@@ -25,7 +25,7 @@ class TaskMapVC: UIViewController {
         taskLabel.text = task?.name
         taskMapView.showsUserLocation = true
     }
-    
+    //make generic
     func dropPinsForTask() {
         var annotations = [MKPointAnnotation]()
         let closestTaskAnnotation = calculateCloseTaskAnnotation()
@@ -33,6 +33,7 @@ class TaskMapVC: UIViewController {
         taskMapView.showAnnotations(annotations, animated: true)
     }
     
+    //make generic and put in extension
     func calculateCloseTaskAnnotation() -> MKPointAnnotation {
         let newAnnotation = MKPointAnnotation()
         newAnnotation.title = closestTask?.name
