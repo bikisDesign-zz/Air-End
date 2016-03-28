@@ -1,0 +1,328 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Task"
+provides-nominal:
+- "C7Air_End4Task"
+provides-member:
+- ["C7Air_End4Task", ""]
+provides-dynamic-lookup:
+- "hashtag"
+- "isCompleted"
+- "id"
+- "dueDate"
+- "name"
+- "primaryKey"
+- "createNewTaskWith"
+depends-top-level:
+- "String"
+- "NSDate"
+- "Bool"
+- "BooleanLiteralType"
+- !private "Array"
+- !private "Void"
+- "Results"
+- "Task"
+- "Object"
+- !private "uiRealm"
+- !private "StringLiteralType"
+- "Noun"
+depends-member:
+- !private ["PSs9AnyObject", "Element"]
+- ["PSs9AnyObject", "NSDate"]
+- ["PSs9AnyObject", "String"]
+- !private ["PSs9AnyObject", "Task"]
+- !private ["PSs9AnyObject", "add"]
+- ["PSs9AnyObject", "createNewTaskWith"]
+- !private ["PSs9AnyObject", "deinit"]
+- ["PSs9AnyObject", "dueDate"]
+- ["PSs9AnyObject", "hashtag"]
+- ["PSs9AnyObject", "id"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "isCompleted"]
+- ["PSs9AnyObject", "name"]
+- !private ["PSs9AnyObject", "objects"]
+- ["PSs9AnyObject", "primaryKey"]
+- ["PSs9AnyObject", "readAllTasks"]
+- ["PSs9AnyObject", "readTasksDueSoon"]
+- !private ["PSs9AnyObject", "sorted"]
+- !private ["PSs9AnyObject", "uiRealm"]
+- !private ["PSs9AnyObject", "write"]
+- ["PSs9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "deinit"]
+- !private ["PSs23ArrayLiteralConvertible", "Element"]
+- ["PSs11CVarArgType", "createNewTaskWith"]
+- ["PSs11CVarArgType", "dueDate"]
+- ["PSs11CVarArgType", "hashtag"]
+- ["PSs11CVarArgType", "id"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "isCompleted"]
+- ["PSs11CVarArgType", "name"]
+- ["PSs11CVarArgType", "primaryKey"]
+- ["PSs11CVarArgType", "readAllTasks"]
+- ["PSs11CVarArgType", "readTasksDueSoon"]
+- !private ["PSs11CVarArgType", "sorted"]
+- !private ["PSs14CollectionType", "Element"]
+- !private ["PSs14CollectionType", "sorted"]
+- ["PSs10Comparable", "init"]
+- !private ["PSs28CustomDebugStringConvertible", "Element"]
+- ["PSs28CustomDebugStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "Element"]
+- ["PSs23CustomStringConvertible", "createNewTaskWith"]
+- ["PSs23CustomStringConvertible", "dueDate"]
+- ["PSs23CustomStringConvertible", "hashtag"]
+- ["PSs23CustomStringConvertible", "id"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "isCompleted"]
+- ["PSs23CustomStringConvertible", "name"]
+- ["PSs23CustomStringConvertible", "primaryKey"]
+- ["PSs23CustomStringConvertible", "readAllTasks"]
+- ["PSs23CustomStringConvertible", "readTasksDueSoon"]
+- !private ["PSs23CustomStringConvertible", "sorted"]
+- !private ["PSs9Equatable", "add"]
+- ["PSs9Equatable", "createNewTaskWith"]
+- ["PSs9Equatable", "dueDate"]
+- ["PSs9Equatable", "hashtag"]
+- ["PSs9Equatable", "id"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "isCompleted"]
+- ["PSs9Equatable", "name"]
+- !private ["PSs9Equatable", "objects"]
+- ["PSs9Equatable", "primaryKey"]
+- ["PSs9Equatable", "readAllTasks"]
+- ["PSs9Equatable", "readTasksDueSoon"]
+- !private ["PSs9Equatable", "sorted"]
+- !private ["PSs9Equatable", "write"]
+- ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["PSs8Hashable", "createNewTaskWith"]
+- ["PSs8Hashable", "dueDate"]
+- ["PSs8Hashable", "hashtag"]
+- ["PSs8Hashable", "id"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "isCompleted"]
+- ["PSs8Hashable", "name"]
+- ["PSs8Hashable", "primaryKey"]
+- ["PSs8Hashable", "readAllTasks"]
+- ["PSs8Hashable", "readTasksDueSoon"]
+- !private ["PSs8Hashable", "sorted"]
+- !private ["PSs9Indexable", "Element"]
+- !private ["PSs9Indexable", "sorted"]
+- ["P10RealmSwift10MinMaxType", "init"]
+- ["PSs14MirrorPathType", "init"]
+- !private ["PSs21MutableCollectionType", "Element"]
+- !private ["PSs16MutableIndexable", "Element"]
+- !private ["PSs16MutableSliceable", "Element"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["CSo6NSDate", "init"]
+- !private ["PSo17NSFastEnumeration", "sorted"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "NSDate"]
+- ["CSo8NSObject", "Noun"]
+- ["CSo8NSObject", "Results"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "Task"]
+- !private ["CSo8NSObject", "Void"]
+- ["CSo8NSObject", "createNewTaskWith"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "dueDate"]
+- ["CSo8NSObject", "hashtag"]
+- ["CSo8NSObject", "id"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isCompleted"]
+- ["CSo8NSObject", "name"]
+- ["CSo8NSObject", "primaryKey"]
+- ["CSo8NSObject", "readAllTasks"]
+- ["CSo8NSObject", "readTasksDueSoon"]
+- !private ["CSo8NSObject", "sorted"]
+- !private ["CSo8NSObject", "uiRealm"]
+- ["PSo16NSObjectProtocol", "createNewTaskWith"]
+- ["PSo16NSObjectProtocol", "dueDate"]
+- ["PSo16NSObjectProtocol", "hashtag"]
+- ["PSo16NSObjectProtocol", "id"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isCompleted"]
+- ["PSo16NSObjectProtocol", "name"]
+- ["PSo16NSObjectProtocol", "primaryKey"]
+- ["PSo16NSObjectProtocol", "readAllTasks"]
+- ["PSo16NSObjectProtocol", "readTasksDueSoon"]
+- !private ["PSo16NSObjectProtocol", "sorted"]
+- ["PSo14NSSecureCoding", "init"]
+- ["C10RealmSwift6Object", "Bool"]
+- ["C10RealmSwift6Object", "NSDate"]
+- ["C10RealmSwift6Object", "Noun"]
+- ["C10RealmSwift6Object", "Results"]
+- ["C10RealmSwift6Object", "String"]
+- ["C10RealmSwift6Object", "Task"]
+- !private ["C10RealmSwift6Object", "Void"]
+- ["C10RealmSwift6Object", "createNewTaskWith"]
+- !private ["C10RealmSwift6Object", "deinit"]
+- ["C10RealmSwift6Object", "dueDate"]
+- ["C10RealmSwift6Object", "hashtag"]
+- ["C10RealmSwift6Object", "id"]
+- ["C10RealmSwift6Object", "init"]
+- ["C10RealmSwift6Object", "isCompleted"]
+- ["C10RealmSwift6Object", "name"]
+- ["C10RealmSwift6Object", "primaryKey"]
+- ["C10RealmSwift6Object", "readAllTasks"]
+- ["C10RealmSwift6Object", "readTasksDueSoon"]
+- !private ["C10RealmSwift6Object", "uiRealm"]
+- ["C10RealmSwift6Object", ""]
+- !private ["Sq", "deinit"]
+- ["PSs16OutputStreamType", "init"]
+- ["CSo13RLMObjectBase", "Bool"]
+- ["CSo13RLMObjectBase", "NSDate"]
+- ["CSo13RLMObjectBase", "Noun"]
+- ["CSo13RLMObjectBase", "Results"]
+- ["CSo13RLMObjectBase", "String"]
+- ["CSo13RLMObjectBase", "Task"]
+- !private ["CSo13RLMObjectBase", "Void"]
+- ["CSo13RLMObjectBase", "createNewTaskWith"]
+- !private ["CSo13RLMObjectBase", "deinit"]
+- ["CSo13RLMObjectBase", "dueDate"]
+- ["CSo13RLMObjectBase", "hashtag"]
+- ["CSo13RLMObjectBase", "id"]
+- ["CSo13RLMObjectBase", "init"]
+- ["CSo13RLMObjectBase", "isCompleted"]
+- ["CSo13RLMObjectBase", "name"]
+- ["CSo13RLMObjectBase", "primaryKey"]
+- ["CSo13RLMObjectBase", "readAllTasks"]
+- ["CSo13RLMObjectBase", "readTasksDueSoon"]
+- !private ["CSo13RLMObjectBase", "uiRealm"]
+- !private ["PSs30RangeReplaceableCollectionType", "Element"]
+- !private ["C10RealmSwift5Realm", "add"]
+- !private ["C10RealmSwift5Realm", "objects"]
+- !private ["C10RealmSwift5Realm", "write"]
+- !private ["P10RealmSwift19RealmCollectionType", "sorted"]
+- !private ["C10RealmSwift7Results", "sorted"]
+- !private ["C10RealmSwift11ResultsBase", "sorted"]
+- !private ["PSs12SequenceType", "Element"]
+- !private ["PSs12SequenceType", "sorted"]
+- ["PSs10Streamable", "init"]
+- ["SS", "init"]
+- ["PSs30StringInterpolationConvertible", "init"]
+- ["PSs24StringLiteralConvertible", "init"]
+- ["C7Air_End4Task", "Bool"]
+- ["C7Air_End4Task", "NSDate"]
+- ["C7Air_End4Task", "Noun"]
+- ["C7Air_End4Task", "Results"]
+- ["C7Air_End4Task", "String"]
+- ["C7Air_End4Task", "Task"]
+- !private ["C7Air_End4Task", "Void"]
+- ["C7Air_End4Task", "createNewTaskWith"]
+- ["C7Air_End4Task", "deinit"]
+- ["C7Air_End4Task", "dueDate"]
+- ["C7Air_End4Task", "hashtag"]
+- ["C7Air_End4Task", "id"]
+- ["C7Air_End4Task", "init"]
+- ["C7Air_End4Task", "isCompleted"]
+- ["C7Air_End4Task", "name"]
+- ["C7Air_End4Task", "primaryKey"]
+- ["C7Air_End4Task", "readAllTasks"]
+- ["C7Air_End4Task", "readTasksDueSoon"]
+- !private ["C7Air_End4Task", "uiRealm"]
+- ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs10_ArrayType", "Element"]
+- ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["PSs32_BuiltinStringLiteralConvertible", "init"]
+- ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
+- ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs24_DestructorSafeContainer", "Element"]
+- !private ["PSs21_ObjectiveCBridgeable", "Element"]
+- ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["PSs12_Reflectable", "Element"]
+- ["PSs12_Reflectable", "init"]
+depends-nominal:
+- "PSs9AnyObject"
+- !private "Sa"
+- !private "PSs23ArrayLiteralConvertible"
+- "PSs11CVarArgType"
+- !private "PSs14CollectionType"
+- "PSs10Comparable"
+- "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- "PSs8Hashable"
+- !private "PSs9Indexable"
+- "P10RealmSwift10MinMaxType"
+- "PSs14MirrorPathType"
+- !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
+- !private "PSs16MutableSliceable"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo6NSDate"
+- !private "PSo17NSFastEnumeration"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "C10RealmSwift6Object"
+- !private "Sq"
+- "PSs16OutputStreamType"
+- "CSo13RLMObjectBase"
+- !private "PSs30RangeReplaceableCollectionType"
+- !private "C10RealmSwift5Realm"
+- !private "P10RealmSwift19RealmCollectionType"
+- !private "C10RealmSwift7Results"
+- !private "C10RealmSwift11ResultsBase"
+- !private "PSs12SequenceType"
+- "PSs10Streamable"
+- "SS"
+- "PSs30StringInterpolationConvertible"
+- "PSs24StringLiteralConvertible"
+- "C7Air_End4Task"
+- "PSs31UnicodeScalarLiteralConvertible"
+- !private "PSs10_ArrayType"
+- "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- "PSs32_BuiltinStringLiteralConvertible"
+- "PSs37_BuiltinUTF16StringLiteralConvertible"
+- "PSs39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "PSs24_DestructorSafeContainer"
+- "PSs21_ObjectiveCBridgeable"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "a0bc30ad658f20b5d22f0fac2e40b5e9"

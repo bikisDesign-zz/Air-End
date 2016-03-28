@@ -1,0 +1,314 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "OE7Air_EndCSo16UIViewController15SegueIdentifier"
+- "OE7Air_EndCSo11UITableView14CellIdentifier"
+provides-member:
+- ["CSo16UIViewController", ""]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", ""]
+- ["CSo11UITableView", ""]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", ""]
+- ["CSo16UIViewController", "SegueIdentifier"]
+- ["CSo16UIViewController", "performSegueWithSegueIdentifier"]
+- ["CSo16UIViewController", "shouldPerformSegueWithSegueIdentifier"]
+- ["CSo11UITableView", "CellIdentifier"]
+- ["CSo11UITableView", "dequeueReusableCellWithCellIdentifier"]
+provides-dynamic-lookup:
+depends-top-level:
+- "String"
+- "UITableView"
+- "AnyObject"
+- "UITableViewCell"
+- "UIViewController"
+- "StringLiteralType"
+- "=="
+- !private "~="
+depends-member:
+- !private ["P10RealmSwift11AddableType", "hashValue"]
+- ["PSs9AnyObject", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs9AnyObject", "performSegueWithIdentifier"]
+- ["PSs9AnyObject", "performSegueWithSegueIdentifier"]
+- !private ["PSs9AnyObject", "shouldPerformSegueWithIdentifier"]
+- ["PSs9AnyObject", "shouldPerformSegueWithSegueIdentifier"]
+- !private ["PSs22BidirectionalIndexType", "hashValue"]
+- !private ["PSs21BitwiseOperationsType", "hashValue"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- ["PSs11CVarArgType", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSs11CVarArgType", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs11CVarArgType", "hashValue"]
+- !private ["PSs11CVarArgType", "performSegueWithIdentifier"]
+- ["PSs11CVarArgType", "performSegueWithSegueIdentifier"]
+- !private ["PSs11CVarArgType", "shouldPerformSegueWithIdentifier"]
+- ["PSs11CVarArgType", "shouldPerformSegueWithSegueIdentifier"]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", "ListCell"]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", "RawValue"]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", "deinit"]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", "hashValue"]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", "init"]
+- ["OE7Air_EndCSo11UITableView14CellIdentifier", "rawValue"]
+- !private ["PSs10Comparable", "hashValue"]
+- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["PSs23CustomStringConvertible", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSs23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs23CustomStringConvertible", "hashValue"]
+- !private ["PSs23CustomStringConvertible", "performSegueWithIdentifier"]
+- ["PSs23CustomStringConvertible", "performSegueWithSegueIdentifier"]
+- !private ["PSs23CustomStringConvertible", "shouldPerformSegueWithIdentifier"]
+- ["PSs23CustomStringConvertible", "shouldPerformSegueWithSegueIdentifier"]
+- ["PSs9Equatable", "RawValue"]
+- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
+- ["PSs9Equatable", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSs9Equatable", "dequeueReusableCellWithIdentifier"]
+- ["PSs9Equatable", "hashValue"]
+- ["PSs9Equatable", "init"]
+- !private ["PSs9Equatable", "performSegueWithIdentifier"]
+- ["PSs9Equatable", "performSegueWithSegueIdentifier"]
+- ["PSs9Equatable", "rawValue"]
+- !private ["PSs9Equatable", "shouldPerformSegueWithIdentifier"]
+- ["PSs9Equatable", "shouldPerformSegueWithSegueIdentifier"]
+- ["PSs9Equatable", ""]
+- !private ["PSs16ForwardIndexType", "hashValue"]
+- ["PSs8Hashable", "RawValue"]
+- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
+- ["PSs8Hashable", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSs8Hashable", "dequeueReusableCellWithIdentifier"]
+- ["PSs8Hashable", "hashValue"]
+- ["PSs8Hashable", "init"]
+- !private ["PSs8Hashable", "performSegueWithIdentifier"]
+- ["PSs8Hashable", "performSegueWithSegueIdentifier"]
+- ["PSs8Hashable", "rawValue"]
+- !private ["PSs8Hashable", "shouldPerformSegueWithIdentifier"]
+- ["PSs8Hashable", "shouldPerformSegueWithSegueIdentifier"]
+- ["PSs8Hashable", ""]
+- !private ["Si", "hashValue"]
+- !private ["PSs21IntegerArithmeticType", "hashValue"]
+- !private ["PSs25IntegerLiteralConvertible", "hashValue"]
+- !private ["PSs11IntegerType", "hashValue"]
+- !private ["P10RealmSwift10MinMaxType", "hashValue"]
+- !private ["PSs14MirrorPathType", "hashValue"]
+- ["PSo8NSCoding", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo8NSCoding", "performSegueWithIdentifier"]
+- !private ["PSo8NSCoding", "shouldPerformSegueWithIdentifier"]
+- !private ["PSo26NSExtensionRequestHandling", "performSegueWithIdentifier"]
+- !private ["PSo26NSExtensionRequestHandling", "shouldPerformSegueWithIdentifier"]
+- ["CSo8NSObject", "AnyObject"]
+- ["CSo8NSObject", "CellIdentifier"]
+- ["CSo8NSObject", "SegueIdentifier"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "dequeueReusableCellWithCellIdentifier"]
+- !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo8NSObject", "performSegueWithIdentifier"]
+- ["CSo8NSObject", "performSegueWithSegueIdentifier"]
+- !private ["CSo8NSObject", "shouldPerformSegueWithIdentifier"]
+- ["CSo8NSObject", "shouldPerformSegueWithSegueIdentifier"]
+- ["PSo16NSObjectProtocol", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo16NSObjectProtocol", "performSegueWithIdentifier"]
+- ["PSo16NSObjectProtocol", "performSegueWithSegueIdentifier"]
+- !private ["PSo16NSObjectProtocol", "shouldPerformSegueWithIdentifier"]
+- ["PSo16NSObjectProtocol", "shouldPerformSegueWithSegueIdentifier"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["PSs21RandomAccessIndexType", "hashValue"]
+- !private ["VSs5Range", "deinit"]
+- ["PSs16RawRepresentable", "RawValue"]
+- ["PSs16RawRepresentable", "hashValue"]
+- ["PSs16RawRepresentable", "init"]
+- ["PSs16RawRepresentable", "rawValue"]
+- ["PSs16RawRepresentable", ""]
+- !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
+- !private ["P10RealmSwift17RealmOptionalType", "hashValue"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "RawValue"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueToMapTaskVC"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueToNewTaskVC"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueUnwindToListVC"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "deinit"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "hashValue"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "init"]
+- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "rawValue"]
+- !private ["PSs17SignedIntegerType", "hashValue"]
+- !private ["PSs16SignedNumberType", "hashValue"]
+- !private ["PSs10Strideable", "hashValue"]
+- ["SS", "deinit"]
+- ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
+- ["PSo12UIAppearance", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
+- ["PSo21UIAppearanceContainer", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo21UIAppearanceContainer", "performSegueWithIdentifier"]
+- !private ["PSo21UIAppearanceContainer", "shouldPerformSegueWithIdentifier"]
+- !private ["PSo18UIContentContainer", "performSegueWithIdentifier"]
+- !private ["PSo18UIContentContainer", "shouldPerformSegueWithIdentifier"]
+- ["PSo17UICoordinateSpace", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithIdentifier"]
+- ["PSo13UIDynamicItem", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo13UIDynamicItem", "dequeueReusableCellWithIdentifier"]
+- ["PSo18UIFocusEnvironment", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo18UIFocusEnvironment", "performSegueWithIdentifier"]
+- !private ["PSo18UIFocusEnvironment", "shouldPerformSegueWithIdentifier"]
+- ["CSo11UIResponder", "AnyObject"]
+- ["CSo11UIResponder", "CellIdentifier"]
+- ["CSo11UIResponder", "SegueIdentifier"]
+- ["CSo11UIResponder", "String"]
+- ["CSo11UIResponder", "UITableViewCell"]
+- ["CSo11UIResponder", "dequeueReusableCellWithCellIdentifier"]
+- !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
+- !private ["CSo11UIResponder", "performSegueWithIdentifier"]
+- ["CSo11UIResponder", "performSegueWithSegueIdentifier"]
+- !private ["CSo11UIResponder", "shouldPerformSegueWithIdentifier"]
+- ["CSo11UIResponder", "shouldPerformSegueWithSegueIdentifier"]
+- ["CSo12UIScrollView", "CellIdentifier"]
+- ["CSo12UIScrollView", "String"]
+- ["CSo12UIScrollView", "UITableViewCell"]
+- ["CSo12UIScrollView", "dequeueReusableCellWithCellIdentifier"]
+- !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo16UIStateRestoring", "performSegueWithIdentifier"]
+- !private ["PSo16UIStateRestoring", "shouldPerformSegueWithIdentifier"]
+- ["CSo11UITableView", "CellIdentifier"]
+- ["CSo11UITableView", "String"]
+- ["CSo11UITableView", "UITableViewCell"]
+- ["CSo11UITableView", "dequeueReusableCellWithCellIdentifier"]
+- !private ["CSo11UITableView", "dequeueReusableCellWithIdentifier"]
+- ["PSo18UITraitEnvironment", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo18UITraitEnvironment", "performSegueWithIdentifier"]
+- !private ["PSo18UITraitEnvironment", "shouldPerformSegueWithIdentifier"]
+- ["CSo6UIView", "CellIdentifier"]
+- ["CSo6UIView", "String"]
+- ["CSo6UIView", "UITableViewCell"]
+- ["CSo6UIView", "dequeueReusableCellWithCellIdentifier"]
+- !private ["CSo6UIView", "dequeueReusableCellWithIdentifier"]
+- ["CSo16UIViewController", "AnyObject"]
+- ["CSo16UIViewController", "SegueIdentifier"]
+- ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "performSegueWithIdentifier"]
+- ["CSo16UIViewController", "performSegueWithSegueIdentifier"]
+- !private ["CSo16UIViewController", "shouldPerformSegueWithIdentifier"]
+- ["CSo16UIViewController", "shouldPerformSegueWithSegueIdentifier"]
+- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "hashValue"]
+- !private ["PSs14_Incrementable", "hashValue"]
+- !private ["PSs22_IntegerArithmeticType", "hashValue"]
+- !private ["PSs12_IntegerType", "hashValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "hashValue"]
+- !private ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs22_RandomAccessAmbiguity", "hashValue"]
+- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- ["PSs12_Reflectable", "dequeueReusableCellWithCellIdentifier"]
+- !private ["PSs12_Reflectable", "dequeueReusableCellWithIdentifier"]
+- !private ["PSs12_Reflectable", "hashValue"]
+- !private ["PSs18_SignedIntegerType", "hashValue"]
+- !private ["PSs11_Strideable", "hashValue"]
+depends-nominal:
+- !private "P10RealmSwift11AddableType"
+- "PSs9AnyObject"
+- !private "PSs22BidirectionalIndexType"
+- !private "PSs21BitwiseOperationsType"
+- !private "Sb"
+- !private "PSs25BooleanLiteralConvertible"
+- !private "PSs11BooleanType"
+- "PSs11CVarArgType"
+- "OE7Air_EndCSo11UITableView14CellIdentifier"
+- !private "PSs10Comparable"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- !private "PSs16ForwardIndexType"
+- "PSs8Hashable"
+- !private "Si"
+- !private "PSs21IntegerArithmeticType"
+- !private "PSs25IntegerLiteralConvertible"
+- !private "PSs11IntegerType"
+- !private "P10RealmSwift10MinMaxType"
+- !private "PSs14MirrorPathType"
+- "PSo8NSCoding"
+- !private "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo8NSString"
+- !private "PSs21RandomAccessIndexType"
+- !private "VSs5Range"
+- "PSs16RawRepresentable"
+- !private "P10RealmSwift17RealmOptionalType"
+- "OE7Air_EndCSo16UIViewController15SegueIdentifier"
+- !private "PSs17SignedIntegerType"
+- !private "PSs16SignedNumberType"
+- !private "PSs10Strideable"
+- "SS"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "PSo18UIContentContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "CSo12UIScrollView"
+- !private "PSo16UIStateRestoring"
+- "CSo11UITableView"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "CSo16UIViewController"
+- !private "PSs33_BuiltinBooleanLiteralConvertible"
+- !private "PSs33_BuiltinIntegerLiteralConvertible"
+- !private "PSs14_Incrementable"
+- !private "PSs22_IntegerArithmeticType"
+- !private "PSs12_IntegerType"
+- !private "PSs21_ObjectiveCBridgeable"
+- !private "VSs26_OptionalNilComparisonType"
+- !private "PSs22_RandomAccessAmbiguity"
+- "PSs12_Reflectable"
+- !private "PSs18_SignedIntegerType"
+- !private "PSs11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "bbdf114a676d5301e326ac5ffcc6ff41"
