@@ -6,30 +6,33 @@ provides-nominal:
 provides-member:
 - ["C7Air_End4Noun", ""]
 provides-dynamic-lookup:
-- "descriptor"
 - "parentTask"
+- "descriptor"
 depends-top-level:
-- "String"
+- "Object"
 - "Task"
 - "Noun"
-- "Object"
+- "String"
 depends-member:
-- ["PSs9AnyObject", "descriptor"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "parentTask"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "descriptor"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "parentTask"]
-- ["PSs23CustomStringConvertible", "descriptor"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "parentTask"]
-- ["PSs9Equatable", "descriptor"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "parentTask"]
-- ["PSs8Hashable", "descriptor"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "parentTask"]
+- ["Ps9AnyObject", "descriptor"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "parentTask"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "descriptor"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "parentTask"]
+- ["Ps28CustomDebugStringConvertible", "descriptor"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "parentTask"]
+- ["Ps23CustomStringConvertible", "descriptor"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "parentTask"]
+- ["Ps9Equatable", "descriptor"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "parentTask"]
+- ["Ps8Hashable", "descriptor"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "parentTask"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "Task"]
 - ["CSo8NSObject", "descriptor"]
@@ -56,11 +59,12 @@ depends-member:
 - ["CSo13RLMObjectBase", "init"]
 - ["CSo13RLMObjectBase", "parentTask"]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "C7Air_End4Noun"

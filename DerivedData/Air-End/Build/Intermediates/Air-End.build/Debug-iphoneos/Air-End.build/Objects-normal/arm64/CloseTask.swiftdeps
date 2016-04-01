@@ -10,35 +10,39 @@ provides-dynamic-lookup:
 depends-top-level:
 - "Double"
 - "NSObject"
-- "MKMapItem"
 - "CloseTask"
+- "MKMapItem"
 depends-member:
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "mapItem"]
-- ["PSs9AnyObject", "metersDifference"]
-- ["PSs9AnyObject", ""]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "mapItem"]
-- ["PSs11CVarArgType", "metersDifference"]
-- ["PSs11CVarArgType", ""]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "mapItem"]
+- ["Ps9AnyObject", "metersDifference"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "mapItem"]
+- ["Ps11CVarArgType", "metersDifference"]
+- ["Ps11CVarArgType", ""]
 - ["C7Air_End9CloseTask", "Double"]
 - ["C7Air_End9CloseTask", "MKMapItem"]
 - ["C7Air_End9CloseTask", "deinit"]
 - ["C7Air_End9CloseTask", "init"]
 - ["C7Air_End9CloseTask", "mapItem"]
 - ["C7Air_End9CloseTask", "metersDifference"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "mapItem"]
-- ["PSs23CustomStringConvertible", "metersDifference"]
-- ["PSs23CustomStringConvertible", ""]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "mapItem"]
-- ["PSs9Equatable", "metersDifference"]
-- ["PSs9Equatable", ""]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "mapItem"]
-- ["PSs8Hashable", "metersDifference"]
-- ["PSs8Hashable", ""]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "mapItem"]
+- ["Ps28CustomDebugStringConvertible", "metersDifference"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "mapItem"]
+- ["Ps23CustomStringConvertible", "metersDifference"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "mapItem"]
+- ["Ps9Equatable", "metersDifference"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "mapItem"]
+- ["Ps8Hashable", "metersDifference"]
+- ["Ps8Hashable", ""]
 - ["CSo8NSObject", "Double"]
 - ["CSo8NSObject", "MKMapItem"]
 - ["CSo8NSObject", "init"]
@@ -50,12 +54,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "metersDifference"]
 - ["PSo16NSObjectProtocol", ""]
 depends-nominal:
-- "PSs9AnyObject"
-- "PSs11CVarArgType"
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
 - "C7Air_End9CloseTask"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 depends-dynamic-lookup:

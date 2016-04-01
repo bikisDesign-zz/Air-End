@@ -29,7 +29,7 @@ class Task: Object {
         }
     }
     
-    func readAllTasks(withCompletionHandler handler: (tasks: Results<Task>) -> () ){
+    func readAllTasks(withCompletionHandler handler: (tasks: Results<Task>?) -> () ){
         let taskList = uiRealm.objects(Task).sorted("name", ascending: true)
         handler(tasks: taskList)
     }

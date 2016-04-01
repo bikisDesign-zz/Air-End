@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+
 extension UIViewController {
     func convertBooltoInt(bool:Bool) -> Int {
         return bool == true ? 1 : 0
@@ -23,4 +25,13 @@ extension UIViewController {
         formater.dateFormat = "dd/MM"
         return formater.dateFromString(date)!
     }
+    
+    func convertToAnnotationFromMapItem(mapItem:MKMapItem) -> MKPointAnnotation {
+        let newAnnotation = MKPointAnnotation()
+        newAnnotation.title = mapItem.name
+        newAnnotation.coordinate = (mapItem.placemark.location?.coordinate)!
+        return newAnnotation
+    }
+    
+    
 }

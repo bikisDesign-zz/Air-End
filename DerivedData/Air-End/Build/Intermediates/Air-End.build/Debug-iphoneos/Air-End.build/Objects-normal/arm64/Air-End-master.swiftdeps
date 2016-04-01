@@ -1,15 +1,16 @@
-version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
-options: "4e88bff0260806b04d7de268f677ac53"
-build_time: [512440176, 676992000]
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "3270a0d2fe0ccb680147cd7d3493153f"
+build_time: [512856973, 61773000]
 inputs:
-  "/Users/aaronb/Development/Air-End/Air-End/ViewController-Conversions-Extension.swift": [511917361, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/Task.swift": [512436784, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/TaskMapVC.swift": [512439547, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/AppDelegate.swift": [511992789, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/ListVC.swift": [512440176, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/NewTaskVC.swift": [512437562, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/Noun.swift": [511997448, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/ViewController-Extension.swift": [511911939, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/CloseTask.swift": [511999687, 0]
   "/Users/aaronb/Development/Air-End/Air-End/TextToEnum- Extentsion.swift": [512098857, 0]
-  "/Users/aaronb/Development/Air-End/Air-End/ListVC-LocationExtension.swift": [512439938, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/ListVC.swift": [512686071, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/MapVC.swift": [512856972, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/ViewController-Conversions-Extension.swift": [512446728, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/ViewController-Extension.swift": [512856972, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/CloseTask.swift": [511999687, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/NewTaskVC.swift": [512679289, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/Noun.swift": [511997448, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/Task.swift": [512685424, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/TaskMapVC.swift": [512447016, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/ListVC-LocationExtension.swift": [512446314, 0]
+  "/Users/aaronb/Development/Air-End/Air-End/AppDelegate.swift": [511992789, 0]

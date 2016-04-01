@@ -31,7 +31,7 @@ class NewTaskVC: UIViewController {
     func setUpUI(){
         textFields = [taskTextField, nounTextField]
         containers = [taskContainer, nounContainer, dateContainer]
-        let tapGR = UITapGestureRecognizer(target: self, action: "handleSingleTap")
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
         view.addGestureRecognizer(tapGR)
         for textField in textFields {
             textField.delegate = self

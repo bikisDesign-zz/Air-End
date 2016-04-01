@@ -18,26 +18,16 @@ class TaskMapVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        dropPinsForTask()
     }
     
     func setUpUI(){
         taskLabel.text = task?.name
         taskMapView.showsUserLocation = true
-    }
-    //make generic
-    func dropPinsForTask() {
+        let taskAsAnnotation = convertToAnnotationFromMapItem(closestTask!)
         var annotations = [MKPointAnnotation]()
-        let closestTaskAnnotation = calculateCloseTaskAnnotation()
-        annotations.append(closestTaskAnnotation)
+        annotations.append(taskAsAnnotation)
         taskMapView.showAnnotations(annotations, animated: true)
     }
     
-    //make generic and put in extension
-    func calculateCloseTaskAnnotation() -> MKPointAnnotation {
-        let newAnnotation = MKPointAnnotation()
-        newAnnotation.title = closestTask?.name
-        newAnnotation.coordinate = (closestTask?.placemark.location?.coordinate)!
-        return newAnnotation
-    }
+    
 }

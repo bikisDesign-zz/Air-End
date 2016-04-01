@@ -6,81 +6,156 @@ provides-member:
 - ["CSo16UIViewController", "convertBooltoInt"]
 - ["CSo16UIViewController", "convertNSDateToString"]
 - ["CSo16UIViewController", "convertStringToNSDate"]
+- ["CSo16UIViewController", "convertToAnnotationFromMapItem"]
 provides-dynamic-lookup:
-- "convertNSDateToString"
-- "convertBooltoInt"
 - "convertStringToNSDate"
+- "convertNSDateToString"
+- "convertToAnnotationFromMapItem"
+- "convertBooltoInt"
 depends-top-level:
-- !private "BooleanLiteralType"
-- "UIViewController"
-- "NSDate"
-- "Bool"
-- !private "StringLiteralType"
-- "String"
-- "Int"
 - !private "NSDateFormatter"
+- !private "StringLiteralType"
+- "Int"
+- "MKMapItem"
+- "UIViewController"
 - !private "=="
+- !private "BooleanLiteralType"
+- "NSDate"
+- "String"
+- "MKPointAnnotation"
+- "Bool"
 depends-member:
-- !private ["PSs9AnyObject", "NSDateFormatter"]
-- ["PSs9AnyObject", "convertBooltoInt"]
-- ["PSs9AnyObject", "convertNSDateToString"]
-- ["PSs9AnyObject", "convertStringToNSDate"]
-- !private ["PSs9AnyObject", "dateFormat"]
-- !private ["PSs9AnyObject", "dateFromString"]
-- !private ["PSs9AnyObject", "init"]
-- !private ["PSs9AnyObject", "stringFromDate"]
+- !private ["Ps9AnyObject", "MKPointAnnotation"]
+- !private ["Ps9AnyObject", "NSDateFormatter"]
+- ["Ps9AnyObject", "convertBooltoInt"]
+- ["Ps9AnyObject", "convertNSDateToString"]
+- ["Ps9AnyObject", "convertStringToNSDate"]
+- ["Ps9AnyObject", "convertToAnnotationFromMapItem"]
+- !private ["Ps9AnyObject", "coordinate"]
+- !private ["Ps9AnyObject", "dateFormat"]
+- !private ["Ps9AnyObject", "dateFromString"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "location"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "placemark"]
+- !private ["Ps9AnyObject", "stringFromDate"]
+- !private ["Ps9AnyObject", "title"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
-- !private ["PSs11CVarArgType", "NSDateFormatter"]
-- ["PSs11CVarArgType", "convertBooltoInt"]
-- ["PSs11CVarArgType", "convertNSDateToString"]
-- ["PSs11CVarArgType", "convertStringToNSDate"]
-- !private ["PSs11CVarArgType", "dateFormat"]
-- !private ["PSs11CVarArgType", "dateFromString"]
-- !private ["PSs11CVarArgType", "init"]
-- !private ["PSs11CVarArgType", "stringFromDate"]
-- !private ["PSs23CustomStringConvertible", "NSDateFormatter"]
-- !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
-- ["PSs23CustomStringConvertible", "convertBooltoInt"]
-- ["PSs23CustomStringConvertible", "convertNSDateToString"]
-- ["PSs23CustomStringConvertible", "convertStringToNSDate"]
-- !private ["PSs23CustomStringConvertible", "dateFormat"]
-- !private ["PSs23CustomStringConvertible", "dateFromString"]
-- !private ["PSs23CustomStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "stringFromDate"]
-- !private ["PSs9Equatable", "NSDateFormatter"]
-- !private ["PSs9Equatable", "_getBuiltinLogicValue"]
-- ["PSs9Equatable", "convertBooltoInt"]
-- ["PSs9Equatable", "convertNSDateToString"]
-- ["PSs9Equatable", "convertStringToNSDate"]
-- !private ["PSs9Equatable", "dateFormat"]
-- !private ["PSs9Equatable", "dateFromString"]
-- !private ["PSs9Equatable", "init"]
-- !private ["PSs9Equatable", "stringFromDate"]
-- !private ["PSs8Hashable", "NSDateFormatter"]
-- !private ["PSs8Hashable", "_getBuiltinLogicValue"]
-- ["PSs8Hashable", "convertBooltoInt"]
-- ["PSs8Hashable", "convertNSDateToString"]
-- ["PSs8Hashable", "convertStringToNSDate"]
-- !private ["PSs8Hashable", "dateFormat"]
-- !private ["PSs8Hashable", "dateFromString"]
-- !private ["PSs8Hashable", "init"]
-- !private ["PSs8Hashable", "stringFromDate"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo10CLLocation", "coordinate"]
+- !private ["CSo11CLPlacemark", "location"]
+- !private ["Ps11CVarArgType", "MKPointAnnotation"]
+- !private ["Ps11CVarArgType", "NSDateFormatter"]
+- ["Ps11CVarArgType", "convertBooltoInt"]
+- ["Ps11CVarArgType", "convertNSDateToString"]
+- ["Ps11CVarArgType", "convertStringToNSDate"]
+- ["Ps11CVarArgType", "convertToAnnotationFromMapItem"]
+- !private ["Ps11CVarArgType", "coordinate"]
+- !private ["Ps11CVarArgType", "dateFormat"]
+- !private ["Ps11CVarArgType", "dateFromString"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "location"]
+- !private ["Ps11CVarArgType", "name"]
+- !private ["Ps11CVarArgType", "placemark"]
+- !private ["Ps11CVarArgType", "stringFromDate"]
+- !private ["Ps11CVarArgType", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "MKPointAnnotation"]
+- !private ["Ps28CustomDebugStringConvertible", "NSDateFormatter"]
+- ["Ps28CustomDebugStringConvertible", "convertBooltoInt"]
+- ["Ps28CustomDebugStringConvertible", "convertNSDateToString"]
+- ["Ps28CustomDebugStringConvertible", "convertStringToNSDate"]
+- ["Ps28CustomDebugStringConvertible", "convertToAnnotationFromMapItem"]
+- !private ["Ps28CustomDebugStringConvertible", "coordinate"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFormat"]
+- !private ["Ps28CustomDebugStringConvertible", "dateFromString"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "location"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "placemark"]
+- !private ["Ps28CustomDebugStringConvertible", "stringFromDate"]
+- !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "MKPointAnnotation"]
+- !private ["Ps23CustomStringConvertible", "NSDateFormatter"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "convertBooltoInt"]
+- ["Ps23CustomStringConvertible", "convertNSDateToString"]
+- ["Ps23CustomStringConvertible", "convertStringToNSDate"]
+- ["Ps23CustomStringConvertible", "convertToAnnotationFromMapItem"]
+- !private ["Ps23CustomStringConvertible", "coordinate"]
+- !private ["Ps23CustomStringConvertible", "dateFormat"]
+- !private ["Ps23CustomStringConvertible", "dateFromString"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "location"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "placemark"]
+- !private ["Ps23CustomStringConvertible", "stringFromDate"]
+- !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps9Equatable", "MKPointAnnotation"]
+- !private ["Ps9Equatable", "NSDateFormatter"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "convertBooltoInt"]
+- ["Ps9Equatable", "convertNSDateToString"]
+- ["Ps9Equatable", "convertStringToNSDate"]
+- ["Ps9Equatable", "convertToAnnotationFromMapItem"]
+- !private ["Ps9Equatable", "coordinate"]
+- !private ["Ps9Equatable", "dateFormat"]
+- !private ["Ps9Equatable", "dateFromString"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "location"]
+- !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "placemark"]
+- !private ["Ps9Equatable", "stringFromDate"]
+- !private ["Ps9Equatable", "title"]
+- !private ["Ps8Hashable", "MKPointAnnotation"]
+- !private ["Ps8Hashable", "NSDateFormatter"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "convertBooltoInt"]
+- ["Ps8Hashable", "convertNSDateToString"]
+- ["Ps8Hashable", "convertStringToNSDate"]
+- ["Ps8Hashable", "convertToAnnotationFromMapItem"]
+- !private ["Ps8Hashable", "coordinate"]
+- !private ["Ps8Hashable", "dateFormat"]
+- !private ["Ps8Hashable", "dateFromString"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "location"]
+- !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "placemark"]
+- !private ["Ps8Hashable", "stringFromDate"]
+- !private ["Ps8Hashable", "title"]
 - !private ["SQ", "deinit"]
+- !private ["PSo12MKAnnotation", "coordinate"]
+- !private ["PSo12MKAnnotation", "init"]
+- !private ["PSo12MKAnnotation", "location"]
+- !private ["PSo12MKAnnotation", "title"]
+- !private ["CSo9MKMapItem", "name"]
+- !private ["CSo9MKMapItem", "placemark"]
+- !private ["CSo11MKPlacemark", "location"]
+- !private ["CSo17MKPointAnnotation", "coordinate"]
+- !private ["CSo17MKPointAnnotation", "init"]
+- !private ["CSo17MKPointAnnotation", "title"]
+- !private ["CSo7MKShape", "coordinate"]
+- !private ["CSo7MKShape", "init"]
+- !private ["CSo7MKShape", "title"]
+- !private ["PSo8NSCoding", "MKPointAnnotation"]
 - !private ["PSo8NSCoding", "NSDateFormatter"]
+- !private ["PSo8NSCoding", "coordinate"]
 - !private ["PSo8NSCoding", "dateFormat"]
 - !private ["PSo8NSCoding", "dateFromString"]
 - !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "location"]
 - !private ["PSo8NSCoding", "stringFromDate"]
+- !private ["PSo9NSCopying", "coordinate"]
 - !private ["PSo9NSCopying", "dateFormat"]
 - !private ["PSo9NSCopying", "dateFromString"]
 - !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "location"]
 - !private ["PSo9NSCopying", "stringFromDate"]
 - !private ["CSo15NSDateFormatter", "dateFormat"]
 - !private ["CSo15NSDateFormatter", "dateFromString"]
 - !private ["CSo15NSDateFormatter", "init"]
 - !private ["CSo15NSDateFormatter", "stringFromDate"]
+- !private ["PSo26NSExtensionRequestHandling", "MKPointAnnotation"]
 - !private ["PSo26NSExtensionRequestHandling", "NSDateFormatter"]
 - !private ["CSo11NSFormatter", "dateFormat"]
 - !private ["CSo11NSFormatter", "dateFromString"]
@@ -88,59 +163,95 @@ depends-member:
 - !private ["CSo11NSFormatter", "stringFromDate"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "MKMapItem"]
+- ["CSo8NSObject", "MKPointAnnotation"]
 - ["CSo8NSObject", "NSDate"]
 - !private ["CSo8NSObject", "NSDateFormatter"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "convertBooltoInt"]
 - ["CSo8NSObject", "convertNSDateToString"]
 - ["CSo8NSObject", "convertStringToNSDate"]
+- ["CSo8NSObject", "convertToAnnotationFromMapItem"]
+- !private ["CSo8NSObject", "coordinate"]
 - !private ["CSo8NSObject", "dateFormat"]
 - !private ["CSo8NSObject", "dateFromString"]
 - !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "location"]
+- !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "placemark"]
 - !private ["CSo8NSObject", "stringFromDate"]
+- !private ["CSo8NSObject", "title"]
+- !private ["PSo16NSObjectProtocol", "MKPointAnnotation"]
 - !private ["PSo16NSObjectProtocol", "NSDateFormatter"]
 - ["PSo16NSObjectProtocol", "convertBooltoInt"]
 - ["PSo16NSObjectProtocol", "convertNSDateToString"]
 - ["PSo16NSObjectProtocol", "convertStringToNSDate"]
+- ["PSo16NSObjectProtocol", "convertToAnnotationFromMapItem"]
+- !private ["PSo16NSObjectProtocol", "coordinate"]
 - !private ["PSo16NSObjectProtocol", "dateFormat"]
 - !private ["PSo16NSObjectProtocol", "dateFromString"]
 - !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "location"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "placemark"]
 - !private ["PSo16NSObjectProtocol", "stringFromDate"]
+- !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo14NSSecureCoding", "coordinate"]
+- !private ["PSo14NSSecureCoding", "location"]
 - !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
+- !private ["PSo21UIAppearanceContainer", "MKPointAnnotation"]
 - !private ["PSo21UIAppearanceContainer", "NSDateFormatter"]
+- !private ["PSo18UIContentContainer", "MKPointAnnotation"]
 - !private ["PSo18UIContentContainer", "NSDateFormatter"]
+- !private ["PSo18UIFocusEnvironment", "MKPointAnnotation"]
 - !private ["PSo18UIFocusEnvironment", "NSDateFormatter"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "Int"]
+- ["CSo11UIResponder", "MKMapItem"]
+- ["CSo11UIResponder", "MKPointAnnotation"]
 - ["CSo11UIResponder", "NSDate"]
 - !private ["CSo11UIResponder", "NSDateFormatter"]
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "convertBooltoInt"]
 - ["CSo11UIResponder", "convertNSDateToString"]
 - ["CSo11UIResponder", "convertStringToNSDate"]
+- ["CSo11UIResponder", "convertToAnnotationFromMapItem"]
+- !private ["PSo16UIStateRestoring", "MKPointAnnotation"]
 - !private ["PSo16UIStateRestoring", "NSDateFormatter"]
+- !private ["PSo18UITraitEnvironment", "MKPointAnnotation"]
 - !private ["PSo18UITraitEnvironment", "NSDateFormatter"]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "Int"]
+- ["CSo16UIViewController", "MKMapItem"]
+- ["CSo16UIViewController", "MKPointAnnotation"]
 - ["CSo16UIViewController", "NSDate"]
 - !private ["CSo16UIViewController", "NSDateFormatter"]
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "convertBooltoInt"]
 - ["CSo16UIViewController", "convertNSDateToString"]
 - ["CSo16UIViewController", "convertStringToNSDate"]
-- !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- ["CSo16UIViewController", "convertToAnnotationFromMapItem"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sb"
-- !private "PSs25BooleanLiteralConvertible"
-- !private "PSs11BooleanType"
-- "PSs11CVarArgType"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs8Hashable"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "CSo10CLLocation"
+- !private "CSo11CLPlacemark"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
 - !private "SQ"
+- !private "PSo12MKAnnotation"
+- !private "CSo9MKMapItem"
+- !private "CSo11MKPlacemark"
+- !private "CSo17MKPointAnnotation"
+- !private "CSo7MKShape"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "CSo15NSDateFormatter"
@@ -148,6 +259,7 @@ depends-nominal:
 - !private "CSo11NSFormatter"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
 - !private "P10RealmSwift17RealmOptionalType"
 - !private "PSo21UIAppearanceContainer"
 - !private "PSo18UIContentContainer"
@@ -156,9 +268,9 @@ depends-nominal:
 - !private "PSo16UIStateRestoring"
 - !private "PSo18UITraitEnvironment"
 - "CSo16UIViewController"
-- !private "PSs33_BuiltinBooleanLiteralConvertible"
-- !private "PSs21_ObjectiveCBridgeable"
-- !private "PSs12_Reflectable"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
@@ -203,4 +315,4 @@ depends-external:
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "d7240af61004b7a83f7454a633c6645e"
+interface-hash: "2f5ced57564c10585b638b4a7e866938"

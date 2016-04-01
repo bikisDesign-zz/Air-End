@@ -39,7 +39,7 @@ class ListVC: UIViewController {
     }
     
     func setUpUI(){
-        let add = UIBarButtonItem(barButtonSystemItem:.Add, target: self, action: "addItemButtonWasTapped")
+        let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:#selector(addItemButtonWasTapped))
         navigationItem.rightBarButtonItem = add
         navigationItem.title = "Lists"
     }
@@ -56,7 +56,7 @@ class ListVC: UIViewController {
     func segmentCloseTasks(){
         taskManager.readAllTasks { (tasks) -> () in
             self.tasks = tasks
-            for task in tasks {
+            for task in tasks! {
                 if let descriptor = task.hashtag?.descriptor {
                     self.findCloseLocationsMatchingNoun(descriptor)
                 }

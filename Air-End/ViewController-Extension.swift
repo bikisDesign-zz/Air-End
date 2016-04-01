@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+
 extension UIViewController {
     func generateRandomPassCode() -> String {
         let alphaNumerial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678910"
@@ -44,4 +46,26 @@ extension UIViewController {
                     }, completion: nil)
         }
     }
+    //MARK: MAPVIEW Methods
+    
+    func initalizeRequestWithDescriptor(nounDescriptor:String, location:CLLocation?) -> MKLocalSearchRequest? {
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = nounDescriptor
+        if let location = location?.coordinate {
+            request.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.01, 0.01))
+            return request
+        }
+        return nil
+    }
+    
+    func coordinateRegionForAnnotations(mapView:MKMapView) -> MKCoordinateRegion?{
+        let allAnnotations = mapView.annotations
+        var mapRect = MKMapRectNull
+        for annotation in allAnnotations {
+            let mapPointCoordinate = MKMapPointForCoordinate(annotation.coordinate)
+            mapRect = MKMapRectUnion(mapRect, MKMapRectMake(mapPointCoordinate.x, mapPointCoordinate.y, 0, 0))
+        }
+        return MKCoordinateRegionForMapRect(mapRect)
+    }
+    
 }
