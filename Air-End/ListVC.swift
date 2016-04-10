@@ -41,7 +41,10 @@ class ListVC: UIViewController {
     func setUpUI(){
         let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:#selector(addItemButtonWasTapped))
         navigationItem.rightBarButtonItem = add
-        navigationItem.title = "Lists"
+        navigationItem.title = "MANGO"
+        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        tableView.separatorColor = Theme.Colors.NavigationBarColor.color
+        
     }
     
     //MARK: - Segmented Control
@@ -122,7 +125,15 @@ extension ListVC: UITableViewDataSource, UITableViewDelegate {
             cell.textLabel?.text = task.name
             cell.detailTextLabel?.text = convertNSDateToString(task.dueDate)
         }
+        cell.selectionStyle = .None
+        cell.backgroundColor = Theme.Colors.LightForegroundColor.color
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.detailTextLabel?.textColor = UIColor.whiteColor()
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 65
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -137,11 +148,12 @@ extension ListVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    
-    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let numberOfTasks = tasks?.count else { return 0}
         return numberOfTasks
     }
 }
-

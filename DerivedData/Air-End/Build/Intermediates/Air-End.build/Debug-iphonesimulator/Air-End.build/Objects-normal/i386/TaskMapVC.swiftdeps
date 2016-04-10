@@ -1,0 +1,544 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "TaskMapVC"
+provides-nominal:
+- "C7Air_End9TaskMapVC"
+provides-member:
+- ["C7Air_End9TaskMapVC", ""]
+provides-dynamic-lookup:
+- "setUpUI"
+- "task"
+- "viewDidLoad"
+- "closestTask"
+- "taskMapView"
+- "taskLabel"
+depends-top-level:
+- "Task"
+- "TaskMapVC"
+- "UIViewController"
+- !private "MKPointAnnotation"
+- "UILabel"
+- "MKMapView"
+- "MKMapItem"
+- !private "BooleanLiteralType"
+depends-member:
+- !private ["P10RealmSwift11AddableType", "Distance"]
+- !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
+- !private ["Ps9AnyObject", "MKPointAnnotation"]
+- ["Ps9AnyObject", "closestTask"]
+- !private ["Ps9AnyObject", "convertToAnnotationFromMapItem"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "name"]
+- ["Ps9AnyObject", "setUpUI"]
+- !private ["Ps9AnyObject", "showAnnotations"]
+- !private ["Ps9AnyObject", "showsUserLocation"]
+- ["Ps9AnyObject", "task"]
+- ["Ps9AnyObject", "taskLabel"]
+- ["Ps9AnyObject", "taskMapView"]
+- !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "append"]
+- !private ["Sa", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "append"]
+- !private ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "MKPointAnnotation"]
+- ["Ps11CVarArgType", "closestTask"]
+- !private ["Ps11CVarArgType", "convertToAnnotationFromMapItem"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "setUpUI"]
+- !private ["Ps11CVarArgType", "showAnnotations"]
+- !private ["Ps11CVarArgType", "showsUserLocation"]
+- ["Ps11CVarArgType", "task"]
+- ["Ps11CVarArgType", "taskLabel"]
+- ["Ps11CVarArgType", "taskMapView"]
+- !private ["Ps11CVarArgType", "text"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "append"]
+- !private ["Ps14CollectionType", "init"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "MKPointAnnotation"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- ["Ps28CustomDebugStringConvertible", "closestTask"]
+- !private ["Ps28CustomDebugStringConvertible", "convertToAnnotationFromMapItem"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "setUpUI"]
+- !private ["Ps28CustomDebugStringConvertible", "showAnnotations"]
+- !private ["Ps28CustomDebugStringConvertible", "showsUserLocation"]
+- ["Ps28CustomDebugStringConvertible", "task"]
+- ["Ps28CustomDebugStringConvertible", "taskLabel"]
+- ["Ps28CustomDebugStringConvertible", "taskMapView"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "MKPointAnnotation"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- ["Ps23CustomStringConvertible", "closestTask"]
+- !private ["Ps23CustomStringConvertible", "convertToAnnotationFromMapItem"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "setUpUI"]
+- !private ["Ps23CustomStringConvertible", "showAnnotations"]
+- !private ["Ps23CustomStringConvertible", "showsUserLocation"]
+- ["Ps23CustomStringConvertible", "task"]
+- ["Ps23CustomStringConvertible", "taskLabel"]
+- ["Ps23CustomStringConvertible", "taskMapView"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "MKPointAnnotation"]
+- ["Ps9Equatable", "closestTask"]
+- !private ["Ps9Equatable", "convertToAnnotationFromMapItem"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "setUpUI"]
+- !private ["Ps9Equatable", "showAnnotations"]
+- !private ["Ps9Equatable", "showsUserLocation"]
+- ["Ps9Equatable", "task"]
+- ["Ps9Equatable", "taskLabel"]
+- ["Ps9Equatable", "taskMapView"]
+- !private ["Ps9Equatable", "text"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "MKPointAnnotation"]
+- ["Ps8Hashable", "closestTask"]
+- !private ["Ps8Hashable", "convertToAnnotationFromMapItem"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "setUpUI"]
+- !private ["Ps8Hashable", "showAnnotations"]
+- !private ["Ps8Hashable", "showsUserLocation"]
+- ["Ps8Hashable", "task"]
+- ["Ps8Hashable", "taskLabel"]
+- ["Ps8Hashable", "taskMapView"]
+- !private ["Ps8Hashable", "text"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "append"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["CSo9MKMapView", "showAnnotations"]
+- !private ["CSo9MKMapView", "showsUserLocation"]
+- !private ["P10RealmSwift10MinMaxType", "Distance"]
+- !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "append"]
+- !private ["Ps21MutableCollectionType", "init"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "append"]
+- !private ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "append"]
+- !private ["Ps16MutableSliceable", "init"]
+- !private ["PSo8NSCoding", "MKPointAnnotation"]
+- ["PSo8NSCoding", "closestTask"]
+- !private ["PSo8NSCoding", "convertToAnnotationFromMapItem"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "setUpUI"]
+- !private ["PSo8NSCoding", "showAnnotations"]
+- !private ["PSo8NSCoding", "showsUserLocation"]
+- ["PSo8NSCoding", "task"]
+- ["PSo8NSCoding", "taskLabel"]
+- ["PSo8NSCoding", "taskMapView"]
+- !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "MKPointAnnotation"]
+- ["PSo26NSExtensionRequestHandling", "closestTask"]
+- !private ["PSo26NSExtensionRequestHandling", "convertToAnnotationFromMapItem"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "setUpUI"]
+- ["PSo26NSExtensionRequestHandling", "task"]
+- ["PSo26NSExtensionRequestHandling", "taskLabel"]
+- ["PSo26NSExtensionRequestHandling", "taskMapView"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "MKMapItem"]
+- ["CSo8NSObject", "MKMapView"]
+- !private ["CSo8NSObject", "MKPointAnnotation"]
+- ["CSo8NSObject", "Task"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "closestTask"]
+- !private ["CSo8NSObject", "convertToAnnotationFromMapItem"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "name"]
+- ["CSo8NSObject", "setUpUI"]
+- !private ["CSo8NSObject", "showAnnotations"]
+- !private ["CSo8NSObject", "showsUserLocation"]
+- ["CSo8NSObject", "task"]
+- ["CSo8NSObject", "taskLabel"]
+- ["CSo8NSObject", "taskMapView"]
+- !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "MKPointAnnotation"]
+- ["PSo16NSObjectProtocol", "closestTask"]
+- !private ["PSo16NSObjectProtocol", "convertToAnnotationFromMapItem"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "setUpUI"]
+- !private ["PSo16NSObjectProtocol", "showAnnotations"]
+- !private ["PSo16NSObjectProtocol", "showsUserLocation"]
+- ["PSo16NSObjectProtocol", "task"]
+- ["PSo16NSObjectProtocol", "taskLabel"]
+- ["PSo16NSObjectProtocol", "taskMapView"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["C10RealmSwift6Object", "name"]
+- !private ["CSo13RLMObjectBase", "name"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "append"]
+- !private ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["P10RealmSwift17RealmOptionalType", "Distance"]
+- !private ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "append"]
+- !private ["Ps12SequenceType", "init"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["C7Air_End4Task", "name"]
+- ["C7Air_End9TaskMapVC", "MKMapItem"]
+- ["C7Air_End9TaskMapVC", "MKMapView"]
+- !private ["C7Air_End9TaskMapVC", "MKPointAnnotation"]
+- ["C7Air_End9TaskMapVC", "Task"]
+- ["C7Air_End9TaskMapVC", "UILabel"]
+- ["C7Air_End9TaskMapVC", "closestTask"]
+- !private ["C7Air_End9TaskMapVC", "convertToAnnotationFromMapItem"]
+- ["C7Air_End9TaskMapVC", "deinit"]
+- ["C7Air_End9TaskMapVC", "init"]
+- ["C7Air_End9TaskMapVC", "setUpUI"]
+- ["C7Air_End9TaskMapVC", "task"]
+- ["C7Air_End9TaskMapVC", "taskLabel"]
+- ["C7Air_End9TaskMapVC", "taskMapView"]
+- ["C7Air_End9TaskMapVC", "viewDidLoad"]
+- !private ["PSo29UIAccessibilityIdentification", "showAnnotations"]
+- !private ["PSo29UIAccessibilityIdentification", "showsUserLocation"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "showAnnotations"]
+- !private ["PSo12UIAppearance", "showsUserLocation"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "MKPointAnnotation"]
+- ["PSo21UIAppearanceContainer", "closestTask"]
+- !private ["PSo21UIAppearanceContainer", "convertToAnnotationFromMapItem"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "setUpUI"]
+- !private ["PSo21UIAppearanceContainer", "showAnnotations"]
+- !private ["PSo21UIAppearanceContainer", "showsUserLocation"]
+- ["PSo21UIAppearanceContainer", "task"]
+- ["PSo21UIAppearanceContainer", "taskLabel"]
+- ["PSo21UIAppearanceContainer", "taskMapView"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "MKPointAnnotation"]
+- ["PSo18UIContentContainer", "closestTask"]
+- !private ["PSo18UIContentContainer", "convertToAnnotationFromMapItem"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "setUpUI"]
+- ["PSo18UIContentContainer", "task"]
+- ["PSo18UIContentContainer", "taskLabel"]
+- ["PSo18UIContentContainer", "taskMapView"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "showAnnotations"]
+- !private ["PSo17UICoordinateSpace", "showsUserLocation"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "showAnnotations"]
+- !private ["PSo13UIDynamicItem", "showsUserLocation"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "MKPointAnnotation"]
+- ["PSo18UIFocusEnvironment", "closestTask"]
+- !private ["PSo18UIFocusEnvironment", "convertToAnnotationFromMapItem"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "setUpUI"]
+- !private ["PSo18UIFocusEnvironment", "showAnnotations"]
+- !private ["PSo18UIFocusEnvironment", "showsUserLocation"]
+- ["PSo18UIFocusEnvironment", "task"]
+- ["PSo18UIFocusEnvironment", "taskLabel"]
+- ["PSo18UIFocusEnvironment", "taskMapView"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UILabel", "text"]
+- ["CSo11UIResponder", "MKMapItem"]
+- ["CSo11UIResponder", "MKMapView"]
+- !private ["CSo11UIResponder", "MKPointAnnotation"]
+- ["CSo11UIResponder", "Task"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "closestTask"]
+- !private ["CSo11UIResponder", "convertToAnnotationFromMapItem"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "setUpUI"]
+- !private ["CSo11UIResponder", "showAnnotations"]
+- !private ["CSo11UIResponder", "showsUserLocation"]
+- ["CSo11UIResponder", "task"]
+- ["CSo11UIResponder", "taskLabel"]
+- ["CSo11UIResponder", "taskMapView"]
+- !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "MKPointAnnotation"]
+- ["PSo16UIStateRestoring", "closestTask"]
+- !private ["PSo16UIStateRestoring", "convertToAnnotationFromMapItem"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "setUpUI"]
+- ["PSo16UIStateRestoring", "task"]
+- ["PSo16UIStateRestoring", "taskLabel"]
+- ["PSo16UIStateRestoring", "taskMapView"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "MKPointAnnotation"]
+- ["PSo18UITraitEnvironment", "closestTask"]
+- !private ["PSo18UITraitEnvironment", "convertToAnnotationFromMapItem"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "setUpUI"]
+- !private ["PSo18UITraitEnvironment", "showAnnotations"]
+- !private ["PSo18UITraitEnvironment", "showsUserLocation"]
+- ["PSo18UITraitEnvironment", "task"]
+- ["PSo18UITraitEnvironment", "taskLabel"]
+- ["PSo18UITraitEnvironment", "taskMapView"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "showAnnotations"]
+- !private ["CSo6UIView", "showsUserLocation"]
+- !private ["CSo6UIView", "text"]
+- ["CSo16UIViewController", "MKMapItem"]
+- ["CSo16UIViewController", "MKMapView"]
+- !private ["CSo16UIViewController", "MKPointAnnotation"]
+- ["CSo16UIViewController", "Task"]
+- ["CSo16UIViewController", "UILabel"]
+- ["CSo16UIViewController", "closestTask"]
+- !private ["CSo16UIViewController", "convertToAnnotationFromMapItem"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "setUpUI"]
+- ["CSo16UIViewController", "task"]
+- ["CSo16UIViewController", "taskLabel"]
+- ["CSo16UIViewController", "taskMapView"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "append"]
+- !private ["Ps10_ArrayType", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "append"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "showAnnotations"]
+- !private ["Ps12_Reflectable", "showsUserLocation"]
+- !private ["Ps12_Reflectable", "text"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- !private "P10RealmSwift11AddableType"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "CSo9MKMapView"
+- !private "P10RealmSwift10MinMaxType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "C10RealmSwift6Object"
+- !private "CSo13RLMObjectBase"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "P10RealmSwift17RealmOptionalType"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Ps10Strideable"
+- !private "C7Air_End4Task"
+- "C7Air_End9TaskMapVC"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "CSo7UILabel"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreLocation.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreData.swiftmodule"
+interface-hash: "f517ff6470e73739e92da90e60d3f3fb"

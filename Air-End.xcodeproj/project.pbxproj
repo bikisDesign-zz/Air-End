@@ -22,13 +22,27 @@
 		913B1F031CA1DF4000D30A7D /* ListVC-LocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B1F021CA1DF4000D30A7D /* ListVC-LocationExtension.swift */; };
 		913B1F051CA1E69900D30A7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 913B1F041CA1E69900D30A7D /* MapKit.framework */; };
 		913B1F091CA1EE4C00D30A7D /* Noun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B1F081CA1EE4C00D30A7D /* Noun.swift */; };
-		913B1F0B1CA1F5E000D30A7D /* CloseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B1F0A1CA1F5E000D30A7D /* CloseTask.swift */; };
 		913B1F0F1CA3779000D30A7D /* TaskMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B1F0E1CA3779000D30A7D /* TaskMapVC.swift */; };
 		914C30D31CA8C57A002D5B9B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C30D21CA8C57A002D5B9B /* MapVC.swift */; };
+		914E4D201CB475DA009D795E /* Glamor-BoldExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 914E4D1F1CB475DA009D795E /* Glamor-BoldExtendedItalic.otf */; };
 		918EF1E81CAC574700A3553E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E61CAC574700A3553E /* Realm.framework */; };
 		918EF1E91CAC574700A3553E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E61CAC574700A3553E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		918EF1EA1CAC574700A3553E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E71CAC574700A3553E /* RealmSwift.framework */; };
 		918EF1EB1CAC574700A3553E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E71CAC574700A3553E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91E225321CB05D5A009D7CDC /* MapVC-TextField-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225311CB05D5A009D7CDC /* MapVC-TextField-Extension.swift */; };
+		91E225341CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225331CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift */; };
+		91E225361CB0864F009D7CDC /* CorrectAddressTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225351CB0864F009D7CDC /* CorrectAddressTableView.swift */; };
+		91E2253A1CB31408009D7CDC /* MapVC-AddressTableViewDelegate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225391CB31408009D7CDC /* MapVC-AddressTableViewDelegate-Extension.swift */; };
+		91F67AC91CB43E8100241C2F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F67AC81CB43E8100241C2F /* Theme.swift */; };
+		91F67ACB1CB43FDF00241C2F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F67ACA1CB43FDF00241C2F /* UIColor+Extension.swift */; };
+		91F67AD01CB444B800241C2F /* Glamor-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67ACD1CB444B800241C2F /* Glamor-Bold.otf */; };
+		91F67AD21CB444B800241C2F /* Glamor-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67ACF1CB444B800241C2F /* Glamor-Regular.otf */; };
+		91F67AD41CB444E300241C2F /* Simplifica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67AD31CB444E300241C2F /* Simplifica.ttf */; };
+		91F67AE01CB4461B00241C2F /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67AD71CB4461B00241C2F /* Lato-Thin.ttf */; };
+		91F67AE31CB4461B00241C2F /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67ADA1CB4461B00241C2F /* Lato-Bold.ttf */; };
+		91F67AE41CB4461B00241C2F /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67ADB1CB4461B00241C2F /* Lato-Hairline.ttf */; };
+		91F67AE61CB4461B00241C2F /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F67ADD1CB4461B00241C2F /* Lato-Regular.ttf */; };
+		91F67AE81CB452A900241C2F /* ColoredDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F67AE71CB452A900241C2F /* ColoredDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,11 +78,25 @@
 		913B1F021CA1DF4000D30A7D /* ListVC-LocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC-LocationExtension.swift"; sourceTree = "<group>"; };
 		913B1F041CA1E69900D30A7D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		913B1F081CA1EE4C00D30A7D /* Noun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Noun.swift; sourceTree = "<group>"; };
-		913B1F0A1CA1F5E000D30A7D /* CloseTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseTask.swift; sourceTree = "<group>"; };
 		913B1F0E1CA3779000D30A7D /* TaskMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMapVC.swift; sourceTree = "<group>"; };
 		914C30D21CA8C57A002D5B9B /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		914E4D1F1CB475DA009D795E /* Glamor-BoldExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldExtendedItalic.otf"; sourceTree = "<group>"; };
 		918EF1E61CAC574700A3553E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		918EF1E71CAC574700A3553E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		91E225311CB05D5A009D7CDC /* MapVC-TextField-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-TextField-Extension.swift"; sourceTree = "<group>"; };
+		91E225331CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-SegmentedControl-Extension.swift"; sourceTree = "<group>"; };
+		91E225351CB0864F009D7CDC /* CorrectAddressTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectAddressTableView.swift; sourceTree = "<group>"; };
+		91E225391CB31408009D7CDC /* MapVC-AddressTableViewDelegate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-AddressTableViewDelegate-Extension.swift"; sourceTree = "<group>"; };
+		91F67AC81CB43E8100241C2F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		91F67ACA1CB43FDF00241C2F /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		91F67ACD1CB444B800241C2F /* Glamor-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Bold.otf"; sourceTree = "<group>"; };
+		91F67ACF1CB444B800241C2F /* Glamor-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-Regular.otf"; sourceTree = "<group>"; };
+		91F67AD31CB444E300241C2F /* Simplifica.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Simplifica.ttf; sourceTree = "<group>"; };
+		91F67AD71CB4461B00241C2F /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		91F67ADA1CB4461B00241C2F /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		91F67ADB1CB4461B00241C2F /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		91F67ADD1CB4461B00241C2F /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		91F67AE71CB452A900241C2F /* ColoredDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +140,7 @@
 				9100916A1CA0691A004D6D78 /* Model */,
 				9100916B1CA0691E004D6D78 /* View */,
 				9100916C1CA06925004D6D78 /* Controller */,
+				91F67ACC1CB444A400241C2F /* Resources */,
 				9100916D1CA0694A004D6D78 /* Other */,
 			);
 			path = "Air-End";
@@ -121,9 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				910091551CA0690E004D6D78 /* AppDelegate.swift */,
+				91F67AC81CB43E8100241C2F /* Theme.swift */,
 				913B1E371CA08D8100F8AFF7 /* Extensions */,
 				913B1E2A1CA06F3C00F8AFF7 /* Task.swift */,
-				913B1F0A1CA1F5E000D30A7D /* CloseTask.swift */,
 				913B1F081CA1EE4C00D30A7D /* Noun.swift */,
 			);
 			name = Model;
@@ -135,6 +164,7 @@
 				910091591CA0690E004D6D78 /* Main.storyboard */,
 				9100915F1CA0690E004D6D78 /* Assets.xcassets */,
 				910091611CA0690E004D6D78 /* LaunchScreen.storyboard */,
+				91E225351CB0864F009D7CDC /* CorrectAddressTableView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -174,6 +204,8 @@
 				913B1E351CA08D3500F8AFF7 /* ViewController-Extension.swift */,
 				911A9D301CA0A2DF0060DB04 /* ViewController-Conversions-Extension.swift */,
 				913B1E381CA08F9000F8AFF7 /* TextToEnum- Extentsion.swift */,
+				91F67ACA1CB43FDF00241C2F /* UIColor+Extension.swift */,
+				91F67AE71CB452A900241C2F /* ColoredDatePicker.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -182,8 +214,26 @@
 			isa = PBXGroup;
 			children = (
 				914C30D21CA8C57A002D5B9B /* MapVC.swift */,
+				91E225391CB31408009D7CDC /* MapVC-AddressTableViewDelegate-Extension.swift */,
+				91E225311CB05D5A009D7CDC /* MapVC-TextField-Extension.swift */,
+				91E225331CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift */,
 			);
 			name = Map;
+			sourceTree = "<group>";
+		};
+		91F67ACC1CB444A400241C2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91F67AD71CB4461B00241C2F /* Lato-Thin.ttf */,
+				91F67ADA1CB4461B00241C2F /* Lato-Bold.ttf */,
+				91F67ADB1CB4461B00241C2F /* Lato-Hairline.ttf */,
+				91F67ADD1CB4461B00241C2F /* Lato-Regular.ttf */,
+				91F67AD31CB444E300241C2F /* Simplifica.ttf */,
+				91F67ACD1CB444B800241C2F /* Glamor-Bold.otf */,
+				91F67ACF1CB444B800241C2F /* Glamor-Regular.otf */,
+				914E4D1F1CB475DA009D795E /* Glamor-BoldExtendedItalic.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +296,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				914E4D201CB475DA009D795E /* Glamor-BoldExtendedItalic.otf in Resources */,
+				91F67AD21CB444B800241C2F /* Glamor-Regular.otf in Resources */,
+				91F67AD41CB444E300241C2F /* Simplifica.ttf in Resources */,
 				910091631CA0690E004D6D78 /* LaunchScreen.storyboard in Resources */,
+				91F67AE31CB4461B00241C2F /* Lato-Bold.ttf in Resources */,
+				91F67AE41CB4461B00241C2F /* Lato-Hairline.ttf in Resources */,
+				91F67AE61CB4461B00241C2F /* Lato-Regular.ttf in Resources */,
 				910091601CA0690E004D6D78 /* Assets.xcassets in Resources */,
+				91F67AE01CB4461B00241C2F /* Lato-Thin.ttf in Resources */,
+				91F67AD01CB444B800241C2F /* Glamor-Bold.otf in Resources */,
 				9100915B1CA0690E004D6D78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,18 +334,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E2253A1CB31408009D7CDC /* MapVC-AddressTableViewDelegate-Extension.swift in Sources */,
+				91F67ACB1CB43FDF00241C2F /* UIColor+Extension.swift in Sources */,
 				913B1E391CA08F9000F8AFF7 /* TextToEnum- Extentsion.swift in Sources */,
 				913B1E311CA0743F00F8AFF7 /* ListVC.swift in Sources */,
 				914C30D31CA8C57A002D5B9B /* MapVC.swift in Sources */,
+				91E225361CB0864F009D7CDC /* CorrectAddressTableView.swift in Sources */,
 				911A9D311CA0A2DF0060DB04 /* ViewController-Conversions-Extension.swift in Sources */,
 				913B1E361CA08D3500F8AFF7 /* ViewController-Extension.swift in Sources */,
-				913B1F0B1CA1F5E000D30A7D /* CloseTask.swift in Sources */,
 				913B1E331CA088D300F8AFF7 /* NewTaskVC.swift in Sources */,
+				91F67AC91CB43E8100241C2F /* Theme.swift in Sources */,
+				91E225321CB05D5A009D7CDC /* MapVC-TextField-Extension.swift in Sources */,
+				91E225341CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift in Sources */,
 				913B1F091CA1EE4C00D30A7D /* Noun.swift in Sources */,
 				913B1E2B1CA06F3C00F8AFF7 /* Task.swift in Sources */,
 				913B1F0F1CA3779000D30A7D /* TaskMapVC.swift in Sources */,
 				913B1F031CA1DF4000D30A7D /* ListVC-LocationExtension.swift in Sources */,
 				910091561CA0690E004D6D78 /* AppDelegate.swift in Sources */,
+				91F67AE81CB452A900241C2F /* ColoredDatePicker.swift in Sources */,
 				9100915E1CA0690E004D6D78 /* Air_End.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

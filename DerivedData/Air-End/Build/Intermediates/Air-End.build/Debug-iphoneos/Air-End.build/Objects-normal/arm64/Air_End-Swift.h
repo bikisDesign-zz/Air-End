@@ -93,7 +93,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
-@import ObjectiveC;
+@import CoreGraphics;
 @import CoreLocation;
 @import MapKit;
 @import RealmSwift;
@@ -126,22 +126,57 @@ SWIFT_CLASS("_TtC7Air_End11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class MKMapItem;
+@class UIView;
+@class NSCoder;
 
-SWIFT_CLASS("_TtC7Air_End9CloseTask")
-@interface CloseTask : NSObject
-@property (nonatomic, strong) MKMapItem * _Nullable mapItem;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS("_TtC7Air_End17ColoredDatePicker")
+@interface ColoredDatePicker : UIDatePicker
+@property (nonatomic) BOOL changed;
+- (void)addSubview:(UIView * _Nonnull)view;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIViewController;
+@class CLPlacemark;
+@class UITextField;
+@class UIButton;
+
+SWIFT_CLASS("_TtC7Air_End23CorrectAddressTableView")
+@interface CorrectAddressTableView : UITableView
+@property (nonatomic, strong) UIViewController * _Nullable mainViewController;
+@property (nonatomic, copy) NSArray<NSString *> * _Null_unspecified addresses;
+@property (nonatomic, copy) NSArray<CLPlacemark *> * _Null_unspecified placemarkArray;
+@property (nonatomic, strong) UITextField * _Null_unspecified currentTextField;
+@property (nonatomic, strong) UIButton * _Null_unspecified sender;
+- (nonnull instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSIndexPath;
+@class UITableViewCell;
+
+@interface CorrectAddressTableView (SWIFT_EXTENSION(Air_End)) <UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface CorrectAddressTableView (SWIFT_EXTENSION(Air_End)) <UITableViewDelegate, UIScrollViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 @class UISegmentedControl;
-@class UITableView;
 @class Task;
+@class MKMapItem;
 @class CLLocationManager;
 @class CLLocation;
 @class UIStoryboardSegue;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC7Air_End6ListVC")
 @interface ListVC : UIViewController
@@ -168,15 +203,6 @@ SWIFT_CLASS("_TtC7Air_End6ListVC")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSIndexPath;
-@class UITableViewCell;
-
-@interface ListVC (SWIFT_EXTENSION(Air_End)) <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
-@end
-
 
 @interface ListVC (SWIFT_EXTENSION(Air_End)) <CLLocationManagerDelegate>
 - (BOOL)determineLocationAuthorizationStatus;
@@ -186,30 +212,71 @@ SWIFT_CLASS("_TtC7Air_End6ListVC")
 - (NSString * _Nullable)findClosestLocationNameForTask:(Task * _Nonnull)task;
 @end
 
+
+@interface ListVC (SWIFT_EXTENSION(Air_End)) <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (BOOL)tableView:(UITableView * _Nonnull)tableView canEditRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+@end
+
 @class MKMapView;
+@class MKUserLocation;
+@protocol MKOverlay;
+@class MKOverlayRenderer;
+@class MKRoute;
 
 SWIFT_CLASS("_TtC7Air_End5MapVC")
 @interface MapVC : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, readonly, strong) Task * _Nonnull taskManager;
 @property (nonatomic, strong) CLLocationManager * _Nonnull locationManager;
 @property (nonatomic, copy) NSDictionary<NSString *, NSArray<MKMapItem *> *> * _Nonnull closeMapItems;
-@property (nonatomic, strong) CLLocation * _Nullable currentLocation;
+@property (nonatomic, strong) MKMapItem * _Nullable userLocation;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified addDestinationButton;
+@property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified checkDestinationButton;
+@property (nonatomic, copy) IBOutletCollection(UIView) NSArray<UIView *> * _Null_unspecified enRouteOutletCollection;
+@property (nonatomic, strong) IBOutlet UIView * _Null_unspecified enRouteView;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified destinationTextField;
 @property (nonatomic, strong) IBOutlet UISegmentedControl * _Null_unspecified segmentedControl;
 @property (nonatomic, strong) IBOutlet MKMapView * _Null_unspecified taskMapView;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)setUpMapUI;
+- (void)checkDestinationUI:(BOOL)isHidden;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
-- (void)readTasks;
-- (void)findCloseLocationsMatchingNounWithDescriptor:(NSString * _Nonnull)nounDescriptor;
+- (void)mapView:(MKMapView * _Nonnull)mapView didUpdateUserLocation:(MKUserLocation * _Nonnull)userLocation;
+- (MKOverlayRenderer * _Nonnull)mapView:(MKMapView * _Nonnull)mapView rendererForOverlay:(id <MKOverlay> _Nonnull)overlay;
+- (IBAction)addDestination:(UIButton * _Nonnull)sender;
+- (IBAction)checkDestination:(UIButton * _Nonnull)sender;
+- (void)plotRouteToDestination:(NSString * _Nonnull)destination;
+- (void)plotPolyline:(MKRoute * _Nonnull)route;
+- (void)showRoute:(NSArray<MKRoute *> * _Nonnull)routes;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIDatePicker;
-@class UIView;
-@class UIButton;
-@class UITextField;
+
+@interface MapVC (SWIFT_EXTENSION(Air_End)) <UITextFieldDelegate>
+- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+@end
+
+
+@interface MapVC (SWIFT_EXTENSION(Air_End))
+- (void)searchForValidAddress:(UIButton * _Nonnull)sender destinationTextField:(UITextField * _Nonnull)destinationTextField viewController:(UIViewController * _Nonnull)viewController;
+- (void)showCorrectAddressTableView:(NSArray<NSString *> * _Nonnull)addresses textField:(UITextField * _Nonnull)textField placemarks:(NSArray<CLPlacemark *> * _Nonnull)placemarks sender:(UIButton * _Nonnull)sender viewController:(UIViewController * _Nonnull)viewController;
+- (void)didSetValidAddress:(CorrectAddressTableView * _Nonnull)sender;
+@end
+
+
+@interface MapVC (SWIFT_EXTENSION(Air_End))
+- (IBAction)segmentedControlValueChanged:(UISegmentedControl * _Nonnull)sender;
+- (void)segmentAllTasks;
+- (void)segmentCloseTasks;
+- (void)segmentEnRoute;
+@end
+
 @class NSDate;
 
 SWIFT_CLASS("_TtC7Air_End9NewTaskVC")
@@ -230,7 +297,7 @@ SWIFT_CLASS("_TtC7Air_End9NewTaskVC")
 - (void)setUpUI;
 - (void)handleSingleTap;
 - (IBAction)datePickerChanged:(UIDatePicker * _Nonnull)sender;
-- (IBAction)sendButtonWasTapped:(UIButton * _Nonnull)sender;
+- (IBAction)createNewTask:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -262,25 +329,49 @@ SWIFT_CLASS("_TtC7Air_End4Task")
 @property (nonatomic, strong) Noun * _Nullable hashtag;
 @property (nonatomic) BOOL isCompleted;
 + (NSString * _Nullable)primaryKey;
-- (void)createNewTaskWith:(NSString * _Nonnull)id name:(NSString * _Nonnull)name dueDate:(NSDate * _Nonnull)dueDate noun:(Noun * _Nonnull)noun withCompletionHandler:(void (^ _Nullable)(Task * _Nonnull))handler;
+- (void)createNewTaskWithID:(NSString * _Nonnull)id name:(NSString * _Nonnull)name dueDate:(NSDate * _Nonnull)dueDate noun:(Noun * _Nonnull)noun withCompletionHandler:(void (^ _Nullable)(Task * _Nonnull))handler;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(id _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithRealm:(RLMRealm * _Nonnull)realm schema:(RLMObjectSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithValue:(id _Nonnull)value schema:(RLMSchema * _Nonnull)schema OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UILabel;
 
 SWIFT_CLASS("_TtC7Air_End9TaskMapVC")
 @interface TaskMapVC : UIViewController
-@property (nonatomic, strong) IBOutlet UILabel * _Null_unspecified taskLabel;
 @property (nonatomic, strong) IBOutlet MKMapView * _Null_unspecified taskMapView;
+@property (nonatomic, strong) IBOutlet UIView * _Null_unspecified overlayView;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified taskTextField;
+@property (nonatomic, strong) IBOutlet UITextField * _Null_unspecified nounTextField;
 @property (nonatomic, strong) Task * _Nullable task;
 @property (nonatomic, strong) MKMapItem * _Nullable closestTask;
+@property (nonatomic, readonly, strong) CLLocationManager * _Nonnull locationManager;
 - (void)viewDidLoad;
 - (void)setUpUI;
+- (void)endEditing;
+- (void)searchForClosestAnnotationMatchingNoun:(NSString * _Nonnull)nounDescriptor;
+- (void)editTask;
+- (void)updateTask;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface TaskMapVC (SWIFT_EXTENSION(Air_End)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+@end
+
+@protocol MKAnnotation;
+@class MKAnnotationView;
+
+@interface TaskMapVC (SWIFT_EXTENSION(Air_End)) <MKMapViewDelegate>
+- (MKAnnotationView * _Nullable)mapView:(MKMapView * _Nonnull)mapView viewForAnnotation:(id <MKAnnotation> _Nonnull)annotation;
+- (void)mapView:(MKMapView * _Nonnull)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> * _Nonnull)views;
+@end
+
+
+@interface UIColor (SWIFT_EXTENSION(Air_End))
+- (nonnull instancetype)initWithR:(CGFloat)r g:(CGFloat)g b:(CGFloat)b;
 @end
 
 
@@ -298,6 +389,7 @@ SWIFT_CLASS("_TtC7Air_End9TaskMapVC")
 - (NSString * _Nonnull)convertNSDateToString:(NSDate * _Nonnull)date;
 - (NSDate * _Nonnull)convertStringToNSDate:(NSString * _Nonnull)date;
 - (MKPointAnnotation * _Nonnull)convertToAnnotationFromMapItem:(MKMapItem * _Nonnull)mapItem;
+- (NSString * _Nonnull)convertAddressFromPlacemark:(CLPlacemark * _Nonnull)placemark;
 @end
 
 @class MKLocalSearchRequest;
@@ -306,7 +398,12 @@ SWIFT_CLASS("_TtC7Air_End9TaskMapVC")
 - (NSString * _Nonnull)generateRandomPassCode;
 - (BOOL)allTextFieldsAreFilled:(NSArray<UITextField *> * _Nonnull)textFields;
 - (void)animateTextField:(UITextField * _Nonnull)textField;
+- (void)showAlert:(NSString * _Nonnull)alertString;
+- (void)hideOverlay:(BOOL)isHidden viewCollection:(NSArray<UIView *> * _Nonnull)viewCollection;
 - (MKLocalSearchRequest * _Nullable)initalizeRequestWithDescriptor:(NSString * _Nonnull)nounDescriptor location:(CLLocation * _Nullable)location;
+- (void)setRegionForUnionOfUserLocationAndTaskAnnotation:(id <MKAnnotation> _Nonnull)taskAnnotation userLocation:(CLLocation * _Nonnull)userLocation mapView:(MKMapView * _Nonnull)mapView;
+- (void)setMapRegionForMapItems:(MKMapItem * _Nullable)mapItemA mapViewA:(MKMapView * _Nullable)mapViewA;
+- (NSArray<MKMapItem *> * _Nullable)sortMapItemsCloseToUserLocation:(CLLocation * _Nullable)userLocation mapItems:(NSArray<MKMapItem *> * _Nonnull)mapItems;
 @end
 
 #pragma clang diagnostic pop

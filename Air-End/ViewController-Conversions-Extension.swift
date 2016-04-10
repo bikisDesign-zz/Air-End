@@ -33,5 +33,8 @@ extension UIViewController {
         return newAnnotation
     }
     
-    
+    func convertAddressFromPlacemark(placemark: CLPlacemark) -> String {
+        return (placemark.addressDictionary!["FormattedAddressLines"] as!
+            [String]).joinWithSeparator(", ")
+    }
 }

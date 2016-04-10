@@ -6,55 +6,60 @@ provides-nominal:
 provides-member:
 - ["C7Air_End6ListVC", ""]
 provides-dynamic-lookup:
-- "unwindToListVC"
+- "segmentDueSoon"
+- "viewWillAppear"
+- "getLocation"
 - "taskManager"
 - "locationManager"
-- "prepareForSegue"
-- "setUpUI"
 - "selectedClosestTask"
+- "setUpUI"
+- "addItemButtonWasTapped"
+- "segmentedControl"
 - "segmentCloseTasks"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
+- "segmentFullList"
+- "segmentedControlValueChanged"
 - "selectedTask"
 - "closeMapItems"
 - "currentLocation"
-- "segmentedControlValueChanged"
+- "unwindToListVC"
 - "viewDidLoad"
-- "viewWillAppear"
-- "segmentedControl"
-- "addItemButtonWasTapped"
-- "segmentDueSoon"
-- "getLocation"
-- "segmentFullList"
+- "prepareForSegue"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
 depends-top-level:
-- "ListVC"
-- !private "TaskMapVC"
-- "UITableViewDelegate"
+- !private "UIColor"
+- !private "Theme"
 - "UITableViewDataSource"
-- "String"
-- "UITableViewCell"
+- !private "assertionFailure"
+- "NSIndexPath"
+- !private "TaskMapVC"
+- !private "!="
 - !private "UIBarButtonItem"
+- "UITableViewDelegate"
+- "Bool"
+- "Int"
 - "Results"
 - "Task"
-- "Bool"
-- "NSIndexPath"
-- !private "assertionFailure"
-- !private "BooleanLiteralType"
-- !private "!="
-- "AnyObject"
-- "UISegmentedControl"
-- "UITableView"
-- "UIViewController"
 - !private "=="
+- "AnyObject"
+- "UITableViewCell"
+- !private "StringLiteralType"
+- "UITableView"
+- "String"
+- !private "~="
+- !private "BooleanLiteralType"
+- "UIViewController"
 - "MKMapItem"
 - "CLLocationManager"
+- "ListVC"
 - "CLLocation"
-- !private "StringLiteralType"
+- "UISegmentedControl"
+- "CGFloat"
 - "UIStoryboardSegue"
-- !private "~="
-- "Int"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -69,11 +74,14 @@ depends-member:
 - ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "SubSequence"]
 - ["Ps9AnyObject", "Task"]
+- !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIBarButtonItem"]
+- !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UITableView"]
 - !private ["Ps9AnyObject", "_Element"]
 - ["Ps9AnyObject", "addItemButtonWasTapped"]
 - !private ["Ps9AnyObject", "assertionFailure"]
+- !private ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "closeMapItems"]
 - !private ["Ps9AnyObject", "closestTask"]
 - !private ["Ps9AnyObject", "convertNSDateToString"]
@@ -124,6 +132,8 @@ depends-member:
 - ["Ps9AnyObject", "selectedClosestTask"]
 - !private ["Ps9AnyObject", "selectedSegmentIndex"]
 - ["Ps9AnyObject", "selectedTask"]
+- !private ["Ps9AnyObject", "selectionStyle"]
+- !private ["Ps9AnyObject", "separatorColor"]
 - ["Ps9AnyObject", "setUpUI"]
 - !private ["Ps9AnyObject", "subscript"]
 - ["Ps9AnyObject", "tableView"]
@@ -131,12 +141,14 @@ depends-member:
 - ["Ps9AnyObject", "taskManager"]
 - ["Ps9AnyObject", "tasks"]
 - !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textColor"]
 - !private ["Ps9AnyObject", "textLabel"]
 - !private ["Ps9AnyObject", "title"]
 - ["Ps9AnyObject", "unwindToListVC"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewForZoomingInScrollView"]
 - ["Ps9AnyObject", "viewWillAppear"]
+- !private ["Ps9AnyObject", "whiteColor"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
@@ -159,6 +171,7 @@ depends-member:
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["CSo17CLLocationManager", "delegate"]
 - ["CSo17CLLocationManager", "init"]
 - ["PSo25CLLocationManagerDelegate", "CLLocationManager"]
@@ -166,11 +179,14 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "SegueIdentifier"]
 - ["PSo25CLLocationManagerDelegate", "String"]
 - ["PSo25CLLocationManagerDelegate", "Task"]
+- !private ["PSo25CLLocationManagerDelegate", "Theme"]
 - !private ["PSo25CLLocationManagerDelegate", "UIBarButtonItem"]
+- !private ["PSo25CLLocationManagerDelegate", "UIColor"]
 - !private ["PSo25CLLocationManagerDelegate", "UITableView"]
 - !private ["PSo25CLLocationManagerDelegate", "addItemButtonWasTapped"]
 - !private ["PSo25CLLocationManagerDelegate", "assertionFailure"]
 - !private ["PSo25CLLocationManagerDelegate", "closeMapItems"]
+- !private ["PSo25CLLocationManagerDelegate", "closestTask"]
 - !private ["PSo25CLLocationManagerDelegate", "convertNSDateToString"]
 - !private ["PSo25CLLocationManagerDelegate", "determineLocationAuthorizationStatus"]
 - !private ["PSo25CLLocationManagerDelegate", "findCloseLocationsMatchingNoun"]
@@ -202,6 +218,7 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "selectedTask"]
 - !private ["PSo25CLLocationManagerDelegate", "setUpUI"]
 - ["PSo25CLLocationManagerDelegate", "tableView"]
+- !private ["PSo25CLLocationManagerDelegate", "task"]
 - !private ["PSo25CLLocationManagerDelegate", "taskManager"]
 - !private ["PSo25CLLocationManagerDelegate", "tasks"]
 - ["PSo25CLLocationManagerDelegate", "viewForZoomingInScrollView"]
@@ -216,12 +233,15 @@ depends-member:
 - ["Ps11CVarArgType", "String"]
 - !private ["Ps11CVarArgType", "SubSequence"]
 - ["Ps11CVarArgType", "Task"]
+- !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIBarButtonItem"]
+- !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UITableView"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "_Element"]
 - ["Ps11CVarArgType", "addItemButtonWasTapped"]
 - !private ["Ps11CVarArgType", "assertionFailure"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
 - ["Ps11CVarArgType", "closeMapItems"]
 - !private ["Ps11CVarArgType", "closestTask"]
 - !private ["Ps11CVarArgType", "convertNSDateToString"]
@@ -266,6 +286,8 @@ depends-member:
 - ["Ps11CVarArgType", "selectedClosestTask"]
 - !private ["Ps11CVarArgType", "selectedSegmentIndex"]
 - ["Ps11CVarArgType", "selectedTask"]
+- !private ["Ps11CVarArgType", "selectionStyle"]
+- !private ["Ps11CVarArgType", "separatorColor"]
 - ["Ps11CVarArgType", "setUpUI"]
 - !private ["Ps11CVarArgType", "subscript"]
 - ["Ps11CVarArgType", "tableView"]
@@ -273,12 +295,14 @@ depends-member:
 - ["Ps11CVarArgType", "taskManager"]
 - ["Ps11CVarArgType", "tasks"]
 - !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "textColor"]
 - !private ["Ps11CVarArgType", "textLabel"]
 - !private ["Ps11CVarArgType", "title"]
 - ["Ps11CVarArgType", "unwindToListVC"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", "viewForZoomingInScrollView"]
 - ["Ps11CVarArgType", "viewWillAppear"]
+- !private ["Ps11CVarArgType", "whiteColor"]
 - ["Ps11CVarArgType", ""]
 - !private ["OE7Air_EndCSo11UITableView14CellIdentifier", "ListCell"]
 - !private ["Ps14CollectionType", "Generator"]
@@ -289,6 +313,10 @@ depends-member:
 - !private ["Ps14CollectionType", "first"]
 - ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "subscript"]
+- !private ["OV7Air_End5Theme6Colors", "BackgroundColor"]
+- !private ["OV7Air_End5Theme6Colors", "LightForegroundColor"]
+- !private ["OV7Air_End5Theme6Colors", "NavigationBarColor"]
+- !private ["OV7Air_End5Theme6Colors", "color"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
@@ -302,11 +330,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - ["Ps28CustomDebugStringConvertible", "Task"]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UITableView"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - ["Ps28CustomDebugStringConvertible", "addItemButtonWasTapped"]
 - !private ["Ps28CustomDebugStringConvertible", "assertionFailure"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - ["Ps28CustomDebugStringConvertible", "closeMapItems"]
 - !private ["Ps28CustomDebugStringConvertible", "closestTask"]
 - !private ["Ps28CustomDebugStringConvertible", "convertNSDateToString"]
@@ -352,6 +383,8 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "selectedClosestTask"]
 - !private ["Ps28CustomDebugStringConvertible", "selectedSegmentIndex"]
 - ["Ps28CustomDebugStringConvertible", "selectedTask"]
+- !private ["Ps28CustomDebugStringConvertible", "selectionStyle"]
+- !private ["Ps28CustomDebugStringConvertible", "separatorColor"]
 - ["Ps28CustomDebugStringConvertible", "setUpUI"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -359,12 +392,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "taskManager"]
 - ["Ps28CustomDebugStringConvertible", "tasks"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textColor"]
 - !private ["Ps28CustomDebugStringConvertible", "textLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
 - ["Ps28CustomDebugStringConvertible", "unwindToListVC"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
+- !private ["Ps28CustomDebugStringConvertible", "whiteColor"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps23CustomStringConvertible", "CLLocationManager"]
 - !private ["Ps23CustomStringConvertible", "CellIdentifier"]
@@ -377,13 +412,16 @@ depends-member:
 - ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - ["Ps23CustomStringConvertible", "Task"]
+- !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UITableView"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "addItemButtonWasTapped"]
 - !private ["Ps23CustomStringConvertible", "assertionFailure"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - ["Ps23CustomStringConvertible", "closeMapItems"]
 - !private ["Ps23CustomStringConvertible", "closestTask"]
 - !private ["Ps23CustomStringConvertible", "convertNSDateToString"]
@@ -429,6 +467,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "selectedClosestTask"]
 - !private ["Ps23CustomStringConvertible", "selectedSegmentIndex"]
 - ["Ps23CustomStringConvertible", "selectedTask"]
+- !private ["Ps23CustomStringConvertible", "selectionStyle"]
+- !private ["Ps23CustomStringConvertible", "separatorColor"]
 - ["Ps23CustomStringConvertible", "setUpUI"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -436,12 +476,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "taskManager"]
 - ["Ps23CustomStringConvertible", "tasks"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textColor"]
 - !private ["Ps23CustomStringConvertible", "textLabel"]
 - !private ["Ps23CustomStringConvertible", "title"]
 - ["Ps23CustomStringConvertible", "unwindToListVC"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewForZoomingInScrollView"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
+- !private ["Ps23CustomStringConvertible", "whiteColor"]
 - ["Ps23CustomStringConvertible", ""]
 - ["Vs10Dictionary", "init"]
 - !private ["Vs10Dictionary", "subscript"]
@@ -449,29 +491,37 @@ depends-member:
 - !private ["Ps28DictionaryLiteralConvertible", "subscript"]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Add"]
+- !private ["Ps9Equatable", "BackgroundColor"]
 - ["Ps9Equatable", "CLLocationManager"]
 - !private ["Ps9Equatable", "CellIdentifier"]
 - !private ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "Generator"]
 - !private ["Ps9Equatable", "Index"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "LightForegroundColor"]
 - !private ["Ps9Equatable", "ListCell"]
 - ["Ps9Equatable", "MKMapItem"]
+- !private ["Ps9Equatable", "NavigationBarColor"]
+- !private ["Ps9Equatable", "None"]
 - !private ["Ps9Equatable", "SegueIdentifier"]
 - !private ["Ps9Equatable", "SegueToMapTaskVC"]
 - !private ["Ps9Equatable", "SegueToNewTaskVC"]
 - ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "SubSequence"]
 - ["Ps9Equatable", "Task"]
+- !private ["Ps9Equatable", "Theme"]
 - !private ["Ps9Equatable", "UIBarButtonItem"]
+- !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UITableView"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "addItemButtonWasTapped"]
 - !private ["Ps9Equatable", "assertionFailure"]
+- !private ["Ps9Equatable", "backgroundColor"]
 - ["Ps9Equatable", "closeMapItems"]
 - !private ["Ps9Equatable", "closestTask"]
+- !private ["Ps9Equatable", "color"]
 - !private ["Ps9Equatable", "convertNSDateToString"]
 - !private ["Ps9Equatable", "count"]
 - ["Ps9Equatable", "currentLocation"]
@@ -514,6 +564,8 @@ depends-member:
 - ["Ps9Equatable", "selectedClosestTask"]
 - !private ["Ps9Equatable", "selectedSegmentIndex"]
 - ["Ps9Equatable", "selectedTask"]
+- !private ["Ps9Equatable", "selectionStyle"]
+- !private ["Ps9Equatable", "separatorColor"]
 - ["Ps9Equatable", "setUpUI"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
@@ -521,41 +573,51 @@ depends-member:
 - ["Ps9Equatable", "taskManager"]
 - ["Ps9Equatable", "tasks"]
 - !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textColor"]
 - !private ["Ps9Equatable", "textLabel"]
 - !private ["Ps9Equatable", "title"]
 - ["Ps9Equatable", "unwindToListVC"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
 - ["Ps9Equatable", "viewWillAppear"]
+- !private ["Ps9Equatable", "whiteColor"]
 - ["Ps9Equatable", ""]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "Add"]
+- !private ["Ps8Hashable", "BackgroundColor"]
 - ["Ps8Hashable", "CLLocationManager"]
 - !private ["Ps8Hashable", "CellIdentifier"]
 - !private ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "Generator"]
 - !private ["Ps8Hashable", "Index"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "LightForegroundColor"]
 - !private ["Ps8Hashable", "ListCell"]
 - ["Ps8Hashable", "MKMapItem"]
+- !private ["Ps8Hashable", "NavigationBarColor"]
+- !private ["Ps8Hashable", "None"]
 - !private ["Ps8Hashable", "SegueIdentifier"]
 - !private ["Ps8Hashable", "SegueToMapTaskVC"]
 - !private ["Ps8Hashable", "SegueToNewTaskVC"]
 - ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "SubSequence"]
 - ["Ps8Hashable", "Task"]
+- !private ["Ps8Hashable", "Theme"]
 - !private ["Ps8Hashable", "UIBarButtonItem"]
+- !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UITableView"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_Element"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "addItemButtonWasTapped"]
 - !private ["Ps8Hashable", "assertionFailure"]
+- !private ["Ps8Hashable", "backgroundColor"]
 - ["Ps8Hashable", "closeMapItems"]
 - !private ["Ps8Hashable", "closestTask"]
+- !private ["Ps8Hashable", "color"]
 - !private ["Ps8Hashable", "convertNSDateToString"]
 - !private ["Ps8Hashable", "count"]
 - ["Ps8Hashable", "currentLocation"]
@@ -598,6 +660,8 @@ depends-member:
 - ["Ps8Hashable", "selectedClosestTask"]
 - !private ["Ps8Hashable", "selectedSegmentIndex"]
 - ["Ps8Hashable", "selectedTask"]
+- !private ["Ps8Hashable", "selectionStyle"]
+- !private ["Ps8Hashable", "separatorColor"]
 - ["Ps8Hashable", "setUpUI"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
@@ -605,12 +669,14 @@ depends-member:
 - ["Ps8Hashable", "taskManager"]
 - ["Ps8Hashable", "tasks"]
 - !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textColor"]
 - !private ["Ps8Hashable", "textLabel"]
 - !private ["Ps8Hashable", "title"]
 - ["Ps8Hashable", "unwindToListVC"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewForZoomingInScrollView"]
 - ["Ps8Hashable", "viewWillAppear"]
+- !private ["Ps8Hashable", "whiteColor"]
 - ["Ps8Hashable", ""]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
@@ -636,6 +702,7 @@ depends-member:
 - !private ["Ps11IntegerType", "_DisabledRangeIndex"]
 - ["C7Air_End6ListVC", "AnyObject"]
 - ["C7Air_End6ListVC", "Bool"]
+- ["C7Air_End6ListVC", "CGFloat"]
 - ["C7Air_End6ListVC", "CLLocation"]
 - ["C7Air_End6ListVC", "CLLocationManager"]
 - ["C7Air_End6ListVC", "Int"]
@@ -646,7 +713,9 @@ depends-member:
 - ["C7Air_End6ListVC", "String"]
 - ["C7Air_End6ListVC", "Task"]
 - !private ["C7Air_End6ListVC", "TaskMapVC"]
+- !private ["C7Air_End6ListVC", "Theme"]
 - !private ["C7Air_End6ListVC", "UIBarButtonItem"]
+- !private ["C7Air_End6ListVC", "UIColor"]
 - ["C7Air_End6ListVC", "UISegmentedControl"]
 - ["C7Air_End6ListVC", "UIStoryboardSegue"]
 - ["C7Air_End6ListVC", "UITableView"]
@@ -696,6 +765,8 @@ depends-member:
 - ["C7Air_End6ListVC", "viewDidLoad"]
 - ["C7Air_End6ListVC", "viewForZoomingInScrollView"]
 - ["C7Air_End6ListVC", "viewWillAppear"]
+- !private ["PSo17MKMapViewDelegate", "closestTask"]
+- !private ["PSo17MKMapViewDelegate", "task"]
 - !private ["P10RealmSwift10MinMaxType", "Distance"]
 - !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
 - !private ["P10RealmSwift10MinMaxType", "_DisabledRangeIndex"]
@@ -723,10 +794,13 @@ depends-member:
 - !private ["PSo8NSCoding", "SegueIdentifier"]
 - ["PSo8NSCoding", "String"]
 - ["PSo8NSCoding", "Task"]
+- !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIBarButtonItem"]
+- !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UITableView"]
 - ["PSo8NSCoding", "addItemButtonWasTapped"]
 - !private ["PSo8NSCoding", "assertionFailure"]
+- !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "closeMapItems"]
 - !private ["PSo8NSCoding", "closestTask"]
 - !private ["PSo8NSCoding", "convertNSDateToString"]
@@ -768,26 +842,33 @@ depends-member:
 - ["PSo8NSCoding", "selectedClosestTask"]
 - !private ["PSo8NSCoding", "selectedSegmentIndex"]
 - ["PSo8NSCoding", "selectedTask"]
+- !private ["PSo8NSCoding", "selectionStyle"]
+- !private ["PSo8NSCoding", "separatorColor"]
 - ["PSo8NSCoding", "setUpUI"]
 - ["PSo8NSCoding", "tableView"]
 - !private ["PSo8NSCoding", "task"]
 - ["PSo8NSCoding", "taskManager"]
 - ["PSo8NSCoding", "tasks"]
 - !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "textLabel"]
 - !private ["PSo8NSCoding", "title"]
 - ["PSo8NSCoding", "unwindToListVC"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewForZoomingInScrollView"]
 - ["PSo8NSCoding", "viewWillAppear"]
+- !private ["PSo8NSCoding", "whiteColor"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "row"]
+- !private ["PSo9NSCopying", "whiteColor"]
 - ["PSo26NSExtensionRequestHandling", "CLLocationManager"]
 - ["PSo26NSExtensionRequestHandling", "MKMapItem"]
 - !private ["PSo26NSExtensionRequestHandling", "SegueIdentifier"]
 - ["PSo26NSExtensionRequestHandling", "String"]
 - ["PSo26NSExtensionRequestHandling", "Task"]
+- !private ["PSo26NSExtensionRequestHandling", "Theme"]
 - !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
+- !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UITableView"]
 - ["PSo26NSExtensionRequestHandling", "addItemButtonWasTapped"]
 - !private ["PSo26NSExtensionRequestHandling", "assertionFailure"]
@@ -846,6 +927,7 @@ depends-member:
 - !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "CGFloat"]
 - ["CSo8NSObject", "CLLocation"]
 - ["CSo8NSObject", "CLLocationManager"]
 - !private ["CSo8NSObject", "CellIdentifier"]
@@ -860,7 +942,9 @@ depends-member:
 - !private ["CSo8NSObject", "SubSequence"]
 - ["CSo8NSObject", "Task"]
 - !private ["CSo8NSObject", "TaskMapVC"]
+- !private ["CSo8NSObject", "Theme"]
 - !private ["CSo8NSObject", "UIBarButtonItem"]
+- !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UISegmentedControl"]
 - ["CSo8NSObject", "UIStoryboardSegue"]
 - ["CSo8NSObject", "UITableView"]
@@ -868,6 +952,7 @@ depends-member:
 - !private ["CSo8NSObject", "_Element"]
 - ["CSo8NSObject", "addItemButtonWasTapped"]
 - !private ["CSo8NSObject", "assertionFailure"]
+- !private ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "closeMapItems"]
 - !private ["CSo8NSObject", "closestTask"]
 - !private ["CSo8NSObject", "convertNSDateToString"]
@@ -919,6 +1004,8 @@ depends-member:
 - ["CSo8NSObject", "selectedClosestTask"]
 - !private ["CSo8NSObject", "selectedSegmentIndex"]
 - ["CSo8NSObject", "selectedTask"]
+- !private ["CSo8NSObject", "selectionStyle"]
+- !private ["CSo8NSObject", "separatorColor"]
 - ["CSo8NSObject", "setUpUI"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "tableView"]
@@ -926,12 +1013,14 @@ depends-member:
 - ["CSo8NSObject", "taskManager"]
 - ["CSo8NSObject", "tasks"]
 - !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "textLabel"]
 - !private ["CSo8NSObject", "title"]
 - ["CSo8NSObject", "unwindToListVC"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewForZoomingInScrollView"]
 - ["CSo8NSObject", "viewWillAppear"]
+- !private ["CSo8NSObject", "whiteColor"]
 - ["PSo16NSObjectProtocol", "CLLocationManager"]
 - !private ["PSo16NSObjectProtocol", "CellIdentifier"]
 - !private ["PSo16NSObjectProtocol", "Generator"]
@@ -941,11 +1030,14 @@ depends-member:
 - ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "SubSequence"]
 - ["PSo16NSObjectProtocol", "Task"]
+- !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UITableView"]
 - !private ["PSo16NSObjectProtocol", "_Element"]
 - ["PSo16NSObjectProtocol", "addItemButtonWasTapped"]
 - !private ["PSo16NSObjectProtocol", "assertionFailure"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "closeMapItems"]
 - !private ["PSo16NSObjectProtocol", "closestTask"]
 - !private ["PSo16NSObjectProtocol", "convertNSDateToString"]
@@ -990,6 +1082,8 @@ depends-member:
 - ["PSo16NSObjectProtocol", "selectedClosestTask"]
 - !private ["PSo16NSObjectProtocol", "selectedSegmentIndex"]
 - ["PSo16NSObjectProtocol", "selectedTask"]
+- !private ["PSo16NSObjectProtocol", "selectionStyle"]
+- !private ["PSo16NSObjectProtocol", "separatorColor"]
 - ["PSo16NSObjectProtocol", "setUpUI"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "tableView"]
@@ -997,14 +1091,17 @@ depends-member:
 - ["PSo16NSObjectProtocol", "taskManager"]
 - ["PSo16NSObjectProtocol", "tasks"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "textLabel"]
 - !private ["PSo16NSObjectProtocol", "title"]
 - ["PSo16NSObjectProtocol", "unwindToListVC"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewForZoomingInScrollView"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
+- !private ["PSo16NSObjectProtocol", "whiteColor"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "row"]
+- !private ["PSo14NSSecureCoding", "whiteColor"]
 - !private ["CSo7NSValue", "deinit"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - !private ["C7Air_End4Noun", "descriptor"]
@@ -1036,6 +1133,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "first"]
 - !private ["Ps16RawRepresentable", "Add"]
 - !private ["Ps16RawRepresentable", "ListCell"]
+- !private ["Ps16RawRepresentable", "None"]
 - !private ["Ps16RawRepresentable", "SegueToMapTaskVC"]
 - !private ["Ps16RawRepresentable", "SegueToNewTaskVC"]
 - !private ["P10RealmSwift19RealmCollectionType", "Generator"]
@@ -1094,21 +1192,30 @@ depends-member:
 - !private ["C7Air_End4Task", "readTasksDueSoon"]
 - !private ["C7Air_End9TaskMapVC", "closestTask"]
 - !private ["C7Air_End9TaskMapVC", "task"]
+- !private ["V7Air_End5Theme", "Colors"]
 - !private ["PSo29UIAccessibilityIdentification", "CellIdentifier"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "detailTextLabel"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo29UIAccessibilityIdentification", "selectedSegmentIndex"]
+- !private ["PSo29UIAccessibilityIdentification", "selectionStyle"]
+- !private ["PSo29UIAccessibilityIdentification", "separatorColor"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
 - !private ["PSo12UIAppearance", "CellIdentifier"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo12UIAppearance", "detailTextLabel"]
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo12UIAppearance", "selectedSegmentIndex"]
+- !private ["PSo12UIAppearance", "selectionStyle"]
+- !private ["PSo12UIAppearance", "separatorColor"]
 - !private ["PSo12UIAppearance", "text"]
+- !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "textLabel"]
 - ["PSo21UIAppearanceContainer", "CLLocationManager"]
 - !private ["PSo21UIAppearanceContainer", "CellIdentifier"]
@@ -1116,10 +1223,13 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "SegueIdentifier"]
 - ["PSo21UIAppearanceContainer", "String"]
 - ["PSo21UIAppearanceContainer", "Task"]
+- !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UITableView"]
 - ["PSo21UIAppearanceContainer", "addItemButtonWasTapped"]
 - !private ["PSo21UIAppearanceContainer", "assertionFailure"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
 - ["PSo21UIAppearanceContainer", "closeMapItems"]
 - !private ["PSo21UIAppearanceContainer", "closestTask"]
 - !private ["PSo21UIAppearanceContainer", "convertNSDateToString"]
@@ -1159,12 +1269,15 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "selectedClosestTask"]
 - !private ["PSo21UIAppearanceContainer", "selectedSegmentIndex"]
 - ["PSo21UIAppearanceContainer", "selectedTask"]
+- !private ["PSo21UIAppearanceContainer", "selectionStyle"]
+- !private ["PSo21UIAppearanceContainer", "separatorColor"]
 - ["PSo21UIAppearanceContainer", "setUpUI"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "task"]
 - ["PSo21UIAppearanceContainer", "taskManager"]
 - ["PSo21UIAppearanceContainer", "tasks"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "textLabel"]
 - ["PSo21UIAppearanceContainer", "unwindToListVC"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
@@ -1174,12 +1287,15 @@ depends-member:
 - !private ["CSo15UIBarButtonItem", "init"]
 - !private ["OSC21UIBarButtonSystemItem", "Add"]
 - !private ["CSo9UIBarItem", "init"]
+- !private ["CSo7UIColor", "whiteColor"]
 - ["PSo18UIContentContainer", "CLLocationManager"]
 - ["PSo18UIContentContainer", "MKMapItem"]
 - !private ["PSo18UIContentContainer", "SegueIdentifier"]
 - ["PSo18UIContentContainer", "String"]
 - ["PSo18UIContentContainer", "Task"]
+- !private ["PSo18UIContentContainer", "Theme"]
 - !private ["PSo18UIContentContainer", "UIBarButtonItem"]
+- !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UITableView"]
 - ["PSo18UIContentContainer", "addItemButtonWasTapped"]
 - !private ["PSo18UIContentContainer", "assertionFailure"]
@@ -1230,18 +1346,26 @@ depends-member:
 - ["PSo18UIContentContainer", ""]
 - !private ["CSo9UIControl", "selectedSegmentIndex"]
 - !private ["PSo17UICoordinateSpace", "CellIdentifier"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo17UICoordinateSpace", "detailTextLabel"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo17UICoordinateSpace", "selectedSegmentIndex"]
+- !private ["PSo17UICoordinateSpace", "selectionStyle"]
+- !private ["PSo17UICoordinateSpace", "separatorColor"]
 - !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo17UICoordinateSpace", "textColor"]
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "CellIdentifier"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo13UIDynamicItem", "detailTextLabel"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo13UIDynamicItem", "selectedSegmentIndex"]
+- !private ["PSo13UIDynamicItem", "selectionStyle"]
+- !private ["PSo13UIDynamicItem", "separatorColor"]
 - !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
 - ["PSo18UIFocusEnvironment", "CLLocationManager"]
 - !private ["PSo18UIFocusEnvironment", "CellIdentifier"]
@@ -1249,10 +1373,13 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "SegueIdentifier"]
 - ["PSo18UIFocusEnvironment", "String"]
 - ["PSo18UIFocusEnvironment", "Task"]
+- !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UITableView"]
 - ["PSo18UIFocusEnvironment", "addItemButtonWasTapped"]
 - !private ["PSo18UIFocusEnvironment", "assertionFailure"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
 - ["PSo18UIFocusEnvironment", "closeMapItems"]
 - !private ["PSo18UIFocusEnvironment", "closestTask"]
 - !private ["PSo18UIFocusEnvironment", "convertNSDateToString"]
@@ -1292,25 +1419,32 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "selectedClosestTask"]
 - !private ["PSo18UIFocusEnvironment", "selectedSegmentIndex"]
 - ["PSo18UIFocusEnvironment", "selectedTask"]
+- !private ["PSo18UIFocusEnvironment", "selectionStyle"]
+- !private ["PSo18UIFocusEnvironment", "separatorColor"]
 - ["PSo18UIFocusEnvironment", "setUpUI"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "task"]
 - ["PSo18UIFocusEnvironment", "taskManager"]
 - ["PSo18UIFocusEnvironment", "tasks"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "textLabel"]
 - ["PSo18UIFocusEnvironment", "unwindToListVC"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewForZoomingInScrollView"]
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo27UIGestureRecognizerDelegate", "backgroundColor"]
 - !private ["PSo27UIGestureRecognizerDelegate", "detailTextLabel"]
+- !private ["PSo27UIGestureRecognizerDelegate", "selectionStyle"]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
 - !private ["CSo7UILabel", "text"]
+- !private ["CSo7UILabel", "textColor"]
 - !private ["CSo16UINavigationItem", "rightBarButtonItem"]
 - !private ["CSo16UINavigationItem", "title"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "CGFloat"]
 - ["CSo11UIResponder", "CLLocation"]
 - ["CSo11UIResponder", "CLLocationManager"]
 - !private ["CSo11UIResponder", "CellIdentifier"]
@@ -1322,13 +1456,16 @@ depends-member:
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "Task"]
 - !private ["CSo11UIResponder", "TaskMapVC"]
+- !private ["CSo11UIResponder", "Theme"]
 - !private ["CSo11UIResponder", "UIBarButtonItem"]
+- !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UISegmentedControl"]
 - ["CSo11UIResponder", "UIStoryboardSegue"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "addItemButtonWasTapped"]
 - !private ["CSo11UIResponder", "assertionFailure"]
+- !private ["CSo11UIResponder", "backgroundColor"]
 - ["CSo11UIResponder", "closeMapItems"]
 - !private ["CSo11UIResponder", "closestTask"]
 - !private ["CSo11UIResponder", "convertNSDateToString"]
@@ -1368,26 +1505,33 @@ depends-member:
 - ["CSo11UIResponder", "selectedClosestTask"]
 - !private ["CSo11UIResponder", "selectedSegmentIndex"]
 - ["CSo11UIResponder", "selectedTask"]
+- !private ["CSo11UIResponder", "selectionStyle"]
+- !private ["CSo11UIResponder", "separatorColor"]
 - ["CSo11UIResponder", "setUpUI"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "task"]
 - ["CSo11UIResponder", "taskManager"]
 - ["CSo11UIResponder", "tasks"]
 - !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "textColor"]
 - !private ["CSo11UIResponder", "textLabel"]
 - ["CSo11UIResponder", "unwindToListVC"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewForZoomingInScrollView"]
 - ["CSo11UIResponder", "viewWillAppear"]
 - !private ["CSo12UIScrollView", "CellIdentifier"]
+- !private ["CSo12UIScrollView", "backgroundColor"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithCellIdentifier"]
 - !private ["CSo12UIScrollView", "reloadData"]
+- !private ["CSo12UIScrollView", "separatorColor"]
 - ["PSo20UIScrollViewDelegate", "CLLocationManager"]
 - ["PSo20UIScrollViewDelegate", "MKMapItem"]
 - !private ["PSo20UIScrollViewDelegate", "SegueIdentifier"]
 - ["PSo20UIScrollViewDelegate", "String"]
 - ["PSo20UIScrollViewDelegate", "Task"]
+- !private ["PSo20UIScrollViewDelegate", "Theme"]
 - !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
+- !private ["PSo20UIScrollViewDelegate", "UIColor"]
 - !private ["PSo20UIScrollViewDelegate", "UITableView"]
 - !private ["PSo20UIScrollViewDelegate", "addItemButtonWasTapped"]
 - !private ["PSo20UIScrollViewDelegate", "assertionFailure"]
@@ -1433,7 +1577,9 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "SegueIdentifier"]
 - ["PSo16UIStateRestoring", "String"]
 - ["PSo16UIStateRestoring", "Task"]
+- !private ["PSo16UIStateRestoring", "Theme"]
 - !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
+- !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UITableView"]
 - ["PSo16UIStateRestoring", "addItemButtonWasTapped"]
 - !private ["PSo16UIStateRestoring", "assertionFailure"]
@@ -1484,16 +1630,23 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo17UIStoryboardSegue", "destinationViewController"]
 - !private ["CSo11UITableView", "CellIdentifier"]
+- !private ["CSo11UITableView", "backgroundColor"]
 - !private ["CSo11UITableView", "dequeueReusableCellWithCellIdentifier"]
 - !private ["CSo11UITableView", "reloadData"]
+- !private ["CSo11UITableView", "separatorColor"]
+- !private ["CSo15UITableViewCell", "backgroundColor"]
 - !private ["CSo15UITableViewCell", "detailTextLabel"]
+- !private ["CSo15UITableViewCell", "selectionStyle"]
 - !private ["CSo15UITableViewCell", "textLabel"]
+- !private ["OSC29UITableViewCellSelectionStyle", "None"]
 - ["PSo21UITableViewDataSource", "CLLocationManager"]
 - ["PSo21UITableViewDataSource", "MKMapItem"]
 - !private ["PSo21UITableViewDataSource", "SegueIdentifier"]
 - ["PSo21UITableViewDataSource", "String"]
 - ["PSo21UITableViewDataSource", "Task"]
+- !private ["PSo21UITableViewDataSource", "Theme"]
 - !private ["PSo21UITableViewDataSource", "UIBarButtonItem"]
+- !private ["PSo21UITableViewDataSource", "UIColor"]
 - !private ["PSo21UITableViewDataSource", "UITableView"]
 - !private ["PSo21UITableViewDataSource", "addItemButtonWasTapped"]
 - !private ["PSo21UITableViewDataSource", "assertionFailure"]
@@ -1538,7 +1691,9 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "SegueIdentifier"]
 - ["PSo19UITableViewDelegate", "String"]
 - ["PSo19UITableViewDelegate", "Task"]
+- !private ["PSo19UITableViewDelegate", "Theme"]
 - !private ["PSo19UITableViewDelegate", "UIBarButtonItem"]
+- !private ["PSo19UITableViewDelegate", "UIColor"]
 - !private ["PSo19UITableViewDelegate", "UITableView"]
 - !private ["PSo19UITableViewDelegate", "addItemButtonWasTapped"]
 - !private ["PSo19UITableViewDelegate", "assertionFailure"]
@@ -1584,10 +1739,13 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "SegueIdentifier"]
 - ["PSo18UITraitEnvironment", "String"]
 - ["PSo18UITraitEnvironment", "Task"]
+- !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UITableView"]
 - ["PSo18UITraitEnvironment", "addItemButtonWasTapped"]
 - !private ["PSo18UITraitEnvironment", "assertionFailure"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
 - ["PSo18UITraitEnvironment", "closeMapItems"]
 - !private ["PSo18UITraitEnvironment", "closestTask"]
 - !private ["PSo18UITraitEnvironment", "convertNSDateToString"]
@@ -1627,12 +1785,15 @@ depends-member:
 - ["PSo18UITraitEnvironment", "selectedClosestTask"]
 - !private ["PSo18UITraitEnvironment", "selectedSegmentIndex"]
 - ["PSo18UITraitEnvironment", "selectedTask"]
+- !private ["PSo18UITraitEnvironment", "selectionStyle"]
+- !private ["PSo18UITraitEnvironment", "separatorColor"]
 - ["PSo18UITraitEnvironment", "setUpUI"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "task"]
 - ["PSo18UITraitEnvironment", "taskManager"]
 - ["PSo18UITraitEnvironment", "tasks"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textColor"]
 - !private ["PSo18UITraitEnvironment", "textLabel"]
 - ["PSo18UITraitEnvironment", "unwindToListVC"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
@@ -1640,14 +1801,19 @@ depends-member:
 - ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "CellIdentifier"]
+- !private ["CSo6UIView", "backgroundColor"]
 - !private ["CSo6UIView", "dequeueReusableCellWithCellIdentifier"]
 - !private ["CSo6UIView", "detailTextLabel"]
 - !private ["CSo6UIView", "reloadData"]
 - !private ["CSo6UIView", "selectedSegmentIndex"]
+- !private ["CSo6UIView", "selectionStyle"]
+- !private ["CSo6UIView", "separatorColor"]
 - !private ["CSo6UIView", "text"]
+- !private ["CSo6UIView", "textColor"]
 - !private ["CSo6UIView", "textLabel"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "CGFloat"]
 - ["CSo16UIViewController", "CLLocation"]
 - ["CSo16UIViewController", "CLLocationManager"]
 - ["CSo16UIViewController", "Int"]
@@ -1658,7 +1824,9 @@ depends-member:
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "Task"]
 - !private ["CSo16UIViewController", "TaskMapVC"]
+- !private ["CSo16UIViewController", "Theme"]
 - !private ["CSo16UIViewController", "UIBarButtonItem"]
+- !private ["CSo16UIViewController", "UIColor"]
 - ["CSo16UIViewController", "UISegmentedControl"]
 - ["CSo16UIViewController", "UIStoryboardSegue"]
 - ["CSo16UIViewController", "UITableView"]
@@ -1720,6 +1888,7 @@ depends-member:
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
+- !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
@@ -1759,14 +1928,18 @@ depends-member:
 - !private ["Ps12_Reflectable", "_DisabledRangeIndex"]
 - !private ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "backgroundColor"]
 - !private ["Ps12_Reflectable", "dequeueReusableCellWithCellIdentifier"]
 - !private ["Ps12_Reflectable", "detailTextLabel"]
 - !private ["Ps12_Reflectable", "first"]
 - ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "reloadData"]
 - !private ["Ps12_Reflectable", "selectedSegmentIndex"]
+- !private ["Ps12_Reflectable", "selectionStyle"]
+- !private ["Ps12_Reflectable", "separatorColor"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps12_Reflectable", "text"]
+- !private ["Ps12_Reflectable", "textColor"]
 - !private ["Ps12_Reflectable", "textLabel"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
@@ -1782,11 +1955,13 @@ depends-nominal:
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
+- !private "V12CoreGraphics7CGFloat"
 - "CSo17CLLocationManager"
 - "PSo25CLLocationManagerDelegate"
 - "Ps11CVarArgType"
 - !private "OE7Air_EndCSo11UITableView14CellIdentifier"
 - "Ps14CollectionType"
+- !private "OV7Air_End5Theme6Colors"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -1804,6 +1979,7 @@ depends-nominal:
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - "C7Air_End6ListVC"
+- !private "PSo17MKMapViewDelegate"
 - !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
 - !private "Ps21MutableCollectionType"
@@ -1842,12 +2018,14 @@ depends-nominal:
 - !private "Ps10Strideable"
 - "C7Air_End4Task"
 - !private "C7Air_End9TaskMapVC"
+- !private "V7Air_End5Theme"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - !private "CSo15UIBarButtonItem"
 - !private "OSC21UIBarButtonSystemItem"
 - !private "CSo9UIBarItem"
+- !private "CSo7UIColor"
 - "PSo18UIContentContainer"
 - !private "CSo9UIControl"
 - !private "PSo17UICoordinateSpace"
@@ -1864,6 +2042,7 @@ depends-nominal:
 - !private "CSo17UIStoryboardSegue"
 - !private "CSo11UITableView"
 - !private "CSo15UITableViewCell"
+- !private "OSC29UITableViewCellSelectionStyle"
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
 - "PSo18UITraitEnvironment"
@@ -1872,6 +2051,7 @@ depends-nominal:
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_ColorLiteralConvertible"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
@@ -1891,6 +2071,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
 - "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
 - "./Realm.framework/Headers/RLMRealm_Dynamic.h"
@@ -1923,6 +2104,5 @@ depends-external:
 - "./Realm.framework/Headers/RLMArray.h"
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "7356c63119035815369d287f63f3d269"
+interface-hash: "184e6eee845cf5087b3edecb353368eb"

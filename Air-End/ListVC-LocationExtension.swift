@@ -15,9 +15,10 @@ extension ListVC: CLLocationManagerDelegate{
     func determineLocationAuthorizationStatus() -> (Bool) {
         switch CLLocationManager.authorizationStatus() {
         case .NotDetermined:
-            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
             return false
         case .Denied:
+            locationManager.requestWhenInUseAuthorization()
             return false
         case .AuthorizedAlways:
             locationManager.startUpdatingLocation()

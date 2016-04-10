@@ -5,29 +5,29 @@ provides-nominal:
 provides-member:
 - ["C7Air_End6ListVC", ""]
 provides-dynamic-lookup:
-- "findClosestLocationNameForTask"
-- "locationManager"
-- "locationManager"
 - "determineLocationAuthorizationStatus"
+- "locationManager"
+- "locationManager"
+- "findClosestLocationNameForTask"
 - "findCloseLocationsMatchingNoun"
 depends-top-level:
 - !private "assertionFailure"
-- !private "Void"
-- !private "NSError"
-- "Task"
-- "Bool"
-- !private "MKLocalSearch"
-- "CLLocationManagerDelegate"
-- "CLAuthorizationStatus"
-- !private "StringLiteralType"
-- !private "MKLocalSearchResponse"
-- "CLLocationManager"
 - !private "print"
-- !private "<"
+- "CLLocationManagerDelegate"
+- !private "MKLocalSearch"
+- "ListVC"
+- "Bool"
+- !private "Void"
+- !private "StringLiteralType"
+- "CLAuthorizationStatus"
+- "CLLocationManager"
 - "String"
 - "CLLocation"
 - !private "BooleanLiteralType"
-- "ListVC"
+- !private "<"
+- "Task"
+- !private "MKLocalSearchResponse"
+- !private "NSError"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -55,7 +55,7 @@ depends-member:
 - !private ["Ps9AnyObject", "placemark"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "reloadData"]
-- !private ["Ps9AnyObject", "requestAlwaysAuthorization"]
+- !private ["Ps9AnyObject", "requestWhenInUseAuthorization"]
 - !private ["Ps9AnyObject", "startUpdatingLocation"]
 - !private ["Ps9AnyObject", "startWithCompletionHandler"]
 - !private ["Ps9AnyObject", "stopUpdatingLocation"]
@@ -85,7 +85,7 @@ depends-member:
 - ["OSC21CLAuthorizationStatus", "NotDetermined"]
 - !private ["CSo10CLLocation", "distanceFromLocation"]
 - !private ["CSo17CLLocationManager", "authorizationStatus"]
-- !private ["CSo17CLLocationManager", "requestAlwaysAuthorization"]
+- !private ["CSo17CLLocationManager", "requestWhenInUseAuthorization"]
 - !private ["CSo17CLLocationManager", "startUpdatingLocation"]
 - !private ["CSo17CLLocationManager", "stopUpdatingLocation"]
 - !private ["PSo25CLLocationManagerDelegate", "CLLocationManager"]
@@ -127,7 +127,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "placemark"]
 - !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "reloadData"]
-- !private ["Ps11CVarArgType", "requestAlwaysAuthorization"]
+- !private ["Ps11CVarArgType", "requestWhenInUseAuthorization"]
 - !private ["Ps11CVarArgType", "startUpdatingLocation"]
 - !private ["Ps11CVarArgType", "startWithCompletionHandler"]
 - !private ["Ps11CVarArgType", "stopUpdatingLocation"]
@@ -169,7 +169,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "placemark"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
-- !private ["Ps28CustomDebugStringConvertible", "requestAlwaysAuthorization"]
+- !private ["Ps28CustomDebugStringConvertible", "requestWhenInUseAuthorization"]
 - !private ["Ps28CustomDebugStringConvertible", "sort"]
 - !private ["Ps28CustomDebugStringConvertible", "startUpdatingLocation"]
 - !private ["Ps28CustomDebugStringConvertible", "startWithCompletionHandler"]
@@ -205,7 +205,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "placemark"]
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
-- !private ["Ps23CustomStringConvertible", "requestAlwaysAuthorization"]
+- !private ["Ps23CustomStringConvertible", "requestWhenInUseAuthorization"]
 - !private ["Ps23CustomStringConvertible", "sort"]
 - !private ["Ps23CustomStringConvertible", "startUpdatingLocation"]
 - !private ["Ps23CustomStringConvertible", "startWithCompletionHandler"]
@@ -242,7 +242,7 @@ depends-member:
 - !private ["Ps9Equatable", "placemark"]
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "reloadData"]
-- !private ["Ps9Equatable", "requestAlwaysAuthorization"]
+- !private ["Ps9Equatable", "requestWhenInUseAuthorization"]
 - !private ["Ps9Equatable", "startUpdatingLocation"]
 - !private ["Ps9Equatable", "startWithCompletionHandler"]
 - !private ["Ps9Equatable", "stopUpdatingLocation"]
@@ -278,7 +278,7 @@ depends-member:
 - !private ["Ps8Hashable", "placemark"]
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "reloadData"]
-- !private ["Ps8Hashable", "requestAlwaysAuthorization"]
+- !private ["Ps8Hashable", "requestWhenInUseAuthorization"]
 - !private ["Ps8Hashable", "startUpdatingLocation"]
 - !private ["Ps8Hashable", "startWithCompletionHandler"]
 - !private ["Ps8Hashable", "stopUpdatingLocation"]
@@ -422,7 +422,7 @@ depends-member:
 - !private ["CSo8NSObject", "placemark"]
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "reloadData"]
-- !private ["CSo8NSObject", "requestAlwaysAuthorization"]
+- !private ["CSo8NSObject", "requestWhenInUseAuthorization"]
 - !private ["CSo8NSObject", "startUpdatingLocation"]
 - !private ["CSo8NSObject", "startWithCompletionHandler"]
 - !private ["CSo8NSObject", "stopUpdatingLocation"]
@@ -449,7 +449,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "placemark"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
-- !private ["PSo16NSObjectProtocol", "requestAlwaysAuthorization"]
+- !private ["PSo16NSObjectProtocol", "requestWhenInUseAuthorization"]
 - !private ["PSo16NSObjectProtocol", "startUpdatingLocation"]
 - !private ["PSo16NSObjectProtocol", "startWithCompletionHandler"]
 - !private ["PSo16NSObjectProtocol", "stopUpdatingLocation"]
@@ -811,6 +811,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
 - "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
 - "./Realm.framework/Headers/RLMRealm_Dynamic.h"
@@ -843,6 +844,5 @@ depends-external:
 - "./Realm.framework/Headers/RLMArray.h"
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
 interface-hash: "5bb96752bcfb1a0b3deaa19ff3e13889"

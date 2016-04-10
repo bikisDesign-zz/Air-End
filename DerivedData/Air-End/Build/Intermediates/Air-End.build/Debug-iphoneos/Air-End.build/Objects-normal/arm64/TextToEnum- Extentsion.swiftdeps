@@ -15,14 +15,14 @@ provides-member:
 - ["CSo11UITableView", "dequeueReusableCellWithCellIdentifier"]
 provides-dynamic-lookup:
 depends-top-level:
-- "UITableViewCell"
+- "AnyObject"
 - !private "~="
 - "=="
-- "StringLiteralType"
-- "AnyObject"
 - "UITableView"
-- "UIViewController"
 - "String"
+- "StringLiteralType"
+- "UITableViewCell"
+- "UIViewController"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "hashValue"]
 - ["Ps9AnyObject", "dequeueReusableCellWithCellIdentifier"]
@@ -282,6 +282,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
 - "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
 - "./Realm.framework/Headers/RLMRealm_Dynamic.h"
@@ -314,6 +315,5 @@ depends-external:
 - "./Realm.framework/Headers/RLMArray.h"
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
 interface-hash: "bbdf114a676d5301e326ac5ffcc6ff41"

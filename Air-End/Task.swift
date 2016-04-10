@@ -21,7 +21,7 @@ class Task: Object {
         return "id"
     }
     
-    func createNewTaskWith(id:String, name:String, dueDate:NSDate, noun:Noun, withCompletionHandler handler: ((newTask: Task) -> ())?) {
+    func createNewTaskWithID(id:String, name:String, dueDate:NSDate, noun:Noun, withCompletionHandler handler: ((newTask: Task) -> ())?) {
         let newTask = Task(value: [id, name, dueDate, noun, false])
         try! uiRealm.write { () -> Void in
             uiRealm.add(newTask)
