@@ -5,29 +5,29 @@ provides-nominal:
 provides-member:
 - ["C7Air_End6ListVC", ""]
 provides-dynamic-lookup:
-- "determineLocationAuthorizationStatus"
-- "locationManager"
-- "locationManager"
-- "findClosestLocationNameForTask"
 - "findCloseLocationsMatchingNoun"
+- "locationManager"
+- "locationManager"
+- "determineLocationAuthorizationStatus"
+- "findClosestLocationNameForTask"
 depends-top-level:
-- !private "assertionFailure"
-- !private "print"
-- "CLLocationManagerDelegate"
 - !private "MKLocalSearch"
+- "Task"
 - "ListVC"
-- "Bool"
+- "CLLocationManagerDelegate"
+- !private "<"
 - !private "Void"
 - !private "StringLiteralType"
-- "CLAuthorizationStatus"
 - "CLLocationManager"
+- !private "print"
+- "CLAuthorizationStatus"
+- !private "assertionFailure"
+- !private "NSError"
 - "String"
 - "CLLocation"
-- !private "BooleanLiteralType"
-- !private "<"
-- "Task"
 - !private "MKLocalSearchResponse"
-- !private "NSError"
+- !private "BooleanLiteralType"
+- "Bool"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]

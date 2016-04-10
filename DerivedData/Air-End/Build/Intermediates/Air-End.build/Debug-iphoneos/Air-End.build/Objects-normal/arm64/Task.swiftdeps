@@ -6,26 +6,26 @@ provides-nominal:
 provides-member:
 - ["C7Air_End4Task", ""]
 provides-dynamic-lookup:
-- "isCompleted"
 - "name"
-- "id"
-- "hashtag"
-- "dueDate"
+- "isCompleted"
 - "createNewTaskWithID"
+- "dueDate"
+- "hashtag"
 - "primaryKey"
+- "id"
 depends-top-level:
-- "Noun"
-- "Task"
-- "Results"
-- !private "Void"
-- !private "StringLiteralType"
 - "Bool"
-- !private "uiRealm"
-- "Object"
-- "BooleanLiteralType"
-- "String"
+- "Noun"
+- !private "StringLiteralType"
 - !private "Array"
 - "NSDate"
+- !private "Void"
+- "Object"
+- "Results"
+- "String"
+- "Task"
+- "BooleanLiteralType"
+- !private "uiRealm"
 depends-member:
 - !private ["Ps9AnyObject", "Element"]
 - ["Ps9AnyObject", "NSDate"]

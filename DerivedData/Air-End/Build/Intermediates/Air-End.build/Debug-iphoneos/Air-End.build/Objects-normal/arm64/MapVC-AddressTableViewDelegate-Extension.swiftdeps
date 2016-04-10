@@ -5,24 +5,24 @@ provides-nominal:
 provides-member:
 - ["C7Air_End5MapVC", ""]
 provides-dynamic-lookup:
-- "showCorrectAddressTableView"
-- "didSetValidAddress"
 - "searchForValidAddress"
+- "didSetValidAddress"
+- "showCorrectAddressTableView"
 depends-top-level:
-- "String"
-- !private "NSError"
-- "CLPlacemark"
-- "StringLiteralType"
+- !private "UIScreen"
 - !private "Void"
-- "UIButton"
-- "CorrectAddressTableViewDelegate"
-- !private "BooleanLiteralType"
-- "MapVC"
+- "UIViewController"
 - "UITextField"
 - "CorrectAddressTableView"
-- "UIViewController"
+- "UIButton"
 - !private "CLGeocoder"
-- !private "UIScreen"
+- !private "BooleanLiteralType"
+- "CLPlacemark"
+- "String"
+- !private "NSError"
+- "MapVC"
+- "CorrectAddressTableViewDelegate"
+- "StringLiteralType"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]

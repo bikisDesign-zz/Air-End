@@ -6,13 +6,13 @@ provides-nominal:
 provides-member:
 - ["C7Air_End17ColoredDatePicker", ""]
 provides-dynamic-lookup:
-- "addSubview"
 - "changed"
+- "addSubview"
 depends-top-level:
 - !private "!"
-- "ColoredDatePicker"
-- !private "StringLiteralType"
 - !private "UIColor"
+- !private "StringLiteralType"
+- "ColoredDatePicker"
 - "UIDatePicker"
 - "BooleanLiteralType"
 - "UIView"

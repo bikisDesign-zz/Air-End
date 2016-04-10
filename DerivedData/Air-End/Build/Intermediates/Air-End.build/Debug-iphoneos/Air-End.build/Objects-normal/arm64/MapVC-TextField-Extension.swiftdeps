@@ -5,8 +5,8 @@ provides-nominal:
 provides-member:
 - ["C7Air_End5MapVC", ""]
 provides-dynamic-lookup:
-- "textFieldDidBeginEditing"
 - "textFieldDidEndEditing"
+- "textFieldDidBeginEditing"
 depends-top-level:
 - "UITextField"
 - "MapVC"

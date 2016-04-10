@@ -9,25 +9,25 @@ provides-member:
 - ["C7Air_End5MapVC", "segmentEnRoute"]
 - ["C7Air_End5MapVC", "searchForMapItemsMatchingNoun"]
 provides-dynamic-lookup:
-- "segmentedControlValueChanged"
 - "segmentEnRoute"
 - "segmentAllTasks"
 - "segmentCloseTasks"
+- "segmentedControlValueChanged"
 depends-top-level:
-- !private "BooleanLiteralType"
-- !private "Void"
+- !private "NSError"
+- !private "assertionFailure"
 - !private "MKLocalSearch"
 - "String"
+- !private "BooleanLiteralType"
+- !private "Void"
+- "MKMapItem"
+- "MapVC"
+- !private "MKLocalSearchResponse"
+- !private "StringLiteralType"
 - !private "print"
 - "UISegmentedControl"
-- !private "StringLiteralType"
-- !private "MKLocalSearchResponse"
-- !private "NSError"
 - !private "~="
 - !private "Array"
-- "MapVC"
-- "MKMapItem"
-- !private "assertionFailure"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
