@@ -4,8 +4,16 @@
 <dict>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This app works best while updating your location to give you reminders of tasks that are close to where you are!</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Simplifica.ttf</string>
+		<string>Glamor-Bold.otf</string>
+		<string>Glamor-BoldExtendedItalic.otf</string>
+		<string>Glamor-Regular.otf</string>
+		<string>Lato-Thin.ttf</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs your location to utilize most of its primary functions</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

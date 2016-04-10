@@ -15,9 +15,10 @@ extension ListVC: CLLocationManagerDelegate{
     func determineLocationAuthorizationStatus() -> (Bool) {
         switch CLLocationManager.authorizationStatus() {
         case .NotDetermined:
-            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
             return false
         case .Denied:
+            locationManager.requestWhenInUseAuthorization()
             return false
         case .AuthorizedAlways:
             locationManager.startUpdatingLocation()
@@ -45,7 +46,6 @@ extension ListVC: CLLocationManagerDelegate{
         }
     }
     
-    
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let newUserLocation = locations.first as CLLocation? {
             currentLocation = newUserLocation
@@ -54,7 +54,7 @@ extension ListVC: CLLocationManagerDelegate{
     }
     
     func findCloseLocationsMatchingNoun(nounDescriptor:String) {
-        if let request = initalizeRequestWithDescriptor(nounDescriptor){
+        if let request = initalizeRequestWithDescriptor(nounDescriptor, location: currentLocation){
             let search = MKLocalSearch(request: request)
             search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
                 if let mapItems = response?.mapItems {
@@ -78,15 +78,4 @@ extension ListVC: CLLocationManagerDelegate{
             return "No close locations for this task"
         }
     }
-    
-    func initalizeRequestWithDescriptor(nounDescriptor:String) -> MKLocalSearchRequest? {
-        let request = MKLocalSearchRequest()
-        request.naturalLanguageQuery = nounDescriptor
-        if let location = currentLocation?.coordinate {
-            request.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.01, 0.01))
-            return request
-        }
-        return nil
-    }
-    
 }

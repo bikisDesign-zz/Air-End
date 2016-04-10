@@ -6,112 +6,122 @@ provides-nominal:
 provides-member:
 - ["C7Air_End4Task", ""]
 provides-dynamic-lookup:
+- "primaryKey"
 - "hashtag"
+- "dueDate"
+- "createNewTaskWithID"
+- "name"
 - "isCompleted"
 - "id"
-- "dueDate"
-- "name"
-- "primaryKey"
-- "createNewTaskWith"
 depends-top-level:
-- "String"
+- "Object"
 - "NSDate"
-- "Bool"
+- !private "StringLiteralType"
+- !private "uiRealm"
+- !private "Void"
+- "Noun"
 - "BooleanLiteralType"
 - !private "Array"
-- !private "Void"
-- "Results"
+- "Bool"
+- "String"
 - "Task"
-- "Object"
-- !private "uiRealm"
-- !private "StringLiteralType"
-- "Noun"
+- "Results"
 depends-member:
-- !private ["PSs9AnyObject", "Element"]
-- ["PSs9AnyObject", "NSDate"]
-- ["PSs9AnyObject", "String"]
-- !private ["PSs9AnyObject", "Task"]
-- !private ["PSs9AnyObject", "add"]
-- ["PSs9AnyObject", "createNewTaskWith"]
-- !private ["PSs9AnyObject", "deinit"]
-- ["PSs9AnyObject", "dueDate"]
-- ["PSs9AnyObject", "hashtag"]
-- ["PSs9AnyObject", "id"]
-- ["PSs9AnyObject", "init"]
-- ["PSs9AnyObject", "isCompleted"]
-- ["PSs9AnyObject", "name"]
-- !private ["PSs9AnyObject", "objects"]
-- ["PSs9AnyObject", "primaryKey"]
-- ["PSs9AnyObject", "readAllTasks"]
-- ["PSs9AnyObject", "readTasksDueSoon"]
-- !private ["PSs9AnyObject", "sorted"]
-- !private ["PSs9AnyObject", "uiRealm"]
-- !private ["PSs9AnyObject", "write"]
-- ["PSs9AnyObject", ""]
+- !private ["Ps9AnyObject", "Element"]
+- ["Ps9AnyObject", "NSDate"]
+- ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "Task"]
+- !private ["Ps9AnyObject", "add"]
+- ["Ps9AnyObject", "createNewTaskWithID"]
+- !private ["Ps9AnyObject", "deinit"]
+- ["Ps9AnyObject", "dueDate"]
+- ["Ps9AnyObject", "hashtag"]
+- ["Ps9AnyObject", "id"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isCompleted"]
+- ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "objects"]
+- ["Ps9AnyObject", "primaryKey"]
+- ["Ps9AnyObject", "readAllTasks"]
+- ["Ps9AnyObject", "readTasksDueSoon"]
+- !private ["Ps9AnyObject", "sorted"]
+- !private ["Ps9AnyObject", "uiRealm"]
+- !private ["Ps9AnyObject", "write"]
+- ["Ps9AnyObject", ""]
 - !private ["Sa", "Element"]
 - !private ["Sa", "deinit"]
-- !private ["PSs23ArrayLiteralConvertible", "Element"]
-- ["PSs11CVarArgType", "createNewTaskWith"]
-- ["PSs11CVarArgType", "dueDate"]
-- ["PSs11CVarArgType", "hashtag"]
-- ["PSs11CVarArgType", "id"]
-- ["PSs11CVarArgType", "init"]
-- ["PSs11CVarArgType", "isCompleted"]
-- ["PSs11CVarArgType", "name"]
-- ["PSs11CVarArgType", "primaryKey"]
-- ["PSs11CVarArgType", "readAllTasks"]
-- ["PSs11CVarArgType", "readTasksDueSoon"]
-- !private ["PSs11CVarArgType", "sorted"]
-- !private ["PSs14CollectionType", "Element"]
-- !private ["PSs14CollectionType", "sorted"]
-- ["PSs10Comparable", "init"]
-- !private ["PSs28CustomDebugStringConvertible", "Element"]
-- ["PSs28CustomDebugStringConvertible", "init"]
-- !private ["PSs23CustomStringConvertible", "Element"]
-- ["PSs23CustomStringConvertible", "createNewTaskWith"]
-- ["PSs23CustomStringConvertible", "dueDate"]
-- ["PSs23CustomStringConvertible", "hashtag"]
-- ["PSs23CustomStringConvertible", "id"]
-- ["PSs23CustomStringConvertible", "init"]
-- ["PSs23CustomStringConvertible", "isCompleted"]
-- ["PSs23CustomStringConvertible", "name"]
-- ["PSs23CustomStringConvertible", "primaryKey"]
-- ["PSs23CustomStringConvertible", "readAllTasks"]
-- ["PSs23CustomStringConvertible", "readTasksDueSoon"]
-- !private ["PSs23CustomStringConvertible", "sorted"]
-- !private ["PSs9Equatable", "add"]
-- ["PSs9Equatable", "createNewTaskWith"]
-- ["PSs9Equatable", "dueDate"]
-- ["PSs9Equatable", "hashtag"]
-- ["PSs9Equatable", "id"]
-- ["PSs9Equatable", "init"]
-- ["PSs9Equatable", "isCompleted"]
-- ["PSs9Equatable", "name"]
-- !private ["PSs9Equatable", "objects"]
-- ["PSs9Equatable", "primaryKey"]
-- ["PSs9Equatable", "readAllTasks"]
-- ["PSs9Equatable", "readTasksDueSoon"]
-- !private ["PSs9Equatable", "sorted"]
-- !private ["PSs9Equatable", "write"]
-- ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
-- ["PSs8Hashable", "createNewTaskWith"]
-- ["PSs8Hashable", "dueDate"]
-- ["PSs8Hashable", "hashtag"]
-- ["PSs8Hashable", "id"]
-- ["PSs8Hashable", "init"]
-- ["PSs8Hashable", "isCompleted"]
-- ["PSs8Hashable", "name"]
-- ["PSs8Hashable", "primaryKey"]
-- ["PSs8Hashable", "readAllTasks"]
-- ["PSs8Hashable", "readTasksDueSoon"]
-- !private ["PSs8Hashable", "sorted"]
-- !private ["PSs9Indexable", "Element"]
-- !private ["PSs9Indexable", "sorted"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- ["Ps11CVarArgType", "createNewTaskWithID"]
+- ["Ps11CVarArgType", "dueDate"]
+- ["Ps11CVarArgType", "hashtag"]
+- ["Ps11CVarArgType", "id"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isCompleted"]
+- ["Ps11CVarArgType", "name"]
+- ["Ps11CVarArgType", "primaryKey"]
+- ["Ps11CVarArgType", "readAllTasks"]
+- ["Ps11CVarArgType", "readTasksDueSoon"]
+- !private ["Ps11CVarArgType", "sorted"]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "sorted"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- ["Ps28CustomDebugStringConvertible", "createNewTaskWithID"]
+- ["Ps28CustomDebugStringConvertible", "dueDate"]
+- ["Ps28CustomDebugStringConvertible", "hashtag"]
+- ["Ps28CustomDebugStringConvertible", "id"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isCompleted"]
+- ["Ps28CustomDebugStringConvertible", "name"]
+- ["Ps28CustomDebugStringConvertible", "primaryKey"]
+- ["Ps28CustomDebugStringConvertible", "readAllTasks"]
+- ["Ps28CustomDebugStringConvertible", "readTasksDueSoon"]
+- !private ["Ps28CustomDebugStringConvertible", "sorted"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- ["Ps23CustomStringConvertible", "createNewTaskWithID"]
+- ["Ps23CustomStringConvertible", "dueDate"]
+- ["Ps23CustomStringConvertible", "hashtag"]
+- ["Ps23CustomStringConvertible", "id"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isCompleted"]
+- ["Ps23CustomStringConvertible", "name"]
+- ["Ps23CustomStringConvertible", "primaryKey"]
+- ["Ps23CustomStringConvertible", "readAllTasks"]
+- ["Ps23CustomStringConvertible", "readTasksDueSoon"]
+- !private ["Ps23CustomStringConvertible", "sorted"]
+- !private ["Ps9Equatable", "add"]
+- ["Ps9Equatable", "createNewTaskWithID"]
+- ["Ps9Equatable", "dueDate"]
+- ["Ps9Equatable", "hashtag"]
+- ["Ps9Equatable", "id"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isCompleted"]
+- ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "objects"]
+- ["Ps9Equatable", "primaryKey"]
+- ["Ps9Equatable", "readAllTasks"]
+- ["Ps9Equatable", "readTasksDueSoon"]
+- !private ["Ps9Equatable", "sorted"]
+- !private ["Ps9Equatable", "write"]
+- ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps8Hashable", "createNewTaskWithID"]
+- ["Ps8Hashable", "dueDate"]
+- ["Ps8Hashable", "hashtag"]
+- ["Ps8Hashable", "id"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isCompleted"]
+- ["Ps8Hashable", "name"]
+- ["Ps8Hashable", "primaryKey"]
+- ["Ps8Hashable", "readAllTasks"]
+- ["Ps8Hashable", "readTasksDueSoon"]
+- !private ["Ps8Hashable", "sorted"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "sorted"]
 - ["P10RealmSwift10MinMaxType", "init"]
-- ["PSs14MirrorPathType", "init"]
-- !private ["PSs21MutableCollectionType", "Element"]
-- !private ["PSs16MutableIndexable", "Element"]
-- !private ["PSs16MutableSliceable", "Element"]
+- ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableSliceable", "Element"]
 - ["PSo8NSCoding", "init"]
 - ["PSo9NSCopying", "init"]
 - ["CSo6NSDate", "init"]
@@ -123,7 +133,7 @@ depends-member:
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "Task"]
 - !private ["CSo8NSObject", "Void"]
-- ["CSo8NSObject", "createNewTaskWith"]
+- ["CSo8NSObject", "createNewTaskWithID"]
 - !private ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "dueDate"]
 - ["CSo8NSObject", "hashtag"]
@@ -136,7 +146,7 @@ depends-member:
 - ["CSo8NSObject", "readTasksDueSoon"]
 - !private ["CSo8NSObject", "sorted"]
 - !private ["CSo8NSObject", "uiRealm"]
-- ["PSo16NSObjectProtocol", "createNewTaskWith"]
+- ["PSo16NSObjectProtocol", "createNewTaskWithID"]
 - ["PSo16NSObjectProtocol", "dueDate"]
 - ["PSo16NSObjectProtocol", "hashtag"]
 - ["PSo16NSObjectProtocol", "id"]
@@ -155,7 +165,7 @@ depends-member:
 - ["C10RealmSwift6Object", "String"]
 - ["C10RealmSwift6Object", "Task"]
 - !private ["C10RealmSwift6Object", "Void"]
-- ["C10RealmSwift6Object", "createNewTaskWith"]
+- ["C10RealmSwift6Object", "createNewTaskWithID"]
 - !private ["C10RealmSwift6Object", "deinit"]
 - ["C10RealmSwift6Object", "dueDate"]
 - ["C10RealmSwift6Object", "hashtag"]
@@ -169,7 +179,7 @@ depends-member:
 - !private ["C10RealmSwift6Object", "uiRealm"]
 - ["C10RealmSwift6Object", ""]
 - !private ["Sq", "deinit"]
-- ["PSs16OutputStreamType", "init"]
+- ["Ps16OutputStreamType", "init"]
 - ["CSo13RLMObjectBase", "Bool"]
 - ["CSo13RLMObjectBase", "NSDate"]
 - ["CSo13RLMObjectBase", "Noun"]
@@ -177,7 +187,7 @@ depends-member:
 - ["CSo13RLMObjectBase", "String"]
 - ["CSo13RLMObjectBase", "Task"]
 - !private ["CSo13RLMObjectBase", "Void"]
-- ["CSo13RLMObjectBase", "createNewTaskWith"]
+- ["CSo13RLMObjectBase", "createNewTaskWithID"]
 - !private ["CSo13RLMObjectBase", "deinit"]
 - ["CSo13RLMObjectBase", "dueDate"]
 - ["CSo13RLMObjectBase", "hashtag"]
@@ -189,19 +199,19 @@ depends-member:
 - ["CSo13RLMObjectBase", "readAllTasks"]
 - ["CSo13RLMObjectBase", "readTasksDueSoon"]
 - !private ["CSo13RLMObjectBase", "uiRealm"]
-- !private ["PSs30RangeReplaceableCollectionType", "Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
 - !private ["C10RealmSwift5Realm", "add"]
 - !private ["C10RealmSwift5Realm", "objects"]
 - !private ["C10RealmSwift5Realm", "write"]
 - !private ["P10RealmSwift19RealmCollectionType", "sorted"]
 - !private ["C10RealmSwift7Results", "sorted"]
 - !private ["C10RealmSwift11ResultsBase", "sorted"]
-- !private ["PSs12SequenceType", "Element"]
-- !private ["PSs12SequenceType", "sorted"]
-- ["PSs10Streamable", "init"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "sorted"]
+- ["Ps10Streamable", "init"]
 - ["SS", "init"]
-- ["PSs30StringInterpolationConvertible", "init"]
-- ["PSs24StringLiteralConvertible", "init"]
+- ["Ps30StringInterpolationConvertible", "init"]
+- ["Ps24StringLiteralConvertible", "init"]
 - ["C7Air_End4Task", "Bool"]
 - ["C7Air_End4Task", "NSDate"]
 - ["C7Air_End4Task", "Noun"]
@@ -209,7 +219,7 @@ depends-member:
 - ["C7Air_End4Task", "String"]
 - ["C7Air_End4Task", "Task"]
 - !private ["C7Air_End4Task", "Void"]
-- ["C7Air_End4Task", "createNewTaskWith"]
+- ["C7Air_End4Task", "createNewTaskWithID"]
 - ["C7Air_End4Task", "deinit"]
 - ["C7Air_End4Task", "dueDate"]
 - ["C7Air_End4Task", "hashtag"]
@@ -221,35 +231,35 @@ depends-member:
 - ["C7Air_End4Task", "readAllTasks"]
 - ["C7Air_End4Task", "readTasksDueSoon"]
 - !private ["C7Air_End4Task", "uiRealm"]
-- ["PSs31UnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs10_ArrayType", "Element"]
-- ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- ["PSs32_BuiltinStringLiteralConvertible", "init"]
-- ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
-- ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["PSs24_DestructorSafeContainer", "Element"]
-- !private ["PSs21_ObjectiveCBridgeable", "Element"]
-- ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["PSs12_Reflectable", "Element"]
-- ["PSs12_Reflectable", "init"]
+- ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps10_ArrayType", "Element"]
+- ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps12_Reflectable", "Element"]
+- ["Ps12_Reflectable", "init"]
 depends-nominal:
-- "PSs9AnyObject"
+- "Ps9AnyObject"
 - !private "Sa"
-- !private "PSs23ArrayLiteralConvertible"
-- "PSs11CVarArgType"
-- !private "PSs14CollectionType"
-- "PSs10Comparable"
-- "PSs28CustomDebugStringConvertible"
-- "PSs23CustomStringConvertible"
-- "PSs9Equatable"
-- "PSs41ExtendedGraphemeClusterLiteralConvertible"
-- "PSs8Hashable"
-- !private "PSs9Indexable"
+- !private "Ps23ArrayLiteralConvertible"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
 - "P10RealmSwift10MinMaxType"
-- "PSs14MirrorPathType"
-- !private "PSs21MutableCollectionType"
-- !private "PSs16MutableIndexable"
-- !private "PSs16MutableSliceable"
+- "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - "CSo6NSDate"
@@ -259,28 +269,28 @@ depends-nominal:
 - "PSo14NSSecureCoding"
 - "C10RealmSwift6Object"
 - !private "Sq"
-- "PSs16OutputStreamType"
+- "Ps16OutputStreamType"
 - "CSo13RLMObjectBase"
-- !private "PSs30RangeReplaceableCollectionType"
+- !private "Ps30RangeReplaceableCollectionType"
 - !private "C10RealmSwift5Realm"
 - !private "P10RealmSwift19RealmCollectionType"
 - !private "C10RealmSwift7Results"
 - !private "C10RealmSwift11ResultsBase"
-- !private "PSs12SequenceType"
-- "PSs10Streamable"
+- !private "Ps12SequenceType"
+- "Ps10Streamable"
 - "SS"
-- "PSs30StringInterpolationConvertible"
-- "PSs24StringLiteralConvertible"
+- "Ps30StringInterpolationConvertible"
+- "Ps24StringLiteralConvertible"
 - "C7Air_End4Task"
-- "PSs31UnicodeScalarLiteralConvertible"
-- !private "PSs10_ArrayType"
-- "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- "PSs32_BuiltinStringLiteralConvertible"
-- "PSs37_BuiltinUTF16StringLiteralConvertible"
-- "PSs39_BuiltinUnicodeScalarLiteralConvertible"
-- !private "PSs24_DestructorSafeContainer"
-- "PSs21_ObjectiveCBridgeable"
-- "PSs12_Reflectable"
+- "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
+- "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- "Ps32_BuiltinStringLiteralConvertible"
+- "Ps37_BuiltinUTF16StringLiteralConvertible"
+- "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
@@ -291,6 +301,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
 - "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
 - "./Realm.framework/Headers/RLMRealm_Dynamic.h"
@@ -323,6 +334,5 @@ depends-external:
 - "./Realm.framework/Headers/RLMArray.h"
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "a0bc30ad658f20b5d22f0fac2e40b5e9"
+interface-hash: "2f140f27445ff85458bf8fcf698eb21c"

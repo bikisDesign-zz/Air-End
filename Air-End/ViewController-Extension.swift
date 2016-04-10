@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+
 extension UIViewController {
     func generateRandomPassCode() -> String {
         let alphaNumerial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ012345678910"
@@ -38,10 +40,80 @@ extension UIViewController {
     func animateTextField(textField:UITextField){
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             textField.backgroundColor = UIColor.redColor()
-            }) { (Bool) -> Void in
-                UIView.animateWithDuration(0.2, animations: { () -> Void in
-//                    textField.backgroundColor = Theme.Colors.ForegroundColor.color
-                    }, completion: nil)
+        }) { (Bool) -> Void in
+            UIView.animateWithDuration(0.2, animations: { () -> Void in
+                //                    textField.backgroundColor = Theme.Colors.ForegroundColor.color
+                }, completion: nil)
         }
     }
+    
+    func showAlert(alertString: String) {
+        let alert = UIAlertController(title: nil, message: alertString, preferredStyle: .Alert)
+        let okButton = UIAlertAction(title: "OK",
+                                     style: .Cancel) { (alert) -> Void in
+        }
+        alert.addAction(okButton)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func hideOverlay(isHidden:Bool, viewCollection:[UIView]){
+        var alpha = CGFloat()
+        alpha = isHidden ? 0.0 : 1.0
+        for view in viewCollection {
+            view.hidden = isHidden
+            UIView.animateWithDuration(0.5, animations: {
+                view.alpha = alpha
+            })
+        }
+    }
+    
+    //MARK: MAPVIEW Methods
+    
+    func initalizeRequestWithDescriptor(nounDescriptor:String, location:CLLocation?) -> MKLocalSearchRequest? {
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = nounDescriptor
+        if let location = location?.coordinate {
+            request.region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(0.01, 0.01))
+            return request
+        }
+        return nil
+    }
+    
+    func setRegionForUnionOfUserLocationAndTaskAnnotation(taskAnnotation:MKAnnotation, userLocation:CLLocation, mapView:MKMapView){
+        mapView.addAnnotation(taskAnnotation)
+        let userPoint = MKMapPointForCoordinate(userLocation.coordinate)
+        let userLocationMapRect = MKMapRect(origin: userPoint, size: MKMapSize(width: 0.010, height: 0.010))
+        let taskPoint = MKMapPointForCoordinate(taskAnnotation.coordinate)
+        let taskLocationMapRect = MKMapRect(origin: taskPoint, size: MKMapSize(width: 0.010, height: 0.010))
+        let mapRect = MKMapRectUnion(userLocationMapRect, taskLocationMapRect)
+        let region = MKCoordinateRegionForMapRect(mapRect)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    func coordinateRegionForAnnotations(mapView:MKMapView) -> MKCoordinateRegion?{
+        let allAnnotations = mapView.annotations
+        var mapRect = MKMapRectNull
+        for annotation in allAnnotations {
+            let mapPointCoordinate = MKMapPointForCoordinate(annotation.coordinate)
+            mapRect = MKMapRectUnion(mapRect, MKMapRectMake(mapPointCoordinate.x, mapPointCoordinate.y, 0, 0))
+        }
+        return MKCoordinateRegionForMapRect(mapRect)
+    }
+    
+    func setMapRegionForMapItems(mapItemA:MKMapItem?, mapViewA:MKMapView?){
+        guard let mapItem = mapItemA else {return}
+        guard let mapView = mapViewA else {return}
+        let newAnnotation = convertToAnnotationFromMapItem(mapItem)
+        mapView.addAnnotation(newAnnotation)
+        if let region = coordinateRegionForAnnotations(mapView){
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    
+    func sortMapItemsCloseToUserLocation(userLocation:CLLocation?, mapItems:[MKMapItem]) -> [MKMapItem]? {
+        guard let currentLocation = userLocation else {return nil}
+        return mapItems.sort({$0.placemark.location?.distanceFromLocation(currentLocation) < $1.placemark.location?.distanceFromLocation(currentLocation)})
+    }
+    
 }

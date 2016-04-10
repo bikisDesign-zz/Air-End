@@ -16,14 +16,15 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "AnyObject"
-- "UIViewController"
-- "UITableView"
 - "StringLiteralType"
-- "String"
-- "=="
 - !private "~="
+- "=="
+- "UITableView"
+- "UIViewController"
+- "String"
 - "UITableViewCell"
 depends-member:
+- !private ["P10RealmSwift11AddableType", "hashValue"]
 - ["Ps9AnyObject", "dequeueReusableCellWithCellIdentifier"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithIdentifier"]
 - !private ["Ps9AnyObject", "performSegueWithIdentifier"]
@@ -92,6 +93,7 @@ depends-member:
 - !private ["Ps21IntegerArithmeticType", "hashValue"]
 - !private ["Ps25IntegerLiteralConvertible", "hashValue"]
 - !private ["Ps11IntegerType", "hashValue"]
+- !private ["P10RealmSwift10MinMaxType", "hashValue"]
 - !private ["Ps14MirrorPathType", "hashValue"]
 - ["PSo8NSCoding", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
@@ -125,6 +127,8 @@ depends-member:
 - ["Ps16RawRepresentable", "init"]
 - ["Ps16RawRepresentable", "rawValue"]
 - ["Ps16RawRepresentable", ""]
+- !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
+- !private ["P10RealmSwift17RealmOptionalType", "hashValue"]
 - ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "RawValue"]
 - ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueToMapTaskVC"]
 - ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueToNewTaskVC"]
@@ -209,6 +213,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "hashValue"]
 - !private ["Ps18_SignedIntegerType", "hashValue"]
 depends-nominal:
+- !private "P10RealmSwift11AddableType"
 - "Ps9AnyObject"
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
@@ -227,6 +232,7 @@ depends-nominal:
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
+- !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
 - "PSo8NSCoding"
 - !private "PSo26NSExtensionRequestHandling"
@@ -236,6 +242,7 @@ depends-nominal:
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
 - "Ps16RawRepresentable"
+- !private "P10RealmSwift17RealmOptionalType"
 - "OE7Air_EndCSo16UIViewController15SegueIdentifier"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
@@ -275,7 +282,38 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
-- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
 interface-hash: "bbdf114a676d5301e326ac5ffcc6ff41"

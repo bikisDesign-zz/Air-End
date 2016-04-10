@@ -29,13 +29,32 @@ class NewTaskVC: UIViewController {
     }
     
     func setUpUI(){
+        navigationItem.backBarButtonItem?.tintColor = Theme.Colors.ButtonColor.color
+        view.backgroundColor = Theme.Colors.BackgroundColor.color
         textFields = [taskTextField, nounTextField]
-        containers = [taskContainer, nounContainer, dateContainer]
-        let tapGR = UITapGestureRecognizer(target: self, action: "handleSingleTap")
+        containers = [taskContainer, nounContainer]
+       
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(handleSingleTap))
         view.addGestureRecognizer(tapGR)
+        for container in containers {
+            container.layer.cornerRadius = 10
+            container.backgroundColor = Theme.Colors.LabelColor.color
+        }
         for textField in textFields {
             textField.delegate = self
+            textField.backgroundColor = Theme.Colors.LabelColor.color
+            textField.textColor = UIColor.whiteColor()
+            textField.layer.cornerRadius = 10
         }
+        
+        sendButton.backgroundColor = Theme.Colors.ButtonColor.color
+        
+        sendButtonContainer.layer.cornerRadius = sendButtonContainer.bounds.size.width / 2.0
+        sendButtonContainer.backgroundColor = sendButton.backgroundColor
+        sendButton.layer.cornerRadius = sendButton.bounds.size.width / 2.0
+        
+        datePicker.backgroundColor = UIColor.clearColor()
+        dateContainer.backgroundColor = datePicker.backgroundColor
     }
     
     func handleSingleTap(){
@@ -45,21 +64,18 @@ class NewTaskVC: UIViewController {
         
     }
     
-    @IBAction func sendButtonWasTapped(sender: UIButton) {
+    @IBAction func createNewTask(sender: UIButton) {
         if allTextFieldsAreFilled(textFields) {
             
             let id = generateRandomPassCode()
             let noun = Noun()
             noun.descriptor = textFields[1].text!
             
-            task.createNewTaskWith(id, name: textFields[0].text!, dueDate: date, noun:noun, withCompletionHandler: { (newTask) -> () in
-                self.performSegueWithSegueIdentifier(SegueIdentifier.SegueUnwindToListVC, sender: self)
+            task.createNewTaskWithID(id, name: taskTextField.text!, dueDate: datePicker.date, noun:noun, withCompletionHandler: { (newTask) in
+            self.performSegueWithSegueIdentifier(SegueIdentifier.SegueUnwindToListVC, sender: self)
             })
         }
-        
-        
     }
-    
 }
 
 extension NewTaskVC: UITextFieldDelegate {

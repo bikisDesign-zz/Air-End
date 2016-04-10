@@ -21,7 +21,7 @@ class Task: Object {
         return "id"
     }
     
-    func createNewTaskWith(id:String, name:String, dueDate:NSDate, noun:Noun, withCompletionHandler handler: ((newTask: Task) -> ())?) {
+    func createNewTaskWithID(id:String, name:String, dueDate:NSDate, noun:Noun, withCompletionHandler handler: ((newTask: Task) -> ())?) {
         let newTask = Task(value: [id, name, dueDate, noun, false])
         try! uiRealm.write { () -> Void in
             uiRealm.add(newTask)
@@ -29,7 +29,7 @@ class Task: Object {
         }
     }
     
-    func readAllTasks(withCompletionHandler handler: (tasks: Results<Task>) -> () ){
+    func readAllTasks(withCompletionHandler handler: (tasks: Results<Task>?) -> () ){
         let taskList = uiRealm.objects(Task).sorted("name", ascending: true)
         handler(tasks: taskList)
     }
