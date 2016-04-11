@@ -67,6 +67,18 @@ extension UIViewController {
         }
     }
     
+    func addActivityIndicator(inout activityIndicator:UIActivityIndicatorView, vcView:UIView) {
+        let activityIndicator = UIActivityIndicatorView(frame: UIScreen.mainScreen().bounds)
+        activityIndicator.activityIndicatorViewStyle = .WhiteLarge
+        activityIndicator.backgroundColor = view.backgroundColor
+        activityIndicator.startAnimating()
+        vcView.addSubview(activityIndicator)
+    }
+    
+    func hideActivityIndicator(inout activityIndicator:UIActivityIndicatorView) {
+            activityIndicator.removeFromSuperview()
+    }
+
     //MARK: MAPVIEW Methods
     
     func initalizeRequestWithDescriptor(nounDescriptor:String, location:CLLocation?) -> MKLocalSearchRequest? {

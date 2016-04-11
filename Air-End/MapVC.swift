@@ -16,7 +16,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var tasks : Results<Task>?
     let taskManager = Task()
     var locationManager = CLLocationManager()
-    var closeMapItems = [String:[MKMapItem]]()
+    var taskLocations:[MKMapItem]?
     var userLocation:MKMapItem?
     var addressValidated:Bool?
     
@@ -49,13 +49,13 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
     }
     
-//    func enRouteUI(isHidden:Bool){
-//        UIView.animateWithDuration(1.0) {
-//            self.enRouteView.hidden = isHidden
-//            self.enRouteView.alpha = 1.0
-//            self.destinationTextField.hidden = isHidden
-//        }
-//    }
+    //    func enRouteUI(isHidden:Bool){
+    //        UIView.animateWithDuration(1.0) {
+    //            self.enRouteView.hidden = isHidden
+    //            self.enRouteView.alpha = 1.0
+    //            self.destinationTextField.hidden = isHidden
+    //        }
+    //    }
     
     func checkDestinationUI(isHidden:Bool){
         UIView.animateWithDuration(1.0) {
@@ -110,14 +110,45 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     
     @IBAction func addDestination(sender: UIButton) {
+        view.endEditing(true)
         if allTextFieldsAreFilled([destinationTextField]) == true {
             guard let destination = destinationTextField.text else {return}
-            view.endEditing(true)
-            hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-            plotRouteToDestination(destination)
+            searchForMapItemsMatchingNoun(destination, withCompletionHandler: { (mapItems) -> () in
+                
+                guard let destinationMapItem = mapItems.first else {return}
+                guard let currentUserLocation = self.userLocation else {return self.showAlert("We couldn't locate you. Please try again!")}
+                self.taskLocations?.append(destinationMapItem)
+                self.taskLocations?.insert(currentUserLocation, atIndex: 0)
+                var someTime:Double = Double()
+                var someRoute:[MKRoute] = [MKRoute]()
+                self.calculateCloseTasksEnRouteToDestination(0, time:&someTime, routes:&someRoute)
+                self.hideOverlay(true, viewCollection: [self.enRouteView, self.destinationTextField])
+            })
         }
     }
     
+    func calculateCloseTasksEnRouteToDestination(index:Int, inout time:NSTimeInterval, inout routes:[MKRoute]){
+        let request:MKDirectionsRequest = MKDirectionsRequest()
+        request.requestsAlternateRoutes = true
+        request.transportType = .Automobile
+        request.source = taskLocations?[index]
+        request.destination = taskLocations?[index + 1]
+        let directions = MKDirections(request: request)
+        directions.calculateDirectionsWithCompletionHandler {(
+            response: MKDirectionsResponse?,
+            error: NSError?) in
+            guard let routeResponse = response?.routes else {return self.showAlert("could not find directions for \(self.taskLocations?[index].name)")}
+            let fastestRoute:MKRoute = routeResponse.sort({$0.expectedTravelTime < $1.expectedTravelTime})[0]
+            routes.append(fastestRoute)
+            time += fastestRoute.expectedTravelTime
+            if index + 2 < self.taskLocations?.count {
+                self.calculateCloseTasksEnRouteToDestination(index + 1, time: &time, routes: &routes)
+            }
+            else {
+                self.showRoute(routes)
+            }
+        }
+    }
     
     @IBAction func checkDestination(sender: UIButton) {
         if allTextFieldsAreFilled([destinationTextField]) == true {
@@ -128,25 +159,6 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
-    func plotRouteToDestination(destination:String) {
-        let request: MKDirectionsRequest = MKDirectionsRequest()
-        request.source = userLocation
-        searchForMapItemsMatchingNoun(destination) { (mapItems) -> () in
-            request.destination = mapItems.first
-            request.requestsAlternateRoutes = true
-            request.transportType = .Automobile
-            let directions = MKDirections(request: request)
-            directions.calculateDirectionsWithCompletionHandler ({
-                (response: MKDirectionsResponse?, error: NSError?) in
-                if let routeResponse = response?.routes {
-                    let quickestRouteForSegment: MKRoute = routeResponse.sort({$0.expectedTravelTime < $1.expectedTravelTime})[0]
-                    self.plotPolyline(quickestRouteForSegment)
-                } else if let _ = error {
-                    self.showAlert("Directions Not Available")
-                }
-            })
-        }
-    }
     
     
     func plotPolyline(route: MKRoute) {
