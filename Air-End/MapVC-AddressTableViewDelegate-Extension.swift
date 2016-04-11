@@ -12,7 +12,7 @@ import MapKit
 extension MapVC: CorrectAddressTableViewDelegate {
     
     func searchForValidAddress(sender:UIButton, destinationTextField:UITextField, viewController:UIViewController){
-        guard let aDestination = destinationTextField.text else {return}
+        guard let aDestination = destinationTextField.text else {return}    
         CLGeocoder().geocodeAddressString(aDestination,
                                           completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
                                             if let placemarks = placemarks {

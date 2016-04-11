@@ -59,6 +59,12 @@ struct Theme {
         }
     }
     
+    static func randomColor() -> BoldColor {
+                let maxValue = BoldColor.OrangeColor.rawValue
+                let randomValue = arc4random_uniform(maxValue)
+                return BoldColor(rawValue: randomValue)!
+            }
+    
     enum Fonts {
         case TitleTypeFace
         case BoldTitleTypeFace

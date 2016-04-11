@@ -29,6 +29,7 @@
 		918EF1E91CAC574700A3553E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E61CAC574700A3553E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		918EF1EA1CAC574700A3553E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E71CAC574700A3553E /* RealmSwift.framework */; };
 		918EF1EB1CAC574700A3553E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E71CAC574700A3553E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91BABBE91CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BABBE81CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift */; };
 		91E225321CB05D5A009D7CDC /* MapVC-TextField-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225311CB05D5A009D7CDC /* MapVC-TextField-Extension.swift */; };
 		91E225341CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225331CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift */; };
 		91E225361CB0864F009D7CDC /* CorrectAddressTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E225351CB0864F009D7CDC /* CorrectAddressTableView.swift */; };
@@ -83,6 +84,7 @@
 		914E4D1F1CB475DA009D795E /* Glamor-BoldExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldExtendedItalic.otf"; sourceTree = "<group>"; };
 		918EF1E61CAC574700A3553E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		918EF1E71CAC574700A3553E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		91BABBE81CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-Guidance-ExtensionViewController.swift"; sourceTree = "<group>"; };
 		91E225311CB05D5A009D7CDC /* MapVC-TextField-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-TextField-Extension.swift"; sourceTree = "<group>"; };
 		91E225331CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-SegmentedControl-Extension.swift"; sourceTree = "<group>"; };
 		91E225351CB0864F009D7CDC /* CorrectAddressTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorrectAddressTableView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				91E225391CB31408009D7CDC /* MapVC-AddressTableViewDelegate-Extension.swift */,
 				91E225311CB05D5A009D7CDC /* MapVC-TextField-Extension.swift */,
 				91E225331CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift */,
+				91BABBE81CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				91E225361CB0864F009D7CDC /* CorrectAddressTableView.swift in Sources */,
 				911A9D311CA0A2DF0060DB04 /* ViewController-Conversions-Extension.swift in Sources */,
 				913B1E361CA08D3500F8AFF7 /* ViewController-Extension.swift in Sources */,
+				91BABBE91CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift in Sources */,
 				913B1E331CA088D300F8AFF7 /* NewTaskVC.swift in Sources */,
 				91F67AC91CB43E8100241C2F /* Theme.swift in Sources */,
 				91E225321CB05D5A009D7CDC /* MapVC-TextField-Extension.swift in Sources */,

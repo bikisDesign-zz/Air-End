@@ -27,14 +27,68 @@
                                             <outlet property="delegate" destination="MKC-yz-ckq" id="DXO-Zg-vlp"/>
                                         </connections>
                                     </mapView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZS-sK-BTi">
+                                        <rect key="frame" x="8" y="0.0" width="584" height="120"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brX-wN-6aA">
+                                                <rect key="frame" x="8" y="8" width="478" height="104"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsM-f6-JiT">
+                                                <rect key="frame" x="496" y="8" width="80" height="104"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="ij9-6a-QE1"/>
+                                                </constraints>
+                                                <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="cueNextDirection:" destination="MKC-yz-ckq" eventType="touchUpInside" id="dV5-bZ-fPX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="brX-wN-6aA" firstAttribute="top" secondItem="PZS-sK-BTi" secondAttribute="topMargin" id="00P-5N-kE6"/>
+                                            <constraint firstItem="QsM-f6-JiT" firstAttribute="leading" secondItem="brX-wN-6aA" secondAttribute="trailing" constant="10" id="094-yc-edy"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="QsM-f6-JiT" secondAttribute="bottom" id="KtZ-Jd-qz5"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="brX-wN-6aA" secondAttribute="trailing" constant="75" id="MZF-mV-3Rg"/>
+                                            <constraint firstAttribute="height" constant="120" id="SRQ-ot-TuT"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="QsM-f6-JiT" secondAttribute="trailing" id="dDM-ih-ssd"/>
+                                            <constraint firstItem="QsM-f6-JiT" firstAttribute="top" secondItem="PZS-sK-BTi" secondAttribute="topMargin" id="h3m-Hg-ntH"/>
+                                            <constraint firstItem="brX-wN-6aA" firstAttribute="leading" secondItem="PZS-sK-BTi" secondAttribute="leadingMargin" id="msn-My-ZYB"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="brX-wN-6aA" secondAttribute="bottom" id="zR3-rg-6T6"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="MZF-mV-3Rg"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="5" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjp-uk-ecK">
+                                        <rect key="frame" x="502" y="453" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="dJH-0E-hs4"/>
+                                            <constraint firstAttribute="width" constant="65" id="vps-C1-ogS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Route-60"/>
+                                        <connections>
+                                            <action selector="beginGuidance:" destination="MKC-yz-ckq" eventType="touchUpInside" id="rRI-uf-hzk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="vjp-uk-ecK" secondAttribute="trailing" constant="25" id="2le-WT-Ebi"/>
+                                    <constraint firstItem="PZS-sK-BTi" firstAttribute="top" secondItem="hyB-d0-qTK" secondAttribute="top" id="QE5-65-Ef2"/>
+                                    <constraint firstAttribute="trailing" secondItem="PZS-sK-BTi" secondAttribute="trailing" constant="8" id="RDu-hq-gJ3"/>
                                     <constraint firstItem="SYG-cu-7gF" firstAttribute="top" secondItem="hyB-d0-qTK" secondAttribute="top" id="U8Y-JB-omB"/>
                                     <constraint firstAttribute="bottom" secondItem="SYG-cu-7gF" secondAttribute="bottom" id="ail-Tc-7JA"/>
                                     <constraint firstItem="SYG-cu-7gF" firstAttribute="leading" secondItem="hyB-d0-qTK" secondAttribute="leading" id="bm7-6B-A1S"/>
+                                    <constraint firstItem="PZS-sK-BTi" firstAttribute="leading" secondItem="hyB-d0-qTK" secondAttribute="leading" constant="8" id="oiU-GC-wwR"/>
                                     <constraint firstAttribute="trailing" secondItem="SYG-cu-7gF" secondAttribute="trailing" id="pVw-Eg-doY"/>
                                     <constraint firstItem="SYG-cu-7gF" firstAttribute="top" secondItem="hyB-d0-qTK" secondAttribute="top" id="vDQ-pa-kJ7"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="vjp-uk-ecK" secondAttribute="bottom" constant="25" id="x7Y-6u-0we"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -139,6 +193,10 @@
                         <outlet property="checkDestinationButton" destination="61K-XN-pAz" id="jke-cQ-akF"/>
                         <outlet property="destinationTextField" destination="Lzr-0d-VIK" id="gHG-yt-Xui"/>
                         <outlet property="enRouteView" destination="r5Z-zl-3OW" id="0p4-DW-p8l"/>
+                        <outlet property="guidanceButton" destination="vjp-uk-ecK" id="8ma-Rw-8Kg"/>
+                        <outlet property="guidanceLabel" destination="brX-wN-6aA" id="eZ3-sL-8xv"/>
+                        <outlet property="guidanceLabelContainer" destination="PZS-sK-BTi" id="NhZ-Hb-hPa"/>
+                        <outlet property="guidanceNextButton" destination="QsM-f6-JiT" id="EIb-Kk-9mP"/>
                         <outlet property="segmentedControl" destination="ggf-Ar-A8U" id="Ikh-MB-QIU"/>
                         <outlet property="taskMapView" destination="SYG-cu-7gF" id="pfr-i4-vcc"/>
                         <outletCollection property="enRouteOutletCollection" destination="r5Z-zl-3OW" collectionClass="NSMutableArray" id="0Gq-f4-Ham"/>
@@ -502,5 +560,6 @@
     <resources>
         <image name="Add-60" width="60" height="60"/>
         <image name="CheckMark-60" width="60" height="60"/>
+        <image name="Route-60" width="60" height="60"/>
     </resources>
 </document>

@@ -19,6 +19,9 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var taskLocations:[MKMapItem]?
     var userLocation:MKMapItem?
     var addressValidated:Bool?
+    var routeIndexInstructionIndexTuple:(Int,Int)?
+    var guidanceRoutes:[MKRoute]?
+    var firstTime:Bool?
     
     @IBOutlet var addDestinationButton: UIButton!
     @IBOutlet var checkDestinationButton: UIButton!
@@ -26,12 +29,17 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet var enRouteView: UIView!
     
     @IBOutlet var destinationTextField: UITextField!
+    
     @IBOutlet var segmentedControl: UISegmentedControl!
+    
     @IBOutlet var taskMapView: MKMapView!
+    @IBOutlet var guidanceButton: UIButton!
+    @IBOutlet var guidanceLabel: UILabel!
+    @IBOutlet var guidanceLabelContainer: UIView!
+    @IBOutlet var guidanceNextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,20 +50,16 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     func setUpMapUI(){
         enRouteView.backgroundColor = Theme.Colors.BackgroundColor.color
         destinationTextField.backgroundColor = Theme.Colors.LabelColor.color
+        guidanceLabelContainer.backgroundColor = Theme.Colors.LabelColor.color
+        guidanceLabelContainer.layer.cornerRadius = 10
+        guidanceLabelContainer.alpha = 0.7
+        guidanceLabel.textColor = UIColor.whiteColor()
         taskMapView.showsUserLocation = true
         locationManager.delegate = self
         taskMapView.delegate = self
         locationManager.startUpdatingLocation()
-        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
+        hideOverlay(true, viewCollection: [enRouteView, destinationTextField, destinationTextField, guidanceButton, guidanceLabelContainer, guidanceLabel])
     }
-    
-    //    func enRouteUI(isHidden:Bool){
-    //        UIView.animateWithDuration(1.0) {
-    //            self.enRouteView.hidden = isHidden
-    //            self.enRouteView.alpha = 1.0
-    //            self.destinationTextField.hidden = isHidden
-    //        }
-    //    }
     
     func checkDestinationUI(isHidden:Bool){
         UIView.animateWithDuration(1.0) {
@@ -85,30 +89,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         })
         self.locationManager.stopUpdatingLocation()
     }
-    
-    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        segmentedControlValueChanged(segmentedControl)
-    }
-    
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-        if (overlay is MKPolyline) {
-            if mapView.overlays.count == 1 {
-                polylineRenderer.strokeColor =
-                    UIColor.blueColor().colorWithAlphaComponent(0.75)
-            } else if mapView.overlays.count == 2 {
-                polylineRenderer.strokeColor =
-                    UIColor.greenColor().colorWithAlphaComponent(0.75)
-            } else if mapView.overlays.count == 3 {
-                polylineRenderer.strokeColor =
-                    UIColor.redColor().colorWithAlphaComponent(0.75)
-            }
-            polylineRenderer.lineWidth = 5
-        }
-        return polylineRenderer
-    }
-    
-    
+
     @IBAction func addDestination(sender: UIButton) {
         view.endEditing(true)
         if allTextFieldsAreFilled([destinationTextField]) == true {
@@ -118,6 +99,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 guard let destinationMapItem = mapItems.first else {return}
                 guard let currentUserLocation = self.userLocation else {return self.showAlert("We couldn't locate you. Please try again!")}
                 self.taskLocations?.append(destinationMapItem)
+                self.taskMapView.addAnnotation(self.convertToAnnotationFromMapItem(destinationMapItem))
                 self.taskLocations?.insert(currentUserLocation, atIndex: 0)
                 var someTime:Double = Double()
                 var someRoute:[MKRoute] = [MKRoute]()
@@ -126,6 +108,17 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             })
         }
     }
+    
+    @IBAction func checkDestination(sender: UIButton) {
+        if allTextFieldsAreFilled([destinationTextField]) == true {
+            view.endEditing(true)
+            let correctAddressTableView = CorrectAddressTableView()
+            correctAddressTableView.correctAddressTableViewDelegate = self
+            searchForValidAddress(sender, destinationTextField: destinationTextField, viewController: self)
+        }
+    }
+    
+  
     
     func calculateCloseTasksEnRouteToDestination(index:Int, inout time:NSTimeInterval, inout routes:[MKRoute]){
         let request:MKDirectionsRequest = MKDirectionsRequest()
@@ -145,23 +138,33 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 self.calculateCloseTasksEnRouteToDestination(index + 1, time: &time, routes: &routes)
             }
             else {
+                self.guidanceRoutes = routes
                 self.showRoute(routes)
             }
         }
     }
     
-    @IBAction func checkDestination(sender: UIButton) {
-        if allTextFieldsAreFilled([destinationTextField]) == true {
-            view.endEditing(true)
-            let correctAddressTableView = CorrectAddressTableView()
-            correctAddressTableView.correctAddressTableViewDelegate = self
-            searchForValidAddress(sender, destinationTextField: destinationTextField, viewController: self)
+    
+    func showRoute(routes: [MKRoute]) {
+        for i in (0..<routes.count).reverse() {
+            plotPolyline(routes[i], index: i)
         }
     }
     
+    func setUPGuidanceUI(){
+        guidanceButton.hidden = false
+        segmentedControl.hidden = true
+//        let tgr = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
+//        taskMapView.addGestureRecognizer(tgr)
+    }
     
-    
-    func plotPolyline(route: MKRoute) {
+//    func hideGuidance(){
+//        guidanceLabelContainer.hidden ? false : true
+//        guidanceLabelContainer.hidden ? true : false
+//    }
+//    
+    func plotPolyline(route: MKRoute, index: Int) {
+        setUPGuidanceUI()
         taskMapView.addOverlay(route.polyline)
         if taskMapView.overlays.count == 1 {
             taskMapView.setVisibleMapRect(route.polyline.boundingMapRect,
@@ -177,9 +180,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
-    func showRoute(routes: [MKRoute]) {
-        for i in 0..<routes.count {
-            plotPolyline(routes[i])
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+        if (overlay is MKPolyline) {
+            polylineRenderer.strokeColor = Theme.randomColor().color
+            polylineRenderer.lineWidth = 5
         }
+        return polylineRenderer
     }
+    
+   
 }
