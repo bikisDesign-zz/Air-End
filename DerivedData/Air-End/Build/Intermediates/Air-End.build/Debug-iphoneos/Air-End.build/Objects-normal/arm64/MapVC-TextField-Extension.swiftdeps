@@ -8,9 +8,9 @@ provides-dynamic-lookup:
 - "textFieldDidEndEditing"
 - "textFieldDidBeginEditing"
 depends-top-level:
-- "UITextField"
 - "MapVC"
 - "UITextFieldDelegate"
+- "UITextField"
 depends-member:
 - ["Ps9AnyObject", "textField"]
 - ["Ps9AnyObject", "textFieldDidBeginEditing"]

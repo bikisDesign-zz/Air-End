@@ -6,28 +6,28 @@ provides-nominal:
 provides-member:
 - ["C7Air_End4Task", ""]
 provides-dynamic-lookup:
+- "distanceFromUser"
 - "isCompleted"
+- "createNewTaskWithID"
 - "dueDate"
-- "id"
 - "primaryKey"
 - "name"
-- "distanceFromUser"
-- "createNewTaskWithID"
 - "hashtag"
+- "id"
 depends-top-level:
 - !private "uiRealm"
-- "Object"
-- "Task"
-- "Results"
+- !private "Array"
+- "NSDate"
 - !private "StringLiteralType"
 - !private "Void"
-- !private "Array"
-- "String"
-- "NSDate"
-- "Double"
+- "Task"
+- "Results"
 - "Noun"
+- "String"
 - "BooleanLiteralType"
 - "Bool"
+- "Object"
+- "Double"
 depends-member:
 - ["Ps16AbsoluteValuable", "init"]
 - ["P10RealmSwift11AddableType", "init"]

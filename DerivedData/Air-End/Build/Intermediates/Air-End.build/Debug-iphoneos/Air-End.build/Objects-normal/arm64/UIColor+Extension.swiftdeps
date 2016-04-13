@@ -7,8 +7,8 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "/"
-- "UIColor"
 - "CGFloat"
+- "UIColor"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]

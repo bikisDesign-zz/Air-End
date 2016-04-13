@@ -15,8 +15,6 @@ extension MapVC {
         case 0:
             segmentAllTasks()
         case 1:
-            segmentCloseTasks()
-        case 2:
             segmentEnRoute()
         default:
             assertionFailure("received extroneous input from segemented control")
@@ -25,13 +23,13 @@ extension MapVC {
     
     
     func segmentAllTasks(){
-//        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-//        taskManager.readCloseTasks { (tasks) in
-//            self.tasks = allTasks
-//            for task in self.tasks! {
-//
+        getLocation()
+        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
+//            taskManager.readCloseTasks { (tasks) in
+//                for task in tasks {
+//                self.setMapRegionForMapItems(self.closeMapItems[task.name], mapViewA: self.taskMapView)
+//                }
 //        }
-        
 //        readAllTasks(withCompletionHandler: { (tasks) in
 //            guard let allTasks = tasks else {return}
 //                            guard let descriptor = task.hashtag?.descriptor else {return}
@@ -48,15 +46,7 @@ extension MapVC {
     }
     
     
-    func segmentCloseTasks(){
-        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-//        print(closeMapItems.count)
-//        print(tasks?.count)
-//        taskManager.readCloseTasks(withCompletionHandler: { (closeTasks) in
-//            self.tasks = closeTasks
-//            self.tableView.reloadData()
-//        })
-    }
+
     
     func segmentEnRoute() {
         hideOverlay(false, viewCollection: [enRouteView, destinationTextField])

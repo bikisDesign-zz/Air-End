@@ -5,29 +5,28 @@ provides-nominal:
 provides-member:
 - ["C7Air_End6ListVC", ""]
 provides-dynamic-lookup:
+- "locationManager"
+- "locationManager"
+- "findClosestMapItemMatchingTask"
 - "determineLocationAuthorizationStatus"
-- "locationManager"
-- "locationManager"
 depends-top-level:
-- !private "uiRealm"
-- !private "MKLocalSearch"
-- "CLLocationManagerDelegate"
-- !private "<"
 - "Task"
-- "MKMapItem"
-- "CLLocationManager"
-- !private "StringLiteralType"
-- !private "Void"
-- "String"
 - !private "BooleanLiteralType"
-- "Bool"
-- "ListVC"
-- !private "assertionFailure"
-- !private "print"
-- !private "NSError"
-- "CLLocation"
-- "CLAuthorizationStatus"
 - !private "MKLocalSearchResponse"
+- !private "print"
+- "CLLocationManagerDelegate"
+- !private "NSError"
+- !private "<"
+- !private "assertionFailure"
+- "CLLocation"
+- "Bool"
+- !private "StringLiteralType"
+- !private "uiRealm"
+- "CLLocationManager"
+- "CLAuthorizationStatus"
+- !private "MKLocalSearch"
+- !private "Void"
+- "ListVC"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -329,9 +328,7 @@ depends-member:
 - ["C7Air_End6ListVC", "CLLocationManager"]
 - !private ["C7Air_End6ListVC", "MKLocalSearch"]
 - !private ["C7Air_End6ListVC", "MKLocalSearchResponse"]
-- ["C7Air_End6ListVC", "MKMapItem"]
 - !private ["C7Air_End6ListVC", "NSError"]
-- ["C7Air_End6ListVC", "String"]
 - ["C7Air_End6ListVC", "Task"]
 - !private ["C7Air_End6ListVC", "Void"]
 - !private ["C7Air_End6ListVC", "assertionFailure"]
@@ -425,9 +422,7 @@ depends-member:
 - !private ["CSo8NSObject", "Generator"]
 - !private ["CSo8NSObject", "MKLocalSearch"]
 - !private ["CSo8NSObject", "MKLocalSearchResponse"]
-- ["CSo8NSObject", "MKMapItem"]
 - !private ["CSo8NSObject", "NSError"]
-- ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "Task"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "assertionFailure"]
@@ -608,9 +603,7 @@ depends-member:
 - ["CSo11UIResponder", "CLLocationManager"]
 - !private ["CSo11UIResponder", "MKLocalSearch"]
 - !private ["CSo11UIResponder", "MKLocalSearchResponse"]
-- ["CSo11UIResponder", "MKMapItem"]
 - !private ["CSo11UIResponder", "NSError"]
-- ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "Task"]
 - !private ["CSo11UIResponder", "Void"]
 - !private ["CSo11UIResponder", "assertionFailure"]
@@ -710,9 +703,7 @@ depends-member:
 - ["CSo16UIViewController", "CLLocationManager"]
 - !private ["CSo16UIViewController", "MKLocalSearch"]
 - !private ["CSo16UIViewController", "MKLocalSearchResponse"]
-- ["CSo16UIViewController", "MKMapItem"]
 - !private ["CSo16UIViewController", "NSError"]
-- ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "Task"]
 - !private ["CSo16UIViewController", "Void"]
 - !private ["CSo16UIViewController", "assertionFailure"]
@@ -945,4 +936,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "c3154c0a7982c18183f440d8cb10c62f"
+interface-hash: "2a18f38662b92ded5a4b2214f3a9a6c2"

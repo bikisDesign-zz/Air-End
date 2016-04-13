@@ -13,15 +13,15 @@ provides-member:
 - ["OV7Air_End5Theme5Fonts", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "UInt32"
-- "UIFont"
-- "Theme"
-- !private "StringLiteralType"
-- !private "arc4random_uniform"
-- "=="
 - !private "~="
-- "UIColor"
+- "=="
+- "UInt32"
+- !private "arc4random_uniform"
+- !private "StringLiteralType"
+- "Theme"
 - "Array"
+- "UIColor"
+- "UIFont"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
 - !private ["P10RealmSwift11AddableType", "hashValue"]

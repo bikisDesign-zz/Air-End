@@ -9,24 +9,24 @@ provides-member:
 - ["CSo16UIViewController", "convertToAnnotationFromMapItem"]
 - ["CSo16UIViewController", "convertAddressFromPlacemark"]
 provides-dynamic-lookup:
-- "convertAddressFromPlacemark"
-- "convertBooltoInt"
 - "convertNSDateToString"
 - "convertToAnnotationFromMapItem"
+- "convertBooltoInt"
 - "convertStringToNSDate"
+- "convertAddressFromPlacemark"
 depends-top-level:
-- !private "BooleanLiteralType"
 - "Bool"
-- "MKMapItem"
-- "MKPointAnnotation"
-- "NSDate"
-- "UIViewController"
-- !private "StringLiteralType"
-- !private "=="
 - "CLPlacemark"
-- "Int"
 - "String"
+- "MKMapItem"
+- "Int"
+- !private "=="
+- "UIViewController"
 - !private "NSDateFormatter"
+- "MKPointAnnotation"
+- !private "StringLiteralType"
+- "NSDate"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]

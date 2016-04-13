@@ -189,8 +189,8 @@ SWIFT_CLASS("_TtC7Air_End6ListVC")
 @property (nonatomic, strong) Task * _Nullable selectedTask;
 @property (nonatomic, strong) MKMapItem * _Nullable selectedClosestTask;
 - (void)viewDidLoad;
-- (void)getLocation;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)getLocation;
 - (void)setUpUI;
 - (void)segmentDueSoon;
 - (void)segmentCloseTasks;
@@ -232,6 +232,7 @@ SWIFT_CLASS("_TtC7Air_End5MapVC")
 @property (nonatomic, strong) CLLocationManager * _Nonnull locationManager;
 @property (nonatomic, copy) NSArray<MKMapItem *> * _Nullable taskLocations;
 @property (nonatomic, strong) MKMapItem * _Nullable userLocation;
+@property (nonatomic, copy) NSDictionary<NSString *, MKMapItem *> * _Nonnull closeMapItems;
 @property (nonatomic, copy) NSArray<MKRoute *> * _Nullable guidanceRoutes;
 @property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified addDestinationButton;
 @property (nonatomic, strong) IBOutlet UIButton * _Null_unspecified checkDestinationButton;
@@ -248,7 +249,9 @@ SWIFT_CLASS("_TtC7Air_End5MapVC")
 - (void)viewWillAppear:(BOOL)animated;
 - (void)setUpMapUI;
 - (void)checkDestinationUI:(BOOL)isHidden;
+- (void)getLocation;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (void)findClosestMapItemMatchingTask:(Task * _Nonnull)task userLocation:(CLLocation * _Nonnull)userLocation;
 - (IBAction)addDestination:(UIButton * _Nonnull)sender;
 - (IBAction)checkDestination:(UIButton * _Nonnull)sender;
 - (void)showRoute:(NSArray<MKRoute *> * _Nonnull)routes;

@@ -27,15 +27,15 @@ class ListVC: UIViewController {
         setUpUI()
     }
     
-    func getLocation(){
-        locationManager.delegate = self
-        determineLocationAuthorizationStatus()
-    }
-  
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControlValueChanged(segmentedControl)
+    }
+    
+    func getLocation(){
+        locationManager.delegate = self
+        determineLocationAuthorizationStatus()
     }
     
     func setUpUI(){

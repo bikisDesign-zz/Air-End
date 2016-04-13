@@ -53,13 +53,13 @@ extension ListVC: CLLocationManagerDelegate{
             taskManager.readAllTasks { (tasks) -> () in
                 self.tasks = tasks
                 for task in tasks! {
-                    self.findClosestMapItemMatchingTask(task, userLocation: newUserLocation, closeTasksArray: &self.closeMapItems)
+                    self.findClosestMapItemMatchingTask(task, userLocation: newUserLocation)
                 }
             }
         }
     }
     
-    func findClosestMapItemMatchingTask(task:Task, userLocation:CLLocation, inout closeTasksArray:[String:MKMapItem]) {
+    func findClosestMapItemMatchingTask(task:Task, userLocation:CLLocation) {
         print("finding Closest Task")
         guard let descriptor = task.hashtag?.descriptor else {return print("this task doesn't have a descriptor")}
         guard let request = initalizeRequestWithDescriptor(descriptor, location: userLocation) else {return showAlert("We couldn't locate you! Please try again.")}
@@ -68,7 +68,7 @@ extension ListVC: CLLocationManagerDelegate{
             guard let mapItems = response?.mapItems else { return print("couldn't find any close mapItems matching \(descriptor)")}
             
             let sortedCloseTasks = mapItems.sort({$0.placemark.location?.distanceFromLocation(userLocation) < $1.placemark.location?.distanceFromLocation(userLocation)})
-            closeTasksArray[task.name] = sortedCloseTasks.first!
+            self.closeMapItems[task.name] = sortedCloseTasks.first!
             if let distanceFromUser = sortedCloseTasks.first?.placemark.location?.distanceFromLocation(userLocation) {
                 try! uiRealm.write({
                     task.distanceFromUser = distanceFromUser

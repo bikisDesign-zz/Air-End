@@ -19,6 +19,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var taskLocations:[MKMapItem]?
     var userLocation:MKMapItem?
     var addressValidated:Bool?
+    var closeMapItems = [String:MKMapItem]()
     var routeIndexInstructionIndexTuple:(Int,Int)?
     var guidanceRoutes:[MKRoute]?
     
@@ -44,6 +45,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         setUpMapUI()
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControlValueChanged(segmentedControl)
     }
     
     func setUpMapUI(){
@@ -54,9 +57,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         guidanceLabelContainer.alpha = 0.7
         guidanceLabel.textColor = UIColor.whiteColor()
         taskMapView.showsUserLocation = true
-        locationManager.delegate = self
         taskMapView.delegate = self
-        locationManager.startUpdatingLocation()
         hideOverlay(true, viewCollection: [enRouteView, destinationTextField, destinationTextField, guidanceButton, guidanceLabelContainer, guidanceLabel])
     }
     
@@ -77,8 +78,23 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
+    func getLocation(){
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+    }
+    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
+        if let currentLocation = locations.first {
+            self.taskManager.readAllTasks(withCompletionHandler: { (tasks) in
+                self.tasks = tasks
+                for task in self.tasks! {
+                    self.findClosestMapItemMatchingTask(task, userLocation: currentLocation)
+                }
+            })
+        }
         CLGeocoder().reverseGeocodeLocation(locations.last!,
                                             completionHandler: {(placemarks:[CLPlacemark]?, error:NSError?) -> Void in
                                                 if let placemarks = placemarks {
@@ -86,9 +102,27 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                                                     self.userLocation = MKMapItem(placemark: userPlaceMark)
                                                 }
         })
-        locationManager.stopUpdatingLocation()
-        locationManager.delegate = nil
     }
+    
+    func findClosestMapItemMatchingTask(task:Task, userLocation:CLLocation) {
+        print("finding Closest Task")
+        guard let descriptor = task.hashtag?.descriptor else {return print("this task doesn't have a descriptor")}
+        guard let request = initalizeRequestWithDescriptor(descriptor, location: userLocation) else {return showAlert("We couldn't locate you! Please try again.")}
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
+            guard let mapItems = response?.mapItems else { return print("couldn't find any close mapItems matching \(descriptor)")}
+            
+            let sortedCloseTasks = mapItems.sort({$0.placemark.location?.distanceFromLocation(userLocation) < $1.placemark.location?.distanceFromLocation(userLocation)})
+            self.closeMapItems[task.name] = sortedCloseTasks.first!
+            if let distanceFromUser = sortedCloseTasks.first?.placemark.location?.distanceFromLocation(userLocation) {
+                self.setMapRegionForMapItems(self.closeMapItems[task.name], mapViewA: self.taskMapView)
+                try! uiRealm.write({
+                    task.distanceFromUser = distanceFromUser
+                })
+            }
+        })
+    }
+
     
     
     //MARK - Destination Button

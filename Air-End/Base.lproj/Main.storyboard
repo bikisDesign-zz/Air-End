@@ -165,7 +165,6 @@
                                 </constraints>
                                 <segments>
                                     <segment title="All Tasks"/>
-                                    <segment title="Close Tasks"/>
                                     <segment title="En Route"/>
                                 </segments>
                                 <connections>

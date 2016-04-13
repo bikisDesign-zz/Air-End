@@ -6,16 +6,16 @@ provides-member:
 - ["C7Air_End5MapVC", "beginGuidance"]
 - ["C7Air_End5MapVC", "cueNextDirection"]
 provides-dynamic-lookup:
-- "cueNextDirection"
 - "beginGuidance"
+- "cueNextDirection"
 depends-top-level:
+- "UIButton"
 - !private "Array"
+- !private ">"
+- !private "StringLiteralType"
+- !private "+"
 - "MapVC"
 - !private "BooleanLiteralType"
-- !private "StringLiteralType"
-- !private ">"
-- "UIButton"
-- !private "+"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
