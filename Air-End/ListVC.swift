@@ -16,7 +16,7 @@ class ListVC: UIViewController {
     @IBOutlet var tableView: UITableView!
     var tasks : Results<Task>?
     let taskManager = Task()
-    var closeMapItems = [String:[MKMapItem]]()
+    var closeMapItems = [String:MKMapItem]()
     let locationManager = CLLocationManager()
     var currentLocation:CLLocation?
     var selectedTask:Task?
@@ -25,17 +25,17 @@ class ListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        getLocation()
     }
     
     func getLocation(){
         locationManager.delegate = self
         determineLocationAuthorizationStatus()
     }
-    
+  
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        segmentDueSoon()
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControlValueChanged(segmentedControl)
     }
     
     func setUpUI(){
@@ -50,6 +50,7 @@ class ListVC: UIViewController {
     //MARK: - Segmented Control
     
     func segmentDueSoon(){
+        getLocation()
         taskManager.readTasksDueSoon { (tasks) -> () in
             self.tasks = tasks
             self.tableView.reloadData()
@@ -57,14 +58,12 @@ class ListVC: UIViewController {
     }
     
     func segmentCloseTasks(){
-        taskManager.readAllTasks { (tasks) -> () in
-            self.tasks = tasks
-            for task in tasks! {
-                if let descriptor = task.hashtag?.descriptor {
-                    self.findCloseLocationsMatchingNoun(descriptor)
-                }
-            }
-        }
+        print(closeMapItems.count)
+        print(tasks?.count)
+        taskManager.readCloseTasks(withCompletionHandler: { (closeTasks) in
+            self.tasks = closeTasks
+            self.tableView.reloadData()
+        })
     }
     
     func segmentFullList(){
@@ -73,7 +72,6 @@ class ListVC: UIViewController {
             self.tableView.reloadData()
         })
     }
-    
     
     
     @IBAction func segmentedControlValueChanged(sender: UISegmentedControl) {
@@ -114,12 +112,18 @@ class ListVC: UIViewController {
 
 extension ListVC: UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let numberOfTasks = tasks?.count else { return 0}
+        return numberOfTasks
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.ListCell)
         guard let task = tasks?[indexPath.row] else { return cell}
         if segmentedControl.selectedSegmentIndex == 1 {
+            print(task.distanceFromUser)
             cell.textLabel?.text = task.name
-            cell.detailTextLabel?.text = findClosestLocationNameForTask(task)
+            cell.detailTextLabel?.text = closeMapItems[task.name]?.name
         }
         else {
             cell.textLabel?.text = task.name
@@ -132,28 +136,19 @@ extension ListVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 65
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let task = tasks?[indexPath.row] {
-            guard let descriptor = task.hashtag?.descriptor else {return}
-            let closestTask = closeMapItems[descriptor]?.first
-            if closestTask != nil {
-                selectedTask = task
-                selectedClosestTask = closestTask
-                performSegueWithSegueIdentifier(SegueIdentifier.SegueToMapTaskVC, sender: self)
-            }
-        }
+        guard let task = tasks?[indexPath.row] else {return}
+        let selectedMapItem = closeMapItems[task.name]
+        selectedTask = task
+        selectedClosestTask = selectedMapItem
+        performSegueWithSegueIdentifier(SegueIdentifier.SegueToMapTaskVC, sender: self)
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let numberOfTasks = tasks?.count else { return 0}
-        return numberOfTasks
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 65
     }
 }

@@ -6,67 +6,66 @@ provides-nominal:
 provides-member:
 - ["C7Air_End6ListVC", ""]
 provides-dynamic-lookup:
-- "segmentCloseTasks"
-- "addItemButtonWasTapped"
-- "unwindToListVC"
-- "getLocation"
-- "locationManager"
 - "segmentedControlValueChanged"
-- "segmentFullList"
-- "selectedClosestTask"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
 - "setUpUI"
-- "currentLocation"
-- "viewWillAppear"
-- "closeMapItems"
-- "taskManager"
-- "viewDidLoad"
-- "segmentedControl"
-- "selectedTask"
+- "selectedClosestTask"
 - "prepareForSegue"
+- "locationManager"
+- "segmentedControl"
+- "taskManager"
+- "segmentFullList"
+- "viewWillAppear"
+- "getLocation"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "addItemButtonWasTapped"
+- "segmentCloseTasks"
+- "currentLocation"
+- "closeMapItems"
+- "viewDidLoad"
 - "segmentDueSoon"
+- "unwindToListVC"
+- "selectedTask"
 depends-top-level:
-- "MKMapItem"
-- "ListVC"
-- !private "!="
-- "CLLocation"
-- "UITableViewDataSource"
-- !private "~="
-- !private "=="
-- "UITableViewDelegate"
 - "UIStoryboardSegue"
-- "AnyObject"
-- "CLLocationManager"
-- "UITableView"
-- "NSIndexPath"
-- !private "StringLiteralType"
-- "CGFloat"
-- "String"
 - !private "UIColor"
-- "UISegmentedControl"
-- "Int"
-- !private "TaskMapVC"
-- "UIViewController"
-- !private "UIBarButtonItem"
-- !private "assertionFailure"
-- "UITableViewCell"
-- "Bool"
-- !private "Theme"
-- !private "BooleanLiteralType"
 - "Task"
 - "Results"
+- !private "TaskMapVC"
+- !private "print"
+- "UIViewController"
+- "UITableViewDataSource"
+- !private "UIBarButtonItem"
+- "UITableViewDelegate"
+- "UITableViewCell"
+- "CGFloat"
+- !private "BooleanLiteralType"
+- "CLLocationManager"
+- !private "assertionFailure"
+- "Bool"
+- "UISegmentedControl"
+- "AnyObject"
+- !private "Theme"
+- "String"
+- "MKMapItem"
+- "NSIndexPath"
+- !private "StringLiteralType"
+- !private "=="
+- !private "~="
+- "UITableView"
+- "ListVC"
+- "Int"
+- "CLLocation"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
 - !private ["P10RealmSwift11AddableType", "_DisabledRangeIndex"]
 - ["Ps9AnyObject", "CLLocationManager"]
 - !private ["Ps9AnyObject", "CellIdentifier"]
-- !private ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "Generator"]
 - !private ["Ps9AnyObject", "Index"]
 - ["Ps9AnyObject", "MKMapItem"]
@@ -89,15 +88,12 @@ depends-member:
 - ["Ps9AnyObject", "currentLocation"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableCellWithCellIdentifier"]
-- !private ["Ps9AnyObject", "descriptor"]
 - !private ["Ps9AnyObject", "destinationViewController"]
 - !private ["Ps9AnyObject", "detailTextLabel"]
 - !private ["Ps9AnyObject", "determineLocationAuthorizationStatus"]
+- !private ["Ps9AnyObject", "distanceFromUser"]
 - !private ["Ps9AnyObject", "dueDate"]
-- !private ["Ps9AnyObject", "findCloseLocationsMatchingNoun"]
-- !private ["Ps9AnyObject", "findClosestLocationNameForTask"]
 - ["Ps9AnyObject", "getLocation"]
-- !private ["Ps9AnyObject", "hashtag"]
 - ["Ps9AnyObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "locationManager"]
@@ -106,7 +102,9 @@ depends-member:
 - ["Ps9AnyObject", "numberOfSectionsInTableView"]
 - !private ["Ps9AnyObject", "performSegueWithSegueIdentifier"]
 - ["Ps9AnyObject", "prepareForSegue"]
+- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "readAllTasks"]
+- !private ["Ps9AnyObject", "readCloseTasks"]
 - !private ["Ps9AnyObject", "readTasksDueSoon"]
 - !private ["Ps9AnyObject", "reloadData"]
 - !private ["Ps9AnyObject", "rightBarButtonItem"]
@@ -150,18 +148,6 @@ depends-member:
 - ["Ps9AnyObject", "viewWillAppear"]
 - !private ["Ps9AnyObject", "whiteColor"]
 - ["Ps9AnyObject", ""]
-- !private ["Sa", "Generator"]
-- !private ["Sa", "Index"]
-- !private ["Sa", "SubSequence"]
-- !private ["Sa", "_Element"]
-- !private ["Sa", "first"]
-- !private ["Ps23ArrayLiteralConvertible", "Generator"]
-- !private ["Ps23ArrayLiteralConvertible", "Index"]
-- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
-- !private ["Ps23ArrayLiteralConvertible", "_Element"]
-- !private ["Ps23ArrayLiteralConvertible", "first"]
-- !private ["Vs10ArraySlice", "Generator"]
-- !private ["Vs10ArraySlice", "Index"]
 - !private ["Ps22BidirectionalIndexType", "Distance"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["Ps22BidirectionalIndexType", "_DisabledRangeIndex"]
@@ -189,14 +175,13 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "closestTask"]
 - !private ["PSo25CLLocationManagerDelegate", "convertNSDateToString"]
 - !private ["PSo25CLLocationManagerDelegate", "determineLocationAuthorizationStatus"]
-- !private ["PSo25CLLocationManagerDelegate", "findCloseLocationsMatchingNoun"]
-- !private ["PSo25CLLocationManagerDelegate", "findClosestLocationNameForTask"]
 - !private ["PSo25CLLocationManagerDelegate", "getLocation"]
 - ["PSo25CLLocationManagerDelegate", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo25CLLocationManagerDelegate", "locationManager"]
 - !private ["PSo25CLLocationManagerDelegate", "navigationItem"]
 - ["PSo25CLLocationManagerDelegate", "numberOfSectionsInTableView"]
 - !private ["PSo25CLLocationManagerDelegate", "performSegueWithSegueIdentifier"]
+- !private ["PSo25CLLocationManagerDelegate", "print"]
 - ["PSo25CLLocationManagerDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo25CLLocationManagerDelegate", "scrollViewDidEndDragging"]
 - ["PSo25CLLocationManagerDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -214,6 +199,7 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "segmentDueSoon"]
 - !private ["PSo25CLLocationManagerDelegate", "segmentFullList"]
 - !private ["PSo25CLLocationManagerDelegate", "segmentedControl"]
+- !private ["PSo25CLLocationManagerDelegate", "segmentedControlValueChanged"]
 - !private ["PSo25CLLocationManagerDelegate", "selectedClosestTask"]
 - !private ["PSo25CLLocationManagerDelegate", "selectedTask"]
 - !private ["PSo25CLLocationManagerDelegate", "setUpUI"]
@@ -252,16 +238,16 @@ depends-member:
 - !private ["Ps11CVarArgType", "destinationViewController"]
 - !private ["Ps11CVarArgType", "detailTextLabel"]
 - !private ["Ps11CVarArgType", "determineLocationAuthorizationStatus"]
-- !private ["Ps11CVarArgType", "findCloseLocationsMatchingNoun"]
-- !private ["Ps11CVarArgType", "findClosestLocationNameForTask"]
 - ["Ps11CVarArgType", "getLocation"]
 - ["Ps11CVarArgType", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "locationManager"]
+- !private ["Ps11CVarArgType", "name"]
 - !private ["Ps11CVarArgType", "navigationItem"]
 - ["Ps11CVarArgType", "numberOfSectionsInTableView"]
 - !private ["Ps11CVarArgType", "performSegueWithSegueIdentifier"]
 - ["Ps11CVarArgType", "prepareForSegue"]
+- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "reloadData"]
 - !private ["Ps11CVarArgType", "rightBarButtonItem"]
 - !private ["Ps11CVarArgType", "row"]
@@ -310,7 +296,6 @@ depends-member:
 - !private ["Ps14CollectionType", "SubSequence"]
 - !private ["Ps14CollectionType", "_Element"]
 - !private ["Ps14CollectionType", "count"]
-- !private ["Ps14CollectionType", "first"]
 - ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["OV7Air_End5Theme6Colors", "BackgroundColor"]
@@ -348,17 +333,16 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "destinationViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "detailTextLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "determineLocationAuthorizationStatus"]
-- !private ["Ps28CustomDebugStringConvertible", "findCloseLocationsMatchingNoun"]
-- !private ["Ps28CustomDebugStringConvertible", "findClosestLocationNameForTask"]
-- !private ["Ps28CustomDebugStringConvertible", "first"]
 - ["Ps28CustomDebugStringConvertible", "getLocation"]
 - ["Ps28CustomDebugStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "locationManager"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps28CustomDebugStringConvertible", "performSegueWithSegueIdentifier"]
 - ["Ps28CustomDebugStringConvertible", "prepareForSegue"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
 - !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
@@ -432,17 +416,16 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "destinationViewController"]
 - !private ["Ps23CustomStringConvertible", "detailTextLabel"]
 - !private ["Ps23CustomStringConvertible", "determineLocationAuthorizationStatus"]
-- !private ["Ps23CustomStringConvertible", "findCloseLocationsMatchingNoun"]
-- !private ["Ps23CustomStringConvertible", "findClosestLocationNameForTask"]
-- !private ["Ps23CustomStringConvertible", "first"]
 - ["Ps23CustomStringConvertible", "getLocation"]
 - ["Ps23CustomStringConvertible", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "locationManager"]
+- !private ["Ps23CustomStringConvertible", "name"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
 - ["Ps23CustomStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps23CustomStringConvertible", "performSegueWithSegueIdentifier"]
 - ["Ps23CustomStringConvertible", "prepareForSegue"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
 - !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "row"]
@@ -485,8 +468,20 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
 - !private ["Ps23CustomStringConvertible", "whiteColor"]
 - ["Ps23CustomStringConvertible", ""]
+- !private ["Vs10Dictionary", "Generator"]
+- !private ["Vs10Dictionary", "Index"]
+- !private ["Vs10Dictionary", "SubSequence"]
+- !private ["Vs10Dictionary", "_Element"]
+- !private ["Vs10Dictionary", "count"]
 - ["Vs10Dictionary", "init"]
 - !private ["Vs10Dictionary", "subscript"]
+- !private ["Vs15DictionaryIndex", "Distance"]
+- !private ["Vs15DictionaryIndex", "_DisabledRangeIndex"]
+- !private ["Ps28DictionaryLiteralConvertible", "Generator"]
+- !private ["Ps28DictionaryLiteralConvertible", "Index"]
+- !private ["Ps28DictionaryLiteralConvertible", "SubSequence"]
+- !private ["Ps28DictionaryLiteralConvertible", "_Element"]
+- !private ["Ps28DictionaryLiteralConvertible", "count"]
 - ["Ps28DictionaryLiteralConvertible", "init"]
 - !private ["Ps28DictionaryLiteralConvertible", "subscript"]
 - !private ["Sd", "deinit"]
@@ -530,16 +525,16 @@ depends-member:
 - !private ["Ps9Equatable", "destinationViewController"]
 - !private ["Ps9Equatable", "detailTextLabel"]
 - !private ["Ps9Equatable", "determineLocationAuthorizationStatus"]
-- !private ["Ps9Equatable", "findCloseLocationsMatchingNoun"]
-- !private ["Ps9Equatable", "findClosestLocationNameForTask"]
 - ["Ps9Equatable", "getLocation"]
 - ["Ps9Equatable", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "locationManager"]
+- !private ["Ps9Equatable", "name"]
 - !private ["Ps9Equatable", "navigationItem"]
 - ["Ps9Equatable", "numberOfSectionsInTableView"]
 - !private ["Ps9Equatable", "performSegueWithSegueIdentifier"]
 - ["Ps9Equatable", "prepareForSegue"]
+- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "reloadData"]
 - !private ["Ps9Equatable", "rightBarButtonItem"]
 - !private ["Ps9Equatable", "row"]
@@ -626,16 +621,16 @@ depends-member:
 - !private ["Ps8Hashable", "destinationViewController"]
 - !private ["Ps8Hashable", "detailTextLabel"]
 - !private ["Ps8Hashable", "determineLocationAuthorizationStatus"]
-- !private ["Ps8Hashable", "findCloseLocationsMatchingNoun"]
-- !private ["Ps8Hashable", "findClosestLocationNameForTask"]
 - ["Ps8Hashable", "getLocation"]
 - ["Ps8Hashable", "indexPathForPreferredFocusedViewInTableView"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "locationManager"]
+- !private ["Ps8Hashable", "name"]
 - !private ["Ps8Hashable", "navigationItem"]
 - ["Ps8Hashable", "numberOfSectionsInTableView"]
 - !private ["Ps8Hashable", "performSegueWithSegueIdentifier"]
 - ["Ps8Hashable", "prepareForSegue"]
+- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "reloadData"]
 - !private ["Ps8Hashable", "rightBarButtonItem"]
 - !private ["Ps8Hashable", "row"]
@@ -683,7 +678,6 @@ depends-member:
 - !private ["Ps9Indexable", "SubSequence"]
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "count"]
-- !private ["Ps9Indexable", "first"]
 - ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
@@ -727,8 +721,6 @@ depends-member:
 - ["C7Air_End6ListVC", "currentLocation"]
 - ["C7Air_End6ListVC", "deinit"]
 - !private ["C7Air_End6ListVC", "determineLocationAuthorizationStatus"]
-- !private ["C7Air_End6ListVC", "findCloseLocationsMatchingNoun"]
-- !private ["C7Air_End6ListVC", "findClosestLocationNameForTask"]
 - ["C7Air_End6ListVC", "getLocation"]
 - ["C7Air_End6ListVC", "indexPathForPreferredFocusedViewInTableView"]
 - ["C7Air_End6ListVC", "init"]
@@ -737,6 +729,7 @@ depends-member:
 - ["C7Air_End6ListVC", "numberOfSectionsInTableView"]
 - !private ["C7Air_End6ListVC", "performSegueWithSegueIdentifier"]
 - ["C7Air_End6ListVC", "prepareForSegue"]
+- !private ["C7Air_End6ListVC", "print"]
 - ["C7Air_End6ListVC", "scrollViewDidEndDecelerating"]
 - ["C7Air_End6ListVC", "scrollViewDidEndDragging"]
 - ["C7Air_End6ListVC", "scrollViewDidEndScrollingAnimation"]
@@ -765,6 +758,7 @@ depends-member:
 - ["C7Air_End6ListVC", "viewDidLoad"]
 - ["C7Air_End6ListVC", "viewForZoomingInScrollView"]
 - ["C7Air_End6ListVC", "viewWillAppear"]
+- !private ["CSo9MKMapItem", "name"]
 - !private ["PSo17MKMapViewDelegate", "closestTask"]
 - !private ["PSo17MKMapViewDelegate", "task"]
 - !private ["P10RealmSwift10MinMaxType", "Distance"]
@@ -773,21 +767,6 @@ depends-member:
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "_DisabledRangeIndex"]
-- !private ["Ps21MutableCollectionType", "Generator"]
-- !private ["Ps21MutableCollectionType", "Index"]
-- !private ["Ps21MutableCollectionType", "SubSequence"]
-- !private ["Ps21MutableCollectionType", "_Element"]
-- !private ["Ps21MutableCollectionType", "first"]
-- !private ["Ps16MutableIndexable", "Generator"]
-- !private ["Ps16MutableIndexable", "Index"]
-- !private ["Ps16MutableIndexable", "SubSequence"]
-- !private ["Ps16MutableIndexable", "_Element"]
-- !private ["Ps16MutableIndexable", "first"]
-- !private ["Ps16MutableSliceable", "Generator"]
-- !private ["Ps16MutableSliceable", "Index"]
-- !private ["Ps16MutableSliceable", "SubSequence"]
-- !private ["Ps16MutableSliceable", "_Element"]
-- !private ["Ps16MutableSliceable", "first"]
 - ["PSo8NSCoding", "CLLocationManager"]
 - !private ["PSo8NSCoding", "CellIdentifier"]
 - ["PSo8NSCoding", "MKMapItem"]
@@ -808,8 +787,6 @@ depends-member:
 - !private ["PSo8NSCoding", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo8NSCoding", "detailTextLabel"]
 - !private ["PSo8NSCoding", "determineLocationAuthorizationStatus"]
-- !private ["PSo8NSCoding", "findCloseLocationsMatchingNoun"]
-- !private ["PSo8NSCoding", "findClosestLocationNameForTask"]
 - ["PSo8NSCoding", "getLocation"]
 - ["PSo8NSCoding", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo8NSCoding", "init"]
@@ -818,6 +795,7 @@ depends-member:
 - ["PSo8NSCoding", "numberOfSectionsInTableView"]
 - !private ["PSo8NSCoding", "performSegueWithSegueIdentifier"]
 - ["PSo8NSCoding", "prepareForSegue"]
+- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "reloadData"]
 - !private ["PSo8NSCoding", "rightBarButtonItem"]
 - !private ["PSo8NSCoding", "row"]
@@ -877,8 +855,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "convertNSDateToString"]
 - ["PSo26NSExtensionRequestHandling", "currentLocation"]
 - !private ["PSo26NSExtensionRequestHandling", "determineLocationAuthorizationStatus"]
-- !private ["PSo26NSExtensionRequestHandling", "findCloseLocationsMatchingNoun"]
-- !private ["PSo26NSExtensionRequestHandling", "findClosestLocationNameForTask"]
 - ["PSo26NSExtensionRequestHandling", "getLocation"]
 - ["PSo26NSExtensionRequestHandling", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -887,6 +863,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "numberOfSectionsInTableView"]
 - !private ["PSo26NSExtensionRequestHandling", "performSegueWithSegueIdentifier"]
 - ["PSo26NSExtensionRequestHandling", "prepareForSegue"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDecelerating"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndDragging"]
 - ["PSo26NSExtensionRequestHandling", "scrollViewDidEndScrollingAnimation"]
@@ -961,15 +938,12 @@ depends-member:
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithCellIdentifier"]
-- !private ["CSo8NSObject", "descriptor"]
 - !private ["CSo8NSObject", "destinationViewController"]
 - !private ["CSo8NSObject", "detailTextLabel"]
 - !private ["CSo8NSObject", "determineLocationAuthorizationStatus"]
+- !private ["CSo8NSObject", "distanceFromUser"]
 - !private ["CSo8NSObject", "dueDate"]
-- !private ["CSo8NSObject", "findCloseLocationsMatchingNoun"]
-- !private ["CSo8NSObject", "findClosestLocationNameForTask"]
 - ["CSo8NSObject", "getLocation"]
-- !private ["CSo8NSObject", "hashtag"]
 - ["CSo8NSObject", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "locationManager"]
@@ -978,7 +952,9 @@ depends-member:
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
 - !private ["CSo8NSObject", "performSegueWithSegueIdentifier"]
 - ["CSo8NSObject", "prepareForSegue"]
+- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "readAllTasks"]
+- !private ["CSo8NSObject", "readCloseTasks"]
 - !private ["CSo8NSObject", "readTasksDueSoon"]
 - !private ["CSo8NSObject", "reloadData"]
 - !private ["CSo8NSObject", "rightBarButtonItem"]
@@ -1048,16 +1024,16 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "destinationViewController"]
 - !private ["PSo16NSObjectProtocol", "detailTextLabel"]
 - !private ["PSo16NSObjectProtocol", "determineLocationAuthorizationStatus"]
-- !private ["PSo16NSObjectProtocol", "findCloseLocationsMatchingNoun"]
-- !private ["PSo16NSObjectProtocol", "findClosestLocationNameForTask"]
 - ["PSo16NSObjectProtocol", "getLocation"]
 - ["PSo16NSObjectProtocol", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "locationManager"]
+- !private ["PSo16NSObjectProtocol", "name"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
 - !private ["PSo16NSObjectProtocol", "performSegueWithSegueIdentifier"]
 - ["PSo16NSObjectProtocol", "prepareForSegue"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
 - !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "row"]
@@ -1104,33 +1080,26 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "whiteColor"]
 - !private ["CSo7NSValue", "deinit"]
 - ["Ps21NilLiteralConvertible", "Some"]
-- !private ["C7Air_End4Noun", "descriptor"]
-- !private ["C10RealmSwift6Object", "descriptor"]
+- !private ["C10RealmSwift6Object", "distanceFromUser"]
 - !private ["C10RealmSwift6Object", "dueDate"]
-- !private ["C10RealmSwift6Object", "hashtag"]
 - ["C10RealmSwift6Object", "init"]
 - !private ["C10RealmSwift6Object", "name"]
 - !private ["C10RealmSwift6Object", "readAllTasks"]
+- !private ["C10RealmSwift6Object", "readCloseTasks"]
 - !private ["C10RealmSwift6Object", "readTasksDueSoon"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
-- !private ["C10RealmSwift12RLMGenerator", "Element"]
-- !private ["CSo13RLMObjectBase", "descriptor"]
+- !private ["CSo13RLMObjectBase", "distanceFromUser"]
 - !private ["CSo13RLMObjectBase", "dueDate"]
-- !private ["CSo13RLMObjectBase", "hashtag"]
 - ["CSo13RLMObjectBase", "init"]
 - !private ["CSo13RLMObjectBase", "name"]
 - !private ["CSo13RLMObjectBase", "readAllTasks"]
+- !private ["CSo13RLMObjectBase", "readCloseTasks"]
 - !private ["CSo13RLMObjectBase", "readTasksDueSoon"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "_DisabledRangeIndex"]
 - !private ["Vs5Range", "deinit"]
-- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
-- !private ["Ps30RangeReplaceableCollectionType", "Index"]
-- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
-- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
-- !private ["Ps30RangeReplaceableCollectionType", "first"]
 - !private ["Ps16RawRepresentable", "Add"]
 - !private ["Ps16RawRepresentable", "ListCell"]
 - !private ["Ps16RawRepresentable", "None"]
@@ -1167,7 +1136,6 @@ depends-member:
 - !private ["Ps12SequenceType", "SubSequence"]
 - !private ["Ps12SequenceType", "_Element"]
 - !private ["Ps12SequenceType", "count"]
-- !private ["Ps12SequenceType", "first"]
 - ["Ps12SequenceType", "init"]
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps17SignedIntegerType", "Distance"]
@@ -1184,11 +1152,12 @@ depends-member:
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
+- !private ["C7Air_End4Task", "distanceFromUser"]
 - !private ["C7Air_End4Task", "dueDate"]
-- !private ["C7Air_End4Task", "hashtag"]
 - ["C7Air_End4Task", "init"]
 - !private ["C7Air_End4Task", "name"]
 - !private ["C7Air_End4Task", "readAllTasks"]
+- !private ["C7Air_End4Task", "readCloseTasks"]
 - !private ["C7Air_End4Task", "readTasksDueSoon"]
 - !private ["C7Air_End9TaskMapVC", "closestTask"]
 - !private ["C7Air_End9TaskMapVC", "task"]
@@ -1237,8 +1206,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "detailTextLabel"]
 - !private ["PSo21UIAppearanceContainer", "determineLocationAuthorizationStatus"]
-- !private ["PSo21UIAppearanceContainer", "findCloseLocationsMatchingNoun"]
-- !private ["PSo21UIAppearanceContainer", "findClosestLocationNameForTask"]
 - ["PSo21UIAppearanceContainer", "getLocation"]
 - ["PSo21UIAppearanceContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -1247,6 +1214,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "numberOfSectionsInTableView"]
 - !private ["PSo21UIAppearanceContainer", "performSegueWithSegueIdentifier"]
 - ["PSo21UIAppearanceContainer", "prepareForSegue"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDecelerating"]
 - ["PSo21UIAppearanceContainer", "scrollViewDidEndDragging"]
@@ -1304,8 +1272,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "convertNSDateToString"]
 - ["PSo18UIContentContainer", "currentLocation"]
 - !private ["PSo18UIContentContainer", "determineLocationAuthorizationStatus"]
-- !private ["PSo18UIContentContainer", "findCloseLocationsMatchingNoun"]
-- !private ["PSo18UIContentContainer", "findClosestLocationNameForTask"]
 - ["PSo18UIContentContainer", "getLocation"]
 - ["PSo18UIContentContainer", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIContentContainer", "init"]
@@ -1314,6 +1280,7 @@ depends-member:
 - ["PSo18UIContentContainer", "numberOfSectionsInTableView"]
 - !private ["PSo18UIContentContainer", "performSegueWithSegueIdentifier"]
 - ["PSo18UIContentContainer", "prepareForSegue"]
+- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDecelerating"]
 - ["PSo18UIContentContainer", "scrollViewDidEndDragging"]
 - ["PSo18UIContentContainer", "scrollViewDidEndScrollingAnimation"]
@@ -1387,8 +1354,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "detailTextLabel"]
 - !private ["PSo18UIFocusEnvironment", "determineLocationAuthorizationStatus"]
-- !private ["PSo18UIFocusEnvironment", "findCloseLocationsMatchingNoun"]
-- !private ["PSo18UIFocusEnvironment", "findClosestLocationNameForTask"]
 - ["PSo18UIFocusEnvironment", "getLocation"]
 - ["PSo18UIFocusEnvironment", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -1397,6 +1362,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "numberOfSectionsInTableView"]
 - !private ["PSo18UIFocusEnvironment", "performSegueWithSegueIdentifier"]
 - ["PSo18UIFocusEnvironment", "prepareForSegue"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UIFocusEnvironment", "scrollViewDidEndDragging"]
@@ -1473,8 +1439,6 @@ depends-member:
 - !private ["CSo11UIResponder", "dequeueReusableCellWithCellIdentifier"]
 - !private ["CSo11UIResponder", "detailTextLabel"]
 - !private ["CSo11UIResponder", "determineLocationAuthorizationStatus"]
-- !private ["CSo11UIResponder", "findCloseLocationsMatchingNoun"]
-- !private ["CSo11UIResponder", "findClosestLocationNameForTask"]
 - ["CSo11UIResponder", "getLocation"]
 - ["CSo11UIResponder", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo11UIResponder", "init"]
@@ -1483,6 +1447,7 @@ depends-member:
 - ["CSo11UIResponder", "numberOfSectionsInTableView"]
 - !private ["CSo11UIResponder", "performSegueWithSegueIdentifier"]
 - ["CSo11UIResponder", "prepareForSegue"]
+- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "reloadData"]
 - ["CSo11UIResponder", "scrollViewDidEndDecelerating"]
 - ["CSo11UIResponder", "scrollViewDidEndDragging"]
@@ -1538,14 +1503,13 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "closeMapItems"]
 - !private ["PSo20UIScrollViewDelegate", "convertNSDateToString"]
 - !private ["PSo20UIScrollViewDelegate", "determineLocationAuthorizationStatus"]
-- !private ["PSo20UIScrollViewDelegate", "findCloseLocationsMatchingNoun"]
-- !private ["PSo20UIScrollViewDelegate", "findClosestLocationNameForTask"]
 - !private ["PSo20UIScrollViewDelegate", "getLocation"]
 - ["PSo20UIScrollViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo20UIScrollViewDelegate", "locationManager"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
 - ["PSo20UIScrollViewDelegate", "numberOfSectionsInTableView"]
 - !private ["PSo20UIScrollViewDelegate", "performSegueWithSegueIdentifier"]
+- !private ["PSo20UIScrollViewDelegate", "print"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo20UIScrollViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1563,6 +1527,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "segmentDueSoon"]
 - !private ["PSo20UIScrollViewDelegate", "segmentFullList"]
 - !private ["PSo20UIScrollViewDelegate", "segmentedControl"]
+- !private ["PSo20UIScrollViewDelegate", "segmentedControlValueChanged"]
 - !private ["PSo20UIScrollViewDelegate", "selectedClosestTask"]
 - !private ["PSo20UIScrollViewDelegate", "selectedTask"]
 - !private ["PSo20UIScrollViewDelegate", "setUpUI"]
@@ -1588,8 +1553,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "convertNSDateToString"]
 - ["PSo16UIStateRestoring", "currentLocation"]
 - !private ["PSo16UIStateRestoring", "determineLocationAuthorizationStatus"]
-- !private ["PSo16UIStateRestoring", "findCloseLocationsMatchingNoun"]
-- !private ["PSo16UIStateRestoring", "findClosestLocationNameForTask"]
 - ["PSo16UIStateRestoring", "getLocation"]
 - ["PSo16UIStateRestoring", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo16UIStateRestoring", "init"]
@@ -1598,6 +1561,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "numberOfSectionsInTableView"]
 - !private ["PSo16UIStateRestoring", "performSegueWithSegueIdentifier"]
 - ["PSo16UIStateRestoring", "prepareForSegue"]
+- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDecelerating"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndDragging"]
 - ["PSo16UIStateRestoring", "scrollViewDidEndScrollingAnimation"]
@@ -1653,14 +1617,13 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "closeMapItems"]
 - !private ["PSo21UITableViewDataSource", "convertNSDateToString"]
 - !private ["PSo21UITableViewDataSource", "determineLocationAuthorizationStatus"]
-- !private ["PSo21UITableViewDataSource", "findCloseLocationsMatchingNoun"]
-- !private ["PSo21UITableViewDataSource", "findClosestLocationNameForTask"]
 - !private ["PSo21UITableViewDataSource", "getLocation"]
 - ["PSo21UITableViewDataSource", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo21UITableViewDataSource", "locationManager"]
 - !private ["PSo21UITableViewDataSource", "navigationItem"]
 - ["PSo21UITableViewDataSource", "numberOfSectionsInTableView"]
 - !private ["PSo21UITableViewDataSource", "performSegueWithSegueIdentifier"]
+- !private ["PSo21UITableViewDataSource", "print"]
 - ["PSo21UITableViewDataSource", "scrollViewDidEndDecelerating"]
 - ["PSo21UITableViewDataSource", "scrollViewDidEndDragging"]
 - ["PSo21UITableViewDataSource", "scrollViewDidEndScrollingAnimation"]
@@ -1678,6 +1641,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "segmentDueSoon"]
 - !private ["PSo21UITableViewDataSource", "segmentFullList"]
 - !private ["PSo21UITableViewDataSource", "segmentedControl"]
+- !private ["PSo21UITableViewDataSource", "segmentedControlValueChanged"]
 - !private ["PSo21UITableViewDataSource", "selectedClosestTask"]
 - !private ["PSo21UITableViewDataSource", "selectedTask"]
 - !private ["PSo21UITableViewDataSource", "setUpUI"]
@@ -1700,14 +1664,13 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "closeMapItems"]
 - !private ["PSo19UITableViewDelegate", "convertNSDateToString"]
 - !private ["PSo19UITableViewDelegate", "determineLocationAuthorizationStatus"]
-- !private ["PSo19UITableViewDelegate", "findCloseLocationsMatchingNoun"]
-- !private ["PSo19UITableViewDelegate", "findClosestLocationNameForTask"]
 - !private ["PSo19UITableViewDelegate", "getLocation"]
 - ["PSo19UITableViewDelegate", "indexPathForPreferredFocusedViewInTableView"]
 - !private ["PSo19UITableViewDelegate", "locationManager"]
 - !private ["PSo19UITableViewDelegate", "navigationItem"]
 - ["PSo19UITableViewDelegate", "numberOfSectionsInTableView"]
 - !private ["PSo19UITableViewDelegate", "performSegueWithSegueIdentifier"]
+- !private ["PSo19UITableViewDelegate", "print"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDecelerating"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndDragging"]
 - ["PSo19UITableViewDelegate", "scrollViewDidEndScrollingAnimation"]
@@ -1725,6 +1688,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "segmentDueSoon"]
 - !private ["PSo19UITableViewDelegate", "segmentFullList"]
 - !private ["PSo19UITableViewDelegate", "segmentedControl"]
+- !private ["PSo19UITableViewDelegate", "segmentedControlValueChanged"]
 - !private ["PSo19UITableViewDelegate", "selectedClosestTask"]
 - !private ["PSo19UITableViewDelegate", "selectedTask"]
 - !private ["PSo19UITableViewDelegate", "setUpUI"]
@@ -1753,8 +1717,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithCellIdentifier"]
 - !private ["PSo18UITraitEnvironment", "detailTextLabel"]
 - !private ["PSo18UITraitEnvironment", "determineLocationAuthorizationStatus"]
-- !private ["PSo18UITraitEnvironment", "findCloseLocationsMatchingNoun"]
-- !private ["PSo18UITraitEnvironment", "findClosestLocationNameForTask"]
 - ["PSo18UITraitEnvironment", "getLocation"]
 - ["PSo18UITraitEnvironment", "indexPathForPreferredFocusedViewInTableView"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -1763,6 +1725,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "numberOfSectionsInTableView"]
 - !private ["PSo18UITraitEnvironment", "performSegueWithSegueIdentifier"]
 - ["PSo18UITraitEnvironment", "prepareForSegue"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDecelerating"]
 - ["PSo18UITraitEnvironment", "scrollViewDidEndDragging"]
@@ -1839,8 +1802,6 @@ depends-member:
 - ["CSo16UIViewController", "currentLocation"]
 - !private ["CSo16UIViewController", "deinit"]
 - !private ["CSo16UIViewController", "determineLocationAuthorizationStatus"]
-- !private ["CSo16UIViewController", "findCloseLocationsMatchingNoun"]
-- !private ["CSo16UIViewController", "findClosestLocationNameForTask"]
 - ["CSo16UIViewController", "getLocation"]
 - ["CSo16UIViewController", "indexPathForPreferredFocusedViewInTableView"]
 - ["CSo16UIViewController", "init"]
@@ -1849,6 +1810,7 @@ depends-member:
 - ["CSo16UIViewController", "numberOfSectionsInTableView"]
 - !private ["CSo16UIViewController", "performSegueWithSegueIdentifier"]
 - ["CSo16UIViewController", "prepareForSegue"]
+- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "scrollViewDidEndDecelerating"]
 - ["CSo16UIViewController", "scrollViewDidEndDragging"]
 - ["CSo16UIViewController", "scrollViewDidEndScrollingAnimation"]
@@ -1879,21 +1841,11 @@ depends-member:
 - ["CSo16UIViewController", "viewForZoomingInScrollView"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", ""]
-- !private ["Ps10_ArrayType", "Generator"]
-- !private ["Ps10_ArrayType", "Index"]
-- !private ["Ps10_ArrayType", "SubSequence"]
-- !private ["Ps10_ArrayType", "_Element"]
-- !private ["Ps10_ArrayType", "first"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps24_ColorLiteralConvertible", "whiteColor"]
-- !private ["Ps24_DestructorSafeContainer", "Generator"]
-- !private ["Ps24_DestructorSafeContainer", "Index"]
-- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
-- !private ["Ps24_DestructorSafeContainer", "_Element"]
-- !private ["Ps24_DestructorSafeContainer", "first"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
@@ -1911,7 +1863,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "first"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
@@ -1929,9 +1881,9 @@ depends-member:
 - !private ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "backgroundColor"]
+- !private ["Ps12_Reflectable", "count"]
 - !private ["Ps12_Reflectable", "dequeueReusableCellWithCellIdentifier"]
 - !private ["Ps12_Reflectable", "detailTextLabel"]
-- !private ["Ps12_Reflectable", "first"]
 - ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "reloadData"]
 - !private ["Ps12_Reflectable", "selectedSegmentIndex"]
@@ -1947,9 +1899,6 @@ depends-member:
 depends-nominal:
 - !private "P10RealmSwift11AddableType"
 - "Ps9AnyObject"
-- !private "Sa"
-- !private "Ps23ArrayLiteralConvertible"
-- !private "Vs10ArraySlice"
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
 - !private "Sb"
@@ -1966,6 +1915,7 @@ depends-nominal:
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Vs10Dictionary"
+- !private "Vs15DictionaryIndex"
 - "Ps28DictionaryLiteralConvertible"
 - !private "Sd"
 - "Ps9Equatable"
@@ -1979,12 +1929,10 @@ depends-nominal:
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - "C7Air_End6ListVC"
+- !private "CSo9MKMapItem"
 - !private "PSo17MKMapViewDelegate"
 - !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
-- !private "Ps21MutableCollectionType"
-- !private "Ps16MutableIndexable"
-- !private "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
@@ -1996,14 +1944,11 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo7NSValue"
 - "Ps21NilLiteralConvertible"
-- !private "C7Air_End4Noun"
 - "C10RealmSwift6Object"
 - "Sq"
-- !private "C10RealmSwift12RLMGenerator"
 - "CSo13RLMObjectBase"
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
-- !private "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
 - !private "P10RealmSwift19RealmCollectionType"
 - !private "P10RealmSwift17RealmOptionalType"
@@ -2048,11 +1993,9 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
-- !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps24_ColorLiteralConvertible"
-- !private "Ps24_DestructorSafeContainer"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
 - !private "Ps12_IntegerType"
@@ -2105,4 +2048,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "184e6eee845cf5087b3edecb353368eb"
+interface-hash: "f3f4bcb3123820a5ff5f5a44c9bf71b5"

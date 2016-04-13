@@ -21,7 +21,6 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var addressValidated:Bool?
     var routeIndexInstructionIndexTuple:(Int,Int)?
     var guidanceRoutes:[MKRoute]?
-    var firstTime:Bool?
     
     @IBOutlet var addDestinationButton: UIButton!
     @IBOutlet var checkDestinationButton: UIButton!
@@ -87,8 +86,12 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                                                     self.userLocation = MKMapItem(placemark: userPlaceMark)
                                                 }
         })
-        self.locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
     }
+    
+    
+    //MARK - Destination Button
 
     @IBAction func addDestination(sender: UIButton) {
         view.endEditing(true)
@@ -118,7 +121,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
-  
+    //MARK - Route Methods
+
     
     func calculateCloseTasksEnRouteToDestination(index:Int, inout time:NSTimeInterval, inout routes:[MKRoute]){
         let request:MKDirectionsRequest = MKDirectionsRequest()
@@ -151,20 +155,24 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
-    func setUPGuidanceUI(){
-        guidanceButton.hidden = false
+    func setUpGuidanceUI(){
+        hideOverlay(false, viewCollection: [guidanceButton])
         segmentedControl.hidden = true
-//        let tgr = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
-//        taskMapView.addGestureRecognizer(tgr)
+        let tgr = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
+        taskMapView.addGestureRecognizer(tgr)
     }
     
-//    func hideGuidance(){
-//        guidanceLabelContainer.hidden ? false : true
-//        guidanceLabelContainer.hidden ? true : false
-//    }
-//    
+    func hideGuidance(){
+        if guidanceLabelContainer.hidden == false {
+            hideOverlay(true, viewCollection: [guidanceLabelContainer, guidanceNextButton, guidanceLabel])
+        }
+        else {
+            hideOverlay(false, viewCollection: [guidanceLabelContainer, guidanceNextButton, guidanceLabel])
+        }
+    }
+
     func plotPolyline(route: MKRoute, index: Int) {
-        setUPGuidanceUI()
+        setUpGuidanceUI()
         taskMapView.addOverlay(route.polyline)
         if taskMapView.overlays.count == 1 {
             taskMapView.setVisibleMapRect(route.polyline.boundingMapRect,

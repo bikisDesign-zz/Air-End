@@ -10,12 +10,12 @@ provides-dynamic-lookup:
 - "beginGuidance"
 depends-top-level:
 - !private "Array"
-- !private "+"
 - "MapVC"
-- !private "StringLiteralType"
-- "UIButton"
 - !private "BooleanLiteralType"
+- !private "StringLiteralType"
 - !private ">"
+- "UIButton"
+- !private "+"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]

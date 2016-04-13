@@ -183,7 +183,7 @@ SWIFT_CLASS("_TtC7Air_End6ListVC")
 @property (nonatomic, strong) IBOutlet UISegmentedControl * _Null_unspecified segmentedControl;
 @property (nonatomic, strong) IBOutlet UITableView * _Null_unspecified tableView;
 @property (nonatomic, readonly, strong) Task * _Nonnull taskManager;
-@property (nonatomic, copy) NSDictionary<NSString *, NSArray<MKMapItem *> *> * _Nonnull closeMapItems;
+@property (nonatomic, copy) NSDictionary<NSString *, MKMapItem *> * _Nonnull closeMapItems;
 @property (nonatomic, readonly, strong) CLLocationManager * _Nonnull locationManager;
 @property (nonatomic, strong) CLLocation * _Nullable currentLocation;
 @property (nonatomic, strong) Task * _Nullable selectedTask;
@@ -208,17 +208,16 @@ SWIFT_CLASS("_TtC7Air_End6ListVC")
 - (BOOL)determineLocationAuthorizationStatus;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
-- (void)findCloseLocationsMatchingNoun:(NSString * _Nonnull)nounDescriptor;
-- (NSString * _Nullable)findClosestLocationNameForTask:(Task * _Nonnull)task;
+- (void)findClosestMapItemMatchingTask:(Task * _Nonnull)task userLocation:(CLLocation * _Nonnull)userLocation;
 @end
 
 
 @interface ListVC (SWIFT_EXTENSION(Air_End)) <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (BOOL)tableView:(UITableView * _Nonnull)tableView canEditRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 @class MKRoute;
@@ -253,7 +252,8 @@ SWIFT_CLASS("_TtC7Air_End5MapVC")
 - (IBAction)addDestination:(UIButton * _Nonnull)sender;
 - (IBAction)checkDestination:(UIButton * _Nonnull)sender;
 - (void)showRoute:(NSArray<MKRoute *> * _Nonnull)routes;
-- (void)setUPGuidanceUI;
+- (void)setUpGuidanceUI;
+- (void)hideGuidance;
 - (void)plotPolyline:(MKRoute * _Nonnull)route index:(NSInteger)index;
 - (MKOverlayRenderer * _Nonnull)mapView:(MKMapView * _Nonnull)mapView rendererForOverlay:(id <MKOverlay> _Nonnull)overlay;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -338,6 +338,7 @@ SWIFT_CLASS("_TtC7Air_End4Task")
 @property (nonatomic, strong) NSDate * _Nonnull dueDate;
 @property (nonatomic, strong) Noun * _Nullable hashtag;
 @property (nonatomic) BOOL isCompleted;
+@property (nonatomic) double distanceFromUser;
 + (NSString * _Nullable)primaryKey;
 - (void)createNewTaskWithID:(NSString * _Nonnull)id name:(NSString * _Nonnull)name dueDate:(NSDate * _Nonnull)dueDate noun:(Noun * _Nonnull)noun withCompletionHandler:(void (^ _Nullable)(Task * _Nonnull))handler;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

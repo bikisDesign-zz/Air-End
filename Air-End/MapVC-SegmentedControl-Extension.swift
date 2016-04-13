@@ -25,34 +25,37 @@ extension MapVC {
     
     
     func segmentAllTasks(){
-        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-        taskManager.readAllTasks(withCompletionHandler: { (tasks) in
-            guard let allTasks = tasks else {return}
-            self.tasks = allTasks
-            for task in self.tasks! {
-                guard let descriptor = task.hashtag?.descriptor else {return}
-                self.searchForMapItemsMatchingNoun(descriptor, withCompletionHandler: { (mapItems) -> () in
-                    // find the closest map item matching this task
-                    if let sortedMapItems = self.sortMapItemsCloseToUserLocation(self.taskMapView.userLocation.location, mapItems: mapItems){
-                        guard let closestMapItem = sortedMapItems.first else {return}
-                        self.taskLocations = [closestMapItem]
-                        self.setMapRegionForMapItems(sortedMapItems.first, mapViewA: self.taskMapView)
-                    }
-                })
-            }
-        })
+//        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
+//        taskManager.readCloseTasks { (tasks) in
+//            self.tasks = allTasks
+//            for task in self.tasks! {
+//
+//        }
+        
+//        readAllTasks(withCompletionHandler: { (tasks) in
+//            guard let allTasks = tasks else {return}
+//                            guard let descriptor = task.hashtag?.descriptor else {return}
+//                self.searchForMapItemsMatchingNoun(descriptor, withCompletionHandler: { (mapItems) -> () in
+//                    // find the closest map item matching this task
+//                    if let sortedMapItems = self.sortMapItemsCloseToUserLocation(self.taskMapView.userLocation.location, mapItems: mapItems){
+//                        guard let closestMapItem = sortedMapItems.first else {return}
+//                        self.taskLocations = [closestMapItem]
+//                        self.setMapRegionForMapItems(sortedMapItems.first, mapViewA: self.taskMapView)
+//                    }
+//                })
+//            }
+//        })
     }
     
     
     func segmentCloseTasks(){
         hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-        //        if closeMapItems.count > 0 {
-        //                //then they are already sorted
-        //            for mapItem in closeMapItems {
-        //             // search through map items and find ones that are within a geofence
-        //             // have ui available to route all of them
-        //            }
-        //            }
+//        print(closeMapItems.count)
+//        print(tasks?.count)
+//        taskManager.readCloseTasks(withCompletionHandler: { (closeTasks) in
+//            self.tasks = closeTasks
+//            self.tableView.reloadData()
+//        })
     }
     
     func segmentEnRoute() {

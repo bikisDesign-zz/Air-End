@@ -15,14 +15,14 @@ provides-member:
 - ["CSo11UITableView", "dequeueReusableCellWithCellIdentifier"]
 provides-dynamic-lookup:
 depends-top-level:
-- "StringLiteralType"
 - "UITableViewCell"
-- "String"
-- "UIViewController"
+- "StringLiteralType"
 - !private "~="
 - "=="
+- "UIViewController"
 - "UITableView"
 - "AnyObject"
+- "String"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "hashValue"]
 - ["Ps9AnyObject", "dequeueReusableCellWithCellIdentifier"]

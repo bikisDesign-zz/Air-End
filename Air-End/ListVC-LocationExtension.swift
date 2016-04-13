@@ -39,7 +39,7 @@ extension ListVC: CLLocationManagerDelegate{
             // prompt that we need it to funcion
             //        case .AuthorizedWhenInUse:
             // do stuff
-            // do stuff
+        // do stuff
         default:
             break
             //            assertionFailure("received unexpected authorization status")
@@ -48,34 +48,42 @@ extension ListVC: CLLocationManagerDelegate{
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let newUserLocation = locations.first as CLLocation? {
-            currentLocation = newUserLocation
             locationManager.stopUpdatingLocation()
-        }
-    }
-    
-    func findCloseLocationsMatchingNoun(nounDescriptor:String) {
-        if let request = initalizeRequestWithDescriptor(nounDescriptor, location: currentLocation){
-            let search = MKLocalSearch(request: request)
-            search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
-                if let mapItems = response?.mapItems {
-                    let sortedCloseTasks = mapItems.sort({$0.placemark.location?.distanceFromLocation(self.currentLocation!) < $1.placemark.location?.distanceFromLocation(self.currentLocation!)})
-                    self.closeMapItems[nounDescriptor] = sortedCloseTasks
-                    self.tableView.reloadData()
+            locationManager.delegate = nil
+            taskManager.readAllTasks { (tasks) -> () in
+                self.tasks = tasks
+                for task in tasks! {
+                    self.findClosestMapItemMatchingTask(task, userLocation: newUserLocation, closeTasksArray: &self.closeMapItems)
                 }
-                else {
-                    print("didn't find any close tasks")
-                }})}
-        else{
-            print("could not locate the user")}
+            }
+        }
     }
     
-    func findClosestLocationNameForTask(task:Task) -> String? {
-        if let noun = task.hashtag?.descriptor {
-            let mapItems = closeMapItems[noun]
-            return mapItems?.first?.placemark.name
-        }
-        else {
-            return "No close locations for this task"
-        }
+    func findClosestMapItemMatchingTask(task:Task, userLocation:CLLocation, inout closeTasksArray:[String:MKMapItem]) {
+        print("finding Closest Task")
+        guard let descriptor = task.hashtag?.descriptor else {return print("this task doesn't have a descriptor")}
+        guard let request = initalizeRequestWithDescriptor(descriptor, location: userLocation) else {return showAlert("We couldn't locate you! Please try again.")}
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
+            guard let mapItems = response?.mapItems else { return print("couldn't find any close mapItems matching \(descriptor)")}
+            
+            let sortedCloseTasks = mapItems.sort({$0.placemark.location?.distanceFromLocation(userLocation) < $1.placemark.location?.distanceFromLocation(userLocation)})
+            closeTasksArray[task.name] = sortedCloseTasks.first!
+            if let distanceFromUser = sortedCloseTasks.first?.placemark.location?.distanceFromLocation(userLocation) {
+                try! uiRealm.write({
+                    task.distanceFromUser = distanceFromUser
+                })
+            }
+        })
     }
+    
+    //    func findClosestLocationNameForTask(task:Task) -> String? {
+    //        if let noun = task.hashtag?.descriptor {
+    //            let mapItems = closeMapItems[noun]
+    //            return mapItems?.first?.placemark.name
+    //        }
+    //        else {
+    //            return "No close locations for this task"
+    //        }
+    //    }
 }

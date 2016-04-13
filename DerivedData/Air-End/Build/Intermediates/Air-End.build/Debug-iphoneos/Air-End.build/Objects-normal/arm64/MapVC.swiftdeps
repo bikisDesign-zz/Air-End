@@ -6,79 +6,81 @@ provides-nominal:
 provides-member:
 - ["C7Air_End5MapVC", ""]
 provides-dynamic-lookup:
-- "addDestination"
-- "checkDestinationUI"
-- "setUPGuidanceUI"
-- "checkDestinationButton"
-- "guidanceRoutes"
-- "destinationTextField"
-- "viewWillAppear"
+- "showRoute"
+- "enRouteView"
 - "setUpMapUI"
-- "enRouteOutletCollection"
+- "addDestinationButton"
+- "plotPolyline"
+- "locationManager"
+- "locationManager"
+- "addDestination"
+- "checkDestinationButton"
+- "viewWillAppear"
+- "taskMapView"
+- "taskLocations"
+- "guidanceLabelContainer"
+- "userLocation"
+- "guidanceRoutes"
+- "guidanceLabel"
 - "viewDidLoad"
+- "setUpGuidanceUI"
+- "mapView"
+- "taskManager"
 - "guidanceNextButton"
 - "guidanceButton"
-- "showRoute"
-- "taskLocations"
-- "addDestinationButton"
-- "taskMapView"
 - "segmentedControl"
-- "enRouteView"
 - "checkDestination"
-- "mapView"
-- "guidanceLabelContainer"
-- "plotPolyline"
-- "userLocation"
-- "guidanceLabel"
-- "locationManager"
-- "locationManager"
-- "taskManager"
+- "checkDestinationUI"
+- "hideGuidance"
+- "enRouteOutletCollection"
+- "destinationTextField"
 depends-top-level:
-- !private "..<"
-- "Bool"
-- !private "=="
-- !private "MKPlacemark"
-- "MKRoute"
-- !private "Void"
-- !private "UIEdgeInsetsMake"
-- !private "MKDirectionsRequest"
-- !private "MKPolylineRenderer"
-- "UIViewController"
-- !private "+"
 - "UITextField"
-- !private "CorrectAddressTableView"
-- !private "MKMapRectUnion"
-- "UIButton"
-- "MKOverlayRenderer"
-- "NSTimeInterval"
-- "MKMapView"
-- !private "Theme"
-- !private "MKPolyline"
-- !private "UIColor"
-- !private "CLGeocoder"
-- "StringLiteralType"
-- "CLLocationManagerDelegate"
-- "MKMapItem"
-- !private "MKDirectionsResponse"
-- !private "+="
-- !private "CLPlacemark"
-- "Int"
-- "CLLocation"
-- "UIView"
-- "MKMapViewDelegate"
-- "MKOverlay"
-- !private "<"
-- "Results"
-- "Task"
-- !private "NSError"
 - "MapVC"
-- !private "Array"
-- !private "MKDirections"
-- "CLLocationManager"
 - "UILabel"
-- !private "BooleanLiteralType"
-- !private "Double"
+- "MKOverlayRenderer"
+- "MKMapView"
+- !private "UIColor"
+- !private "<"
+- "CLLocationManager"
+- "MKMapItem"
+- "MKMapViewDelegate"
 - "UISegmentedControl"
+- !private "+="
+- !private "NSError"
+- !private "=="
+- !private "CLGeocoder"
+- !private "MKPlacemark"
+- !private "MKDirectionsRequest"
+- !private "MKMapRectUnion"
+- !private "Void"
+- !private "UITapGestureRecognizer"
+- "CLLocation"
+- "StringLiteralType"
+- "Int"
+- !private "CorrectAddressTableView"
+- "UIButton"
+- "NSTimeInterval"
+- !private "MKPolyline"
+- "Bool"
+- "UIView"
+- !private "..<"
+- !private "MKDirections"
+- !private "UIEdgeInsetsMake"
+- !private "+"
+- "CLLocationManagerDelegate"
+- !private "Theme"
+- !private "Double"
+- !private "CLPlacemark"
+- !private "MKPolylineRenderer"
+- !private "Array"
+- "MKOverlay"
+- "UIViewController"
+- !private "MKDirectionsResponse"
+- "Task"
+- "Results"
+- "MKRoute"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["P10RealmSwift11AddableType", "Distance"]
@@ -101,10 +103,12 @@ depends-member:
 - !private ["Ps9AnyObject", "Theme"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIEdgeInsetsMake"]
+- !private ["Ps9AnyObject", "UITapGestureRecognizer"]
 - !private ["Ps9AnyObject", "UIView"]
 - !private ["Ps9AnyObject", "addAnnotation"]
 - ["Ps9AnyObject", "addDestination"]
 - ["Ps9AnyObject", "addDestinationButton"]
+- !private ["Ps9AnyObject", "addGestureRecognizer"]
 - !private ["Ps9AnyObject", "addOverlay"]
 - ["Ps9AnyObject", "addressValidated"]
 - !private ["Ps9AnyObject", "allTextFieldsAreFilled"]
@@ -127,13 +131,13 @@ depends-member:
 - ["Ps9AnyObject", "enRouteView"]
 - !private ["Ps9AnyObject", "endEditing"]
 - !private ["Ps9AnyObject", "expectedTravelTime"]
-- ["Ps9AnyObject", "firstTime"]
 - ["Ps9AnyObject", "guidanceButton"]
 - ["Ps9AnyObject", "guidanceLabel"]
 - ["Ps9AnyObject", "guidanceLabelContainer"]
 - ["Ps9AnyObject", "guidanceNextButton"]
 - ["Ps9AnyObject", "guidanceRoutes"]
 - !private ["Ps9AnyObject", "hidden"]
+- ["Ps9AnyObject", "hideGuidance"]
 - !private ["Ps9AnyObject", "hideOverlay"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "layer"]
@@ -161,7 +165,7 @@ depends-member:
 - !private ["Ps9AnyObject", "searchForMapItemsMatchingNoun"]
 - !private ["Ps9AnyObject", "searchForValidAddress"]
 - ["Ps9AnyObject", "segmentedControl"]
-- ["Ps9AnyObject", "setUPGuidanceUI"]
+- ["Ps9AnyObject", "setUpGuidanceUI"]
 - ["Ps9AnyObject", "setUpMapUI"]
 - !private ["Ps9AnyObject", "setVisibleMapRect"]
 - !private ["Ps9AnyObject", "showAlert"]
@@ -253,6 +257,7 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "Theme"]
 - !private ["PSo25CLLocationManagerDelegate", "UIColor"]
 - !private ["PSo25CLLocationManagerDelegate", "UIEdgeInsetsMake"]
+- !private ["PSo25CLLocationManagerDelegate", "UITapGestureRecognizer"]
 - !private ["PSo25CLLocationManagerDelegate", "UIView"]
 - !private ["PSo25CLLocationManagerDelegate", "addDestinationButton"]
 - !private ["PSo25CLLocationManagerDelegate", "allTextFieldsAreFilled"]
@@ -264,7 +269,9 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "guidanceButton"]
 - !private ["PSo25CLLocationManagerDelegate", "guidanceLabel"]
 - !private ["PSo25CLLocationManagerDelegate", "guidanceLabelContainer"]
+- !private ["PSo25CLLocationManagerDelegate", "guidanceNextButton"]
 - !private ["PSo25CLLocationManagerDelegate", "guidanceRoutes"]
+- !private ["PSo25CLLocationManagerDelegate", "hideGuidance"]
 - !private ["PSo25CLLocationManagerDelegate", "hideOverlay"]
 - ["PSo25CLLocationManagerDelegate", "locationManager"]
 - ["PSo25CLLocationManagerDelegate", "locationManagerDidPauseLocationUpdates"]
@@ -282,7 +289,7 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForValidAddress"]
 - !private ["PSo25CLLocationManagerDelegate", "segmentedControl"]
-- !private ["PSo25CLLocationManagerDelegate", "setUPGuidanceUI"]
+- !private ["PSo25CLLocationManagerDelegate", "setUpGuidanceUI"]
 - !private ["PSo25CLLocationManagerDelegate", "setUpMapUI"]
 - !private ["PSo25CLLocationManagerDelegate", "showAlert"]
 - !private ["PSo25CLLocationManagerDelegate", "showRoute"]
@@ -310,11 +317,13 @@ depends-member:
 - !private ["Ps11CVarArgType", "Theme"]
 - !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UIEdgeInsetsMake"]
+- !private ["Ps11CVarArgType", "UITapGestureRecognizer"]
 - !private ["Ps11CVarArgType", "UIView"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "addAnnotation"]
 - ["Ps11CVarArgType", "addDestination"]
 - ["Ps11CVarArgType", "addDestinationButton"]
+- !private ["Ps11CVarArgType", "addGestureRecognizer"]
 - !private ["Ps11CVarArgType", "addOverlay"]
 - ["Ps11CVarArgType", "addressValidated"]
 - !private ["Ps11CVarArgType", "allTextFieldsAreFilled"]
@@ -337,13 +346,13 @@ depends-member:
 - ["Ps11CVarArgType", "enRouteView"]
 - !private ["Ps11CVarArgType", "endEditing"]
 - !private ["Ps11CVarArgType", "expectedTravelTime"]
-- ["Ps11CVarArgType", "firstTime"]
 - ["Ps11CVarArgType", "guidanceButton"]
 - ["Ps11CVarArgType", "guidanceLabel"]
 - ["Ps11CVarArgType", "guidanceLabelContainer"]
 - ["Ps11CVarArgType", "guidanceNextButton"]
 - ["Ps11CVarArgType", "guidanceRoutes"]
 - !private ["Ps11CVarArgType", "hidden"]
+- ["Ps11CVarArgType", "hideGuidance"]
 - !private ["Ps11CVarArgType", "hideOverlay"]
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "layer"]
@@ -371,7 +380,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "searchForMapItemsMatchingNoun"]
 - !private ["Ps11CVarArgType", "searchForValidAddress"]
 - ["Ps11CVarArgType", "segmentedControl"]
-- ["Ps11CVarArgType", "setUPGuidanceUI"]
+- ["Ps11CVarArgType", "setUpGuidanceUI"]
 - ["Ps11CVarArgType", "setUpMapUI"]
 - !private ["Ps11CVarArgType", "setVisibleMapRect"]
 - !private ["Ps11CVarArgType", "showAlert"]
@@ -435,6 +444,7 @@ depends-member:
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "Theme"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "UIColor"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "UIEdgeInsetsMake"]
+- !private ["P7Air_End31CorrectAddressTableViewDelegate", "UITapGestureRecognizer"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "UIView"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "addDestinationButton"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "allTextFieldsAreFilled"]
@@ -446,7 +456,9 @@ depends-member:
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "guidanceButton"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "guidanceLabel"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "guidanceLabelContainer"]
+- !private ["P7Air_End31CorrectAddressTableViewDelegate", "guidanceNextButton"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "guidanceRoutes"]
+- !private ["P7Air_End31CorrectAddressTableViewDelegate", "hideGuidance"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "hideOverlay"]
 - ["P7Air_End31CorrectAddressTableViewDelegate", "locationManager"]
 - ["P7Air_End31CorrectAddressTableViewDelegate", "locationManagerDidPauseLocationUpdates"]
@@ -464,7 +476,7 @@ depends-member:
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "searchForValidAddress"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "segmentedControl"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "setUPGuidanceUI"]
+- !private ["P7Air_End31CorrectAddressTableViewDelegate", "setUpGuidanceUI"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "setUpMapUI"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "showAlert"]
 - !private ["P7Air_End31CorrectAddressTableViewDelegate", "showRoute"]
@@ -493,11 +505,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Theme"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIEdgeInsetsMake"]
+- !private ["Ps28CustomDebugStringConvertible", "UITapGestureRecognizer"]
 - !private ["Ps28CustomDebugStringConvertible", "UIView"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addAnnotation"]
 - ["Ps28CustomDebugStringConvertible", "addDestination"]
 - ["Ps28CustomDebugStringConvertible", "addDestinationButton"]
+- !private ["Ps28CustomDebugStringConvertible", "addGestureRecognizer"]
 - !private ["Ps28CustomDebugStringConvertible", "addOverlay"]
 - ["Ps28CustomDebugStringConvertible", "addressValidated"]
 - !private ["Ps28CustomDebugStringConvertible", "allTextFieldsAreFilled"]
@@ -523,13 +537,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "endEditing"]
 - !private ["Ps28CustomDebugStringConvertible", "expectedTravelTime"]
 - !private ["Ps28CustomDebugStringConvertible", "first"]
-- ["Ps28CustomDebugStringConvertible", "firstTime"]
 - ["Ps28CustomDebugStringConvertible", "guidanceButton"]
 - ["Ps28CustomDebugStringConvertible", "guidanceLabel"]
 - ["Ps28CustomDebugStringConvertible", "guidanceLabelContainer"]
 - ["Ps28CustomDebugStringConvertible", "guidanceNextButton"]
 - ["Ps28CustomDebugStringConvertible", "guidanceRoutes"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
+- ["Ps28CustomDebugStringConvertible", "hideGuidance"]
 - !private ["Ps28CustomDebugStringConvertible", "hideOverlay"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "insert"]
@@ -560,7 +574,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "searchForMapItemsMatchingNoun"]
 - !private ["Ps28CustomDebugStringConvertible", "searchForValidAddress"]
 - ["Ps28CustomDebugStringConvertible", "segmentedControl"]
-- ["Ps28CustomDebugStringConvertible", "setUPGuidanceUI"]
+- ["Ps28CustomDebugStringConvertible", "setUpGuidanceUI"]
 - ["Ps28CustomDebugStringConvertible", "setUpMapUI"]
 - !private ["Ps28CustomDebugStringConvertible", "setVisibleMapRect"]
 - !private ["Ps28CustomDebugStringConvertible", "showAlert"]
@@ -608,6 +622,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Theme"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIEdgeInsetsMake"]
+- !private ["Ps23CustomStringConvertible", "UITapGestureRecognizer"]
 - !private ["Ps23CustomStringConvertible", "UIView"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
@@ -615,6 +630,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "addAnnotation"]
 - ["Ps23CustomStringConvertible", "addDestination"]
 - ["Ps23CustomStringConvertible", "addDestinationButton"]
+- !private ["Ps23CustomStringConvertible", "addGestureRecognizer"]
 - !private ["Ps23CustomStringConvertible", "addOverlay"]
 - ["Ps23CustomStringConvertible", "addressValidated"]
 - !private ["Ps23CustomStringConvertible", "allTextFieldsAreFilled"]
@@ -640,13 +656,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "endEditing"]
 - !private ["Ps23CustomStringConvertible", "expectedTravelTime"]
 - !private ["Ps23CustomStringConvertible", "first"]
-- ["Ps23CustomStringConvertible", "firstTime"]
 - ["Ps23CustomStringConvertible", "guidanceButton"]
 - ["Ps23CustomStringConvertible", "guidanceLabel"]
 - ["Ps23CustomStringConvertible", "guidanceLabelContainer"]
 - ["Ps23CustomStringConvertible", "guidanceNextButton"]
 - ["Ps23CustomStringConvertible", "guidanceRoutes"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
+- ["Ps23CustomStringConvertible", "hideGuidance"]
 - !private ["Ps23CustomStringConvertible", "hideOverlay"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "insert"]
@@ -677,7 +693,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "searchForMapItemsMatchingNoun"]
 - !private ["Ps23CustomStringConvertible", "searchForValidAddress"]
 - ["Ps23CustomStringConvertible", "segmentedControl"]
-- ["Ps23CustomStringConvertible", "setUPGuidanceUI"]
+- ["Ps23CustomStringConvertible", "setUpGuidanceUI"]
 - ["Ps23CustomStringConvertible", "setUpMapUI"]
 - !private ["Ps23CustomStringConvertible", "setVisibleMapRect"]
 - !private ["Ps23CustomStringConvertible", "showAlert"]
@@ -729,6 +745,7 @@ depends-member:
 - !private ["Ps9Equatable", "Theme"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIEdgeInsetsMake"]
+- !private ["Ps9Equatable", "UITapGestureRecognizer"]
 - !private ["Ps9Equatable", "UIView"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_Element"]
@@ -736,6 +753,7 @@ depends-member:
 - !private ["Ps9Equatable", "addAnnotation"]
 - ["Ps9Equatable", "addDestination"]
 - ["Ps9Equatable", "addDestinationButton"]
+- !private ["Ps9Equatable", "addGestureRecognizer"]
 - !private ["Ps9Equatable", "addOverlay"]
 - ["Ps9Equatable", "addressValidated"]
 - !private ["Ps9Equatable", "allTextFieldsAreFilled"]
@@ -759,13 +777,13 @@ depends-member:
 - ["Ps9Equatable", "enRouteView"]
 - !private ["Ps9Equatable", "endEditing"]
 - !private ["Ps9Equatable", "expectedTravelTime"]
-- ["Ps9Equatable", "firstTime"]
 - ["Ps9Equatable", "guidanceButton"]
 - ["Ps9Equatable", "guidanceLabel"]
 - ["Ps9Equatable", "guidanceLabelContainer"]
 - ["Ps9Equatable", "guidanceNextButton"]
 - ["Ps9Equatable", "guidanceRoutes"]
 - !private ["Ps9Equatable", "hidden"]
+- ["Ps9Equatable", "hideGuidance"]
 - !private ["Ps9Equatable", "hideOverlay"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "layer"]
@@ -794,7 +812,7 @@ depends-member:
 - !private ["Ps9Equatable", "searchForMapItemsMatchingNoun"]
 - !private ["Ps9Equatable", "searchForValidAddress"]
 - ["Ps9Equatable", "segmentedControl"]
-- ["Ps9Equatable", "setUPGuidanceUI"]
+- ["Ps9Equatable", "setUpGuidanceUI"]
 - ["Ps9Equatable", "setUpMapUI"]
 - !private ["Ps9Equatable", "setVisibleMapRect"]
 - !private ["Ps9Equatable", "showAlert"]
@@ -848,12 +866,14 @@ depends-member:
 - !private ["Ps8Hashable", "Theme"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIEdgeInsetsMake"]
+- !private ["Ps8Hashable", "UITapGestureRecognizer"]
 - !private ["Ps8Hashable", "UIView"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addAnnotation"]
 - ["Ps8Hashable", "addDestination"]
 - ["Ps8Hashable", "addDestinationButton"]
+- !private ["Ps8Hashable", "addGestureRecognizer"]
 - !private ["Ps8Hashable", "addOverlay"]
 - ["Ps8Hashable", "addressValidated"]
 - !private ["Ps8Hashable", "allTextFieldsAreFilled"]
@@ -877,13 +897,13 @@ depends-member:
 - ["Ps8Hashable", "enRouteView"]
 - !private ["Ps8Hashable", "endEditing"]
 - !private ["Ps8Hashable", "expectedTravelTime"]
-- ["Ps8Hashable", "firstTime"]
 - ["Ps8Hashable", "guidanceButton"]
 - ["Ps8Hashable", "guidanceLabel"]
 - ["Ps8Hashable", "guidanceLabelContainer"]
 - ["Ps8Hashable", "guidanceNextButton"]
 - ["Ps8Hashable", "guidanceRoutes"]
 - !private ["Ps8Hashable", "hidden"]
+- ["Ps8Hashable", "hideGuidance"]
 - !private ["Ps8Hashable", "hideOverlay"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "layer"]
@@ -911,7 +931,7 @@ depends-member:
 - !private ["Ps8Hashable", "searchForMapItemsMatchingNoun"]
 - !private ["Ps8Hashable", "searchForValidAddress"]
 - ["Ps8Hashable", "segmentedControl"]
-- ["Ps8Hashable", "setUPGuidanceUI"]
+- ["Ps8Hashable", "setUpGuidanceUI"]
 - ["Ps8Hashable", "setUpMapUI"]
 - !private ["Ps8Hashable", "setVisibleMapRect"]
 - !private ["Ps8Hashable", "showAlert"]
@@ -987,6 +1007,7 @@ depends-member:
 - !private ["CSo9MKMapItem", "init"]
 - !private ["CSo9MKMapItem", "name"]
 - !private ["CSo9MKMapView", "addAnnotation"]
+- !private ["CSo9MKMapView", "addGestureRecognizer"]
 - !private ["CSo9MKMapView", "addOverlay"]
 - !private ["CSo9MKMapView", "delegate"]
 - !private ["CSo9MKMapView", "overlays"]
@@ -1008,6 +1029,7 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "Theme"]
 - !private ["PSo17MKMapViewDelegate", "UIColor"]
 - !private ["PSo17MKMapViewDelegate", "UIEdgeInsetsMake"]
+- !private ["PSo17MKMapViewDelegate", "UITapGestureRecognizer"]
 - !private ["PSo17MKMapViewDelegate", "UIView"]
 - !private ["PSo17MKMapViewDelegate", "addDestinationButton"]
 - !private ["PSo17MKMapViewDelegate", "allTextFieldsAreFilled"]
@@ -1019,7 +1041,9 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "guidanceButton"]
 - !private ["PSo17MKMapViewDelegate", "guidanceLabel"]
 - !private ["PSo17MKMapViewDelegate", "guidanceLabelContainer"]
+- !private ["PSo17MKMapViewDelegate", "guidanceNextButton"]
 - !private ["PSo17MKMapViewDelegate", "guidanceRoutes"]
+- !private ["PSo17MKMapViewDelegate", "hideGuidance"]
 - !private ["PSo17MKMapViewDelegate", "hideOverlay"]
 - ["PSo17MKMapViewDelegate", "locationManager"]
 - ["PSo17MKMapViewDelegate", "locationManagerDidPauseLocationUpdates"]
@@ -1037,7 +1061,7 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["PSo17MKMapViewDelegate", "searchForValidAddress"]
 - !private ["PSo17MKMapViewDelegate", "segmentedControl"]
-- !private ["PSo17MKMapViewDelegate", "setUPGuidanceUI"]
+- !private ["PSo17MKMapViewDelegate", "setUpGuidanceUI"]
 - !private ["PSo17MKMapViewDelegate", "setUpMapUI"]
 - !private ["PSo17MKMapViewDelegate", "showAlert"]
 - !private ["PSo17MKMapViewDelegate", "showRoute"]
@@ -1092,6 +1116,7 @@ depends-member:
 - !private ["C7Air_End5MapVC", "UIEdgeInsetsMake"]
 - ["C7Air_End5MapVC", "UILabel"]
 - ["C7Air_End5MapVC", "UISegmentedControl"]
+- !private ["C7Air_End5MapVC", "UITapGestureRecognizer"]
 - ["C7Air_End5MapVC", "UITextField"]
 - ["C7Air_End5MapVC", "UIView"]
 - !private ["C7Air_End5MapVC", "Void"]
@@ -1108,12 +1133,12 @@ depends-member:
 - ["C7Air_End5MapVC", "destinationTextField"]
 - ["C7Air_End5MapVC", "enRouteOutletCollection"]
 - ["C7Air_End5MapVC", "enRouteView"]
-- ["C7Air_End5MapVC", "firstTime"]
 - ["C7Air_End5MapVC", "guidanceButton"]
 - ["C7Air_End5MapVC", "guidanceLabel"]
 - ["C7Air_End5MapVC", "guidanceLabelContainer"]
 - ["C7Air_End5MapVC", "guidanceNextButton"]
 - ["C7Air_End5MapVC", "guidanceRoutes"]
+- ["C7Air_End5MapVC", "hideGuidance"]
 - !private ["C7Air_End5MapVC", "hideOverlay"]
 - ["C7Air_End5MapVC", "init"]
 - ["C7Air_End5MapVC", "locationManager"]
@@ -1133,7 +1158,7 @@ depends-member:
 - !private ["C7Air_End5MapVC", "searchForMapItemsMatchingNoun"]
 - !private ["C7Air_End5MapVC", "searchForValidAddress"]
 - ["C7Air_End5MapVC", "segmentedControl"]
-- ["C7Air_End5MapVC", "setUPGuidanceUI"]
+- ["C7Air_End5MapVC", "setUpGuidanceUI"]
 - ["C7Air_End5MapVC", "setUpMapUI"]
 - !private ["C7Air_End5MapVC", "showAlert"]
 - ["C7Air_End5MapVC", "showRoute"]
@@ -1209,10 +1234,12 @@ depends-member:
 - !private ["PSo8NSCoding", "Theme"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIEdgeInsetsMake"]
+- !private ["PSo8NSCoding", "UITapGestureRecognizer"]
 - !private ["PSo8NSCoding", "UIView"]
 - !private ["PSo8NSCoding", "addAnnotation"]
 - ["PSo8NSCoding", "addDestination"]
 - ["PSo8NSCoding", "addDestinationButton"]
+- !private ["PSo8NSCoding", "addGestureRecognizer"]
 - !private ["PSo8NSCoding", "addOverlay"]
 - ["PSo8NSCoding", "addressValidated"]
 - !private ["PSo8NSCoding", "allTextFieldsAreFilled"]
@@ -1231,13 +1258,13 @@ depends-member:
 - ["PSo8NSCoding", "enRouteOutletCollection"]
 - ["PSo8NSCoding", "enRouteView"]
 - !private ["PSo8NSCoding", "endEditing"]
-- ["PSo8NSCoding", "firstTime"]
 - ["PSo8NSCoding", "guidanceButton"]
 - ["PSo8NSCoding", "guidanceLabel"]
 - ["PSo8NSCoding", "guidanceLabelContainer"]
 - ["PSo8NSCoding", "guidanceNextButton"]
 - ["PSo8NSCoding", "guidanceRoutes"]
 - !private ["PSo8NSCoding", "hidden"]
+- ["PSo8NSCoding", "hideGuidance"]
 - !private ["PSo8NSCoding", "hideOverlay"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "layer"]
@@ -1259,7 +1286,7 @@ depends-member:
 - !private ["PSo8NSCoding", "searchForMapItemsMatchingNoun"]
 - !private ["PSo8NSCoding", "searchForValidAddress"]
 - ["PSo8NSCoding", "segmentedControl"]
-- ["PSo8NSCoding", "setUPGuidanceUI"]
+- ["PSo8NSCoding", "setUpGuidanceUI"]
 - ["PSo8NSCoding", "setUpMapUI"]
 - !private ["PSo8NSCoding", "setVisibleMapRect"]
 - !private ["PSo8NSCoding", "showAlert"]
@@ -1295,6 +1322,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "Theme"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIEdgeInsetsMake"]
+- !private ["PSo26NSExtensionRequestHandling", "UITapGestureRecognizer"]
 - !private ["PSo26NSExtensionRequestHandling", "UIView"]
 - ["PSo26NSExtensionRequestHandling", "addDestination"]
 - ["PSo26NSExtensionRequestHandling", "addDestinationButton"]
@@ -1308,12 +1336,12 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "destinationTextField"]
 - ["PSo26NSExtensionRequestHandling", "enRouteOutletCollection"]
 - ["PSo26NSExtensionRequestHandling", "enRouteView"]
-- ["PSo26NSExtensionRequestHandling", "firstTime"]
 - ["PSo26NSExtensionRequestHandling", "guidanceButton"]
 - ["PSo26NSExtensionRequestHandling", "guidanceLabel"]
 - ["PSo26NSExtensionRequestHandling", "guidanceLabelContainer"]
 - ["PSo26NSExtensionRequestHandling", "guidanceNextButton"]
 - ["PSo26NSExtensionRequestHandling", "guidanceRoutes"]
+- ["PSo26NSExtensionRequestHandling", "hideGuidance"]
 - !private ["PSo26NSExtensionRequestHandling", "hideOverlay"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "locationManager"]
@@ -1333,7 +1361,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "searchForMapItemsMatchingNoun"]
 - !private ["PSo26NSExtensionRequestHandling", "searchForValidAddress"]
 - ["PSo26NSExtensionRequestHandling", "segmentedControl"]
-- ["PSo26NSExtensionRequestHandling", "setUPGuidanceUI"]
+- ["PSo26NSExtensionRequestHandling", "setUpGuidanceUI"]
 - ["PSo26NSExtensionRequestHandling", "setUpMapUI"]
 - !private ["PSo26NSExtensionRequestHandling", "showAlert"]
 - ["PSo26NSExtensionRequestHandling", "showRoute"]
@@ -1377,12 +1405,14 @@ depends-member:
 - !private ["CSo8NSObject", "UIEdgeInsetsMake"]
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UISegmentedControl"]
+- !private ["CSo8NSObject", "UITapGestureRecognizer"]
 - ["CSo8NSObject", "UITextField"]
 - ["CSo8NSObject", "UIView"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addAnnotation"]
 - ["CSo8NSObject", "addDestination"]
 - ["CSo8NSObject", "addDestinationButton"]
+- !private ["CSo8NSObject", "addGestureRecognizer"]
 - !private ["CSo8NSObject", "addOverlay"]
 - ["CSo8NSObject", "addressValidated"]
 - !private ["CSo8NSObject", "allTextFieldsAreFilled"]
@@ -1405,13 +1435,13 @@ depends-member:
 - ["CSo8NSObject", "enRouteView"]
 - !private ["CSo8NSObject", "endEditing"]
 - !private ["CSo8NSObject", "expectedTravelTime"]
-- ["CSo8NSObject", "firstTime"]
 - ["CSo8NSObject", "guidanceButton"]
 - ["CSo8NSObject", "guidanceLabel"]
 - ["CSo8NSObject", "guidanceLabelContainer"]
 - ["CSo8NSObject", "guidanceNextButton"]
 - ["CSo8NSObject", "guidanceRoutes"]
 - !private ["CSo8NSObject", "hidden"]
+- ["CSo8NSObject", "hideGuidance"]
 - !private ["CSo8NSObject", "hideOverlay"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "layer"]
@@ -1439,7 +1469,7 @@ depends-member:
 - !private ["CSo8NSObject", "searchForMapItemsMatchingNoun"]
 - !private ["CSo8NSObject", "searchForValidAddress"]
 - ["CSo8NSObject", "segmentedControl"]
-- ["CSo8NSObject", "setUPGuidanceUI"]
+- ["CSo8NSObject", "setUpGuidanceUI"]
 - ["CSo8NSObject", "setUpMapUI"]
 - !private ["CSo8NSObject", "setVisibleMapRect"]
 - !private ["CSo8NSObject", "showAlert"]
@@ -1477,10 +1507,12 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Theme"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIEdgeInsetsMake"]
+- !private ["PSo16NSObjectProtocol", "UITapGestureRecognizer"]
 - !private ["PSo16NSObjectProtocol", "UIView"]
 - !private ["PSo16NSObjectProtocol", "addAnnotation"]
 - ["PSo16NSObjectProtocol", "addDestination"]
 - ["PSo16NSObjectProtocol", "addDestinationButton"]
+- !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
 - !private ["PSo16NSObjectProtocol", "addOverlay"]
 - ["PSo16NSObjectProtocol", "addressValidated"]
 - !private ["PSo16NSObjectProtocol", "allTextFieldsAreFilled"]
@@ -1503,13 +1535,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "enRouteView"]
 - !private ["PSo16NSObjectProtocol", "endEditing"]
 - !private ["PSo16NSObjectProtocol", "expectedTravelTime"]
-- ["PSo16NSObjectProtocol", "firstTime"]
 - ["PSo16NSObjectProtocol", "guidanceButton"]
 - ["PSo16NSObjectProtocol", "guidanceLabel"]
 - ["PSo16NSObjectProtocol", "guidanceLabelContainer"]
 - ["PSo16NSObjectProtocol", "guidanceNextButton"]
 - ["PSo16NSObjectProtocol", "guidanceRoutes"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
+- ["PSo16NSObjectProtocol", "hideGuidance"]
 - !private ["PSo16NSObjectProtocol", "hideOverlay"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "layer"]
@@ -1537,7 +1569,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "searchForMapItemsMatchingNoun"]
 - !private ["PSo16NSObjectProtocol", "searchForValidAddress"]
 - ["PSo16NSObjectProtocol", "segmentedControl"]
-- ["PSo16NSObjectProtocol", "setUPGuidanceUI"]
+- ["PSo16NSObjectProtocol", "setUpGuidanceUI"]
 - ["PSo16NSObjectProtocol", "setUpMapUI"]
 - !private ["PSo16NSObjectProtocol", "setVisibleMapRect"]
 - !private ["PSo16NSObjectProtocol", "showAlert"]
@@ -1656,6 +1688,7 @@ depends-member:
 - !private ["V7Air_End5Theme", "Colors"]
 - !private ["V7Air_End5Theme", "randomColor"]
 - !private ["PSo29UIAccessibilityIdentification", "addAnnotation"]
+- !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
 - !private ["PSo29UIAccessibilityIdentification", "addOverlay"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "animateWithDuration"]
@@ -1673,6 +1706,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo29UIAccessibilityIdentification", "visibleMapRect"]
 - !private ["PSo12UIAppearance", "addAnnotation"]
+- !private ["PSo12UIAppearance", "addGestureRecognizer"]
 - !private ["PSo12UIAppearance", "addOverlay"]
 - !private ["PSo12UIAppearance", "alpha"]
 - !private ["PSo12UIAppearance", "animateWithDuration"]
@@ -1704,10 +1738,12 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "Theme"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIEdgeInsetsMake"]
+- !private ["PSo21UIAppearanceContainer", "UITapGestureRecognizer"]
 - !private ["PSo21UIAppearanceContainer", "UIView"]
 - !private ["PSo21UIAppearanceContainer", "addAnnotation"]
 - ["PSo21UIAppearanceContainer", "addDestination"]
 - ["PSo21UIAppearanceContainer", "addDestinationButton"]
+- !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
 - !private ["PSo21UIAppearanceContainer", "addOverlay"]
 - ["PSo21UIAppearanceContainer", "addressValidated"]
 - !private ["PSo21UIAppearanceContainer", "allTextFieldsAreFilled"]
@@ -1725,13 +1761,13 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "enRouteOutletCollection"]
 - ["PSo21UIAppearanceContainer", "enRouteView"]
 - !private ["PSo21UIAppearanceContainer", "endEditing"]
-- ["PSo21UIAppearanceContainer", "firstTime"]
 - ["PSo21UIAppearanceContainer", "guidanceButton"]
 - ["PSo21UIAppearanceContainer", "guidanceLabel"]
 - ["PSo21UIAppearanceContainer", "guidanceLabelContainer"]
 - ["PSo21UIAppearanceContainer", "guidanceNextButton"]
 - ["PSo21UIAppearanceContainer", "guidanceRoutes"]
 - !private ["PSo21UIAppearanceContainer", "hidden"]
+- ["PSo21UIAppearanceContainer", "hideGuidance"]
 - !private ["PSo21UIAppearanceContainer", "hideOverlay"]
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "layer"]
@@ -1753,7 +1789,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "searchForMapItemsMatchingNoun"]
 - !private ["PSo21UIAppearanceContainer", "searchForValidAddress"]
 - ["PSo21UIAppearanceContainer", "segmentedControl"]
-- ["PSo21UIAppearanceContainer", "setUPGuidanceUI"]
+- ["PSo21UIAppearanceContainer", "setUpGuidanceUI"]
 - ["PSo21UIAppearanceContainer", "setUpMapUI"]
 - !private ["PSo21UIAppearanceContainer", "setVisibleMapRect"]
 - !private ["PSo21UIAppearanceContainer", "showAlert"]
@@ -1789,6 +1825,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "Theme"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIEdgeInsetsMake"]
+- !private ["PSo18UIContentContainer", "UITapGestureRecognizer"]
 - !private ["PSo18UIContentContainer", "UIView"]
 - ["PSo18UIContentContainer", "addDestination"]
 - ["PSo18UIContentContainer", "addDestinationButton"]
@@ -1802,12 +1839,12 @@ depends-member:
 - ["PSo18UIContentContainer", "destinationTextField"]
 - ["PSo18UIContentContainer", "enRouteOutletCollection"]
 - ["PSo18UIContentContainer", "enRouteView"]
-- ["PSo18UIContentContainer", "firstTime"]
 - ["PSo18UIContentContainer", "guidanceButton"]
 - ["PSo18UIContentContainer", "guidanceLabel"]
 - ["PSo18UIContentContainer", "guidanceLabelContainer"]
 - ["PSo18UIContentContainer", "guidanceNextButton"]
 - ["PSo18UIContentContainer", "guidanceRoutes"]
+- ["PSo18UIContentContainer", "hideGuidance"]
 - !private ["PSo18UIContentContainer", "hideOverlay"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "locationManager"]
@@ -1827,7 +1864,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "searchForMapItemsMatchingNoun"]
 - !private ["PSo18UIContentContainer", "searchForValidAddress"]
 - ["PSo18UIContentContainer", "segmentedControl"]
-- ["PSo18UIContentContainer", "setUPGuidanceUI"]
+- ["PSo18UIContentContainer", "setUpGuidanceUI"]
 - ["PSo18UIContentContainer", "setUpMapUI"]
 - !private ["PSo18UIContentContainer", "showAlert"]
 - ["PSo18UIContentContainer", "showRoute"]
@@ -1845,6 +1882,7 @@ depends-member:
 - !private ["CSo9UIControl", "hidden"]
 - !private ["CSo9UIControl", "text"]
 - !private ["PSo17UICoordinateSpace", "addAnnotation"]
+- !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
 - !private ["PSo17UICoordinateSpace", "addOverlay"]
 - !private ["PSo17UICoordinateSpace", "alpha"]
 - !private ["PSo17UICoordinateSpace", "animateWithDuration"]
@@ -1862,6 +1900,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "textColor"]
 - !private ["PSo17UICoordinateSpace", "visibleMapRect"]
 - !private ["PSo13UIDynamicItem", "addAnnotation"]
+- !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
 - !private ["PSo13UIDynamicItem", "addOverlay"]
 - !private ["PSo13UIDynamicItem", "alpha"]
 - !private ["PSo13UIDynamicItem", "animateWithDuration"]
@@ -1893,10 +1932,12 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "Theme"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIEdgeInsetsMake"]
+- !private ["PSo18UIFocusEnvironment", "UITapGestureRecognizer"]
 - !private ["PSo18UIFocusEnvironment", "UIView"]
 - !private ["PSo18UIFocusEnvironment", "addAnnotation"]
 - ["PSo18UIFocusEnvironment", "addDestination"]
 - ["PSo18UIFocusEnvironment", "addDestinationButton"]
+- !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
 - !private ["PSo18UIFocusEnvironment", "addOverlay"]
 - ["PSo18UIFocusEnvironment", "addressValidated"]
 - !private ["PSo18UIFocusEnvironment", "allTextFieldsAreFilled"]
@@ -1914,13 +1955,13 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "enRouteOutletCollection"]
 - ["PSo18UIFocusEnvironment", "enRouteView"]
 - !private ["PSo18UIFocusEnvironment", "endEditing"]
-- ["PSo18UIFocusEnvironment", "firstTime"]
 - ["PSo18UIFocusEnvironment", "guidanceButton"]
 - ["PSo18UIFocusEnvironment", "guidanceLabel"]
 - ["PSo18UIFocusEnvironment", "guidanceLabelContainer"]
 - ["PSo18UIFocusEnvironment", "guidanceNextButton"]
 - ["PSo18UIFocusEnvironment", "guidanceRoutes"]
 - !private ["PSo18UIFocusEnvironment", "hidden"]
+- ["PSo18UIFocusEnvironment", "hideGuidance"]
 - !private ["PSo18UIFocusEnvironment", "hideOverlay"]
 - ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "layer"]
@@ -1942,7 +1983,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "searchForMapItemsMatchingNoun"]
 - !private ["PSo18UIFocusEnvironment", "searchForValidAddress"]
 - ["PSo18UIFocusEnvironment", "segmentedControl"]
-- ["PSo18UIFocusEnvironment", "setUPGuidanceUI"]
+- ["PSo18UIFocusEnvironment", "setUpGuidanceUI"]
 - ["PSo18UIFocusEnvironment", "setUpMapUI"]
 - !private ["PSo18UIFocusEnvironment", "setVisibleMapRect"]
 - !private ["PSo18UIFocusEnvironment", "showAlert"]
@@ -1960,6 +2001,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - !private ["PSo18UIFocusEnvironment", "visibleMapRect"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo19UIGestureRecognizer", "init"]
 - !private ["PSo10UIKeyInput", "backgroundColor"]
 - !private ["PSo10UIKeyInput", "text"]
 - !private ["CSo7UILabel", "textColor"]
@@ -1993,12 +2035,14 @@ depends-member:
 - !private ["CSo11UIResponder", "UIEdgeInsetsMake"]
 - ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "UISegmentedControl"]
+- !private ["CSo11UIResponder", "UITapGestureRecognizer"]
 - ["CSo11UIResponder", "UITextField"]
 - ["CSo11UIResponder", "UIView"]
 - !private ["CSo11UIResponder", "Void"]
 - !private ["CSo11UIResponder", "addAnnotation"]
 - ["CSo11UIResponder", "addDestination"]
 - ["CSo11UIResponder", "addDestinationButton"]
+- !private ["CSo11UIResponder", "addGestureRecognizer"]
 - !private ["CSo11UIResponder", "addOverlay"]
 - ["CSo11UIResponder", "addressValidated"]
 - !private ["CSo11UIResponder", "allTextFieldsAreFilled"]
@@ -2016,13 +2060,13 @@ depends-member:
 - ["CSo11UIResponder", "enRouteOutletCollection"]
 - ["CSo11UIResponder", "enRouteView"]
 - !private ["CSo11UIResponder", "endEditing"]
-- ["CSo11UIResponder", "firstTime"]
 - ["CSo11UIResponder", "guidanceButton"]
 - ["CSo11UIResponder", "guidanceLabel"]
 - ["CSo11UIResponder", "guidanceLabelContainer"]
 - ["CSo11UIResponder", "guidanceNextButton"]
 - ["CSo11UIResponder", "guidanceRoutes"]
 - !private ["CSo11UIResponder", "hidden"]
+- ["CSo11UIResponder", "hideGuidance"]
 - !private ["CSo11UIResponder", "hideOverlay"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "layer"]
@@ -2044,7 +2088,7 @@ depends-member:
 - !private ["CSo11UIResponder", "searchForMapItemsMatchingNoun"]
 - !private ["CSo11UIResponder", "searchForValidAddress"]
 - ["CSo11UIResponder", "segmentedControl"]
-- ["CSo11UIResponder", "setUPGuidanceUI"]
+- ["CSo11UIResponder", "setUpGuidanceUI"]
 - ["CSo11UIResponder", "setUpMapUI"]
 - !private ["CSo11UIResponder", "setVisibleMapRect"]
 - !private ["CSo11UIResponder", "showAlert"]
@@ -2081,6 +2125,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "Theme"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIEdgeInsetsMake"]
+- !private ["PSo16UIStateRestoring", "UITapGestureRecognizer"]
 - !private ["PSo16UIStateRestoring", "UIView"]
 - ["PSo16UIStateRestoring", "addDestination"]
 - ["PSo16UIStateRestoring", "addDestinationButton"]
@@ -2094,12 +2139,12 @@ depends-member:
 - ["PSo16UIStateRestoring", "destinationTextField"]
 - ["PSo16UIStateRestoring", "enRouteOutletCollection"]
 - ["PSo16UIStateRestoring", "enRouteView"]
-- ["PSo16UIStateRestoring", "firstTime"]
 - ["PSo16UIStateRestoring", "guidanceButton"]
 - ["PSo16UIStateRestoring", "guidanceLabel"]
 - ["PSo16UIStateRestoring", "guidanceLabelContainer"]
 - ["PSo16UIStateRestoring", "guidanceNextButton"]
 - ["PSo16UIStateRestoring", "guidanceRoutes"]
+- ["PSo16UIStateRestoring", "hideGuidance"]
 - !private ["PSo16UIStateRestoring", "hideOverlay"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "locationManager"]
@@ -2119,7 +2164,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "searchForMapItemsMatchingNoun"]
 - !private ["PSo16UIStateRestoring", "searchForValidAddress"]
 - ["PSo16UIStateRestoring", "segmentedControl"]
-- ["PSo16UIStateRestoring", "setUPGuidanceUI"]
+- ["PSo16UIStateRestoring", "setUpGuidanceUI"]
 - ["PSo16UIStateRestoring", "setUpMapUI"]
 - !private ["PSo16UIStateRestoring", "showAlert"]
 - ["PSo16UIStateRestoring", "showRoute"]
@@ -2138,6 +2183,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "init"]
 - !private ["PSo19UITableViewDelegate", "correctAddressTableViewDelegate"]
 - !private ["PSo19UITableViewDelegate", "init"]
+- !private ["CSo22UITapGestureRecognizer", "init"]
 - !private ["CSo11UITextField", "backgroundColor"]
 - !private ["CSo11UITextField", "text"]
 - !private ["PSo19UITextFieldDelegate", "CLGeocoder"]
@@ -2155,6 +2201,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "Theme"]
 - !private ["PSo19UITextFieldDelegate", "UIColor"]
 - !private ["PSo19UITextFieldDelegate", "UIEdgeInsetsMake"]
+- !private ["PSo19UITextFieldDelegate", "UITapGestureRecognizer"]
 - !private ["PSo19UITextFieldDelegate", "UIView"]
 - !private ["PSo19UITextFieldDelegate", "addDestinationButton"]
 - !private ["PSo19UITextFieldDelegate", "allTextFieldsAreFilled"]
@@ -2166,7 +2213,9 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "guidanceButton"]
 - !private ["PSo19UITextFieldDelegate", "guidanceLabel"]
 - !private ["PSo19UITextFieldDelegate", "guidanceLabelContainer"]
+- !private ["PSo19UITextFieldDelegate", "guidanceNextButton"]
 - !private ["PSo19UITextFieldDelegate", "guidanceRoutes"]
+- !private ["PSo19UITextFieldDelegate", "hideGuidance"]
 - !private ["PSo19UITextFieldDelegate", "hideOverlay"]
 - ["PSo19UITextFieldDelegate", "locationManager"]
 - ["PSo19UITextFieldDelegate", "locationManagerDidPauseLocationUpdates"]
@@ -2184,7 +2233,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["PSo19UITextFieldDelegate", "searchForValidAddress"]
 - !private ["PSo19UITextFieldDelegate", "segmentedControl"]
-- !private ["PSo19UITextFieldDelegate", "setUPGuidanceUI"]
+- !private ["PSo19UITextFieldDelegate", "setUpGuidanceUI"]
 - !private ["PSo19UITextFieldDelegate", "setUpMapUI"]
 - !private ["PSo19UITextFieldDelegate", "showAlert"]
 - !private ["PSo19UITextFieldDelegate", "showRoute"]
@@ -2211,10 +2260,12 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "Theme"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIEdgeInsetsMake"]
+- !private ["PSo18UITraitEnvironment", "UITapGestureRecognizer"]
 - !private ["PSo18UITraitEnvironment", "UIView"]
 - !private ["PSo18UITraitEnvironment", "addAnnotation"]
 - ["PSo18UITraitEnvironment", "addDestination"]
 - ["PSo18UITraitEnvironment", "addDestinationButton"]
+- !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
 - !private ["PSo18UITraitEnvironment", "addOverlay"]
 - ["PSo18UITraitEnvironment", "addressValidated"]
 - !private ["PSo18UITraitEnvironment", "allTextFieldsAreFilled"]
@@ -2232,13 +2283,13 @@ depends-member:
 - ["PSo18UITraitEnvironment", "enRouteOutletCollection"]
 - ["PSo18UITraitEnvironment", "enRouteView"]
 - !private ["PSo18UITraitEnvironment", "endEditing"]
-- ["PSo18UITraitEnvironment", "firstTime"]
 - ["PSo18UITraitEnvironment", "guidanceButton"]
 - ["PSo18UITraitEnvironment", "guidanceLabel"]
 - ["PSo18UITraitEnvironment", "guidanceLabelContainer"]
 - ["PSo18UITraitEnvironment", "guidanceNextButton"]
 - ["PSo18UITraitEnvironment", "guidanceRoutes"]
 - !private ["PSo18UITraitEnvironment", "hidden"]
+- ["PSo18UITraitEnvironment", "hideGuidance"]
 - !private ["PSo18UITraitEnvironment", "hideOverlay"]
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "layer"]
@@ -2260,7 +2311,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "searchForMapItemsMatchingNoun"]
 - !private ["PSo18UITraitEnvironment", "searchForValidAddress"]
 - ["PSo18UITraitEnvironment", "segmentedControl"]
-- ["PSo18UITraitEnvironment", "setUPGuidanceUI"]
+- ["PSo18UITraitEnvironment", "setUpGuidanceUI"]
 - ["PSo18UITraitEnvironment", "setUpMapUI"]
 - !private ["PSo18UITraitEnvironment", "setVisibleMapRect"]
 - !private ["PSo18UITraitEnvironment", "showAlert"]
@@ -2279,6 +2330,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "visibleMapRect"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "addAnnotation"]
+- !private ["CSo6UIView", "addGestureRecognizer"]
 - !private ["CSo6UIView", "addOverlay"]
 - !private ["CSo6UIView", "alpha"]
 - !private ["CSo6UIView", "animateWithDuration"]
@@ -2325,6 +2377,7 @@ depends-member:
 - !private ["CSo16UIViewController", "UIEdgeInsetsMake"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "UISegmentedControl"]
+- !private ["CSo16UIViewController", "UITapGestureRecognizer"]
 - ["CSo16UIViewController", "UITextField"]
 - ["CSo16UIViewController", "UIView"]
 - !private ["CSo16UIViewController", "Void"]
@@ -2340,12 +2393,12 @@ depends-member:
 - ["CSo16UIViewController", "destinationTextField"]
 - ["CSo16UIViewController", "enRouteOutletCollection"]
 - ["CSo16UIViewController", "enRouteView"]
-- ["CSo16UIViewController", "firstTime"]
 - ["CSo16UIViewController", "guidanceButton"]
 - ["CSo16UIViewController", "guidanceLabel"]
 - ["CSo16UIViewController", "guidanceLabelContainer"]
 - ["CSo16UIViewController", "guidanceNextButton"]
 - ["CSo16UIViewController", "guidanceRoutes"]
+- ["CSo16UIViewController", "hideGuidance"]
 - !private ["CSo16UIViewController", "hideOverlay"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "locationManager"]
@@ -2365,7 +2418,7 @@ depends-member:
 - !private ["CSo16UIViewController", "searchForMapItemsMatchingNoun"]
 - !private ["CSo16UIViewController", "searchForValidAddress"]
 - ["CSo16UIViewController", "segmentedControl"]
-- ["CSo16UIViewController", "setUPGuidanceUI"]
+- ["CSo16UIViewController", "setUpGuidanceUI"]
 - ["CSo16UIViewController", "setUpMapUI"]
 - !private ["CSo16UIViewController", "showAlert"]
 - ["CSo16UIViewController", "showRoute"]
@@ -2471,6 +2524,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "addAnnotation"]
+- !private ["Ps12_Reflectable", "addGestureRecognizer"]
 - !private ["Ps12_Reflectable", "addOverlay"]
 - !private ["Ps12_Reflectable", "alpha"]
 - !private ["Ps12_Reflectable", "animateWithDuration"]
@@ -2623,6 +2677,7 @@ depends-nominal:
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
+- !private "CSo19UIGestureRecognizer"
 - !private "PSo10UIKeyInput"
 - !private "CSo7UILabel"
 - "CSo11UIResponder"
@@ -2633,6 +2688,7 @@ depends-nominal:
 - !private "CSo11UITableView"
 - !private "PSo21UITableViewDataSource"
 - !private "PSo19UITableViewDelegate"
+- !private "CSo22UITapGestureRecognizer"
 - !private "CSo11UITextField"
 - "PSo19UITextFieldDelegate"
 - !private "PSo11UITextInput"
@@ -2711,4 +2767,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "50e2eb702c81717534d16a7664ff3978"
+interface-hash: "e8f8c84de70fd1a414550ec2ec69f677"
