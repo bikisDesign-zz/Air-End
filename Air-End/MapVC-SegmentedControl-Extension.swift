@@ -38,7 +38,7 @@ extension MapVC {
 //                self.searchForMapItemsMatchingNoun(descriptor, withCompletionHandler: { (mapItems) -> () in
 //                    // find the closest map item matching this task
 //                    if let sortedMapItems = self.sortMapItemsCloseToUserLocation(self.taskMapView.userLocation.location, mapItems: mapItems){
-//                        guard let closestMapItem = sortedMapItems.first else {return}
+//                        gt couard let closestMapItem = sortedMapItems.first else {return}
 //                        self.taskLocations = [closestMapItem]
 //                        self.setMapRegionForMapItems(sortedMapItems.first, mapViewA: self.taskMapView)
 //                    }
