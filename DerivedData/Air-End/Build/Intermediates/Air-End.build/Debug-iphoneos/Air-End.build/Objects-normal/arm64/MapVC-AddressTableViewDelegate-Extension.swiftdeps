@@ -1,27 +1,27 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 provides-nominal:
-- "C7Air_End5MapVC"
+- "C5Mango5MapVC"
 provides-member:
-- ["C7Air_End5MapVC", ""]
+- ["C5Mango5MapVC", ""]
 provides-dynamic-lookup:
 - "showCorrectAddressTableView"
-- "didSetValidAddress"
 - "searchForValidAddress"
+- "didSetValidAddress"
 depends-top-level:
-- !private "NSError"
-- "UIButton"
 - "CLPlacemark"
-- "UITextField"
 - "String"
-- "UIViewController"
-- "StringLiteralType"
-- "CorrectAddressTableViewDelegate"
-- "MapVC"
 - !private "BooleanLiteralType"
-- !private "UIScreen"
-- !private "Void"
 - "CorrectAddressTableView"
+- "UIViewController"
+- !private "NSError"
+- !private "UIScreen"
+- "UITextField"
+- "UIButton"
+- "StringLiteralType"
+- !private "Void"
+- "MapVC"
+- "CorrectAddressTableViewDelegate"
 - !private "CLGeocoder"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
@@ -116,27 +116,27 @@ depends-member:
 - !private ["Ps14CollectionType", "init"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
-- !private ["C7Air_End23CorrectAddressTableView", "addresses"]
-- !private ["C7Air_End23CorrectAddressTableView", "correctAddressTableViewDelegate"]
-- !private ["C7Air_End23CorrectAddressTableView", "currentTextField"]
-- !private ["C7Air_End23CorrectAddressTableView", "dataSource"]
-- !private ["C7Air_End23CorrectAddressTableView", "deinit"]
-- !private ["C7Air_End23CorrectAddressTableView", "delegate"]
-- !private ["C7Air_End23CorrectAddressTableView", "init"]
-- !private ["C7Air_End23CorrectAddressTableView", "mainViewController"]
-- !private ["C7Air_End23CorrectAddressTableView", "placemarkArray"]
-- !private ["C7Air_End23CorrectAddressTableView", "sender"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "CLGeocoder"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "CorrectAddressTableView"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "String"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "UIScreen"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "checkDestinationUI"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "convertAddressFromPlacemark"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "didSetValidAddress"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "showAlert"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "showCorrectAddressTableView"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "view"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", ""]
+- !private ["C5Mango23CorrectAddressTableView", "addresses"]
+- !private ["C5Mango23CorrectAddressTableView", "correctAddressTableViewDelegate"]
+- !private ["C5Mango23CorrectAddressTableView", "currentTextField"]
+- !private ["C5Mango23CorrectAddressTableView", "dataSource"]
+- !private ["C5Mango23CorrectAddressTableView", "deinit"]
+- !private ["C5Mango23CorrectAddressTableView", "delegate"]
+- !private ["C5Mango23CorrectAddressTableView", "init"]
+- !private ["C5Mango23CorrectAddressTableView", "mainViewController"]
+- !private ["C5Mango23CorrectAddressTableView", "placemarkArray"]
+- !private ["C5Mango23CorrectAddressTableView", "sender"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "CLGeocoder"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "CorrectAddressTableView"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "String"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "UIScreen"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "checkDestinationUI"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "convertAddressFromPlacemark"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "didSetValidAddress"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "showAlert"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "showCorrectAddressTableView"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "view"]
+- ["P5Mango31CorrectAddressTableViewDelegate", ""]
 - !private ["Ps28CustomDebugStringConvertible", "CLGeocoder"]
 - !private ["Ps28CustomDebugStringConvertible", "CorrectAddressTableView"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
@@ -284,24 +284,24 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "showAlert"]
 - !private ["PSo17MKMapViewDelegate", "showCorrectAddressTableView"]
 - !private ["PSo17MKMapViewDelegate", "view"]
-- !private ["C7Air_End5MapVC", "CLGeocoder"]
-- ["C7Air_End5MapVC", "CLPlacemark"]
-- ["C7Air_End5MapVC", "CorrectAddressTableView"]
-- !private ["C7Air_End5MapVC", "NSError"]
-- ["C7Air_End5MapVC", "String"]
-- ["C7Air_End5MapVC", "UIButton"]
-- !private ["C7Air_End5MapVC", "UIScreen"]
-- ["C7Air_End5MapVC", "UITextField"]
-- ["C7Air_End5MapVC", "UIViewController"]
-- !private ["C7Air_End5MapVC", "Void"]
-- !private ["C7Air_End5MapVC", "checkDestinationUI"]
-- !private ["C7Air_End5MapVC", "convertAddressFromPlacemark"]
-- ["C7Air_End5MapVC", "deinit"]
-- ["C7Air_End5MapVC", "didSetValidAddress"]
-- ["C7Air_End5MapVC", "searchForValidAddress"]
-- !private ["C7Air_End5MapVC", "showAlert"]
-- ["C7Air_End5MapVC", "showCorrectAddressTableView"]
-- !private ["C7Air_End5MapVC", "view"]
+- !private ["C5Mango5MapVC", "CLGeocoder"]
+- ["C5Mango5MapVC", "CLPlacemark"]
+- ["C5Mango5MapVC", "CorrectAddressTableView"]
+- !private ["C5Mango5MapVC", "NSError"]
+- ["C5Mango5MapVC", "String"]
+- ["C5Mango5MapVC", "UIButton"]
+- !private ["C5Mango5MapVC", "UIScreen"]
+- ["C5Mango5MapVC", "UITextField"]
+- ["C5Mango5MapVC", "UIViewController"]
+- !private ["C5Mango5MapVC", "Void"]
+- !private ["C5Mango5MapVC", "checkDestinationUI"]
+- !private ["C5Mango5MapVC", "convertAddressFromPlacemark"]
+- ["C5Mango5MapVC", "deinit"]
+- ["C5Mango5MapVC", "didSetValidAddress"]
+- ["C5Mango5MapVC", "searchForValidAddress"]
+- !private ["C5Mango5MapVC", "showAlert"]
+- ["C5Mango5MapVC", "showCorrectAddressTableView"]
+- !private ["C5Mango5MapVC", "view"]
 - !private ["P10RealmSwift10MinMaxType", "Distance"]
 - !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "Distance"]
@@ -439,6 +439,16 @@ depends-member:
 - !private ["Ps16SignedNumberType", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["P5Mango19TaskMapViewDelegate", "CLGeocoder"]
+- !private ["P5Mango19TaskMapViewDelegate", "CorrectAddressTableView"]
+- !private ["P5Mango19TaskMapViewDelegate", "String"]
+- !private ["P5Mango19TaskMapViewDelegate", "UIScreen"]
+- !private ["P5Mango19TaskMapViewDelegate", "checkDestinationUI"]
+- !private ["P5Mango19TaskMapViewDelegate", "convertAddressFromPlacemark"]
+- ["P5Mango19TaskMapViewDelegate", "didSetValidAddress"]
+- !private ["P5Mango19TaskMapViewDelegate", "showAlert"]
+- !private ["P5Mango19TaskMapViewDelegate", "showCorrectAddressTableView"]
+- !private ["P5Mango19TaskMapViewDelegate", "view"]
 - !private ["PSo29UIAccessibilityIdentification", "addSubview"]
 - !private ["PSo29UIAccessibilityIdentification", "addresses"]
 - !private ["PSo29UIAccessibilityIdentification", "correctAddressTableViewDelegate"]
@@ -756,8 +766,8 @@ depends-nominal:
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
-- !private "C7Air_End23CorrectAddressTableView"
-- "P7Air_End31CorrectAddressTableViewDelegate"
+- !private "C5Mango23CorrectAddressTableView"
+- "P5Mango31CorrectAddressTableViewDelegate"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
@@ -771,7 +781,7 @@ depends-nominal:
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - "PSo17MKMapViewDelegate"
-- "C7Air_End5MapVC"
+- "C5Mango5MapVC"
 - !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
 - !private "Ps21MutableCollectionType"
@@ -791,6 +801,7 @@ depends-nominal:
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
 - !private "Ps10Strideable"
+- "P5Mango19TaskMapViewDelegate"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"

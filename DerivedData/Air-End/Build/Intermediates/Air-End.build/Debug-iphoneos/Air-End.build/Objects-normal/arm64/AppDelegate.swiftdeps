@@ -3,60 +3,60 @@ provides-top-level:
 - "uiRealm"
 - "AppDelegate"
 provides-nominal:
-- "C7Air_End11AppDelegate"
+- "C5Mango11AppDelegate"
 provides-member:
-- ["C7Air_End11AppDelegate", ""]
+- ["C5Mango11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
-- "applicationDidBecomeActive"
-- "applicationWillEnterForeground"
-- "persistentStoreCoordinator"
 - "applicationDidEnterBackground"
-- "saveContext"
-- "applicationDocumentsDirectory"
-- "application"
-- "managedObjectModel"
-- "applicationWillResignActive"
-- "managedObjectContext"
 - "applicationWillTerminate"
+- "application"
+- "applicationWillResignActive"
+- "applicationDocumentsDirectory"
+- "applicationDidBecomeActive"
+- "window"
+- "managedObjectModel"
+- "persistentStoreCoordinator"
+- "managedObjectContext"
+- "applicationWillEnterForeground"
+- "saveContext"
 depends-top-level:
-- !private "NSBundle"
-- !private "NSLocalizedFailureReasonErrorKey"
-- !private "UIBarButtonItem"
-- "Bool"
-- "NSManagedObjectContext"
-- !private "NSError"
-- !private "String"
-- !private "Theme"
-- !private "UIControlState"
 - !private "UINavigationBar"
-- "NSManagedObjectModel"
-- !private "NSForegroundColorAttributeName"
-- "UIApplication"
-- !private "NSFileManager"
-- "UIWindow"
-- !private "UIColor"
 - !private "NSLocalizedDescriptionKey"
-- "UIApplicationDelegate"
-- "NSURL"
-- !private "-"
-- "StringLiteralType"
-- "uiRealm"
-- !private "NSLog"
-- !private "UISegmentedControl"
-- !private "Dictionary"
-- "UIResponder"
-- !private "NSUnderlyingErrorKey"
-- "NSObject"
 - "NSPersistentStoreCoordinator"
-- "AnyObject"
-- !private "abort"
-- "AppDelegate"
+- !private "Dictionary"
 - !private "UIBarStyle"
-- !private "NSFontAttributeName"
+- !private "NSUnderlyingErrorKey"
+- !private "NSLog"
+- "UIResponder"
+- !private "NSFileManager"
 - !private "NSSQLiteStoreType"
-- "Realm"
 - !private "BooleanLiteralType"
+- "Bool"
+- "NSManagedObjectModel"
+- "UIApplicationDelegate"
+- "NSObject"
+- !private "UIControlState"
+- !private "abort"
+- "uiRealm"
+- "NSManagedObjectContext"
+- "AppDelegate"
+- !private "String"
+- !private "UIBarButtonItem"
+- !private "NSForegroundColorAttributeName"
+- "Realm"
+- "AnyObject"
+- !private "NSError"
+- !private "UISegmentedControl"
+- !private "NSLocalizedFailureReasonErrorKey"
+- "NSURL"
+- "StringLiteralType"
+- !private "Theme"
+- !private "UIColor"
+- !private "-"
+- "UIWindow"
+- !private "NSBundle"
+- "UIApplication"
+- !private "NSFontAttributeName"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -124,58 +124,58 @@ depends-member:
 - !private ["Ps9AnyObject", "whiteColor"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
-- ["C7Air_End11AppDelegate", "AnyObject"]
-- ["C7Air_End11AppDelegate", "Bool"]
-- !private ["C7Air_End11AppDelegate", "NSBundle"]
-- !private ["C7Air_End11AppDelegate", "NSError"]
-- !private ["C7Air_End11AppDelegate", "NSFileManager"]
-- !private ["C7Air_End11AppDelegate", "NSFontAttributeName"]
-- !private ["C7Air_End11AppDelegate", "NSForegroundColorAttributeName"]
-- !private ["C7Air_End11AppDelegate", "NSLocalizedDescriptionKey"]
-- !private ["C7Air_End11AppDelegate", "NSLocalizedFailureReasonErrorKey"]
-- !private ["C7Air_End11AppDelegate", "NSLog"]
-- ["C7Air_End11AppDelegate", "NSManagedObjectContext"]
-- ["C7Air_End11AppDelegate", "NSManagedObjectModel"]
-- ["C7Air_End11AppDelegate", "NSObject"]
-- ["C7Air_End11AppDelegate", "NSPersistentStoreCoordinator"]
-- !private ["C7Air_End11AppDelegate", "NSSQLiteStoreType"]
-- ["C7Air_End11AppDelegate", "NSURL"]
-- !private ["C7Air_End11AppDelegate", "NSUnderlyingErrorKey"]
-- !private ["C7Air_End11AppDelegate", "String"]
-- !private ["C7Air_End11AppDelegate", "Theme"]
-- ["C7Air_End11AppDelegate", "UIApplication"]
-- !private ["C7Air_End11AppDelegate", "UIBarButtonItem"]
-- !private ["C7Air_End11AppDelegate", "UIBarStyle"]
-- !private ["C7Air_End11AppDelegate", "UIColor"]
-- !private ["C7Air_End11AppDelegate", "UIControlState"]
-- !private ["C7Air_End11AppDelegate", "UINavigationBar"]
-- !private ["C7Air_End11AppDelegate", "UISegmentedControl"]
-- ["C7Air_End11AppDelegate", "UIWindow"]
-- !private ["C7Air_End11AppDelegate", "abort"]
-- ["C7Air_End11AppDelegate", "application"]
-- ["C7Air_End11AppDelegate", "applicationDidBecomeActive"]
-- ["C7Air_End11AppDelegate", "applicationDidEnterBackground"]
-- ["C7Air_End11AppDelegate", "applicationDidFinishLaunching"]
-- ["C7Air_End11AppDelegate", "applicationDidReceiveMemoryWarning"]
-- ["C7Air_End11AppDelegate", "applicationDocumentsDirectory"]
-- !private ["C7Air_End11AppDelegate", "applicationDocumentsDirectory.storage"]
-- ["C7Air_End11AppDelegate", "applicationProtectedDataDidBecomeAvailable"]
-- ["C7Air_End11AppDelegate", "applicationProtectedDataWillBecomeUnavailable"]
-- ["C7Air_End11AppDelegate", "applicationShouldRequestHealthAuthorization"]
-- ["C7Air_End11AppDelegate", "applicationSignificantTimeChange"]
-- ["C7Air_End11AppDelegate", "applicationWillEnterForeground"]
-- ["C7Air_End11AppDelegate", "applicationWillResignActive"]
-- ["C7Air_End11AppDelegate", "applicationWillTerminate"]
-- ["C7Air_End11AppDelegate", "deinit"]
-- ["C7Air_End11AppDelegate", "init"]
-- ["C7Air_End11AppDelegate", "managedObjectContext"]
-- !private ["C7Air_End11AppDelegate", "managedObjectContext.storage"]
-- ["C7Air_End11AppDelegate", "managedObjectModel"]
-- !private ["C7Air_End11AppDelegate", "managedObjectModel.storage"]
-- ["C7Air_End11AppDelegate", "persistentStoreCoordinator"]
-- !private ["C7Air_End11AppDelegate", "persistentStoreCoordinator.storage"]
-- ["C7Air_End11AppDelegate", "saveContext"]
-- ["C7Air_End11AppDelegate", "window"]
+- ["C5Mango11AppDelegate", "AnyObject"]
+- ["C5Mango11AppDelegate", "Bool"]
+- !private ["C5Mango11AppDelegate", "NSBundle"]
+- !private ["C5Mango11AppDelegate", "NSError"]
+- !private ["C5Mango11AppDelegate", "NSFileManager"]
+- !private ["C5Mango11AppDelegate", "NSFontAttributeName"]
+- !private ["C5Mango11AppDelegate", "NSForegroundColorAttributeName"]
+- !private ["C5Mango11AppDelegate", "NSLocalizedDescriptionKey"]
+- !private ["C5Mango11AppDelegate", "NSLocalizedFailureReasonErrorKey"]
+- !private ["C5Mango11AppDelegate", "NSLog"]
+- ["C5Mango11AppDelegate", "NSManagedObjectContext"]
+- ["C5Mango11AppDelegate", "NSManagedObjectModel"]
+- ["C5Mango11AppDelegate", "NSObject"]
+- ["C5Mango11AppDelegate", "NSPersistentStoreCoordinator"]
+- !private ["C5Mango11AppDelegate", "NSSQLiteStoreType"]
+- ["C5Mango11AppDelegate", "NSURL"]
+- !private ["C5Mango11AppDelegate", "NSUnderlyingErrorKey"]
+- !private ["C5Mango11AppDelegate", "String"]
+- !private ["C5Mango11AppDelegate", "Theme"]
+- ["C5Mango11AppDelegate", "UIApplication"]
+- !private ["C5Mango11AppDelegate", "UIBarButtonItem"]
+- !private ["C5Mango11AppDelegate", "UIBarStyle"]
+- !private ["C5Mango11AppDelegate", "UIColor"]
+- !private ["C5Mango11AppDelegate", "UIControlState"]
+- !private ["C5Mango11AppDelegate", "UINavigationBar"]
+- !private ["C5Mango11AppDelegate", "UISegmentedControl"]
+- ["C5Mango11AppDelegate", "UIWindow"]
+- !private ["C5Mango11AppDelegate", "abort"]
+- ["C5Mango11AppDelegate", "application"]
+- ["C5Mango11AppDelegate", "applicationDidBecomeActive"]
+- ["C5Mango11AppDelegate", "applicationDidEnterBackground"]
+- ["C5Mango11AppDelegate", "applicationDidFinishLaunching"]
+- ["C5Mango11AppDelegate", "applicationDidReceiveMemoryWarning"]
+- ["C5Mango11AppDelegate", "applicationDocumentsDirectory"]
+- !private ["C5Mango11AppDelegate", "applicationDocumentsDirectory.storage"]
+- ["C5Mango11AppDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["C5Mango11AppDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["C5Mango11AppDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["C5Mango11AppDelegate", "applicationSignificantTimeChange"]
+- ["C5Mango11AppDelegate", "applicationWillEnterForeground"]
+- ["C5Mango11AppDelegate", "applicationWillResignActive"]
+- ["C5Mango11AppDelegate", "applicationWillTerminate"]
+- ["C5Mango11AppDelegate", "deinit"]
+- ["C5Mango11AppDelegate", "init"]
+- ["C5Mango11AppDelegate", "managedObjectContext"]
+- !private ["C5Mango11AppDelegate", "managedObjectContext.storage"]
+- ["C5Mango11AppDelegate", "managedObjectModel"]
+- !private ["C5Mango11AppDelegate", "managedObjectModel.storage"]
+- ["C5Mango11AppDelegate", "persistentStoreCoordinator"]
+- !private ["C5Mango11AppDelegate", "persistentStoreCoordinator.storage"]
+- ["C5Mango11AppDelegate", "saveContext"]
+- ["C5Mango11AppDelegate", "window"]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
@@ -275,10 +275,10 @@ depends-member:
 - !private ["Ps14CollectionType", "count"]
 - !private ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "subscript"]
-- !private ["OV7Air_End5Theme6Colors", "ButtonColor"]
-- !private ["OV7Air_End5Theme6Colors", "NavigationBarColor"]
-- !private ["OV7Air_End5Theme6Colors", "SegmentedControlColor"]
-- !private ["OV7Air_End5Theme6Colors", "color"]
+- !private ["OV5Mango5Theme6Colors", "ButtonColor"]
+- !private ["OV5Mango5Theme6Colors", "NavigationBarColor"]
+- !private ["OV5Mango5Theme6Colors", "SegmentedControlColor"]
+- !private ["OV5Mango5Theme6Colors", "color"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "init"]
@@ -516,8 +516,8 @@ depends-member:
 - !private ["Ps9ErrorType", "userInfo"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
-- !private ["OV7Air_End5Theme5Fonts", "BoldItalicNavigationBarTypeFace"]
-- !private ["OV7Air_End5Theme5Fonts", "font"]
+- !private ["OV5Mango5Theme5Fonts", "BoldItalicNavigationBarTypeFace"]
+- !private ["OV5Mango5Theme5Fonts", "font"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps13GeneratorType", "Element"]
@@ -828,11 +828,15 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "count"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "Black"]
+- !private ["Ps16RawRepresentable", "ButtonColor"]
 - !private ["Ps16RawRepresentable", "DocumentDirectory"]
 - !private ["Ps16RawRepresentable", "MainQueueConcurrencyType"]
+- !private ["Ps16RawRepresentable", "NavigationBarColor"]
 - !private ["Ps16RawRepresentable", "Normal"]
+- !private ["Ps16RawRepresentable", "SegmentedControlColor"]
 - !private ["Ps16RawRepresentable", "Selected"]
 - !private ["Ps16RawRepresentable", "UserDomainMask"]
+- !private ["Ps16RawRepresentable", "color"]
 - ["C10RealmSwift5Realm", "init"]
 - !private ["P10RealmSwift17RealmOptionalType", "Distance"]
 - !private ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
@@ -865,8 +869,8 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
-- !private ["V7Air_End5Theme", "Colors"]
-- !private ["V7Air_End5Theme", "Fonts"]
+- !private ["V5Mango5Theme", "Colors"]
+- !private ["V5Mango5Theme", "Fonts"]
 - !private ["PSo29UIAccessibilityIdentification", "appearance"]
 - !private ["PSo29UIAccessibilityIdentification", "barStyle"]
 - !private ["PSo29UIAccessibilityIdentification", "barTintColor"]
@@ -1106,7 +1110,7 @@ depends-member:
 depends-nominal:
 - !private "P10RealmSwift11AddableType"
 - "Ps9AnyObject"
-- "C7Air_End11AppDelegate"
+- "C5Mango11AppDelegate"
 - !private "Sa"
 - !private "Ps23ArrayLiteralConvertible"
 - !private "Vs10ArraySlice"
@@ -1118,7 +1122,7 @@ depends-nominal:
 - "Ps11CVarArgType"
 - !private "Vs9Character"
 - !private "Ps14CollectionType"
-- !private "OV7Air_End5Theme6Colors"
+- !private "OV5Mango5Theme6Colors"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -1129,7 +1133,7 @@ depends-nominal:
 - !private "Ps9ErrorType"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
-- !private "OV7Air_End5Theme5Fonts"
+- !private "OV5Mango5Theme5Fonts"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
@@ -1185,7 +1189,7 @@ depends-nominal:
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
-- !private "V7Air_End5Theme"
+- !private "V5Mango5Theme"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"

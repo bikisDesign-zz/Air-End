@@ -11,57 +11,66 @@ provides-member:
 - ["CSo16UIViewController", "addActivityIndicator"]
 - ["CSo16UIViewController", "hideActivityIndicator"]
 - ["CSo16UIViewController", "initalizeRequestWithDescriptor"]
+- ["CSo16UIViewController", "initializeRequest"]
+- ["CSo16UIViewController", "searchForFastestRouteFromSourceToDestination"]
 - ["CSo16UIViewController", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["CSo16UIViewController", "coordinateRegionForAnnotations"]
 - ["CSo16UIViewController", "setMapRegionForMapItems"]
 - ["CSo16UIViewController", "sortMapItemsCloseToUserLocation"]
 provides-dynamic-lookup:
-- "initalizeRequestWithDescriptor"
-- "hideOverlay"
-- "setMapRegionForMapItems"
-- "allTextFieldsAreFilled"
 - "showAlert"
 - "sortMapItemsCloseToUserLocation"
-- "animateTextField"
-- "generateRandomPassCode"
 - "setRegionForUnionOfUserLocationAndTaskAnnotation"
+- "allTextFieldsAreFilled"
+- "hideOverlay"
+- "searchForFastestRouteFromSourceToDestination"
+- "setMapRegionForMapItems"
+- "initializeRequest"
+- "generateRandomPassCode"
+- "initalizeRequestWithDescriptor"
+- "animateTextField"
 depends-top-level:
-- !private "UIColor"
-- "MKMapView"
-- !private "UIAlertController"
 - "MKCoordinateRegion"
-- "MKMapItem"
-- "Bool"
-- "MKLocalSearchRequest"
-- !private "Int"
-- "String"
-- !private "MKCoordinateRegionForMapRect"
-- !private "=="
-- "CLLocation"
-- !private "MKMapPointForCoordinate"
-- !private "<"
-- "UIView"
-- !private "arc4random_uniform"
-- !private "UInt32"
-- !private "StringLiteralType"
-- !private "MKCoordinateSpanMake"
-- !private "MKMapSize"
-- !private "UIScreen"
-- !private "Void"
-- "UIActivityIndicatorView"
-- "UITextField"
 - "UIViewController"
-- "MKAnnotation"
+- "MKRoute"
+- "Bool"
+- "UITextField"
+- "UIActivityIndicatorView"
+- "MKDirections"
 - !private "||"
-- !private "..."
+- "MKAnnotation"
+- "MKMapItem"
+- !private "UIScreen"
+- "MKLocalSearchRequest"
+- "String"
+- !private "MKDirectionsResponse"
+- !private "Int"
+- !private "arc4random_uniform"
+- !private "StringLiteralType"
 - !private "CGFloat"
-- !private "MKMapRect"
-- !private "MKCoordinateRegionMake"
-- !private "MKMapRectMake"
+- !private "UInt32"
+- !private "=="
+- !private "MKCoordinateRegionForMapRect"
+- "MKMapView"
+- !private "NSError"
 - !private "MKMapRectNull"
-- !private "BooleanLiteralType"
 - !private "MKMapRectUnion"
+- !private "MKMapRect"
+- !private "<"
+- !private "UIAlertController"
+- !private "UIColor"
+- !private "MKCoordinateSpanMake"
+- !private "MKMapRectMake"
+- "CLLocation"
+- !private "MKCoordinateRegionMake"
+- !private "MKMapSize"
 - !private "UIAlertAction"
+- !private "MKMapPointForCoordinate"
+- "MKDirectionsRequest"
+- "UIView"
+- !private "BooleanLiteralType"
+- !private "Void"
+- !private "..."
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["P10RealmSwift11AddableType", "Distance"]
@@ -73,6 +82,7 @@ depends-member:
 - !private ["Ps9AnyObject", "MKCoordinateRegionForMapRect"]
 - !private ["Ps9AnyObject", "MKCoordinateRegionMake"]
 - !private ["Ps9AnyObject", "MKCoordinateSpanMake"]
+- !private ["Ps9AnyObject", "MKDirectionsRequest"]
 - !private ["Ps9AnyObject", "MKLocalSearchRequest"]
 - !private ["Ps9AnyObject", "MKMapPointForCoordinate"]
 - !private ["Ps9AnyObject", "MKMapRect"]
@@ -100,17 +110,21 @@ depends-member:
 - !private ["Ps9AnyObject", "arc4random_uniform"]
 - !private ["Ps9AnyObject", "backgroundColor"]
 - !private ["Ps9AnyObject", "bounds"]
+- !private ["Ps9AnyObject", "calculateDirectionsWithCompletionHandler"]
 - !private ["Ps9AnyObject", "characters"]
 - !private ["Ps9AnyObject", "convertToAnnotationFromMapItem"]
 - !private ["Ps9AnyObject", "coordinate"]
 - ["Ps9AnyObject", "coordinateRegionForAnnotations"]
+- !private ["Ps9AnyObject", "destination"]
 - !private ["Ps9AnyObject", "distanceFromLocation"]
+- !private ["Ps9AnyObject", "expectedTravelTime"]
 - ["Ps9AnyObject", "generateRandomPassCode"]
 - !private ["Ps9AnyObject", "hidden"]
 - ["Ps9AnyObject", "hideActivityIndicator"]
 - ["Ps9AnyObject", "hideOverlay"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "initalizeRequestWithDescriptor"]
+- ["Ps9AnyObject", "initializeRequest"]
 - !private ["Ps9AnyObject", "location"]
 - !private ["Ps9AnyObject", "mainScreen"]
 - !private ["Ps9AnyObject", "naturalLanguageQuery"]
@@ -119,26 +133,35 @@ depends-member:
 - !private ["Ps9AnyObject", "redColor"]
 - !private ["Ps9AnyObject", "region"]
 - !private ["Ps9AnyObject", "removeFromSuperview"]
+- !private ["Ps9AnyObject", "requestsAlternateRoutes"]
+- !private ["Ps9AnyObject", "routes"]
+- ["Ps9AnyObject", "searchForFastestRouteFromSourceToDestination"]
 - ["Ps9AnyObject", "setMapRegionForMapItems"]
 - !private ["Ps9AnyObject", "setRegion"]
 - ["Ps9AnyObject", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["Ps9AnyObject", "showAlert"]
 - ["Ps9AnyObject", "sortMapItemsCloseToUserLocation"]
+- !private ["Ps9AnyObject", "source"]
 - !private ["Ps9AnyObject", "startAnimating"]
 - !private ["Ps9AnyObject", "startIndex"]
 - !private ["Ps9AnyObject", "subscript"]
 - !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "transportType"]
 - !private ["Ps9AnyObject", "view"]
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
 - !private ["Sa", "_Element"]
+- !private ["Sa", "deinit"]
 - !private ["Sa", "sort"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23ArrayLiteralConvertible", "Automobile"]
 - !private ["Ps23ArrayLiteralConvertible", "Generator"]
 - !private ["Ps23ArrayLiteralConvertible", "Index"]
 - !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
 - !private ["Ps23ArrayLiteralConvertible", "_Element"]
 - !private ["Ps23ArrayLiteralConvertible", "sort"]
+- !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Vs10ArraySlice", "Generator"]
 - !private ["Vs10ArraySlice", "Index"]
 - !private ["Vs10ArraySlice", "SubSequence"]
@@ -167,6 +190,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "MKCoordinateRegionForMapRect"]
 - !private ["Ps11CVarArgType", "MKCoordinateRegionMake"]
 - !private ["Ps11CVarArgType", "MKCoordinateSpanMake"]
+- !private ["Ps11CVarArgType", "MKDirectionsRequest"]
 - !private ["Ps11CVarArgType", "MKLocalSearchRequest"]
 - !private ["Ps11CVarArgType", "MKMapPointForCoordinate"]
 - !private ["Ps11CVarArgType", "MKMapRect"]
@@ -195,17 +219,21 @@ depends-member:
 - !private ["Ps11CVarArgType", "arc4random_uniform"]
 - !private ["Ps11CVarArgType", "backgroundColor"]
 - !private ["Ps11CVarArgType", "bounds"]
+- !private ["Ps11CVarArgType", "calculateDirectionsWithCompletionHandler"]
 - !private ["Ps11CVarArgType", "characters"]
 - !private ["Ps11CVarArgType", "convertToAnnotationFromMapItem"]
 - !private ["Ps11CVarArgType", "coordinate"]
 - ["Ps11CVarArgType", "coordinateRegionForAnnotations"]
+- !private ["Ps11CVarArgType", "destination"]
 - !private ["Ps11CVarArgType", "distanceFromLocation"]
+- !private ["Ps11CVarArgType", "expectedTravelTime"]
 - ["Ps11CVarArgType", "generateRandomPassCode"]
 - !private ["Ps11CVarArgType", "hidden"]
 - ["Ps11CVarArgType", "hideActivityIndicator"]
 - ["Ps11CVarArgType", "hideOverlay"]
 - !private ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "initalizeRequestWithDescriptor"]
+- ["Ps11CVarArgType", "initializeRequest"]
 - !private ["Ps11CVarArgType", "location"]
 - !private ["Ps11CVarArgType", "mainScreen"]
 - !private ["Ps11CVarArgType", "naturalLanguageQuery"]
@@ -214,15 +242,20 @@ depends-member:
 - !private ["Ps11CVarArgType", "redColor"]
 - !private ["Ps11CVarArgType", "region"]
 - !private ["Ps11CVarArgType", "removeFromSuperview"]
+- !private ["Ps11CVarArgType", "requestsAlternateRoutes"]
+- !private ["Ps11CVarArgType", "routes"]
+- ["Ps11CVarArgType", "searchForFastestRouteFromSourceToDestination"]
 - ["Ps11CVarArgType", "setMapRegionForMapItems"]
 - !private ["Ps11CVarArgType", "setRegion"]
 - ["Ps11CVarArgType", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["Ps11CVarArgType", "showAlert"]
 - ["Ps11CVarArgType", "sortMapItemsCloseToUserLocation"]
+- !private ["Ps11CVarArgType", "source"]
 - !private ["Ps11CVarArgType", "startAnimating"]
 - !private ["Ps11CVarArgType", "startIndex"]
 - !private ["Ps11CVarArgType", "subscript"]
 - !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "transportType"]
 - !private ["Ps11CVarArgType", "view"]
 - !private ["Vs9Character", "deinit"]
 - !private ["VSS13CharacterView", "Generator"]
@@ -236,6 +269,7 @@ depends-member:
 - !private ["Ps14CollectionType", "_Element"]
 - !private ["Ps14CollectionType", "count"]
 - !private ["Ps14CollectionType", "sort"]
+- !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
@@ -251,6 +285,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "MKCoordinateRegionForMapRect"]
 - !private ["Ps28CustomDebugStringConvertible", "MKCoordinateRegionMake"]
 - !private ["Ps28CustomDebugStringConvertible", "MKCoordinateSpanMake"]
+- !private ["Ps28CustomDebugStringConvertible", "MKDirectionsRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "MKLocalSearchRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "MKMapPointForCoordinate"]
 - !private ["Ps28CustomDebugStringConvertible", "MKMapRect"]
@@ -281,17 +316,21 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "arc4random_uniform"]
 - !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - !private ["Ps28CustomDebugStringConvertible", "bounds"]
+- !private ["Ps28CustomDebugStringConvertible", "calculateDirectionsWithCompletionHandler"]
 - !private ["Ps28CustomDebugStringConvertible", "characters"]
 - !private ["Ps28CustomDebugStringConvertible", "convertToAnnotationFromMapItem"]
 - !private ["Ps28CustomDebugStringConvertible", "coordinate"]
 - ["Ps28CustomDebugStringConvertible", "coordinateRegionForAnnotations"]
+- !private ["Ps28CustomDebugStringConvertible", "destination"]
 - !private ["Ps28CustomDebugStringConvertible", "distanceFromLocation"]
+- !private ["Ps28CustomDebugStringConvertible", "expectedTravelTime"]
 - ["Ps28CustomDebugStringConvertible", "generateRandomPassCode"]
 - !private ["Ps28CustomDebugStringConvertible", "hidden"]
 - ["Ps28CustomDebugStringConvertible", "hideActivityIndicator"]
 - ["Ps28CustomDebugStringConvertible", "hideOverlay"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "initalizeRequestWithDescriptor"]
+- ["Ps28CustomDebugStringConvertible", "initializeRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "location"]
 - !private ["Ps28CustomDebugStringConvertible", "mainScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "naturalLanguageQuery"]
@@ -300,16 +339,21 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "redColor"]
 - !private ["Ps28CustomDebugStringConvertible", "region"]
 - !private ["Ps28CustomDebugStringConvertible", "removeFromSuperview"]
+- !private ["Ps28CustomDebugStringConvertible", "requestsAlternateRoutes"]
+- !private ["Ps28CustomDebugStringConvertible", "routes"]
+- ["Ps28CustomDebugStringConvertible", "searchForFastestRouteFromSourceToDestination"]
 - ["Ps28CustomDebugStringConvertible", "setMapRegionForMapItems"]
 - !private ["Ps28CustomDebugStringConvertible", "setRegion"]
 - ["Ps28CustomDebugStringConvertible", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["Ps28CustomDebugStringConvertible", "showAlert"]
 - !private ["Ps28CustomDebugStringConvertible", "sort"]
 - ["Ps28CustomDebugStringConvertible", "sortMapItemsCloseToUserLocation"]
+- !private ["Ps28CustomDebugStringConvertible", "source"]
 - !private ["Ps28CustomDebugStringConvertible", "startAnimating"]
 - !private ["Ps28CustomDebugStringConvertible", "startIndex"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "transportType"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - !private ["Ps23CustomStringConvertible", "CGFloat"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
@@ -320,6 +364,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "MKCoordinateRegionForMapRect"]
 - !private ["Ps23CustomStringConvertible", "MKCoordinateRegionMake"]
 - !private ["Ps23CustomStringConvertible", "MKCoordinateSpanMake"]
+- !private ["Ps23CustomStringConvertible", "MKDirectionsRequest"]
 - !private ["Ps23CustomStringConvertible", "MKLocalSearchRequest"]
 - !private ["Ps23CustomStringConvertible", "MKMapPointForCoordinate"]
 - !private ["Ps23CustomStringConvertible", "MKMapRect"]
@@ -351,17 +396,21 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "arc4random_uniform"]
 - !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - !private ["Ps23CustomStringConvertible", "bounds"]
+- !private ["Ps23CustomStringConvertible", "calculateDirectionsWithCompletionHandler"]
 - !private ["Ps23CustomStringConvertible", "characters"]
 - !private ["Ps23CustomStringConvertible", "convertToAnnotationFromMapItem"]
 - !private ["Ps23CustomStringConvertible", "coordinate"]
 - ["Ps23CustomStringConvertible", "coordinateRegionForAnnotations"]
+- !private ["Ps23CustomStringConvertible", "destination"]
 - !private ["Ps23CustomStringConvertible", "distanceFromLocation"]
+- !private ["Ps23CustomStringConvertible", "expectedTravelTime"]
 - ["Ps23CustomStringConvertible", "generateRandomPassCode"]
 - !private ["Ps23CustomStringConvertible", "hidden"]
 - ["Ps23CustomStringConvertible", "hideActivityIndicator"]
 - ["Ps23CustomStringConvertible", "hideOverlay"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "initalizeRequestWithDescriptor"]
+- ["Ps23CustomStringConvertible", "initializeRequest"]
 - !private ["Ps23CustomStringConvertible", "location"]
 - !private ["Ps23CustomStringConvertible", "mainScreen"]
 - !private ["Ps23CustomStringConvertible", "naturalLanguageQuery"]
@@ -370,19 +419,25 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "redColor"]
 - !private ["Ps23CustomStringConvertible", "region"]
 - !private ["Ps23CustomStringConvertible", "removeFromSuperview"]
+- !private ["Ps23CustomStringConvertible", "requestsAlternateRoutes"]
+- !private ["Ps23CustomStringConvertible", "routes"]
+- ["Ps23CustomStringConvertible", "searchForFastestRouteFromSourceToDestination"]
 - ["Ps23CustomStringConvertible", "setMapRegionForMapItems"]
 - !private ["Ps23CustomStringConvertible", "setRegion"]
 - ["Ps23CustomStringConvertible", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["Ps23CustomStringConvertible", "showAlert"]
 - !private ["Ps23CustomStringConvertible", "sort"]
 - ["Ps23CustomStringConvertible", "sortMapItemsCloseToUserLocation"]
+- !private ["Ps23CustomStringConvertible", "source"]
 - !private ["Ps23CustomStringConvertible", "startAnimating"]
 - !private ["Ps23CustomStringConvertible", "startIndex"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "transportType"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Alert"]
+- !private ["Ps9Equatable", "Automobile"]
 - !private ["Ps9Equatable", "CGFloat"]
 - !private ["Ps9Equatable", "Cancel"]
 - !private ["Ps9Equatable", "Distance"]
@@ -392,6 +447,7 @@ depends-member:
 - !private ["Ps9Equatable", "MKCoordinateRegionForMapRect"]
 - !private ["Ps9Equatable", "MKCoordinateRegionMake"]
 - !private ["Ps9Equatable", "MKCoordinateSpanMake"]
+- !private ["Ps9Equatable", "MKDirectionsRequest"]
 - !private ["Ps9Equatable", "MKLocalSearchRequest"]
 - !private ["Ps9Equatable", "MKMapPointForCoordinate"]
 - !private ["Ps9Equatable", "MKMapRect"]
@@ -423,17 +479,21 @@ depends-member:
 - !private ["Ps9Equatable", "arc4random_uniform"]
 - !private ["Ps9Equatable", "backgroundColor"]
 - !private ["Ps9Equatable", "bounds"]
+- !private ["Ps9Equatable", "calculateDirectionsWithCompletionHandler"]
 - !private ["Ps9Equatable", "characters"]
 - !private ["Ps9Equatable", "convertToAnnotationFromMapItem"]
 - !private ["Ps9Equatable", "coordinate"]
 - ["Ps9Equatable", "coordinateRegionForAnnotations"]
+- !private ["Ps9Equatable", "destination"]
 - !private ["Ps9Equatable", "distanceFromLocation"]
+- !private ["Ps9Equatable", "expectedTravelTime"]
 - ["Ps9Equatable", "generateRandomPassCode"]
 - !private ["Ps9Equatable", "hidden"]
 - ["Ps9Equatable", "hideActivityIndicator"]
 - ["Ps9Equatable", "hideOverlay"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "initalizeRequestWithDescriptor"]
+- ["Ps9Equatable", "initializeRequest"]
 - !private ["Ps9Equatable", "location"]
 - !private ["Ps9Equatable", "mainScreen"]
 - !private ["Ps9Equatable", "naturalLanguageQuery"]
@@ -442,15 +502,20 @@ depends-member:
 - !private ["Ps9Equatable", "redColor"]
 - !private ["Ps9Equatable", "region"]
 - !private ["Ps9Equatable", "removeFromSuperview"]
+- !private ["Ps9Equatable", "requestsAlternateRoutes"]
+- !private ["Ps9Equatable", "routes"]
+- ["Ps9Equatable", "searchForFastestRouteFromSourceToDestination"]
 - ["Ps9Equatable", "setMapRegionForMapItems"]
 - !private ["Ps9Equatable", "setRegion"]
 - ["Ps9Equatable", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["Ps9Equatable", "showAlert"]
 - ["Ps9Equatable", "sortMapItemsCloseToUserLocation"]
+- !private ["Ps9Equatable", "source"]
 - !private ["Ps9Equatable", "startAnimating"]
 - !private ["Ps9Equatable", "startIndex"]
 - !private ["Ps9Equatable", "subscript"]
 - !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "transportType"]
 - !private ["Ps9Equatable", "view"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "characters"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -474,6 +539,7 @@ depends-member:
 - !private ["Ps8Hashable", "MKCoordinateRegionForMapRect"]
 - !private ["Ps8Hashable", "MKCoordinateRegionMake"]
 - !private ["Ps8Hashable", "MKCoordinateSpanMake"]
+- !private ["Ps8Hashable", "MKDirectionsRequest"]
 - !private ["Ps8Hashable", "MKLocalSearchRequest"]
 - !private ["Ps8Hashable", "MKMapPointForCoordinate"]
 - !private ["Ps8Hashable", "MKMapRect"]
@@ -504,17 +570,21 @@ depends-member:
 - !private ["Ps8Hashable", "arc4random_uniform"]
 - !private ["Ps8Hashable", "backgroundColor"]
 - !private ["Ps8Hashable", "bounds"]
+- !private ["Ps8Hashable", "calculateDirectionsWithCompletionHandler"]
 - !private ["Ps8Hashable", "characters"]
 - !private ["Ps8Hashable", "convertToAnnotationFromMapItem"]
 - !private ["Ps8Hashable", "coordinate"]
 - ["Ps8Hashable", "coordinateRegionForAnnotations"]
+- !private ["Ps8Hashable", "destination"]
 - !private ["Ps8Hashable", "distanceFromLocation"]
+- !private ["Ps8Hashable", "expectedTravelTime"]
 - ["Ps8Hashable", "generateRandomPassCode"]
 - !private ["Ps8Hashable", "hidden"]
 - ["Ps8Hashable", "hideActivityIndicator"]
 - ["Ps8Hashable", "hideOverlay"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "initalizeRequestWithDescriptor"]
+- ["Ps8Hashable", "initializeRequest"]
 - !private ["Ps8Hashable", "location"]
 - !private ["Ps8Hashable", "mainScreen"]
 - !private ["Ps8Hashable", "naturalLanguageQuery"]
@@ -523,15 +593,20 @@ depends-member:
 - !private ["Ps8Hashable", "redColor"]
 - !private ["Ps8Hashable", "region"]
 - !private ["Ps8Hashable", "removeFromSuperview"]
+- !private ["Ps8Hashable", "requestsAlternateRoutes"]
+- !private ["Ps8Hashable", "routes"]
+- ["Ps8Hashable", "searchForFastestRouteFromSourceToDestination"]
 - ["Ps8Hashable", "setMapRegionForMapItems"]
 - !private ["Ps8Hashable", "setRegion"]
 - ["Ps8Hashable", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["Ps8Hashable", "showAlert"]
 - ["Ps8Hashable", "sortMapItemsCloseToUserLocation"]
+- !private ["Ps8Hashable", "source"]
 - !private ["Ps8Hashable", "startAnimating"]
 - !private ["Ps8Hashable", "startIndex"]
 - !private ["Ps8Hashable", "subscript"]
 - !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "transportType"]
 - !private ["Ps8Hashable", "view"]
 - !private ["VVSS13CharacterView5Index", "Distance"]
 - !private ["VVSS13CharacterView5Index", "advancedBy"]
@@ -541,6 +616,7 @@ depends-member:
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "count"]
 - !private ["Ps9Indexable", "sort"]
+- !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
@@ -565,6 +641,14 @@ depends-member:
 - !private ["Ps11IntegerType", "init"]
 - !private ["PSo12MKAnnotation", "coordinate"]
 - !private ["PSo12MKAnnotation", "location"]
+- !private ["CSo12MKDirections", "calculateDirectionsWithCompletionHandler"]
+- !private ["CSo19MKDirectionsRequest", "destination"]
+- !private ["CSo19MKDirectionsRequest", "init"]
+- !private ["CSo19MKDirectionsRequest", "requestsAlternateRoutes"]
+- !private ["CSo19MKDirectionsRequest", "source"]
+- !private ["CSo19MKDirectionsRequest", "transportType"]
+- !private ["CSo20MKDirectionsResponse", "routes"]
+- !private ["VSC25MKDirectionsTransportType", "Automobile"]
 - !private ["CSo20MKLocalSearchRequest", "init"]
 - !private ["CSo20MKLocalSearchRequest", "naturalLanguageQuery"]
 - !private ["CSo20MKLocalSearchRequest", "region"]
@@ -577,6 +661,7 @@ depends-member:
 - !private ["CSo9MKMapView", "annotations"]
 - !private ["CSo9MKMapView", "setRegion"]
 - !private ["CSo11MKPlacemark", "location"]
+- !private ["CSo7MKRoute", "expectedTravelTime"]
 - !private ["P10RealmSwift10MinMaxType", "Distance"]
 - !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
 - !private ["P10RealmSwift10MinMaxType", "_DisabledRangeIndex"]
@@ -593,21 +678,25 @@ depends-member:
 - !private ["Ps21MutableCollectionType", "SubSequence"]
 - !private ["Ps21MutableCollectionType", "_Element"]
 - !private ["Ps21MutableCollectionType", "sort"]
+- !private ["Ps21MutableCollectionType", "subscript"]
 - !private ["Ps16MutableIndexable", "Generator"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "sort"]
+- !private ["Ps16MutableIndexable", "subscript"]
 - !private ["Ps16MutableSliceable", "Generator"]
 - !private ["Ps16MutableSliceable", "Index"]
 - !private ["Ps16MutableSliceable", "SubSequence"]
 - !private ["Ps16MutableSliceable", "_Element"]
 - !private ["Ps16MutableSliceable", "sort"]
+- !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "CGFloat"]
 - !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "MKCoordinateRegionForMapRect"]
 - !private ["PSo8NSCoding", "MKCoordinateRegionMake"]
 - !private ["PSo8NSCoding", "MKCoordinateSpanMake"]
+- !private ["PSo8NSCoding", "MKDirectionsRequest"]
 - !private ["PSo8NSCoding", "MKLocalSearchRequest"]
 - !private ["PSo8NSCoding", "MKMapPointForCoordinate"]
 - !private ["PSo8NSCoding", "MKMapRect"]
@@ -664,6 +753,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "MKCoordinateRegionForMapRect"]
 - !private ["PSo26NSExtensionRequestHandling", "MKCoordinateRegionMake"]
 - !private ["PSo26NSExtensionRequestHandling", "MKCoordinateSpanMake"]
+- !private ["PSo26NSExtensionRequestHandling", "MKDirectionsRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "MKLocalSearchRequest"]
 - !private ["PSo26NSExtensionRequestHandling", "MKMapPointForCoordinate"]
 - !private ["PSo26NSExtensionRequestHandling", "MKMapRect"]
@@ -699,6 +789,9 @@ depends-member:
 - !private ["CSo8NSObject", "MKCoordinateRegionForMapRect"]
 - !private ["CSo8NSObject", "MKCoordinateRegionMake"]
 - !private ["CSo8NSObject", "MKCoordinateSpanMake"]
+- ["CSo8NSObject", "MKDirections"]
+- ["CSo8NSObject", "MKDirectionsRequest"]
+- !private ["CSo8NSObject", "MKDirectionsResponse"]
 - ["CSo8NSObject", "MKLocalSearchRequest"]
 - ["CSo8NSObject", "MKMapItem"]
 - !private ["CSo8NSObject", "MKMapPointForCoordinate"]
@@ -708,6 +801,8 @@ depends-member:
 - !private ["CSo8NSObject", "MKMapRectUnion"]
 - !private ["CSo8NSObject", "MKMapSize"]
 - ["CSo8NSObject", "MKMapView"]
+- ["CSo8NSObject", "MKRoute"]
+- !private ["CSo8NSObject", "NSError"]
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIActivityIndicatorView"]
 - !private ["CSo8NSObject", "UIAlertAction"]
@@ -731,17 +826,21 @@ depends-member:
 - !private ["CSo8NSObject", "arc4random_uniform"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - !private ["CSo8NSObject", "bounds"]
+- !private ["CSo8NSObject", "calculateDirectionsWithCompletionHandler"]
 - !private ["CSo8NSObject", "characters"]
 - !private ["CSo8NSObject", "convertToAnnotationFromMapItem"]
 - !private ["CSo8NSObject", "coordinate"]
 - ["CSo8NSObject", "coordinateRegionForAnnotations"]
+- !private ["CSo8NSObject", "destination"]
 - !private ["CSo8NSObject", "distanceFromLocation"]
+- !private ["CSo8NSObject", "expectedTravelTime"]
 - ["CSo8NSObject", "generateRandomPassCode"]
 - !private ["CSo8NSObject", "hidden"]
 - ["CSo8NSObject", "hideActivityIndicator"]
 - ["CSo8NSObject", "hideOverlay"]
 - !private ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "initalizeRequestWithDescriptor"]
+- ["CSo8NSObject", "initializeRequest"]
 - !private ["CSo8NSObject", "location"]
 - !private ["CSo8NSObject", "mainScreen"]
 - !private ["CSo8NSObject", "naturalLanguageQuery"]
@@ -750,21 +849,27 @@ depends-member:
 - !private ["CSo8NSObject", "redColor"]
 - !private ["CSo8NSObject", "region"]
 - !private ["CSo8NSObject", "removeFromSuperview"]
+- !private ["CSo8NSObject", "requestsAlternateRoutes"]
+- !private ["CSo8NSObject", "routes"]
+- ["CSo8NSObject", "searchForFastestRouteFromSourceToDestination"]
 - ["CSo8NSObject", "setMapRegionForMapItems"]
 - !private ["CSo8NSObject", "setRegion"]
 - ["CSo8NSObject", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["CSo8NSObject", "showAlert"]
 - ["CSo8NSObject", "sortMapItemsCloseToUserLocation"]
+- !private ["CSo8NSObject", "source"]
 - !private ["CSo8NSObject", "startAnimating"]
 - !private ["CSo8NSObject", "startIndex"]
 - !private ["CSo8NSObject", "subscript"]
 - !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "transportType"]
 - !private ["CSo8NSObject", "view"]
 - !private ["PSo16NSObjectProtocol", "CGFloat"]
 - !private ["PSo16NSObjectProtocol", "Int"]
 - !private ["PSo16NSObjectProtocol", "MKCoordinateRegionForMapRect"]
 - !private ["PSo16NSObjectProtocol", "MKCoordinateRegionMake"]
 - !private ["PSo16NSObjectProtocol", "MKCoordinateSpanMake"]
+- !private ["PSo16NSObjectProtocol", "MKDirectionsRequest"]
 - !private ["PSo16NSObjectProtocol", "MKLocalSearchRequest"]
 - !private ["PSo16NSObjectProtocol", "MKMapPointForCoordinate"]
 - !private ["PSo16NSObjectProtocol", "MKMapRect"]
@@ -792,17 +897,21 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "arc4random_uniform"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - !private ["PSo16NSObjectProtocol", "bounds"]
+- !private ["PSo16NSObjectProtocol", "calculateDirectionsWithCompletionHandler"]
 - !private ["PSo16NSObjectProtocol", "characters"]
 - !private ["PSo16NSObjectProtocol", "convertToAnnotationFromMapItem"]
 - !private ["PSo16NSObjectProtocol", "coordinate"]
 - ["PSo16NSObjectProtocol", "coordinateRegionForAnnotations"]
+- !private ["PSo16NSObjectProtocol", "destination"]
 - !private ["PSo16NSObjectProtocol", "distanceFromLocation"]
+- !private ["PSo16NSObjectProtocol", "expectedTravelTime"]
 - ["PSo16NSObjectProtocol", "generateRandomPassCode"]
 - !private ["PSo16NSObjectProtocol", "hidden"]
 - ["PSo16NSObjectProtocol", "hideActivityIndicator"]
 - ["PSo16NSObjectProtocol", "hideOverlay"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "initalizeRequestWithDescriptor"]
+- ["PSo16NSObjectProtocol", "initializeRequest"]
 - !private ["PSo16NSObjectProtocol", "location"]
 - !private ["PSo16NSObjectProtocol", "mainScreen"]
 - !private ["PSo16NSObjectProtocol", "naturalLanguageQuery"]
@@ -811,15 +920,20 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "redColor"]
 - !private ["PSo16NSObjectProtocol", "region"]
 - !private ["PSo16NSObjectProtocol", "removeFromSuperview"]
+- !private ["PSo16NSObjectProtocol", "requestsAlternateRoutes"]
+- !private ["PSo16NSObjectProtocol", "routes"]
+- ["PSo16NSObjectProtocol", "searchForFastestRouteFromSourceToDestination"]
 - ["PSo16NSObjectProtocol", "setMapRegionForMapItems"]
 - !private ["PSo16NSObjectProtocol", "setRegion"]
 - ["PSo16NSObjectProtocol", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["PSo16NSObjectProtocol", "showAlert"]
 - ["PSo16NSObjectProtocol", "sortMapItemsCloseToUserLocation"]
+- !private ["PSo16NSObjectProtocol", "source"]
 - !private ["PSo16NSObjectProtocol", "startAnimating"]
 - !private ["PSo16NSObjectProtocol", "startIndex"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "transportType"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - !private ["PSo14NSSecureCoding", "characters"]
 - !private ["PSo14NSSecureCoding", "coordinate"]
@@ -834,6 +948,7 @@ depends-member:
 - !private ["CSo8NSString", "startIndex"]
 - !private ["CSo8NSString", "subscript"]
 - ["Ps21NilLiteralConvertible", "Some"]
+- !private ["Ps13OptionSetType", "Automobile"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16OutputStreamType", "characters"]
@@ -852,7 +967,9 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "_Element"]
 - !private ["Ps30RangeReplaceableCollectionType", "count"]
 - !private ["Ps30RangeReplaceableCollectionType", "sort"]
+- !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "Alert"]
+- !private ["Ps16RawRepresentable", "Automobile"]
 - !private ["Ps16RawRepresentable", "Cancel"]
 - !private ["Ps16RawRepresentable", "WhiteLarge"]
 - !private ["P10RealmSwift17RealmOptionalType", "Distance"]
@@ -867,6 +984,8 @@ depends-member:
 - !private ["Ps12SequenceType", "_Element"]
 - !private ["Ps12SequenceType", "count"]
 - !private ["Ps12SequenceType", "sort"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps14SetAlgebraType", "Automobile"]
 - !private ["Ps17SignedIntegerType", "Distance"]
 - !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
 - !private ["Ps17SignedIntegerType", "_DisabledRangeIndex"]
@@ -875,6 +994,10 @@ depends-member:
 - !private ["Ps16SignedNumberType", "IntegerLiteralType"]
 - !private ["Ps16SignedNumberType", "_DisabledRangeIndex"]
 - !private ["Ps16SignedNumberType", "init"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
 - !private ["Ps10Streamable", "characters"]
 - !private ["Ps10Streamable", "init"]
 - !private ["Ps10Streamable", "startIndex"]
@@ -937,6 +1060,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "MKCoordinateRegionForMapRect"]
 - !private ["PSo21UIAppearanceContainer", "MKCoordinateRegionMake"]
 - !private ["PSo21UIAppearanceContainer", "MKCoordinateSpanMake"]
+- !private ["PSo21UIAppearanceContainer", "MKDirectionsRequest"]
 - !private ["PSo21UIAppearanceContainer", "MKLocalSearchRequest"]
 - !private ["PSo21UIAppearanceContainer", "MKMapPointForCoordinate"]
 - !private ["PSo21UIAppearanceContainer", "MKMapRect"]
@@ -977,6 +1101,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "MKCoordinateRegionForMapRect"]
 - !private ["PSo18UIContentContainer", "MKCoordinateRegionMake"]
 - !private ["PSo18UIContentContainer", "MKCoordinateSpanMake"]
+- !private ["PSo18UIContentContainer", "MKDirectionsRequest"]
 - !private ["PSo18UIContentContainer", "MKLocalSearchRequest"]
 - !private ["PSo18UIContentContainer", "MKMapPointForCoordinate"]
 - !private ["PSo18UIContentContainer", "MKMapRect"]
@@ -1032,6 +1157,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "MKCoordinateRegionForMapRect"]
 - !private ["PSo18UIFocusEnvironment", "MKCoordinateRegionMake"]
 - !private ["PSo18UIFocusEnvironment", "MKCoordinateSpanMake"]
+- !private ["PSo18UIFocusEnvironment", "MKDirectionsRequest"]
 - !private ["PSo18UIFocusEnvironment", "MKLocalSearchRequest"]
 - !private ["PSo18UIFocusEnvironment", "MKMapPointForCoordinate"]
 - !private ["PSo18UIFocusEnvironment", "MKMapRect"]
@@ -1077,6 +1203,9 @@ depends-member:
 - !private ["CSo11UIResponder", "MKCoordinateRegionForMapRect"]
 - !private ["CSo11UIResponder", "MKCoordinateRegionMake"]
 - !private ["CSo11UIResponder", "MKCoordinateSpanMake"]
+- ["CSo11UIResponder", "MKDirections"]
+- ["CSo11UIResponder", "MKDirectionsRequest"]
+- !private ["CSo11UIResponder", "MKDirectionsResponse"]
 - ["CSo11UIResponder", "MKLocalSearchRequest"]
 - ["CSo11UIResponder", "MKMapItem"]
 - !private ["CSo11UIResponder", "MKMapPointForCoordinate"]
@@ -1086,6 +1215,8 @@ depends-member:
 - !private ["CSo11UIResponder", "MKMapRectUnion"]
 - !private ["CSo11UIResponder", "MKMapSize"]
 - ["CSo11UIResponder", "MKMapView"]
+- ["CSo11UIResponder", "MKRoute"]
+- !private ["CSo11UIResponder", "NSError"]
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIActivityIndicatorView"]
 - !private ["CSo11UIResponder", "UIAlertAction"]
@@ -1116,8 +1247,10 @@ depends-member:
 - ["CSo11UIResponder", "hideOverlay"]
 - !private ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "initalizeRequestWithDescriptor"]
+- ["CSo11UIResponder", "initializeRequest"]
 - !private ["CSo11UIResponder", "presentViewController"]
 - !private ["CSo11UIResponder", "removeFromSuperview"]
+- ["CSo11UIResponder", "searchForFastestRouteFromSourceToDestination"]
 - ["CSo11UIResponder", "setMapRegionForMapItems"]
 - !private ["CSo11UIResponder", "setRegion"]
 - ["CSo11UIResponder", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
@@ -1133,6 +1266,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "MKCoordinateRegionForMapRect"]
 - !private ["PSo16UIStateRestoring", "MKCoordinateRegionMake"]
 - !private ["PSo16UIStateRestoring", "MKCoordinateSpanMake"]
+- !private ["PSo16UIStateRestoring", "MKDirectionsRequest"]
 - !private ["PSo16UIStateRestoring", "MKLocalSearchRequest"]
 - !private ["PSo16UIStateRestoring", "MKMapPointForCoordinate"]
 - !private ["PSo16UIStateRestoring", "MKMapRect"]
@@ -1166,6 +1300,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "MKCoordinateRegionForMapRect"]
 - !private ["PSo18UITraitEnvironment", "MKCoordinateRegionMake"]
 - !private ["PSo18UITraitEnvironment", "MKCoordinateSpanMake"]
+- !private ["PSo18UITraitEnvironment", "MKDirectionsRequest"]
 - !private ["PSo18UITraitEnvironment", "MKLocalSearchRequest"]
 - !private ["PSo18UITraitEnvironment", "MKMapPointForCoordinate"]
 - !private ["PSo18UITraitEnvironment", "MKMapRect"]
@@ -1224,6 +1359,9 @@ depends-member:
 - !private ["CSo16UIViewController", "MKCoordinateRegionForMapRect"]
 - !private ["CSo16UIViewController", "MKCoordinateRegionMake"]
 - !private ["CSo16UIViewController", "MKCoordinateSpanMake"]
+- ["CSo16UIViewController", "MKDirections"]
+- ["CSo16UIViewController", "MKDirectionsRequest"]
+- !private ["CSo16UIViewController", "MKDirectionsResponse"]
 - ["CSo16UIViewController", "MKLocalSearchRequest"]
 - ["CSo16UIViewController", "MKMapItem"]
 - !private ["CSo16UIViewController", "MKMapPointForCoordinate"]
@@ -1233,6 +1371,8 @@ depends-member:
 - !private ["CSo16UIViewController", "MKMapRectUnion"]
 - !private ["CSo16UIViewController", "MKMapSize"]
 - ["CSo16UIViewController", "MKMapView"]
+- ["CSo16UIViewController", "MKRoute"]
+- !private ["CSo16UIViewController", "NSError"]
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "UIActivityIndicatorView"]
 - !private ["CSo16UIViewController", "UIAlertAction"]
@@ -1255,7 +1395,9 @@ depends-member:
 - ["CSo16UIViewController", "hideOverlay"]
 - !private ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "initalizeRequestWithDescriptor"]
+- ["CSo16UIViewController", "initializeRequest"]
 - !private ["CSo16UIViewController", "presentViewController"]
+- ["CSo16UIViewController", "searchForFastestRouteFromSourceToDestination"]
 - ["CSo16UIViewController", "setMapRegionForMapItems"]
 - ["CSo16UIViewController", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
 - ["CSo16UIViewController", "showAlert"]
@@ -1278,6 +1420,7 @@ depends-member:
 - !private ["Ps10_ArrayType", "SubSequence"]
 - !private ["Ps10_ArrayType", "_Element"]
 - !private ["Ps10_ArrayType", "sort"]
+- !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "characters"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -1307,6 +1450,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "sort"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "init"]
 - !private ["Ps14_Incrementable", "Distance"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
@@ -1414,6 +1558,10 @@ depends-nominal:
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - !private "PSo12MKAnnotation"
+- !private "CSo12MKDirections"
+- !private "CSo19MKDirectionsRequest"
+- !private "CSo20MKDirectionsResponse"
+- !private "VSC25MKDirectionsTransportType"
 - !private "CSo20MKLocalSearchRequest"
 - !private "CSo9MKMapItem"
 - !private "VSC10MKMapPoint"
@@ -1421,6 +1569,7 @@ depends-nominal:
 - !private "VSC9MKMapSize"
 - !private "CSo9MKMapView"
 - !private "CSo11MKPlacemark"
+- !private "CSo7MKRoute"
 - !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
 - !private "Ps21MutableCollectionType"
@@ -1435,6 +1584,7 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "Ps21NilLiteralConvertible"
+- !private "Ps13OptionSetType"
 - "Sq"
 - !private "Ps16OutputStreamType"
 - !private "Ps21RandomAccessIndexType"
@@ -1444,8 +1594,10 @@ depends-nominal:
 - !private "Ps16RawRepresentable"
 - !private "P10RealmSwift17RealmOptionalType"
 - !private "Ps12SequenceType"
+- !private "Ps14SetAlgebraType"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
 - !private "Ps10Streamable"
 - !private "Ps10Strideable"
 - !private "SS"
@@ -1548,4 +1700,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "c5565c6836c79dd2765e42050235c114"
+interface-hash: "672ec68b8864eaa59632229188a8b2e0"

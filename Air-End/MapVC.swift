@@ -16,27 +16,31 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var tasks : Results<Task>?
     let taskManager = Task()
     var locationManager = CLLocationManager()
-    var taskLocations:[MKMapItem]?
+    var taskLocations = [MKMapItem]()
     var userLocation:MKMapItem?
-    var addressValidated:Bool?
     var closeMapItems = [String:MKMapItem]()
     var routeIndexInstructionIndexTuple:(Int,Int)?
-    var guidanceRoutes:[MKRoute]?
+    var guidances = [Guidance]()
+    var finalRoutes = [MKRoute]()
+    var routeCounter = [Int]()
+    var destinationMapItem:MKMapItem?
+    var guidanceEnabled = Bool()
+    var userSelectingAdditionalRoutes = false
     
+    @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var etaLabel: UILabel!
+    @IBOutlet var guidanceContainer: UIView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var addDestinationButton: UIButton!
     @IBOutlet var checkDestinationButton: UIButton!
     @IBOutlet var enRouteOutletCollection: [UIView]!
     @IBOutlet var enRouteView: UIView!
-    
     @IBOutlet var destinationTextField: UITextField!
-    
     @IBOutlet var segmentedControl: UISegmentedControl!
-    
-    @IBOutlet var taskMapView: MKMapView!
+    @IBOutlet var taskMapView: TaskMapView!
     @IBOutlet var guidanceButton: UIButton!
     @IBOutlet var guidanceLabel: UILabel!
     @IBOutlet var guidanceLabelContainer: UIView!
-    @IBOutlet var guidanceNextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +60,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         guidanceLabelContainer.layer.cornerRadius = 10
         guidanceLabelContainer.alpha = 0.7
         guidanceLabel.textColor = UIColor.whiteColor()
+        cancelButton.setImage(UIImage(named: "Cancel-76"), forState: .Normal)
+        cancelButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        cancelButton.tintColor = UIColor.whiteColor()
+        guidanceContainer.backgroundColor = Theme.Colors.OrangeColor.color
+        guidanceContainer.alpha = 0.8
         taskMapView.showsUserLocation = true
         taskMapView.delegate = self
-        hideOverlay(true, viewCollection: [enRouteView, destinationTextField, destinationTextField, guidanceButton, guidanceLabelContainer, guidanceLabel])
+        hideOverlay(true, viewCollection: [enRouteView, destinationTextField, destinationTextField, guidanceButton, guidanceLabelContainer, guidanceLabel, activityIndicator, guidanceContainer, cancelButton, etaLabel])
     }
     
     func checkDestinationUI(isHidden:Bool){
@@ -78,11 +87,28 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
     }
     
+    func setUpGuidanceUI(enabled:Bool){
+        tabBarController?.tabBar.hidden = enabled
+        navigationController?.setNavigationBarHidden(enabled, animated: true)
+        segmentedControl.hidden = enabled
+        if enabled == true {
+            let mapSingleTGR = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
+            taskMapView.addGestureRecognizer(mapSingleTGR)
+        }
+        else {
+            guard let tgrs = taskMapView.gestureRecognizers else {return}
+            for tgr in tgrs {
+                taskMapView.removeGestureRecognizer(tgr)
+            }
+        }
+    }
+
+    
+    
     func getLocation(){
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
     }
-    
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationManager.stopUpdatingLocation()
@@ -122,26 +148,40 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             }
         })
     }
-
-    
     
     //MARK - Destination Button
-
+    
     @IBAction func addDestination(sender: UIButton) {
         view.endEditing(true)
+        hideOverlay(false, viewCollection: [activityIndicator])
+        self.activityIndicator.startAnimating()
         if allTextFieldsAreFilled([destinationTextField]) == true {
             guard let destination = destinationTextField.text else {return}
-            searchForMapItemsMatchingNoun(destination, withCompletionHandler: { (mapItems) -> () in
-                
-                guard let destinationMapItem = mapItems.first else {return}
-                guard let currentUserLocation = self.userLocation else {return self.showAlert("We couldn't locate you. Please try again!")}
-                self.taskLocations?.append(destinationMapItem)
-                self.taskMapView.addAnnotation(self.convertToAnnotationFromMapItem(destinationMapItem))
-                self.taskLocations?.insert(currentUserLocation, atIndex: 0)
-                var someTime:Double = Double()
-                var someRoute:[MKRoute] = [MKRoute]()
-                self.calculateCloseTasksEnRouteToDestination(0, time:&someTime, routes:&someRoute)
-                self.hideOverlay(true, viewCollection: [self.enRouteView, self.destinationTextField])
+            guard let location = userLocation else {return}
+            for annotation in taskMapView.annotations {
+                taskMapView.removeAnnotation(annotation)
+            }
+            userSelectingAdditionalRoutes = true
+            searchForMapItemsMatchingNoun(destination,
+                                          userLocation: location,
+                                          withCompletionHandler: {
+                                            (result) -> () in
+                                            guard let mapItems = result else {return self.showAlert("We couldn't locate a close location matching \(destination)")}
+                                            guard let destinationMapItem = mapItems.first else {return}
+                                            guard let currentUserLocation = self.userLocation else {
+                                                return self.showAlert("We couldn't locate you. Please try again!")}
+                                            for task in self.tasks! {
+                                                let taskLocation = (self.closeMapItems[task.name]!)
+                                                self.taskLocations.append(taskLocation)
+                                                self.taskMapView.addAnnotation(self.convertToAnnotationFromMapItem(taskLocation))
+                                            }
+                                            self.taskLocations.insert(currentUserLocation, atIndex: 0)
+                                            self.taskLocations.append(destinationMapItem)
+                                            self.hideOverlay(true, viewCollection: [self.enRouteView, self.destinationTextField])
+                                            self.destinationMapItem = destinationMapItem
+                                            let destinationAnnotation = self.convertToAnnotationFromMapItem(destinationMapItem)
+                                            self.taskMapView.addAnnotation(destinationAnnotation)
+                                            self.findTasksEnrouteToDestination()
             })
         }
     }
@@ -156,80 +196,100 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     //MARK - Route Methods
-
+    func findTasksEnrouteToDestination(){
+        guard let source = taskLocations.first else {return print("source not available")}
+        guard let destination = taskLocations.last else {return print ("destination not available")}
+        
+        guard let sourceToDestinationRequest = initializeRequest(source, destination: destination) else {return}
+        
+        let sourceToDestinationDirections = MKDirections(request:sourceToDestinationRequest)
+        
+        searchForFastestRouteWithDirections(sourceToDestinationDirections) { (sourceToDestinationRoute) in
+            guard let sToDRoute = sourceToDestinationRoute else {return}
+            self.routeAllCloseTasksEnRouteToDestination(source, destination: destination, sourceToDestinationRoute: sToDRoute, index: 1)
+        }
+    }
     
-    func calculateCloseTasksEnRouteToDestination(index:Int, inout time:NSTimeInterval, inout routes:[MKRoute]){
-        let request:MKDirectionsRequest = MKDirectionsRequest()
-        request.requestsAlternateRoutes = true
-        request.transportType = .Automobile
-        request.source = taskLocations?[index]
-        request.destination = taskLocations?[index + 1]
-        let directions = MKDirections(request: request)
-        directions.calculateDirectionsWithCompletionHandler {(
-            response: MKDirectionsResponse?,
-            error: NSError?) in
-            guard let routeResponse = response?.routes else {return self.showAlert("could not find directions for \(self.taskLocations?[index].name)")}
-            let fastestRoute:MKRoute = routeResponse.sort({$0.expectedTravelTime < $1.expectedTravelTime})[0]
-            routes.append(fastestRoute)
-            time += fastestRoute.expectedTravelTime
-            if index + 2 < self.taskLocations?.count {
-                self.calculateCloseTasksEnRouteToDestination(index + 1, time: &time, routes: &routes)
+    func routeAllCloseTasksEnRouteToDestination(source: MKMapItem,
+                                                destination:MKMapItem,
+                                                sourceToDestinationRoute:MKRoute,
+                                                var index: Int){
+        
+        let sourceToDestinationETA = sourceToDestinationRoute.expectedTravelTime
+        guard let sourceToTaskRequest = initializeRequest(source,
+                                                          destination: taskLocations[index]) else {return}
+        let sourceToTaskDirections = MKDirections(request: sourceToTaskRequest)
+        
+        searchForFastestRouteWithDirections(sourceToTaskDirections) { (sourceToTaskRoute) in
+            guard let sourceToTaskETA = sourceToTaskRoute?.expectedTravelTime else {return}
+            if  sourceToTaskETA - 600 < sourceToDestinationETA {
+                
+                guard let taskToDestinationRequest = self.initializeRequest(self.taskLocations[index], destination: destination) else {return}
+                let taskToDestinationDirections = MKDirections(request: taskToDestinationRequest)
+                self.searchForFastestRouteWithDirections(taskToDestinationDirections, withCompletionHandler: { (taskToDestinationRoute) in
+                    guard let taskToDestinationETA = taskToDestinationRoute?.expectedTravelTime else {return}
+                    
+                    if sourceToTaskETA + taskToDestinationETA - 600 < sourceToDestinationETA {
+                        
+                        let newGuidance = Guidance(index: index - 1,
+                                                    sourceRoute: sourceToTaskRoute,
+                                                    destinationRoute: taskToDestinationRoute,
+                                                    destinationMapItem: self.taskLocations[index])
+                        
+                        self.guidances += [newGuidance]
+                    }
+                    else{
+                        self.taskLocations.removeAtIndex(index)
+                        index -= 1
+                    }
+                    self.determineRemaningDestinationsWithSource(source,
+                                                                destination: destination,
+                                                                sourceToDestinationRoute:
+                                                                sourceToDestinationRoute,
+                                                                index: index)
+                })
             }
             else {
-                self.guidanceRoutes = routes
-                self.showRoute(routes)
+                self.taskLocations.removeAtIndex(index)
+                index -= 1
+                self.determineRemaningDestinationsWithSource(source,
+                                                             destination: destination,
+                                                             sourceToDestinationRoute: sourceToDestinationRoute,
+                                                             index: index)
             }
         }
     }
     
     
-    func showRoute(routes: [MKRoute]) {
-        for i in (0..<routes.count).reverse() {
-            plotPolyline(routes[i], index: i)
-        }
-    }
-    
-    func setUpGuidanceUI(){
-        hideOverlay(false, viewCollection: [guidanceButton])
-        segmentedControl.hidden = true
-        let tgr = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
-        taskMapView.addGestureRecognizer(tgr)
-    }
-    
-    func hideGuidance(){
-        if guidanceLabelContainer.hidden == false {
-            hideOverlay(true, viewCollection: [guidanceLabelContainer, guidanceNextButton, guidanceLabel])
+    func determineRemaningDestinationsWithSource(source: MKMapItem,
+                                                 destination:MKMapItem,
+                                                 sourceToDestinationRoute:MKRoute,
+                                                 var index: Int){
+        if index < self.taskLocations.count - 2 {
+            routeAllCloseTasksEnRouteToDestination(source,
+                                                   destination: destination,
+                                                   sourceToDestinationRoute: sourceToDestinationRoute,
+                                                   index: index + 1)
         }
         else {
-            hideOverlay(false, viewCollection: [guidanceLabelContainer, guidanceNextButton, guidanceLabel])
-        }
-    }
-
-    func plotPolyline(route: MKRoute, index: Int) {
-        setUpGuidanceUI()
-        taskMapView.addOverlay(route.polyline)
-        if taskMapView.overlays.count == 1 {
-            taskMapView.setVisibleMapRect(route.polyline.boundingMapRect,
-                                          edgePadding: UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0),
-                                          animated: false)
-        }
-        else {
-            let polylineBoundingRect =  MKMapRectUnion(taskMapView.visibleMapRect,
-                                                       route.polyline.boundingMapRect)
-            taskMapView.setVisibleMapRect(polylineBoundingRect,
-                                          edgePadding: UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0),
-                                          animated: false)
+            let newGuidance = Guidance(index: index - 1,
+                                       sourceRoute: sourceToDestinationRoute,
+                                       destinationRoute: MKRoute(),
+                                       destinationMapItem: destination)
+            
+            newGuidance.wasSelectedForFinalRoute = true
+            guidances += [newGuidance]
+            segmentedControl.hidden = true
+            showRoute()
         }
     }
     
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-        if (overlay is MKPolyline) {
-            polylineRenderer.strokeColor = Theme.randomColor().color
-            polylineRenderer.lineWidth = 5
+    func showRoute() {
+        for guidance in guidances {
+            guard let source = guidance.sourceRoute  else {return}
+            hideOverlay(false, viewCollection: [guidanceButton])
+            plotPolylineWithRoute(source, mapView: taskMapView)
         }
-        return polylineRenderer
+        self.activityIndicator.stopAnimating()
     }
-    
-   
-}
+  }

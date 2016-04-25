@@ -1,32 +1,32 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 provides-nominal:
-- "C7Air_End6ListVC"
+- "C5Mango6ListVC"
 provides-member:
-- ["C7Air_End6ListVC", ""]
+- ["C5Mango6ListVC", ""]
 provides-dynamic-lookup:
-- "locationManager"
-- "locationManager"
 - "findClosestMapItemMatchingTask"
+- "locationManager"
+- "locationManager"
 - "determineLocationAuthorizationStatus"
 depends-top-level:
-- "Task"
-- !private "BooleanLiteralType"
-- !private "MKLocalSearchResponse"
+- "ListVC"
+- !private "Void"
 - !private "print"
 - "CLLocationManagerDelegate"
-- !private "NSError"
-- !private "<"
-- !private "assertionFailure"
-- "CLLocation"
-- "Bool"
-- !private "StringLiteralType"
-- !private "uiRealm"
-- "CLLocationManager"
 - "CLAuthorizationStatus"
+- !private "assertionFailure"
 - !private "MKLocalSearch"
-- !private "Void"
-- "ListVC"
+- !private "uiRealm"
+- !private "BooleanLiteralType"
+- !private "<"
+- !private "NSError"
+- "Bool"
+- "CLLocationManager"
+- !private "MKLocalSearchResponse"
+- "CLLocation"
+- !private "StringLiteralType"
+- "Task"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -322,30 +322,30 @@ depends-member:
 - !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps11IntegerType", "Distance"]
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
-- ["C7Air_End6ListVC", "Bool"]
-- ["C7Air_End6ListVC", "CLAuthorizationStatus"]
-- ["C7Air_End6ListVC", "CLLocation"]
-- ["C7Air_End6ListVC", "CLLocationManager"]
-- !private ["C7Air_End6ListVC", "MKLocalSearch"]
-- !private ["C7Air_End6ListVC", "MKLocalSearchResponse"]
-- !private ["C7Air_End6ListVC", "NSError"]
-- ["C7Air_End6ListVC", "Task"]
-- !private ["C7Air_End6ListVC", "Void"]
-- !private ["C7Air_End6ListVC", "assertionFailure"]
-- !private ["C7Air_End6ListVC", "closeMapItems"]
-- ["C7Air_End6ListVC", "deinit"]
-- ["C7Air_End6ListVC", "determineLocationAuthorizationStatus"]
-- ["C7Air_End6ListVC", "findClosestMapItemMatchingTask"]
-- !private ["C7Air_End6ListVC", "initalizeRequestWithDescriptor"]
-- ["C7Air_End6ListVC", "locationManager"]
-- ["C7Air_End6ListVC", "locationManagerDidPauseLocationUpdates"]
-- ["C7Air_End6ListVC", "locationManagerDidResumeLocationUpdates"]
-- ["C7Air_End6ListVC", "locationManagerShouldDisplayHeadingCalibration"]
-- !private ["C7Air_End6ListVC", "print"]
-- !private ["C7Air_End6ListVC", "showAlert"]
-- !private ["C7Air_End6ListVC", "taskManager"]
-- !private ["C7Air_End6ListVC", "tasks"]
-- !private ["C7Air_End6ListVC", "uiRealm"]
+- ["C5Mango6ListVC", "Bool"]
+- ["C5Mango6ListVC", "CLAuthorizationStatus"]
+- ["C5Mango6ListVC", "CLLocation"]
+- ["C5Mango6ListVC", "CLLocationManager"]
+- !private ["C5Mango6ListVC", "MKLocalSearch"]
+- !private ["C5Mango6ListVC", "MKLocalSearchResponse"]
+- !private ["C5Mango6ListVC", "NSError"]
+- ["C5Mango6ListVC", "Task"]
+- !private ["C5Mango6ListVC", "Void"]
+- !private ["C5Mango6ListVC", "assertionFailure"]
+- !private ["C5Mango6ListVC", "closeMapItems"]
+- ["C5Mango6ListVC", "deinit"]
+- ["C5Mango6ListVC", "determineLocationAuthorizationStatus"]
+- ["C5Mango6ListVC", "findClosestMapItemMatchingTask"]
+- !private ["C5Mango6ListVC", "initalizeRequestWithDescriptor"]
+- ["C5Mango6ListVC", "locationManager"]
+- ["C5Mango6ListVC", "locationManagerDidPauseLocationUpdates"]
+- ["C5Mango6ListVC", "locationManagerDidResumeLocationUpdates"]
+- ["C5Mango6ListVC", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["C5Mango6ListVC", "print"]
+- !private ["C5Mango6ListVC", "showAlert"]
+- !private ["C5Mango6ListVC", "taskManager"]
+- !private ["C5Mango6ListVC", "tasks"]
+- !private ["C5Mango6ListVC", "uiRealm"]
 - !private ["PSo12MKAnnotation", "location"]
 - !private ["CSo13MKLocalSearch", "init"]
 - !private ["CSo13MKLocalSearch", "startWithCompletionHandler"]
@@ -489,7 +489,7 @@ depends-member:
 - !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - ["Ps21NilLiteralConvertible", "Some"]
-- !private ["C7Air_End4Noun", "descriptor"]
+- !private ["C5Mango4Noun", "descriptor"]
 - !private ["C10RealmSwift6Object", "descriptor"]
 - !private ["C10RealmSwift6Object", "distanceFromUser"]
 - !private ["C10RealmSwift6Object", "hashtag"]
@@ -545,10 +545,10 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
-- !private ["C7Air_End4Task", "distanceFromUser"]
-- !private ["C7Air_End4Task", "hashtag"]
-- !private ["C7Air_End4Task", "name"]
-- !private ["C7Air_End4Task", "readAllTasks"]
+- !private ["C5Mango4Task", "distanceFromUser"]
+- !private ["C5Mango4Task", "hashtag"]
+- !private ["C5Mango4Task", "name"]
+- !private ["C5Mango4Task", "readAllTasks"]
 - !private ["PSo21UIAppearanceContainer", "CLLocationManager"]
 - !private ["PSo21UIAppearanceContainer", "MKLocalSearch"]
 - !private ["PSo21UIAppearanceContainer", "assertionFailure"]
@@ -815,7 +815,7 @@ depends-nominal:
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
-- "C7Air_End6ListVC"
+- "C5Mango6ListVC"
 - !private "PSo12MKAnnotation"
 - !private "CSo13MKLocalSearch"
 - !private "CSo21MKLocalSearchResponse"
@@ -836,7 +836,7 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - "Ps21NilLiteralConvertible"
-- !private "C7Air_End4Noun"
+- !private "C5Mango4Noun"
 - !private "C10RealmSwift6Object"
 - "Sq"
 - !private "Ps16OutputStreamType"
@@ -860,7 +860,7 @@ depends-nominal:
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
-- !private "C7Air_End4Task"
+- !private "C5Mango4Task"
 - "PSo21UIAppearanceContainer"
 - "PSo18UIContentContainer"
 - "PSo18UIFocusEnvironment"

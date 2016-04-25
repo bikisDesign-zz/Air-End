@@ -27,6 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         navBarAppearance.barStyle = UIBarStyle.Black
         navBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
+        navBarAppearance.translucent = false
+        navBarAppearance.tintColor = Theme.Colors.ButtonColor.color
+        
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.tintColor = Theme.Colors.ButtonColor.color
+        tabBarAppearance.barTintColor = Theme.Colors.NavigationBarColor.color
         
         let barButtonAppearance = UIBarButtonItem.appearance()
             barButtonAppearance.tintColor = Theme.Colors.ButtonColor.color

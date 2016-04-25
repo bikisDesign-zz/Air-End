@@ -2,20 +2,20 @@
 provides-top-level:
 - "ColoredDatePicker"
 provides-nominal:
-- "C7Air_End17ColoredDatePicker"
+- "C5Mango17ColoredDatePicker"
 provides-member:
-- ["C7Air_End17ColoredDatePicker", ""]
+- ["C5Mango17ColoredDatePicker", ""]
 provides-dynamic-lookup:
 - "addSubview"
 - "changed"
 depends-top-level:
-- !private "!"
-- !private "StringLiteralType"
-- "UIDatePicker"
-- "UIView"
-- "ColoredDatePicker"
 - "BooleanLiteralType"
+- "UIView"
+- "UIDatePicker"
+- !private "!"
 - !private "UIColor"
+- "ColoredDatePicker"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "UIColor"]
 - ["Ps9AnyObject", "addSubview"]
@@ -34,13 +34,13 @@ depends-member:
 - !private ["Ps11CVarArgType", "setValue"]
 - !private ["Ps11CVarArgType", "whiteColor"]
 - ["Ps11CVarArgType", ""]
-- !private ["C7Air_End17ColoredDatePicker", "UIColor"]
-- ["C7Air_End17ColoredDatePicker", "UIView"]
-- ["C7Air_End17ColoredDatePicker", "addSubview"]
-- ["C7Air_End17ColoredDatePicker", "changed"]
-- ["C7Air_End17ColoredDatePicker", "deinit"]
-- ["C7Air_End17ColoredDatePicker", "init"]
-- !private ["C7Air_End17ColoredDatePicker", "setValue"]
+- !private ["C5Mango17ColoredDatePicker", "UIColor"]
+- ["C5Mango17ColoredDatePicker", "UIView"]
+- ["C5Mango17ColoredDatePicker", "addSubview"]
+- ["C5Mango17ColoredDatePicker", "changed"]
+- ["C5Mango17ColoredDatePicker", "deinit"]
+- ["C5Mango17ColoredDatePicker", "init"]
+- !private ["C5Mango17ColoredDatePicker", "setValue"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - ["Ps28CustomDebugStringConvertible", "addSubview"]
 - ["Ps28CustomDebugStringConvertible", "changed"]
@@ -180,7 +180,7 @@ depends-nominal:
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
 - "Ps11CVarArgType"
-- "C7Air_End17ColoredDatePicker"
+- "C5Mango17ColoredDatePicker"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"

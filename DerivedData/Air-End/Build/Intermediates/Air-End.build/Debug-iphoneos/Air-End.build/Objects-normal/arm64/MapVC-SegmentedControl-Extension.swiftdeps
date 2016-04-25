@@ -2,32 +2,30 @@
 provides-top-level:
 provides-nominal:
 provides-member:
-- ["C7Air_End5MapVC", ""]
-- ["C7Air_End5MapVC", "segmentedControlValueChanged"]
-- ["C7Air_End5MapVC", "segmentAllTasks"]
-- ["C7Air_End5MapVC", "segmentCloseTasks"]
-- ["C7Air_End5MapVC", "segmentEnRoute"]
-- ["C7Air_End5MapVC", "searchForMapItemsMatchingNoun"]
+- ["C5Mango5MapVC", ""]
+- ["C5Mango5MapVC", "segmentedControlValueChanged"]
+- ["C5Mango5MapVC", "segmentAllTasks"]
+- ["C5Mango5MapVC", "segmentEnRoute"]
+- ["C5Mango5MapVC", "searchForMapItemsMatchingNoun"]
 provides-dynamic-lookup:
+- "segmentEnRoute"
 - "segmentedControlValueChanged"
 - "segmentAllTasks"
-- "segmentEnRoute"
-- "segmentCloseTasks"
 depends-top-level:
+- "MKMapItem"
 - !private "StringLiteralType"
+- "String"
+- !private "NSError"
+- !private "print"
 - !private "Array"
 - !private "MKLocalSearchResponse"
-- !private "print"
 - !private "BooleanLiteralType"
-- "MapVC"
 - "UISegmentedControl"
+- !private "~="
+- "MapVC"
+- !private "MKLocalSearch"
 - !private "Void"
 - !private "assertionFailure"
-- !private "~="
-- "String"
-- !private "MKLocalSearch"
-- !private "NSError"
-- "MKMapItem"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -46,7 +44,6 @@ depends-member:
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "searchForMapItemsMatchingNoun"]
 - ["Ps9AnyObject", "segmentAllTasks"]
-- ["Ps9AnyObject", "segmentCloseTasks"]
 - ["Ps9AnyObject", "segmentEnRoute"]
 - !private ["Ps9AnyObject", "segmentedControl"]
 - ["Ps9AnyObject", "segmentedControlValueChanged"]
@@ -73,7 +70,6 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "initalizeRequestWithDescriptor"]
 - !private ["PSo25CLLocationManagerDelegate", "print"]
 - !private ["PSo25CLLocationManagerDelegate", "segmentAllTasks"]
-- !private ["PSo25CLLocationManagerDelegate", "segmentCloseTasks"]
 - !private ["PSo25CLLocationManagerDelegate", "segmentEnRoute"]
 - !private ["PSo25CLLocationManagerDelegate", "segmentedControl"]
 - !private ["PSo25CLLocationManagerDelegate", "userLocation"]
@@ -95,7 +91,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "searchForMapItemsMatchingNoun"]
 - ["Ps11CVarArgType", "segmentAllTasks"]
-- ["Ps11CVarArgType", "segmentCloseTasks"]
 - ["Ps11CVarArgType", "segmentEnRoute"]
 - !private ["Ps11CVarArgType", "segmentedControl"]
 - ["Ps11CVarArgType", "segmentedControlValueChanged"]
@@ -107,20 +102,19 @@ depends-member:
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "init"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "MKLocalSearch"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "assertionFailure"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "checkDestinationUI"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "destinationTextField"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "enRouteView"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "getLocation"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "hideOverlay"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "initalizeRequestWithDescriptor"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "print"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "segmentAllTasks"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "segmentCloseTasks"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "segmentEnRoute"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "segmentedControl"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "userLocation"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "MKLocalSearch"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "assertionFailure"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "checkDestinationUI"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "destinationTextField"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "enRouteView"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "getLocation"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "hideOverlay"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "initalizeRequestWithDescriptor"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "print"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "segmentAllTasks"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "segmentEnRoute"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "segmentedControl"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "userLocation"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "MKLocalSearch"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
@@ -138,7 +132,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - ["Ps28CustomDebugStringConvertible", "searchForMapItemsMatchingNoun"]
 - ["Ps28CustomDebugStringConvertible", "segmentAllTasks"]
-- ["Ps28CustomDebugStringConvertible", "segmentCloseTasks"]
 - ["Ps28CustomDebugStringConvertible", "segmentEnRoute"]
 - !private ["Ps28CustomDebugStringConvertible", "segmentedControl"]
 - ["Ps28CustomDebugStringConvertible", "segmentedControlValueChanged"]
@@ -164,7 +157,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "print"]
 - ["Ps23CustomStringConvertible", "searchForMapItemsMatchingNoun"]
 - ["Ps23CustomStringConvertible", "segmentAllTasks"]
-- ["Ps23CustomStringConvertible", "segmentCloseTasks"]
 - ["Ps23CustomStringConvertible", "segmentEnRoute"]
 - !private ["Ps23CustomStringConvertible", "segmentedControl"]
 - ["Ps23CustomStringConvertible", "segmentedControlValueChanged"]
@@ -190,7 +182,6 @@ depends-member:
 - !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "searchForMapItemsMatchingNoun"]
 - ["Ps9Equatable", "segmentAllTasks"]
-- ["Ps9Equatable", "segmentCloseTasks"]
 - ["Ps9Equatable", "segmentEnRoute"]
 - !private ["Ps9Equatable", "segmentedControl"]
 - ["Ps9Equatable", "segmentedControlValueChanged"]
@@ -219,7 +210,6 @@ depends-member:
 - !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "searchForMapItemsMatchingNoun"]
 - ["Ps8Hashable", "segmentAllTasks"]
-- ["Ps8Hashable", "segmentCloseTasks"]
 - ["Ps8Hashable", "segmentEnRoute"]
 - !private ["Ps8Hashable", "segmentedControl"]
 - ["Ps8Hashable", "segmentedControlValueChanged"]
@@ -255,33 +245,31 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "initalizeRequestWithDescriptor"]
 - !private ["PSo17MKMapViewDelegate", "print"]
 - !private ["PSo17MKMapViewDelegate", "segmentAllTasks"]
-- !private ["PSo17MKMapViewDelegate", "segmentCloseTasks"]
 - !private ["PSo17MKMapViewDelegate", "segmentEnRoute"]
 - !private ["PSo17MKMapViewDelegate", "segmentedControl"]
 - !private ["PSo17MKMapViewDelegate", "userLocation"]
 - !private ["CSo11MKPlacemark", "location"]
-- !private ["C7Air_End5MapVC", "MKLocalSearch"]
-- !private ["C7Air_End5MapVC", "MKLocalSearchResponse"]
-- ["C7Air_End5MapVC", "MKMapItem"]
-- !private ["C7Air_End5MapVC", "NSError"]
-- ["C7Air_End5MapVC", "String"]
-- ["C7Air_End5MapVC", "UISegmentedControl"]
-- !private ["C7Air_End5MapVC", "Void"]
-- !private ["C7Air_End5MapVC", "assertionFailure"]
-- !private ["C7Air_End5MapVC", "checkDestinationUI"]
-- !private ["C7Air_End5MapVC", "destinationTextField"]
-- !private ["C7Air_End5MapVC", "enRouteView"]
-- !private ["C7Air_End5MapVC", "getLocation"]
-- !private ["C7Air_End5MapVC", "hideOverlay"]
-- !private ["C7Air_End5MapVC", "initalizeRequestWithDescriptor"]
-- !private ["C7Air_End5MapVC", "print"]
-- ["C7Air_End5MapVC", "searchForMapItemsMatchingNoun"]
-- ["C7Air_End5MapVC", "segmentAllTasks"]
-- ["C7Air_End5MapVC", "segmentCloseTasks"]
-- ["C7Air_End5MapVC", "segmentEnRoute"]
-- !private ["C7Air_End5MapVC", "segmentedControl"]
-- ["C7Air_End5MapVC", "segmentedControlValueChanged"]
-- !private ["C7Air_End5MapVC", "userLocation"]
+- !private ["C5Mango5MapVC", "MKLocalSearch"]
+- !private ["C5Mango5MapVC", "MKLocalSearchResponse"]
+- ["C5Mango5MapVC", "MKMapItem"]
+- !private ["C5Mango5MapVC", "NSError"]
+- ["C5Mango5MapVC", "String"]
+- ["C5Mango5MapVC", "UISegmentedControl"]
+- !private ["C5Mango5MapVC", "Void"]
+- !private ["C5Mango5MapVC", "assertionFailure"]
+- !private ["C5Mango5MapVC", "checkDestinationUI"]
+- !private ["C5Mango5MapVC", "destinationTextField"]
+- !private ["C5Mango5MapVC", "enRouteView"]
+- !private ["C5Mango5MapVC", "getLocation"]
+- !private ["C5Mango5MapVC", "hideOverlay"]
+- !private ["C5Mango5MapVC", "initalizeRequestWithDescriptor"]
+- !private ["C5Mango5MapVC", "print"]
+- ["C5Mango5MapVC", "searchForMapItemsMatchingNoun"]
+- ["C5Mango5MapVC", "segmentAllTasks"]
+- ["C5Mango5MapVC", "segmentEnRoute"]
+- !private ["C5Mango5MapVC", "segmentedControl"]
+- ["C5Mango5MapVC", "segmentedControlValueChanged"]
+- !private ["C5Mango5MapVC", "userLocation"]
 - !private ["P10RealmSwift10MinMaxType", "Distance"]
 - !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "Distance"]
@@ -303,7 +291,6 @@ depends-member:
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "searchForMapItemsMatchingNoun"]
 - ["PSo8NSCoding", "segmentAllTasks"]
-- ["PSo8NSCoding", "segmentCloseTasks"]
 - ["PSo8NSCoding", "segmentEnRoute"]
 - !private ["PSo8NSCoding", "segmentedControl"]
 - ["PSo8NSCoding", "segmentedControlValueChanged"]
@@ -322,7 +309,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "searchForMapItemsMatchingNoun"]
 - ["PSo26NSExtensionRequestHandling", "segmentAllTasks"]
-- ["PSo26NSExtensionRequestHandling", "segmentCloseTasks"]
 - ["PSo26NSExtensionRequestHandling", "segmentEnRoute"]
 - !private ["PSo26NSExtensionRequestHandling", "segmentedControl"]
 - ["PSo26NSExtensionRequestHandling", "segmentedControlValueChanged"]
@@ -351,7 +337,6 @@ depends-member:
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "searchForMapItemsMatchingNoun"]
 - ["CSo8NSObject", "segmentAllTasks"]
-- ["CSo8NSObject", "segmentCloseTasks"]
 - ["CSo8NSObject", "segmentEnRoute"]
 - !private ["CSo8NSObject", "segmentedControl"]
 - ["CSo8NSObject", "segmentedControlValueChanged"]
@@ -373,7 +358,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "searchForMapItemsMatchingNoun"]
 - ["PSo16NSObjectProtocol", "segmentAllTasks"]
-- ["PSo16NSObjectProtocol", "segmentCloseTasks"]
 - ["PSo16NSObjectProtocol", "segmentEnRoute"]
 - !private ["PSo16NSObjectProtocol", "segmentedControl"]
 - ["PSo16NSObjectProtocol", "segmentedControlValueChanged"]
@@ -407,6 +391,19 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["P5Mango19TaskMapViewDelegate", "MKLocalSearch"]
+- !private ["P5Mango19TaskMapViewDelegate", "assertionFailure"]
+- !private ["P5Mango19TaskMapViewDelegate", "checkDestinationUI"]
+- !private ["P5Mango19TaskMapViewDelegate", "destinationTextField"]
+- !private ["P5Mango19TaskMapViewDelegate", "enRouteView"]
+- !private ["P5Mango19TaskMapViewDelegate", "getLocation"]
+- !private ["P5Mango19TaskMapViewDelegate", "hideOverlay"]
+- !private ["P5Mango19TaskMapViewDelegate", "initalizeRequestWithDescriptor"]
+- !private ["P5Mango19TaskMapViewDelegate", "print"]
+- !private ["P5Mango19TaskMapViewDelegate", "segmentAllTasks"]
+- !private ["P5Mango19TaskMapViewDelegate", "segmentEnRoute"]
+- !private ["P5Mango19TaskMapViewDelegate", "segmentedControl"]
+- !private ["P5Mango19TaskMapViewDelegate", "userLocation"]
 - !private ["PSo29UIAccessibilityIdentification", "selectedSegmentIndex"]
 - !private ["PSo12UIAppearance", "selectedSegmentIndex"]
 - !private ["PSo21UIAppearanceContainer", "MKLocalSearch"]
@@ -420,7 +417,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "print"]
 - ["PSo21UIAppearanceContainer", "searchForMapItemsMatchingNoun"]
 - ["PSo21UIAppearanceContainer", "segmentAllTasks"]
-- ["PSo21UIAppearanceContainer", "segmentCloseTasks"]
 - ["PSo21UIAppearanceContainer", "segmentEnRoute"]
 - !private ["PSo21UIAppearanceContainer", "segmentedControl"]
 - ["PSo21UIAppearanceContainer", "segmentedControlValueChanged"]
@@ -437,7 +433,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "searchForMapItemsMatchingNoun"]
 - ["PSo18UIContentContainer", "segmentAllTasks"]
-- ["PSo18UIContentContainer", "segmentCloseTasks"]
 - ["PSo18UIContentContainer", "segmentEnRoute"]
 - !private ["PSo18UIContentContainer", "segmentedControl"]
 - ["PSo18UIContentContainer", "segmentedControlValueChanged"]
@@ -456,7 +451,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "print"]
 - ["PSo18UIFocusEnvironment", "searchForMapItemsMatchingNoun"]
 - ["PSo18UIFocusEnvironment", "segmentAllTasks"]
-- ["PSo18UIFocusEnvironment", "segmentCloseTasks"]
 - ["PSo18UIFocusEnvironment", "segmentEnRoute"]
 - !private ["PSo18UIFocusEnvironment", "segmentedControl"]
 - ["PSo18UIFocusEnvironment", "segmentedControlValueChanged"]
@@ -479,7 +473,6 @@ depends-member:
 - !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "searchForMapItemsMatchingNoun"]
 - ["CSo11UIResponder", "segmentAllTasks"]
-- ["CSo11UIResponder", "segmentCloseTasks"]
 - ["CSo11UIResponder", "segmentEnRoute"]
 - !private ["CSo11UIResponder", "segmentedControl"]
 - ["CSo11UIResponder", "segmentedControlValueChanged"]
@@ -497,7 +490,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "searchForMapItemsMatchingNoun"]
 - ["PSo16UIStateRestoring", "segmentAllTasks"]
-- ["PSo16UIStateRestoring", "segmentCloseTasks"]
 - ["PSo16UIStateRestoring", "segmentEnRoute"]
 - !private ["PSo16UIStateRestoring", "segmentedControl"]
 - ["PSo16UIStateRestoring", "segmentedControlValueChanged"]
@@ -512,7 +504,6 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "initalizeRequestWithDescriptor"]
 - !private ["PSo19UITextFieldDelegate", "print"]
 - !private ["PSo19UITextFieldDelegate", "segmentAllTasks"]
-- !private ["PSo19UITextFieldDelegate", "segmentCloseTasks"]
 - !private ["PSo19UITextFieldDelegate", "segmentEnRoute"]
 - !private ["PSo19UITextFieldDelegate", "segmentedControl"]
 - !private ["PSo19UITextFieldDelegate", "userLocation"]
@@ -527,7 +518,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "print"]
 - ["PSo18UITraitEnvironment", "searchForMapItemsMatchingNoun"]
 - ["PSo18UITraitEnvironment", "segmentAllTasks"]
-- ["PSo18UITraitEnvironment", "segmentCloseTasks"]
 - ["PSo18UITraitEnvironment", "segmentEnRoute"]
 - !private ["PSo18UITraitEnvironment", "segmentedControl"]
 - ["PSo18UITraitEnvironment", "segmentedControlValueChanged"]
@@ -551,7 +541,6 @@ depends-member:
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "searchForMapItemsMatchingNoun"]
 - ["CSo16UIViewController", "segmentAllTasks"]
-- ["CSo16UIViewController", "segmentCloseTasks"]
 - ["CSo16UIViewController", "segmentEnRoute"]
 - !private ["CSo16UIViewController", "segmentedControl"]
 - ["CSo16UIViewController", "segmentedControlValueChanged"]
@@ -611,7 +600,7 @@ depends-nominal:
 - !private "Vs9Character"
 - !private "Ps14CollectionType"
 - !private "Ps10Comparable"
-- !private "P7Air_End31CorrectAddressTableViewDelegate"
+- !private "P5Mango31CorrectAddressTableViewDelegate"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - !private "Sd"
@@ -635,7 +624,7 @@ depends-nominal:
 - !private "CSo9MKMapItem"
 - !private "PSo17MKMapViewDelegate"
 - !private "CSo11MKPlacemark"
-- "C7Air_End5MapVC"
+- "C5Mango5MapVC"
 - !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
 - !private "Ps21MutableCollectionType"
@@ -667,6 +656,7 @@ depends-nominal:
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
+- !private "P5Mango19TaskMapViewDelegate"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
@@ -749,4 +739,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "c5b822d4fe1dfa5898b08ec0af094b42"
+interface-hash: "bd7b4f02d595d4bd2d2f5848c0f71701"

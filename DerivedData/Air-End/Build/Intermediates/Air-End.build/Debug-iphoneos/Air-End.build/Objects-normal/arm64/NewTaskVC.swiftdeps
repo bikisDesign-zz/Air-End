@@ -2,44 +2,44 @@
 provides-top-level:
 - "NewTaskVC"
 provides-nominal:
-- "C7Air_End9NewTaskVC"
+- "C5Mango9NewTaskVC"
 provides-member:
-- ["C7Air_End9NewTaskVC", ""]
+- ["C5Mango9NewTaskVC", ""]
 provides-dynamic-lookup:
-- "setUpUI"
-- "sendButtonContainer"
-- "textFields"
-- "handleSingleTap"
-- "date"
+- "viewDidLoad"
 - "nounTextField"
-- "createNewTask"
-- "nounContainer"
 - "datePicker"
+- "nounContainer"
+- "date"
 - "datePickerChanged"
 - "dateContainer"
-- "sendButton"
-- "viewDidLoad"
 - "task"
-- "taskContainer"
+- "sendButton"
+- "handleSingleTap"
+- "textFields"
 - "containers"
+- "sendButtonContainer"
 - "taskTextField"
+- "taskContainer"
+- "setUpUI"
+- "createNewTask"
 depends-top-level:
-- !private "UITapGestureRecognizer"
-- "Task"
-- "UIView"
+- "UITextFieldDelegate"
 - !private "Array"
 - "NSDate"
-- "UITextFieldDelegate"
 - "NewTaskVC"
-- "UIButton"
-- "UIDatePicker"
-- !private "BooleanLiteralType"
-- !private "Theme"
 - !private "UIColor"
-- !private "/"
-- "UITextField"
-- "UIViewController"
+- "Task"
 - !private "Noun"
+- !private "Theme"
+- "UITextField"
+- !private "/"
+- "UIViewController"
+- "UIView"
+- !private "UITapGestureRecognizer"
+- "UIButton"
+- !private "BooleanLiteralType"
+- "UIDatePicker"
 depends-member:
 - ["P10RealmSwift11AddableType", "Distance"]
 - ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -188,10 +188,10 @@ depends-member:
 - ["Ps14CollectionType", "_Element"]
 - ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "subscript"]
-- !private ["OV7Air_End5Theme6Colors", "BackgroundColor"]
-- !private ["OV7Air_End5Theme6Colors", "ButtonColor"]
-- !private ["OV7Air_End5Theme6Colors", "LabelColor"]
-- !private ["OV7Air_End5Theme6Colors", "color"]
+- !private ["OV5Mango5Theme6Colors", "BackgroundColor"]
+- !private ["OV5Mango5Theme6Colors", "ButtonColor"]
+- !private ["OV5Mango5Theme6Colors", "LabelColor"]
+- !private ["OV5Mango5Theme6Colors", "color"]
 - ["Ps10Comparable", "Distance"]
 - ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
@@ -693,50 +693,50 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "clearColor"]
 - ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "whiteColor"]
-- ["C7Air_End9NewTaskVC", "NSDate"]
-- !private ["C7Air_End9NewTaskVC", "Noun"]
-- !private ["C7Air_End9NewTaskVC", "SegueIdentifier"]
-- ["C7Air_End9NewTaskVC", "Task"]
-- !private ["C7Air_End9NewTaskVC", "Theme"]
-- ["C7Air_End9NewTaskVC", "UIButton"]
-- !private ["C7Air_End9NewTaskVC", "UIColor"]
-- ["C7Air_End9NewTaskVC", "UIDatePicker"]
-- !private ["C7Air_End9NewTaskVC", "UITapGestureRecognizer"]
-- ["C7Air_End9NewTaskVC", "UITextField"]
-- ["C7Air_End9NewTaskVC", "UIView"]
-- !private ["C7Air_End9NewTaskVC", "allTextFieldsAreFilled"]
-- ["C7Air_End9NewTaskVC", "containers"]
-- ["C7Air_End9NewTaskVC", "createNewTask"]
-- ["C7Air_End9NewTaskVC", "date"]
-- ["C7Air_End9NewTaskVC", "dateContainer"]
-- ["C7Air_End9NewTaskVC", "datePicker"]
-- ["C7Air_End9NewTaskVC", "datePickerChanged"]
-- ["C7Air_End9NewTaskVC", "deinit"]
-- !private ["C7Air_End9NewTaskVC", "generateRandomPassCode"]
-- ["C7Air_End9NewTaskVC", "handleSingleTap"]
-- ["C7Air_End9NewTaskVC", "init"]
-- !private ["C7Air_End9NewTaskVC", "navigationItem"]
-- ["C7Air_End9NewTaskVC", "nounContainer"]
-- ["C7Air_End9NewTaskVC", "nounTextField"]
-- !private ["C7Air_End9NewTaskVC", "performSegueWithSegueIdentifier"]
-- ["C7Air_End9NewTaskVC", "sendButton"]
-- ["C7Air_End9NewTaskVC", "sendButtonContainer"]
-- ["C7Air_End9NewTaskVC", "setUpUI"]
-- ["C7Air_End9NewTaskVC", "task"]
-- ["C7Air_End9NewTaskVC", "taskContainer"]
-- ["C7Air_End9NewTaskVC", "taskTextField"]
-- ["C7Air_End9NewTaskVC", "textField"]
-- ["C7Air_End9NewTaskVC", "textFieldDidBeginEditing"]
-- ["C7Air_End9NewTaskVC", "textFieldDidEndEditing"]
-- ["C7Air_End9NewTaskVC", "textFieldShouldBeginEditing"]
-- ["C7Air_End9NewTaskVC", "textFieldShouldClear"]
-- ["C7Air_End9NewTaskVC", "textFieldShouldEndEditing"]
-- ["C7Air_End9NewTaskVC", "textFieldShouldReturn"]
-- ["C7Air_End9NewTaskVC", "textFields"]
-- !private ["C7Air_End9NewTaskVC", "view"]
-- ["C7Air_End9NewTaskVC", "viewDidLoad"]
-- !private ["C7Air_End4Noun", "descriptor"]
-- !private ["C7Air_End4Noun", "init"]
+- ["C5Mango9NewTaskVC", "NSDate"]
+- !private ["C5Mango9NewTaskVC", "Noun"]
+- !private ["C5Mango9NewTaskVC", "SegueIdentifier"]
+- ["C5Mango9NewTaskVC", "Task"]
+- !private ["C5Mango9NewTaskVC", "Theme"]
+- ["C5Mango9NewTaskVC", "UIButton"]
+- !private ["C5Mango9NewTaskVC", "UIColor"]
+- ["C5Mango9NewTaskVC", "UIDatePicker"]
+- !private ["C5Mango9NewTaskVC", "UITapGestureRecognizer"]
+- ["C5Mango9NewTaskVC", "UITextField"]
+- ["C5Mango9NewTaskVC", "UIView"]
+- !private ["C5Mango9NewTaskVC", "allTextFieldsAreFilled"]
+- ["C5Mango9NewTaskVC", "containers"]
+- ["C5Mango9NewTaskVC", "createNewTask"]
+- ["C5Mango9NewTaskVC", "date"]
+- ["C5Mango9NewTaskVC", "dateContainer"]
+- ["C5Mango9NewTaskVC", "datePicker"]
+- ["C5Mango9NewTaskVC", "datePickerChanged"]
+- ["C5Mango9NewTaskVC", "deinit"]
+- !private ["C5Mango9NewTaskVC", "generateRandomPassCode"]
+- ["C5Mango9NewTaskVC", "handleSingleTap"]
+- ["C5Mango9NewTaskVC", "init"]
+- !private ["C5Mango9NewTaskVC", "navigationItem"]
+- ["C5Mango9NewTaskVC", "nounContainer"]
+- ["C5Mango9NewTaskVC", "nounTextField"]
+- !private ["C5Mango9NewTaskVC", "performSegueWithSegueIdentifier"]
+- ["C5Mango9NewTaskVC", "sendButton"]
+- ["C5Mango9NewTaskVC", "sendButtonContainer"]
+- ["C5Mango9NewTaskVC", "setUpUI"]
+- ["C5Mango9NewTaskVC", "task"]
+- ["C5Mango9NewTaskVC", "taskContainer"]
+- ["C5Mango9NewTaskVC", "taskTextField"]
+- ["C5Mango9NewTaskVC", "textField"]
+- ["C5Mango9NewTaskVC", "textFieldDidBeginEditing"]
+- ["C5Mango9NewTaskVC", "textFieldDidEndEditing"]
+- ["C5Mango9NewTaskVC", "textFieldShouldBeginEditing"]
+- ["C5Mango9NewTaskVC", "textFieldShouldClear"]
+- ["C5Mango9NewTaskVC", "textFieldShouldEndEditing"]
+- ["C5Mango9NewTaskVC", "textFieldShouldReturn"]
+- ["C5Mango9NewTaskVC", "textFields"]
+- !private ["C5Mango9NewTaskVC", "view"]
+- ["C5Mango9NewTaskVC", "viewDidLoad"]
+- !private ["C5Mango4Noun", "descriptor"]
+- !private ["C5Mango4Noun", "init"]
 - !private ["C10RealmSwift6Object", "createNewTaskWithID"]
 - !private ["C10RealmSwift6Object", "descriptor"]
 - ["C10RealmSwift6Object", "init"]
@@ -752,11 +752,15 @@ depends-member:
 - ["Ps30RangeReplaceableCollectionType", "_Element"]
 - ["Ps30RangeReplaceableCollectionType", "init"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- !private ["Ps16RawRepresentable", "BackgroundColor"]
+- !private ["Ps16RawRepresentable", "ButtonColor"]
+- !private ["Ps16RawRepresentable", "LabelColor"]
 - !private ["Ps16RawRepresentable", "SegueUnwindToListVC"]
+- !private ["Ps16RawRepresentable", "color"]
 - ["P10RealmSwift17RealmOptionalType", "Distance"]
 - ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
 - !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
-- !private ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueUnwindToListVC"]
+- !private ["OE5MangoCSo16UIViewController15SegueIdentifier", "SegueUnwindToListVC"]
 - ["Ps12SequenceType", "Element"]
 - ["Ps12SequenceType", "Generator"]
 - ["Ps12SequenceType", "Index"]
@@ -774,9 +778,9 @@ depends-member:
 - !private ["Vs5Slice", "_Element"]
 - ["Ps10Strideable", "Distance"]
 - ["Ps10Strideable", "IntegerLiteralType"]
-- !private ["C7Air_End4Task", "createNewTaskWithID"]
-- ["C7Air_End4Task", "init"]
-- !private ["V7Air_End5Theme", "Colors"]
+- !private ["C5Mango4Task", "createNewTaskWithID"]
+- ["C5Mango4Task", "init"]
+- !private ["V5Mango5Theme", "Colors"]
 - !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
 - !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
 - !private ["PSo29UIAccessibilityIdentification", "bounds"]
@@ -1292,7 +1296,7 @@ depends-nominal:
 - !private "VSC6CGSize"
 - "Ps11CVarArgType"
 - "Ps14CollectionType"
-- !private "OV7Air_End5Theme6Colors"
+- !private "OV5Mango5Theme6Colors"
 - "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -1318,22 +1322,22 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
-- "C7Air_End9NewTaskVC"
-- !private "C7Air_End4Noun"
+- "C5Mango9NewTaskVC"
+- !private "C5Mango4Noun"
 - "C10RealmSwift6Object"
 - "CSo13RLMObjectBase"
 - "Ps21RandomAccessIndexType"
 - "Ps30RangeReplaceableCollectionType"
 - !private "Ps16RawRepresentable"
 - "P10RealmSwift17RealmOptionalType"
-- !private "OE7Air_EndCSo16UIViewController15SegueIdentifier"
+- !private "OE5MangoCSo16UIViewController15SegueIdentifier"
 - "Ps12SequenceType"
 - "Ps17SignedIntegerType"
 - "Ps16SignedNumberType"
 - !private "Vs5Slice"
 - "Ps10Strideable"
-- "C7Air_End4Task"
-- !private "V7Air_End5Theme"
+- "C5Mango4Task"
+- !private "V5Mango5Theme"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"

@@ -1,0 +1,939 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+- "C7Air_End6ListVC"
+provides-member:
+- ["C7Air_End6ListVC", ""]
+provides-dynamic-lookup:
+- "findClosestMapItemMatchingTask"
+- "locationManager"
+- "locationManager"
+- "determineLocationAuthorizationStatus"
+depends-top-level:
+- !private "MKLocalSearchResponse"
+- "ListVC"
+- "Task"
+- "CLLocationManagerDelegate"
+- !private "StringLiteralType"
+- !private "print"
+- !private "<"
+- !private "uiRealm"
+- !private "MKLocalSearch"
+- !private "Void"
+- !private "BooleanLiteralType"
+- !private "assertionFailure"
+- "CLLocationManager"
+- !private "NSError"
+- "CLAuthorizationStatus"
+- "Bool"
+- "CLLocation"
+depends-member:
+- !private ["P10RealmSwift11AddableType", "Distance"]
+- !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
+- !private ["Ps9AnyObject", "CLLocationManager"]
+- !private ["Ps9AnyObject", "Element"]
+- !private ["Ps9AnyObject", "Generator"]
+- !private ["Ps9AnyObject", "MKLocalSearch"]
+- !private ["Ps9AnyObject", "assertionFailure"]
+- !private ["Ps9AnyObject", "authorizationStatus"]
+- !private ["Ps9AnyObject", "closeMapItems"]
+- !private ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "descriptor"]
+- ["Ps9AnyObject", "determineLocationAuthorizationStatus"]
+- !private ["Ps9AnyObject", "distanceFromLocation"]
+- !private ["Ps9AnyObject", "distanceFromUser"]
+- ["Ps9AnyObject", "findClosestMapItemMatchingTask"]
+- !private ["Ps9AnyObject", "hashtag"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "initalizeRequestWithDescriptor"]
+- !private ["Ps9AnyObject", "location"]
+- ["Ps9AnyObject", "locationManager"]
+- ["Ps9AnyObject", "locationManagerDidPauseLocationUpdates"]
+- ["Ps9AnyObject", "locationManagerDidResumeLocationUpdates"]
+- ["Ps9AnyObject", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["Ps9AnyObject", "mapItems"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "placemark"]
+- !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "readAllTasks"]
+- !private ["Ps9AnyObject", "requestWhenInUseAuthorization"]
+- !private ["Ps9AnyObject", "showAlert"]
+- !private ["Ps9AnyObject", "startUpdatingLocation"]
+- !private ["Ps9AnyObject", "startWithCompletionHandler"]
+- !private ["Ps9AnyObject", "stopUpdatingLocation"]
+- !private ["Ps9AnyObject", "taskManager"]
+- !private ["Ps9AnyObject", "tasks"]
+- !private ["Ps9AnyObject", "uiRealm"]
+- !private ["Ps9AnyObject", "write"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "first"]
+- !private ["Sa", "sort"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "first"]
+- !private ["Ps23ArrayLiteralConvertible", "sort"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- !private ["Vs10ArraySlice", "SubSequence"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "deinit"]
+- ["OSC21CLAuthorizationStatus", "AuthorizedAlways"]
+- ["OSC21CLAuthorizationStatus", "AuthorizedWhenInUse"]
+- ["OSC21CLAuthorizationStatus", "Denied"]
+- ["OSC21CLAuthorizationStatus", "NotDetermined"]
+- !private ["CSo10CLLocation", "distanceFromLocation"]
+- !private ["CSo17CLLocationManager", "authorizationStatus"]
+- !private ["CSo17CLLocationManager", "delegate"]
+- !private ["CSo17CLLocationManager", "requestWhenInUseAuthorization"]
+- !private ["CSo17CLLocationManager", "startUpdatingLocation"]
+- !private ["CSo17CLLocationManager", "stopUpdatingLocation"]
+- !private ["PSo25CLLocationManagerDelegate", "CLLocationManager"]
+- !private ["PSo25CLLocationManagerDelegate", "MKLocalSearch"]
+- !private ["PSo25CLLocationManagerDelegate", "assertionFailure"]
+- !private ["PSo25CLLocationManagerDelegate", "closeMapItems"]
+- !private ["PSo25CLLocationManagerDelegate", "findClosestMapItemMatchingTask"]
+- !private ["PSo25CLLocationManagerDelegate", "initalizeRequestWithDescriptor"]
+- ["PSo25CLLocationManagerDelegate", "locationManager"]
+- ["PSo25CLLocationManagerDelegate", "locationManagerDidPauseLocationUpdates"]
+- ["PSo25CLLocationManagerDelegate", "locationManagerDidResumeLocationUpdates"]
+- ["PSo25CLLocationManagerDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo25CLLocationManagerDelegate", "print"]
+- !private ["PSo25CLLocationManagerDelegate", "showAlert"]
+- !private ["PSo25CLLocationManagerDelegate", "taskManager"]
+- !private ["PSo25CLLocationManagerDelegate", "tasks"]
+- !private ["PSo25CLLocationManagerDelegate", "uiRealm"]
+- ["PSo25CLLocationManagerDelegate", ""]
+- !private ["CSo11CLPlacemark", "location"]
+- !private ["Ps11CVarArgType", "CLLocationManager"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "Generator"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "MKLocalSearch"]
+- !private ["Ps11CVarArgType", "assertionFailure"]
+- !private ["Ps11CVarArgType", "authorizationStatus"]
+- !private ["Ps11CVarArgType", "closeMapItems"]
+- !private ["Ps11CVarArgType", "delegate"]
+- ["Ps11CVarArgType", "determineLocationAuthorizationStatus"]
+- !private ["Ps11CVarArgType", "distanceFromLocation"]
+- ["Ps11CVarArgType", "findClosestMapItemMatchingTask"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "initalizeRequestWithDescriptor"]
+- !private ["Ps11CVarArgType", "location"]
+- ["Ps11CVarArgType", "locationManager"]
+- ["Ps11CVarArgType", "locationManagerDidPauseLocationUpdates"]
+- ["Ps11CVarArgType", "locationManagerDidResumeLocationUpdates"]
+- ["Ps11CVarArgType", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["Ps11CVarArgType", "mapItems"]
+- !private ["Ps11CVarArgType", "placemark"]
+- !private ["Ps11CVarArgType", "print"]
+- !private ["Ps11CVarArgType", "requestWhenInUseAuthorization"]
+- !private ["Ps11CVarArgType", "showAlert"]
+- !private ["Ps11CVarArgType", "startUpdatingLocation"]
+- !private ["Ps11CVarArgType", "startWithCompletionHandler"]
+- !private ["Ps11CVarArgType", "stopUpdatingLocation"]
+- !private ["Ps11CVarArgType", "taskManager"]
+- !private ["Ps11CVarArgType", "tasks"]
+- !private ["Ps11CVarArgType", "uiRealm"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Generator"]
+- !private ["Ps14CollectionType", "Index"]
+- !private ["Ps14CollectionType", "SubSequence"]
+- !private ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "first"]
+- !private ["Ps14CollectionType", "sort"]
+- !private ["Ps14CollectionType", "subscript"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "CLLocationManager"]
+- !private ["Ps28CustomDebugStringConvertible", "Generator"]
+- !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "MKLocalSearch"]
+- ["Ps28CustomDebugStringConvertible", "Some"]
+- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "assertionFailure"]
+- !private ["Ps28CustomDebugStringConvertible", "authorizationStatus"]
+- !private ["Ps28CustomDebugStringConvertible", "closeMapItems"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- ["Ps28CustomDebugStringConvertible", "determineLocationAuthorizationStatus"]
+- !private ["Ps28CustomDebugStringConvertible", "distanceFromLocation"]
+- ["Ps28CustomDebugStringConvertible", "findClosestMapItemMatchingTask"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "initalizeRequestWithDescriptor"]
+- !private ["Ps28CustomDebugStringConvertible", "location"]
+- ["Ps28CustomDebugStringConvertible", "locationManager"]
+- ["Ps28CustomDebugStringConvertible", "locationManagerDidPauseLocationUpdates"]
+- ["Ps28CustomDebugStringConvertible", "locationManagerDidResumeLocationUpdates"]
+- ["Ps28CustomDebugStringConvertible", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["Ps28CustomDebugStringConvertible", "mapItems"]
+- !private ["Ps28CustomDebugStringConvertible", "placemark"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "requestWhenInUseAuthorization"]
+- !private ["Ps28CustomDebugStringConvertible", "showAlert"]
+- !private ["Ps28CustomDebugStringConvertible", "sort"]
+- !private ["Ps28CustomDebugStringConvertible", "startUpdatingLocation"]
+- !private ["Ps28CustomDebugStringConvertible", "startWithCompletionHandler"]
+- !private ["Ps28CustomDebugStringConvertible", "stopUpdatingLocation"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "taskManager"]
+- !private ["Ps28CustomDebugStringConvertible", "tasks"]
+- !private ["Ps28CustomDebugStringConvertible", "uiRealm"]
+- !private ["Ps23CustomStringConvertible", "CLLocationManager"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Generator"]
+- !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "MKLocalSearch"]
+- !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
+- !private ["Ps23CustomStringConvertible", "assertionFailure"]
+- !private ["Ps23CustomStringConvertible", "authorizationStatus"]
+- !private ["Ps23CustomStringConvertible", "closeMapItems"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- ["Ps23CustomStringConvertible", "determineLocationAuthorizationStatus"]
+- !private ["Ps23CustomStringConvertible", "distanceFromLocation"]
+- ["Ps23CustomStringConvertible", "findClosestMapItemMatchingTask"]
+- !private ["Ps23CustomStringConvertible", "first"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "initalizeRequestWithDescriptor"]
+- !private ["Ps23CustomStringConvertible", "location"]
+- ["Ps23CustomStringConvertible", "locationManager"]
+- ["Ps23CustomStringConvertible", "locationManagerDidPauseLocationUpdates"]
+- ["Ps23CustomStringConvertible", "locationManagerDidResumeLocationUpdates"]
+- ["Ps23CustomStringConvertible", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["Ps23CustomStringConvertible", "mapItems"]
+- !private ["Ps23CustomStringConvertible", "placemark"]
+- !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "requestWhenInUseAuthorization"]
+- !private ["Ps23CustomStringConvertible", "showAlert"]
+- !private ["Ps23CustomStringConvertible", "sort"]
+- !private ["Ps23CustomStringConvertible", "startUpdatingLocation"]
+- !private ["Ps23CustomStringConvertible", "startWithCompletionHandler"]
+- !private ["Ps23CustomStringConvertible", "stopUpdatingLocation"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "taskManager"]
+- !private ["Ps23CustomStringConvertible", "tasks"]
+- !private ["Ps23CustomStringConvertible", "uiRealm"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Sd", "deinit"]
+- ["Ps9Equatable", "AuthorizedAlways"]
+- ["Ps9Equatable", "AuthorizedWhenInUse"]
+- !private ["Ps9Equatable", "CLLocationManager"]
+- ["Ps9Equatable", "Denied"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "Generator"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "MKLocalSearch"]
+- ["Ps9Equatable", "NotDetermined"]
+- !private ["Ps9Equatable", "assertionFailure"]
+- !private ["Ps9Equatable", "authorizationStatus"]
+- !private ["Ps9Equatable", "closeMapItems"]
+- !private ["Ps9Equatable", "delegate"]
+- ["Ps9Equatable", "determineLocationAuthorizationStatus"]
+- !private ["Ps9Equatable", "distanceFromLocation"]
+- ["Ps9Equatable", "findClosestMapItemMatchingTask"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "initalizeRequestWithDescriptor"]
+- !private ["Ps9Equatable", "location"]
+- ["Ps9Equatable", "locationManager"]
+- ["Ps9Equatable", "locationManagerDidPauseLocationUpdates"]
+- ["Ps9Equatable", "locationManagerDidResumeLocationUpdates"]
+- ["Ps9Equatable", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["Ps9Equatable", "mapItems"]
+- !private ["Ps9Equatable", "placemark"]
+- !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "requestWhenInUseAuthorization"]
+- !private ["Ps9Equatable", "showAlert"]
+- !private ["Ps9Equatable", "startUpdatingLocation"]
+- !private ["Ps9Equatable", "startWithCompletionHandler"]
+- !private ["Ps9Equatable", "stopUpdatingLocation"]
+- !private ["Ps9Equatable", "taskManager"]
+- !private ["Ps9Equatable", "tasks"]
+- !private ["Ps9Equatable", "uiRealm"]
+- !private ["Ps9Equatable", "write"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps13GeneratorType", "Element"]
+- ["Ps8Hashable", "AuthorizedAlways"]
+- ["Ps8Hashable", "AuthorizedWhenInUse"]
+- !private ["Ps8Hashable", "CLLocationManager"]
+- ["Ps8Hashable", "Denied"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "Generator"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "MKLocalSearch"]
+- ["Ps8Hashable", "NotDetermined"]
+- !private ["Ps8Hashable", "assertionFailure"]
+- !private ["Ps8Hashable", "authorizationStatus"]
+- !private ["Ps8Hashable", "closeMapItems"]
+- !private ["Ps8Hashable", "delegate"]
+- ["Ps8Hashable", "determineLocationAuthorizationStatus"]
+- !private ["Ps8Hashable", "distanceFromLocation"]
+- ["Ps8Hashable", "findClosestMapItemMatchingTask"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "initalizeRequestWithDescriptor"]
+- !private ["Ps8Hashable", "location"]
+- ["Ps8Hashable", "locationManager"]
+- ["Ps8Hashable", "locationManagerDidPauseLocationUpdates"]
+- ["Ps8Hashable", "locationManagerDidResumeLocationUpdates"]
+- ["Ps8Hashable", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["Ps8Hashable", "mapItems"]
+- !private ["Ps8Hashable", "placemark"]
+- !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "requestWhenInUseAuthorization"]
+- !private ["Ps8Hashable", "showAlert"]
+- !private ["Ps8Hashable", "startUpdatingLocation"]
+- !private ["Ps8Hashable", "startWithCompletionHandler"]
+- !private ["Ps8Hashable", "stopUpdatingLocation"]
+- !private ["Ps8Hashable", "taskManager"]
+- !private ["Ps8Hashable", "tasks"]
+- !private ["Ps8Hashable", "uiRealm"]
+- !private ["Ps9Indexable", "Generator"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "first"]
+- !private ["Ps9Indexable", "sort"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- ["C7Air_End6ListVC", "Bool"]
+- ["C7Air_End6ListVC", "CLAuthorizationStatus"]
+- ["C7Air_End6ListVC", "CLLocation"]
+- ["C7Air_End6ListVC", "CLLocationManager"]
+- !private ["C7Air_End6ListVC", "MKLocalSearch"]
+- !private ["C7Air_End6ListVC", "MKLocalSearchResponse"]
+- !private ["C7Air_End6ListVC", "NSError"]
+- ["C7Air_End6ListVC", "Task"]
+- !private ["C7Air_End6ListVC", "Void"]
+- !private ["C7Air_End6ListVC", "assertionFailure"]
+- !private ["C7Air_End6ListVC", "closeMapItems"]
+- ["C7Air_End6ListVC", "deinit"]
+- ["C7Air_End6ListVC", "determineLocationAuthorizationStatus"]
+- ["C7Air_End6ListVC", "findClosestMapItemMatchingTask"]
+- !private ["C7Air_End6ListVC", "initalizeRequestWithDescriptor"]
+- ["C7Air_End6ListVC", "locationManager"]
+- ["C7Air_End6ListVC", "locationManagerDidPauseLocationUpdates"]
+- ["C7Air_End6ListVC", "locationManagerDidResumeLocationUpdates"]
+- ["C7Air_End6ListVC", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["C7Air_End6ListVC", "print"]
+- !private ["C7Air_End6ListVC", "showAlert"]
+- !private ["C7Air_End6ListVC", "taskManager"]
+- !private ["C7Air_End6ListVC", "tasks"]
+- !private ["C7Air_End6ListVC", "uiRealm"]
+- !private ["PSo12MKAnnotation", "location"]
+- !private ["CSo13MKLocalSearch", "init"]
+- !private ["CSo13MKLocalSearch", "startWithCompletionHandler"]
+- !private ["CSo21MKLocalSearchResponse", "mapItems"]
+- !private ["CSo9MKMapItem", "placemark"]
+- !private ["CSo11MKPlacemark", "location"]
+- !private ["P10RealmSwift10MinMaxType", "Distance"]
+- !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "first"]
+- !private ["Ps21MutableCollectionType", "sort"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "first"]
+- !private ["Ps16MutableIndexable", "sort"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "first"]
+- !private ["Ps16MutableSliceable", "sort"]
+- !private ["PSo8NSCoding", "CLLocationManager"]
+- !private ["PSo8NSCoding", "MKLocalSearch"]
+- !private ["PSo8NSCoding", "assertionFailure"]
+- !private ["PSo8NSCoding", "closeMapItems"]
+- ["PSo8NSCoding", "determineLocationAuthorizationStatus"]
+- !private ["PSo8NSCoding", "distanceFromLocation"]
+- ["PSo8NSCoding", "findClosestMapItemMatchingTask"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "initalizeRequestWithDescriptor"]
+- !private ["PSo8NSCoding", "location"]
+- ["PSo8NSCoding", "locationManager"]
+- ["PSo8NSCoding", "locationManagerDidPauseLocationUpdates"]
+- ["PSo8NSCoding", "locationManagerDidResumeLocationUpdates"]
+- ["PSo8NSCoding", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo8NSCoding", "print"]
+- !private ["PSo8NSCoding", "showAlert"]
+- !private ["PSo8NSCoding", "taskManager"]
+- !private ["PSo8NSCoding", "tasks"]
+- !private ["PSo8NSCoding", "uiRealm"]
+- !private ["PSo9NSCopying", "distanceFromLocation"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "location"]
+- !private ["PSo26NSExtensionRequestHandling", "CLLocationManager"]
+- !private ["PSo26NSExtensionRequestHandling", "MKLocalSearch"]
+- !private ["PSo26NSExtensionRequestHandling", "assertionFailure"]
+- !private ["PSo26NSExtensionRequestHandling", "closeMapItems"]
+- ["PSo26NSExtensionRequestHandling", "determineLocationAuthorizationStatus"]
+- ["PSo26NSExtensionRequestHandling", "findClosestMapItemMatchingTask"]
+- !private ["PSo26NSExtensionRequestHandling", "initalizeRequestWithDescriptor"]
+- ["PSo26NSExtensionRequestHandling", "locationManager"]
+- ["PSo26NSExtensionRequestHandling", "locationManagerDidPauseLocationUpdates"]
+- ["PSo26NSExtensionRequestHandling", "locationManagerDidResumeLocationUpdates"]
+- ["PSo26NSExtensionRequestHandling", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
+- !private ["PSo26NSExtensionRequestHandling", "showAlert"]
+- !private ["PSo26NSExtensionRequestHandling", "taskManager"]
+- !private ["PSo26NSExtensionRequestHandling", "tasks"]
+- !private ["PSo26NSExtensionRequestHandling", "uiRealm"]
+- !private ["PSo17NSFastEnumeration", "Generator"]
+- !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "CLAuthorizationStatus"]
+- ["CSo8NSObject", "CLLocation"]
+- ["CSo8NSObject", "CLLocationManager"]
+- !private ["CSo8NSObject", "Generator"]
+- !private ["CSo8NSObject", "MKLocalSearch"]
+- !private ["CSo8NSObject", "MKLocalSearchResponse"]
+- !private ["CSo8NSObject", "NSError"]
+- ["CSo8NSObject", "Task"]
+- !private ["CSo8NSObject", "Void"]
+- !private ["CSo8NSObject", "assertionFailure"]
+- !private ["CSo8NSObject", "authorizationStatus"]
+- !private ["CSo8NSObject", "closeMapItems"]
+- !private ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "descriptor"]
+- ["CSo8NSObject", "determineLocationAuthorizationStatus"]
+- !private ["CSo8NSObject", "distanceFromLocation"]
+- !private ["CSo8NSObject", "distanceFromUser"]
+- ["CSo8NSObject", "findClosestMapItemMatchingTask"]
+- !private ["CSo8NSObject", "hashtag"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "initalizeRequestWithDescriptor"]
+- !private ["CSo8NSObject", "location"]
+- ["CSo8NSObject", "locationManager"]
+- ["CSo8NSObject", "locationManagerDidPauseLocationUpdates"]
+- ["CSo8NSObject", "locationManagerDidResumeLocationUpdates"]
+- ["CSo8NSObject", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["CSo8NSObject", "mapItems"]
+- !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "placemark"]
+- !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "readAllTasks"]
+- !private ["CSo8NSObject", "requestWhenInUseAuthorization"]
+- !private ["CSo8NSObject", "showAlert"]
+- !private ["CSo8NSObject", "startUpdatingLocation"]
+- !private ["CSo8NSObject", "startWithCompletionHandler"]
+- !private ["CSo8NSObject", "stopUpdatingLocation"]
+- !private ["CSo8NSObject", "taskManager"]
+- !private ["CSo8NSObject", "tasks"]
+- !private ["CSo8NSObject", "uiRealm"]
+- !private ["PSo16NSObjectProtocol", "CLLocationManager"]
+- !private ["PSo16NSObjectProtocol", "Generator"]
+- !private ["PSo16NSObjectProtocol", "MKLocalSearch"]
+- !private ["PSo16NSObjectProtocol", "assertionFailure"]
+- !private ["PSo16NSObjectProtocol", "authorizationStatus"]
+- !private ["PSo16NSObjectProtocol", "closeMapItems"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- ["PSo16NSObjectProtocol", "determineLocationAuthorizationStatus"]
+- !private ["PSo16NSObjectProtocol", "distanceFromLocation"]
+- ["PSo16NSObjectProtocol", "findClosestMapItemMatchingTask"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "initalizeRequestWithDescriptor"]
+- !private ["PSo16NSObjectProtocol", "location"]
+- ["PSo16NSObjectProtocol", "locationManager"]
+- ["PSo16NSObjectProtocol", "locationManagerDidPauseLocationUpdates"]
+- ["PSo16NSObjectProtocol", "locationManagerDidResumeLocationUpdates"]
+- ["PSo16NSObjectProtocol", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo16NSObjectProtocol", "mapItems"]
+- !private ["PSo16NSObjectProtocol", "placemark"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "requestWhenInUseAuthorization"]
+- !private ["PSo16NSObjectProtocol", "showAlert"]
+- !private ["PSo16NSObjectProtocol", "startUpdatingLocation"]
+- !private ["PSo16NSObjectProtocol", "startWithCompletionHandler"]
+- !private ["PSo16NSObjectProtocol", "stopUpdatingLocation"]
+- !private ["PSo16NSObjectProtocol", "taskManager"]
+- !private ["PSo16NSObjectProtocol", "tasks"]
+- !private ["PSo16NSObjectProtocol", "uiRealm"]
+- !private ["PSo14NSSecureCoding", "distanceFromLocation"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "location"]
+- !private ["CSo8NSString", "deinit"]
+- !private ["CSo8NSString", "init"]
+- ["Ps21NilLiteralConvertible", "Some"]
+- !private ["C7Air_End4Noun", "descriptor"]
+- !private ["C10RealmSwift6Object", "descriptor"]
+- !private ["C10RealmSwift6Object", "distanceFromUser"]
+- !private ["C10RealmSwift6Object", "hashtag"]
+- !private ["C10RealmSwift6Object", "name"]
+- !private ["C10RealmSwift6Object", "readAllTasks"]
+- ["Sq", "Some"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- !private ["C10RealmSwift12RLMGenerator", "Element"]
+- !private ["CSo13RLMObjectBase", "descriptor"]
+- !private ["CSo13RLMObjectBase", "distanceFromUser"]
+- !private ["CSo13RLMObjectBase", "hashtag"]
+- !private ["CSo13RLMObjectBase", "name"]
+- !private ["CSo13RLMObjectBase", "readAllTasks"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Ps30RangeReplaceableCollectionType", "Generator"]
+- !private ["Ps30RangeReplaceableCollectionType", "Index"]
+- !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "first"]
+- !private ["Ps30RangeReplaceableCollectionType", "sort"]
+- ["Ps16RawRepresentable", "AuthorizedAlways"]
+- ["Ps16RawRepresentable", "AuthorizedWhenInUse"]
+- ["Ps16RawRepresentable", "Denied"]
+- ["Ps16RawRepresentable", "NotDetermined"]
+- !private ["C10RealmSwift5Realm", "write"]
+- !private ["P10RealmSwift19RealmCollectionType", "Generator"]
+- !private ["P10RealmSwift17RealmOptionalType", "Distance"]
+- !private ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
+- !private ["C10RealmSwift7Results", "Generator"]
+- !private ["C10RealmSwift11ResultsBase", "Generator"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "Generator"]
+- !private ["Ps12SequenceType", "Index"]
+- !private ["Ps12SequenceType", "SubSequence"]
+- !private ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "first"]
+- !private ["Ps12SequenceType", "sort"]
+- !private ["Ps12SequenceType", "subscript"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Vs5Slice", "Generator"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["C7Air_End4Task", "distanceFromUser"]
+- !private ["C7Air_End4Task", "hashtag"]
+- !private ["C7Air_End4Task", "name"]
+- !private ["C7Air_End4Task", "readAllTasks"]
+- !private ["PSo21UIAppearanceContainer", "CLLocationManager"]
+- !private ["PSo21UIAppearanceContainer", "MKLocalSearch"]
+- !private ["PSo21UIAppearanceContainer", "assertionFailure"]
+- !private ["PSo21UIAppearanceContainer", "closeMapItems"]
+- ["PSo21UIAppearanceContainer", "determineLocationAuthorizationStatus"]
+- ["PSo21UIAppearanceContainer", "findClosestMapItemMatchingTask"]
+- !private ["PSo21UIAppearanceContainer", "initalizeRequestWithDescriptor"]
+- ["PSo21UIAppearanceContainer", "locationManager"]
+- ["PSo21UIAppearanceContainer", "locationManagerDidPauseLocationUpdates"]
+- ["PSo21UIAppearanceContainer", "locationManagerDidResumeLocationUpdates"]
+- ["PSo21UIAppearanceContainer", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo21UIAppearanceContainer", "print"]
+- !private ["PSo21UIAppearanceContainer", "showAlert"]
+- !private ["PSo21UIAppearanceContainer", "taskManager"]
+- !private ["PSo21UIAppearanceContainer", "tasks"]
+- !private ["PSo21UIAppearanceContainer", "uiRealm"]
+- !private ["PSo18UIContentContainer", "CLLocationManager"]
+- !private ["PSo18UIContentContainer", "MKLocalSearch"]
+- !private ["PSo18UIContentContainer", "assertionFailure"]
+- !private ["PSo18UIContentContainer", "closeMapItems"]
+- ["PSo18UIContentContainer", "determineLocationAuthorizationStatus"]
+- ["PSo18UIContentContainer", "findClosestMapItemMatchingTask"]
+- !private ["PSo18UIContentContainer", "initalizeRequestWithDescriptor"]
+- ["PSo18UIContentContainer", "locationManager"]
+- ["PSo18UIContentContainer", "locationManagerDidPauseLocationUpdates"]
+- ["PSo18UIContentContainer", "locationManagerDidResumeLocationUpdates"]
+- ["PSo18UIContentContainer", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo18UIContentContainer", "print"]
+- !private ["PSo18UIContentContainer", "showAlert"]
+- !private ["PSo18UIContentContainer", "taskManager"]
+- !private ["PSo18UIContentContainer", "tasks"]
+- !private ["PSo18UIContentContainer", "uiRealm"]
+- !private ["PSo18UIFocusEnvironment", "CLLocationManager"]
+- !private ["PSo18UIFocusEnvironment", "MKLocalSearch"]
+- !private ["PSo18UIFocusEnvironment", "assertionFailure"]
+- !private ["PSo18UIFocusEnvironment", "closeMapItems"]
+- ["PSo18UIFocusEnvironment", "determineLocationAuthorizationStatus"]
+- ["PSo18UIFocusEnvironment", "findClosestMapItemMatchingTask"]
+- !private ["PSo18UIFocusEnvironment", "initalizeRequestWithDescriptor"]
+- ["PSo18UIFocusEnvironment", "locationManager"]
+- ["PSo18UIFocusEnvironment", "locationManagerDidPauseLocationUpdates"]
+- ["PSo18UIFocusEnvironment", "locationManagerDidResumeLocationUpdates"]
+- ["PSo18UIFocusEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo18UIFocusEnvironment", "print"]
+- !private ["PSo18UIFocusEnvironment", "showAlert"]
+- !private ["PSo18UIFocusEnvironment", "taskManager"]
+- !private ["PSo18UIFocusEnvironment", "tasks"]
+- !private ["PSo18UIFocusEnvironment", "uiRealm"]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "CLAuthorizationStatus"]
+- ["CSo11UIResponder", "CLLocation"]
+- ["CSo11UIResponder", "CLLocationManager"]
+- !private ["CSo11UIResponder", "MKLocalSearch"]
+- !private ["CSo11UIResponder", "MKLocalSearchResponse"]
+- !private ["CSo11UIResponder", "NSError"]
+- ["CSo11UIResponder", "Task"]
+- !private ["CSo11UIResponder", "Void"]
+- !private ["CSo11UIResponder", "assertionFailure"]
+- !private ["CSo11UIResponder", "closeMapItems"]
+- ["CSo11UIResponder", "determineLocationAuthorizationStatus"]
+- ["CSo11UIResponder", "findClosestMapItemMatchingTask"]
+- !private ["CSo11UIResponder", "initalizeRequestWithDescriptor"]
+- ["CSo11UIResponder", "locationManager"]
+- ["CSo11UIResponder", "locationManagerDidPauseLocationUpdates"]
+- ["CSo11UIResponder", "locationManagerDidResumeLocationUpdates"]
+- ["CSo11UIResponder", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["CSo11UIResponder", "print"]
+- !private ["CSo11UIResponder", "showAlert"]
+- !private ["CSo11UIResponder", "taskManager"]
+- !private ["CSo11UIResponder", "tasks"]
+- !private ["CSo11UIResponder", "uiRealm"]
+- !private ["PSo20UIScrollViewDelegate", "CLLocationManager"]
+- !private ["PSo20UIScrollViewDelegate", "MKLocalSearch"]
+- !private ["PSo20UIScrollViewDelegate", "assertionFailure"]
+- !private ["PSo20UIScrollViewDelegate", "closeMapItems"]
+- !private ["PSo20UIScrollViewDelegate", "findClosestMapItemMatchingTask"]
+- !private ["PSo20UIScrollViewDelegate", "initalizeRequestWithDescriptor"]
+- ["PSo20UIScrollViewDelegate", "locationManager"]
+- ["PSo20UIScrollViewDelegate", "locationManagerDidPauseLocationUpdates"]
+- ["PSo20UIScrollViewDelegate", "locationManagerDidResumeLocationUpdates"]
+- ["PSo20UIScrollViewDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo20UIScrollViewDelegate", "print"]
+- !private ["PSo20UIScrollViewDelegate", "showAlert"]
+- !private ["PSo20UIScrollViewDelegate", "taskManager"]
+- !private ["PSo20UIScrollViewDelegate", "tasks"]
+- !private ["PSo20UIScrollViewDelegate", "uiRealm"]
+- !private ["PSo16UIStateRestoring", "CLLocationManager"]
+- !private ["PSo16UIStateRestoring", "MKLocalSearch"]
+- !private ["PSo16UIStateRestoring", "assertionFailure"]
+- !private ["PSo16UIStateRestoring", "closeMapItems"]
+- ["PSo16UIStateRestoring", "determineLocationAuthorizationStatus"]
+- ["PSo16UIStateRestoring", "findClosestMapItemMatchingTask"]
+- !private ["PSo16UIStateRestoring", "initalizeRequestWithDescriptor"]
+- ["PSo16UIStateRestoring", "locationManager"]
+- ["PSo16UIStateRestoring", "locationManagerDidPauseLocationUpdates"]
+- ["PSo16UIStateRestoring", "locationManagerDidResumeLocationUpdates"]
+- ["PSo16UIStateRestoring", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo16UIStateRestoring", "print"]
+- !private ["PSo16UIStateRestoring", "showAlert"]
+- !private ["PSo16UIStateRestoring", "taskManager"]
+- !private ["PSo16UIStateRestoring", "tasks"]
+- !private ["PSo16UIStateRestoring", "uiRealm"]
+- !private ["PSo21UITableViewDataSource", "CLLocationManager"]
+- !private ["PSo21UITableViewDataSource", "MKLocalSearch"]
+- !private ["PSo21UITableViewDataSource", "assertionFailure"]
+- !private ["PSo21UITableViewDataSource", "closeMapItems"]
+- !private ["PSo21UITableViewDataSource", "findClosestMapItemMatchingTask"]
+- !private ["PSo21UITableViewDataSource", "initalizeRequestWithDescriptor"]
+- ["PSo21UITableViewDataSource", "locationManager"]
+- ["PSo21UITableViewDataSource", "locationManagerDidPauseLocationUpdates"]
+- ["PSo21UITableViewDataSource", "locationManagerDidResumeLocationUpdates"]
+- ["PSo21UITableViewDataSource", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo21UITableViewDataSource", "print"]
+- !private ["PSo21UITableViewDataSource", "showAlert"]
+- !private ["PSo21UITableViewDataSource", "taskManager"]
+- !private ["PSo21UITableViewDataSource", "tasks"]
+- !private ["PSo21UITableViewDataSource", "uiRealm"]
+- !private ["PSo19UITableViewDelegate", "CLLocationManager"]
+- !private ["PSo19UITableViewDelegate", "MKLocalSearch"]
+- !private ["PSo19UITableViewDelegate", "assertionFailure"]
+- !private ["PSo19UITableViewDelegate", "closeMapItems"]
+- !private ["PSo19UITableViewDelegate", "findClosestMapItemMatchingTask"]
+- !private ["PSo19UITableViewDelegate", "initalizeRequestWithDescriptor"]
+- ["PSo19UITableViewDelegate", "locationManager"]
+- ["PSo19UITableViewDelegate", "locationManagerDidPauseLocationUpdates"]
+- ["PSo19UITableViewDelegate", "locationManagerDidResumeLocationUpdates"]
+- ["PSo19UITableViewDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo19UITableViewDelegate", "print"]
+- !private ["PSo19UITableViewDelegate", "showAlert"]
+- !private ["PSo19UITableViewDelegate", "taskManager"]
+- !private ["PSo19UITableViewDelegate", "tasks"]
+- !private ["PSo19UITableViewDelegate", "uiRealm"]
+- !private ["PSo18UITraitEnvironment", "CLLocationManager"]
+- !private ["PSo18UITraitEnvironment", "MKLocalSearch"]
+- !private ["PSo18UITraitEnvironment", "assertionFailure"]
+- !private ["PSo18UITraitEnvironment", "closeMapItems"]
+- ["PSo18UITraitEnvironment", "determineLocationAuthorizationStatus"]
+- ["PSo18UITraitEnvironment", "findClosestMapItemMatchingTask"]
+- !private ["PSo18UITraitEnvironment", "initalizeRequestWithDescriptor"]
+- ["PSo18UITraitEnvironment", "locationManager"]
+- ["PSo18UITraitEnvironment", "locationManagerDidPauseLocationUpdates"]
+- ["PSo18UITraitEnvironment", "locationManagerDidResumeLocationUpdates"]
+- ["PSo18UITraitEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo18UITraitEnvironment", "print"]
+- !private ["PSo18UITraitEnvironment", "showAlert"]
+- !private ["PSo18UITraitEnvironment", "taskManager"]
+- !private ["PSo18UITraitEnvironment", "tasks"]
+- !private ["PSo18UITraitEnvironment", "uiRealm"]
+- ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "CLAuthorizationStatus"]
+- ["CSo16UIViewController", "CLLocation"]
+- ["CSo16UIViewController", "CLLocationManager"]
+- !private ["CSo16UIViewController", "MKLocalSearch"]
+- !private ["CSo16UIViewController", "MKLocalSearchResponse"]
+- !private ["CSo16UIViewController", "NSError"]
+- ["CSo16UIViewController", "Task"]
+- !private ["CSo16UIViewController", "Void"]
+- !private ["CSo16UIViewController", "assertionFailure"]
+- !private ["CSo16UIViewController", "closeMapItems"]
+- ["CSo16UIViewController", "determineLocationAuthorizationStatus"]
+- ["CSo16UIViewController", "findClosestMapItemMatchingTask"]
+- !private ["CSo16UIViewController", "initalizeRequestWithDescriptor"]
+- ["CSo16UIViewController", "locationManager"]
+- ["CSo16UIViewController", "locationManagerDidPauseLocationUpdates"]
+- ["CSo16UIViewController", "locationManagerDidResumeLocationUpdates"]
+- ["CSo16UIViewController", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["CSo16UIViewController", "print"]
+- !private ["CSo16UIViewController", "showAlert"]
+- !private ["CSo16UIViewController", "taskManager"]
+- !private ["CSo16UIViewController", "tasks"]
+- !private ["CSo16UIViewController", "uiRealm"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "first"]
+- !private ["Ps10_ArrayType", "sort"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "first"]
+- !private ["Ps24_DestructorSafeContainer", "sort"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "sort"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- ["Ps12_Reflectable", "Some"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- !private ["Ps12_Reflectable", "_Element"]
+- !private ["Ps12_Reflectable", "first"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "sort"]
+- !private ["Ps12_Reflectable", "subscript"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- !private "P10RealmSwift11AddableType"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- "OSC21CLAuthorizationStatus"
+- !private "CSo10CLLocation"
+- !private "CSo17CLLocationManager"
+- "PSo25CLLocationManagerDelegate"
+- !private "CSo11CLPlacemark"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "Ps16ForwardIndexType"
+- !private "Ps13GeneratorType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- "C7Air_End6ListVC"
+- !private "PSo12MKAnnotation"
+- !private "CSo13MKLocalSearch"
+- !private "CSo21MKLocalSearchResponse"
+- !private "CSo9MKMapItem"
+- !private "CSo11MKPlacemark"
+- !private "P10RealmSwift10MinMaxType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Ps21NilLiteralConvertible"
+- !private "C7Air_End4Noun"
+- !private "C10RealmSwift6Object"
+- "Sq"
+- !private "Ps16OutputStreamType"
+- !private "C10RealmSwift12RLMGenerator"
+- !private "CSo13RLMObjectBase"
+- !private "Ps21RandomAccessIndexType"
+- !private "Ps30RangeReplaceableCollectionType"
+- "Ps16RawRepresentable"
+- !private "C10RealmSwift5Realm"
+- !private "P10RealmSwift19RealmCollectionType"
+- !private "P10RealmSwift17RealmOptionalType"
+- !private "C10RealmSwift7Results"
+- !private "C10RealmSwift11ResultsBase"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs5Slice"
+- !private "Vs12StaticString"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "C7Air_End4Task"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- "PSo21UITableViewDataSource"
+- "PSo19UITableViewDelegate"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreLocation.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreData.swiftmodule"
+interface-hash: "2a18f38662b92ded5a4b2214f3a9a6c2"

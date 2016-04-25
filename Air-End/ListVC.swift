@@ -12,6 +12,7 @@ import CoreLocation
 import MapKit
 
 class ListVC: UIViewController {
+    @IBOutlet var viewContainer: UIView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
     var tasks : Results<Task>?
@@ -31,6 +32,7 @@ class ListVC: UIViewController {
         super.viewWillAppear(animated)
         segmentedControl.selectedSegmentIndex = 0
         segmentedControlValueChanged(segmentedControl)
+        tableView.allowsMultipleSelectionDuringEditing = false
     }
     
     func getLocation(){
@@ -41,10 +43,10 @@ class ListVC: UIViewController {
     func setUpUI(){
         let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:#selector(addItemButtonWasTapped))
         navigationItem.rightBarButtonItem = add
-        navigationItem.title = "MANGO"
-        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        navigationItem.title = " M A N G O "
+        tableView.backgroundColor = Theme.Colors.LabelColor.color
         tableView.separatorColor = Theme.Colors.NavigationBarColor.color
-        
+        viewContainer.backgroundColor = tableView.backgroundColor
     }
     
     //MARK: - Segmented Control
@@ -82,9 +84,6 @@ class ListVC: UIViewController {
             if determineLocationAuthorizationStatus() == true {
                 segmentCloseTasks()
             }
-            else {
-                //display warning
-            }
         case 2:
             segmentFullList()
         default:
@@ -118,10 +117,9 @@ extension ListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.ListCell)
+        var cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.ListCell)
         guard let task = tasks?[indexPath.row] else { return cell}
         if segmentedControl.selectedSegmentIndex == 1 {
-            print(task.distanceFromUser)
             cell.textLabel?.text = task.name
             cell.detailTextLabel?.text = closeMapItems[task.name]?.name
         }
@@ -129,19 +127,39 @@ extension ListVC: UITableViewDataSource, UITableViewDelegate {
             cell.textLabel?.text = task.name
             cell.detailTextLabel?.text = convertNSDateToString(task.dueDate)
         }
+        cell = setUpTableviewCellUI(cell)
+        return cell
+    }
+    
+    func setUpTableviewCellUI(cell:UITableViewCell) -> UITableViewCell{
         cell.selectionStyle = .None
-        cell.backgroundColor = Theme.Colors.LightForegroundColor.color
+        cell.backgroundColor = Theme.Colors.LabelColor.color
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         guard let task = tasks?[indexPath.row] else {return}
+        if closeMapItems.count > 0 {
         let selectedMapItem = closeMapItems[task.name]
         selectedTask = task
         selectedClosestTask = selectedMapItem
         performSegueWithSegueIdentifier(SegueIdentifier.SegueToMapTaskVC, sender: self)
+        }
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            guard let task = tasks?[indexPath.row] else {return}
+            taskManager.removeTask(task, withCompletionHandler: { (tasks) in
+                self.tasks = tasks
+                self.tableView.reloadData()
+            })
+        }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

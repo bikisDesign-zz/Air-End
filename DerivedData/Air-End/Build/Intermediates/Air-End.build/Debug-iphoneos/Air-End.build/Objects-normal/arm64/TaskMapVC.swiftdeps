@@ -2,58 +2,58 @@
 provides-top-level:
 - "TaskMapVC"
 provides-nominal:
-- "C7Air_End9TaskMapVC"
+- "C5Mango9TaskMapVC"
 provides-member:
-- ["C7Air_End9TaskMapVC", ""]
+- ["C5Mango9TaskMapVC", ""]
 provides-dynamic-lookup:
 - "taskTextField"
-- "closestTask"
-- "mapView"
-- "mapView"
-- "setUpUI"
-- "locationManager"
-- "locationManager"
-- "searchForClosestAnnotationMatchingNoun"
-- "editTask"
-- "updateTask"
 - "viewDidLoad"
 - "endEditing"
 - "task"
-- "nounTextField"
-- "taskMapView"
 - "overlayView"
+- "locationManager"
+- "locationManager"
+- "nounTextField"
+- "setUpUI"
+- "mapView"
+- "mapView"
+- "taskMapView"
+- "closestTask"
+- "updateTask"
+- "searchForClosestAnnotationMatchingNoun"
+- "editTask"
 depends-top-level:
-- !private "&&"
-- !private "MKLocalSearch"
-- "Task"
-- "MKMapViewDelegate"
-- !private "UITapGestureRecognizer"
 - "String"
 - !private "NSError"
-- !private "MKPinAnnotationView"
-- "UIView"
-- !private "Array"
-- !private "=="
-- "CLLocationManagerDelegate"
-- "UIViewController"
-- "StringLiteralType"
-- "UITextField"
-- "MKAnnotationView"
-- "CLLocationManager"
-- !private "print"
-- !private "uiRealm"
-- "MKAnnotation"
 - "MKMapView"
-- !private "UIBarButtonItem"
-- !private "Void"
+- "CLLocationManager"
 - !private "MKUserLocation"
+- "StringLiteralType"
 - "MKMapItem"
-- "TaskMapVC"
+- !private "=="
+- "UIViewController"
+- !private "UIBarButtonItem"
+- "UITextField"
 - !private "!="
-- !private "Theme"
 - "CLLocation"
+- !private "UITapGestureRecognizer"
+- "MKAnnotation"
+- "Task"
 - !private "MKLocalSearchResponse"
+- !private "&&"
 - !private "BooleanLiteralType"
+- !private "Array"
+- !private "MKLocalSearch"
+- !private "Theme"
+- "TaskMapVC"
+- "UIView"
+- !private "uiRealm"
+- !private "Void"
+- !private "print"
+- "CLLocationManagerDelegate"
+- !private "MKPinAnnotationView"
+- "MKMapViewDelegate"
+- "MKAnnotationView"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -258,9 +258,9 @@ depends-member:
 - !private ["Ps14CollectionType", "_Element"]
 - !private ["Ps14CollectionType", "first"]
 - !private ["Ps14CollectionType", "last"]
-- !private ["OV7Air_End5Theme6Colors", "BackgroundColor"]
-- !private ["OV7Air_End5Theme6Colors", "ButtonColor"]
-- !private ["OV7Air_End5Theme6Colors", "color"]
+- !private ["OV5Mango5Theme6Colors", "BackgroundColor"]
+- !private ["OV5Mango5Theme6Colors", "ButtonColor"]
+- !private ["OV5Mango5Theme6Colors", "color"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - ["Ps28CustomDebugStringConvertible", "CLLocationManager"]
@@ -880,7 +880,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - ["Ps21NilLiteralConvertible", "Some"]
-- !private ["C7Air_End4Noun", "descriptor"]
+- !private ["C5Mango4Noun", "descriptor"]
 - !private ["C10RealmSwift6Object", "descriptor"]
 - !private ["C10RealmSwift6Object", "hashtag"]
 - !private ["C10RealmSwift6Object", "name"]
@@ -898,8 +898,11 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "_Element"]
 - !private ["Ps30RangeReplaceableCollectionType", "first"]
 - !private ["Ps30RangeReplaceableCollectionType", "last"]
+- !private ["Ps16RawRepresentable", "BackgroundColor"]
+- !private ["Ps16RawRepresentable", "ButtonColor"]
 - !private ["Ps16RawRepresentable", "Done"]
 - !private ["Ps16RawRepresentable", "Edit"]
+- !private ["Ps16RawRepresentable", "color"]
 - !private ["C10RealmSwift5Realm", "write"]
 - !private ["P10RealmSwift17RealmOptionalType", "Distance"]
 - !private ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
@@ -918,63 +921,63 @@ depends-member:
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["SS", "deinit"]
-- !private ["C7Air_End4Task", "hashtag"]
-- !private ["C7Air_End4Task", "name"]
-- ["C7Air_End9TaskMapVC", "CLLocation"]
-- ["C7Air_End9TaskMapVC", "CLLocationManager"]
-- ["C7Air_End9TaskMapVC", "MKAnnotation"]
-- ["C7Air_End9TaskMapVC", "MKAnnotationView"]
-- !private ["C7Air_End9TaskMapVC", "MKLocalSearch"]
-- !private ["C7Air_End9TaskMapVC", "MKLocalSearchResponse"]
-- ["C7Air_End9TaskMapVC", "MKMapItem"]
-- ["C7Air_End9TaskMapVC", "MKMapView"]
-- !private ["C7Air_End9TaskMapVC", "MKPinAnnotationView"]
-- !private ["C7Air_End9TaskMapVC", "MKUserLocation"]
-- !private ["C7Air_End9TaskMapVC", "NSError"]
-- ["C7Air_End9TaskMapVC", "String"]
-- ["C7Air_End9TaskMapVC", "Task"]
-- !private ["C7Air_End9TaskMapVC", "Theme"]
-- !private ["C7Air_End9TaskMapVC", "UIBarButtonItem"]
-- !private ["C7Air_End9TaskMapVC", "UITapGestureRecognizer"]
-- ["C7Air_End9TaskMapVC", "UITextField"]
-- ["C7Air_End9TaskMapVC", "UIView"]
-- !private ["C7Air_End9TaskMapVC", "Void"]
-- ["C7Air_End9TaskMapVC", "closestTask"]
-- !private ["C7Air_End9TaskMapVC", "convertToAnnotationFromMapItem"]
-- ["C7Air_End9TaskMapVC", "deinit"]
-- ["C7Air_End9TaskMapVC", "editTask"]
-- ["C7Air_End9TaskMapVC", "endEditing"]
-- !private ["C7Air_End9TaskMapVC", "hideOverlay"]
-- ["C7Air_End9TaskMapVC", "init"]
-- !private ["C7Air_End9TaskMapVC", "initalizeRequestWithDescriptor"]
-- ["C7Air_End9TaskMapVC", "locationManager"]
-- ["C7Air_End9TaskMapVC", "locationManagerDidPauseLocationUpdates"]
-- ["C7Air_End9TaskMapVC", "locationManagerDidResumeLocationUpdates"]
-- ["C7Air_End9TaskMapVC", "locationManagerShouldDisplayHeadingCalibration"]
-- ["C7Air_End9TaskMapVC", "mapView"]
-- ["C7Air_End9TaskMapVC", "mapViewDidFailLoadingMap"]
-- ["C7Air_End9TaskMapVC", "mapViewDidFinishLoadingMap"]
-- ["C7Air_End9TaskMapVC", "mapViewDidFinishRenderingMap"]
-- ["C7Air_End9TaskMapVC", "mapViewDidStopLocatingUser"]
-- ["C7Air_End9TaskMapVC", "mapViewWillStartLoadingMap"]
-- ["C7Air_End9TaskMapVC", "mapViewWillStartLocatingUser"]
-- ["C7Air_End9TaskMapVC", "mapViewWillStartRenderingMap"]
-- !private ["C7Air_End9TaskMapVC", "navigationItem"]
-- ["C7Air_End9TaskMapVC", "nounTextField"]
-- ["C7Air_End9TaskMapVC", "overlayView"]
-- !private ["C7Air_End9TaskMapVC", "print"]
-- ["C7Air_End9TaskMapVC", "searchForClosestAnnotationMatchingNoun"]
-- !private ["C7Air_End9TaskMapVC", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
-- ["C7Air_End9TaskMapVC", "setUpUI"]
-- !private ["C7Air_End9TaskMapVC", "sortMapItemsCloseToUserLocation"]
-- ["C7Air_End9TaskMapVC", "task"]
-- ["C7Air_End9TaskMapVC", "taskMapView"]
-- ["C7Air_End9TaskMapVC", "taskTextField"]
-- !private ["C7Air_End9TaskMapVC", "uiRealm"]
-- ["C7Air_End9TaskMapVC", "updateTask"]
-- !private ["C7Air_End9TaskMapVC", "view"]
-- ["C7Air_End9TaskMapVC", "viewDidLoad"]
-- !private ["V7Air_End5Theme", "Colors"]
+- !private ["C5Mango4Task", "hashtag"]
+- !private ["C5Mango4Task", "name"]
+- ["C5Mango9TaskMapVC", "CLLocation"]
+- ["C5Mango9TaskMapVC", "CLLocationManager"]
+- ["C5Mango9TaskMapVC", "MKAnnotation"]
+- ["C5Mango9TaskMapVC", "MKAnnotationView"]
+- !private ["C5Mango9TaskMapVC", "MKLocalSearch"]
+- !private ["C5Mango9TaskMapVC", "MKLocalSearchResponse"]
+- ["C5Mango9TaskMapVC", "MKMapItem"]
+- ["C5Mango9TaskMapVC", "MKMapView"]
+- !private ["C5Mango9TaskMapVC", "MKPinAnnotationView"]
+- !private ["C5Mango9TaskMapVC", "MKUserLocation"]
+- !private ["C5Mango9TaskMapVC", "NSError"]
+- ["C5Mango9TaskMapVC", "String"]
+- ["C5Mango9TaskMapVC", "Task"]
+- !private ["C5Mango9TaskMapVC", "Theme"]
+- !private ["C5Mango9TaskMapVC", "UIBarButtonItem"]
+- !private ["C5Mango9TaskMapVC", "UITapGestureRecognizer"]
+- ["C5Mango9TaskMapVC", "UITextField"]
+- ["C5Mango9TaskMapVC", "UIView"]
+- !private ["C5Mango9TaskMapVC", "Void"]
+- ["C5Mango9TaskMapVC", "closestTask"]
+- !private ["C5Mango9TaskMapVC", "convertToAnnotationFromMapItem"]
+- ["C5Mango9TaskMapVC", "deinit"]
+- ["C5Mango9TaskMapVC", "editTask"]
+- ["C5Mango9TaskMapVC", "endEditing"]
+- !private ["C5Mango9TaskMapVC", "hideOverlay"]
+- ["C5Mango9TaskMapVC", "init"]
+- !private ["C5Mango9TaskMapVC", "initalizeRequestWithDescriptor"]
+- ["C5Mango9TaskMapVC", "locationManager"]
+- ["C5Mango9TaskMapVC", "locationManagerDidPauseLocationUpdates"]
+- ["C5Mango9TaskMapVC", "locationManagerDidResumeLocationUpdates"]
+- ["C5Mango9TaskMapVC", "locationManagerShouldDisplayHeadingCalibration"]
+- ["C5Mango9TaskMapVC", "mapView"]
+- ["C5Mango9TaskMapVC", "mapViewDidFailLoadingMap"]
+- ["C5Mango9TaskMapVC", "mapViewDidFinishLoadingMap"]
+- ["C5Mango9TaskMapVC", "mapViewDidFinishRenderingMap"]
+- ["C5Mango9TaskMapVC", "mapViewDidStopLocatingUser"]
+- ["C5Mango9TaskMapVC", "mapViewWillStartLoadingMap"]
+- ["C5Mango9TaskMapVC", "mapViewWillStartLocatingUser"]
+- ["C5Mango9TaskMapVC", "mapViewWillStartRenderingMap"]
+- !private ["C5Mango9TaskMapVC", "navigationItem"]
+- ["C5Mango9TaskMapVC", "nounTextField"]
+- ["C5Mango9TaskMapVC", "overlayView"]
+- !private ["C5Mango9TaskMapVC", "print"]
+- ["C5Mango9TaskMapVC", "searchForClosestAnnotationMatchingNoun"]
+- !private ["C5Mango9TaskMapVC", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
+- ["C5Mango9TaskMapVC", "setUpUI"]
+- !private ["C5Mango9TaskMapVC", "sortMapItemsCloseToUserLocation"]
+- ["C5Mango9TaskMapVC", "task"]
+- ["C5Mango9TaskMapVC", "taskMapView"]
+- ["C5Mango9TaskMapVC", "taskTextField"]
+- !private ["C5Mango9TaskMapVC", "uiRealm"]
+- ["C5Mango9TaskMapVC", "updateTask"]
+- !private ["C5Mango9TaskMapVC", "view"]
+- ["C5Mango9TaskMapVC", "viewDidLoad"]
+- !private ["V5Mango5Theme", "Colors"]
 - !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
 - !private ["PSo29UIAccessibilityIdentification", "animatesDrop"]
 - !private ["PSo29UIAccessibilityIdentification", "annotation"]
@@ -1505,7 +1508,7 @@ depends-nominal:
 - "PSo25CLLocationManagerDelegate"
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
-- !private "OV7Air_End5Theme6Colors"
+- !private "OV5Mango5Theme6Colors"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -1537,7 +1540,7 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "Ps21NilLiteralConvertible"
-- !private "C7Air_End4Noun"
+- !private "C5Mango4Noun"
 - !private "C10RealmSwift6Object"
 - "Sq"
 - !private "CSo13RLMObjectBase"
@@ -1551,9 +1554,9 @@ depends-nominal:
 - !private "Ps16SignedNumberType"
 - !private "Ps10Strideable"
 - !private "SS"
-- !private "C7Air_End4Task"
-- "C7Air_End9TaskMapVC"
-- !private "V7Air_End5Theme"
+- !private "C5Mango4Task"
+- "C5Mango9TaskMapVC"
+- !private "V5Mango5Theme"
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"

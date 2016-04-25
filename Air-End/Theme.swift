@@ -9,33 +9,7 @@
 import UIKit
 
 struct Theme {
-    enum Colors {
-        case RedBackgroundColor
-        case LightBackgroundColor
-        case BackgroundColor
-        case LightForegroundColor
-        case NavigationBarColor
-        case NavigationBarFontColor
-        case ButtonColor
-        case LabelColor
-        case SegmentedControlColor
-        
-        var color:UIColor {
-            switch self {
-            case .RedBackgroundColor: return UIColor(r: 210, g: 0, b: 0)
-            case .LightBackgroundColor: return UIColor(r: 255, g: 155, b: 155)
-            case .BackgroundColor: return UIColor(r:255, g:152, b:0)
-            case .LightForegroundColor: return UIColor(r:255, g:183, b:77)
-            case .NavigationBarColor: return UIColor(r:245 ,g:124, b:0)
-            case .NavigationBarFontColor: return UIColor.whiteColor()
-            case .ButtonColor: return UIColor(r:245, g:63, b:0)
-            case .LabelColor: return UIColor(r:255, g:193, b:7)
-            case .SegmentedControlColor: return UIColor(r:255, g:193, b:7)
-            }
-        }
-    }
-    
-    enum BoldColor: UInt32 {
+    enum Colors: UInt32 {
         case RedColor = 0
         case BlueColor = 1
         case YellowColor = 2
@@ -43,8 +17,17 @@ struct Theme {
         case PinkColor = 4
         case PurpleColor = 5
         case OrangeColor = 6
+        case RedBackgroundColor = 7
+        case BackgroundColor = 8
+        case LightForegroundColor = 9
+        case NavigationBarColor = 10
+        case NavigationBarFontColor = 11
+        case ButtonColor = 12
+        case LabelColor = 13
+        case SegmentedControlColor = 14
+
         
-        static let allValues = [RedColor, BlueColor, YellowColor, GreenColor, PinkColor, PurpleColor, OrangeColor]
+        static let allValues = [RedColor, BlueColor, YellowColor, GreenColor, PinkColor, PurpleColor, OrangeColor, RedBackgroundColor, BackgroundColor, LightForegroundColor, NavigationBarColor,NavigationBarFontColor, ButtonColor, LabelColor, SegmentedControlColor]
         
         var color: UIColor {
             switch self {
@@ -55,14 +38,22 @@ struct Theme {
             case .PinkColor: return UIColor(r: 255, g: 51, b: 255)
             case .PurpleColor: return UIColor(r: 155, g: 51, b: 255)
             case .OrangeColor: return UIColor(r: 255, g: 155, b: 51)
+            case .RedBackgroundColor: return UIColor(r: 210, g: 0, b: 0)
+            case .BackgroundColor: return UIColor(r:255, g:152, b:0)
+            case .LightForegroundColor: return UIColor(r:255, g:183, b:77)
+            case .NavigationBarColor: return UIColor(r:239 ,g:108, b:0)
+            case .NavigationBarFontColor: return UIColor.whiteColor()
+            case .ButtonColor: return UIColor(r: 210, g: 0, b: 0)
+            case .LabelColor: return UIColor(r:255, g:193, b:7)
+            case .SegmentedControlColor: return UIColor(r:255, g:69, b:7)
             }
         }
     }
     
-    static func randomColor() -> BoldColor {
-                let maxValue = BoldColor.OrangeColor.rawValue
+    static func randomColor() -> Colors {
+                let maxValue = Colors.SegmentedControlColor.rawValue
                 let randomValue = arc4random_uniform(maxValue)
-                return BoldColor(rawValue: randomValue)!
+                return Colors(rawValue: randomValue)!
             }
     
     enum Fonts {

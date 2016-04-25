@@ -43,11 +43,11 @@ extension CorrectAddressTableView: UITableViewDelegate {
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
-        label.font = Theme.Fonts.BoldNavigationBarTypeFace.font
+        label.font = Theme.Fonts.NormalTextTypeFaceLato.font
+        label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .Center
-        label.text = "Did you mean..."
+        label.text = "Please Select a Specific Address"
         label.backgroundColor = Theme.Colors.BackgroundColor.color
-        
         return label
     }
     
@@ -80,11 +80,12 @@ extension CorrectAddressTableView: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("AddressCell") as UITableViewCell!
-        cell.textLabel?.numberOfLines = 3
+        cell.textLabel?.numberOfLines = 5
         cell.textLabel?.font = Theme.Fonts.NormalTextTypeFaceLato.font
-        
+        cell.detailTextLabel?.font = Theme.Fonts.NormalTextTypeFaceLato.font
         if addresses.count > indexPath.row {
             cell.textLabel?.text = addresses[indexPath.row]
+            cell.detailTextLabel?.text = placemarkArray[indexPath.row].name
         } else {
             cell.textLabel?.text = "Nope! Lemme try that again"
         }

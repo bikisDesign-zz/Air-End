@@ -12,19 +12,16 @@ import MapKit
 extension MapVC: CorrectAddressTableViewDelegate {
     
     func searchForValidAddress(sender:UIButton, destinationTextField:UITextField, viewController:UIViewController){
-        guard let aDestination = destinationTextField.text else {return}    
-        CLGeocoder().geocodeAddressString(aDestination,
-                                          completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
-                                            if let placemarks = placemarks {
-                                                var addresses = [String]()
-                                                for placemark in placemarks {
-                                                    addresses.append(self.convertAddressFromPlacemark(placemark))
-                                                }
-                                                self.showCorrectAddressTableView(addresses, textField: destinationTextField, placemarks: placemarks, sender: sender, viewController: viewController)
-                                            } else {
-                                                self.showAlert("Address not found.")
-                                            }
-        })
+        var addresses = [String]()
+        searchForMapItemsMatchingNoun(destinationTextField.text, userLocation: userLocation) { (result) -> () in
+            var placemarks = [CLPlacemark]()
+            guard let mapItems = result else {return self.showAlert("Couldn't not find a match to the address")}
+            for mapItem in mapItems {
+                placemarks.append(mapItem.placemark)
+                addresses.append(self.convertAddressFromPlacemark(mapItem.placemark))
+            }
+             self.showCorrectAddressTableView(addresses, textField: destinationTextField, placemarks: placemarks, sender: sender, viewController: viewController)
+        }
     }
     
     func showCorrectAddressTableView(addresses:[String], textField:UITextField, placemarks:[CLPlacemark], sender: UIButton, viewController: UIViewController){
@@ -39,7 +36,6 @@ extension MapVC: CorrectAddressTableViewDelegate {
         addressTableView.mainViewController = viewController
         view.addSubview(addressTableView)
     }
-    
     
     func didSetValidAddress(sender: CorrectAddressTableView) {
             checkDestinationUI(true)

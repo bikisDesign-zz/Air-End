@@ -3,50 +3,50 @@ provides-top-level:
 - "CorrectAddressTableViewDelegate"
 - "CorrectAddressTableView"
 provides-nominal:
-- "P7Air_End31CorrectAddressTableViewDelegate"
-- "C7Air_End23CorrectAddressTableView"
+- "P5Mango31CorrectAddressTableViewDelegate"
+- "C5Mango23CorrectAddressTableView"
 provides-member:
-- ["P7Air_End31CorrectAddressTableViewDelegate", ""]
-- ["C7Air_End23CorrectAddressTableView", ""]
+- ["P5Mango31CorrectAddressTableViewDelegate", ""]
+- ["C5Mango23CorrectAddressTableView", ""]
 provides-dynamic-lookup:
-- "sender"
-- "mainViewController"
 - "addresses"
-- "placemarkArray"
+- "sender"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "mainViewController"
 - "numberOfSectionsInTableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
+- "placemarkArray"
 - "currentTextField"
 depends-top-level:
+- "UITableView"
+- "CLPlacemark"
+- "CGFloat"
 - "String"
 - "UIButton"
-- "UITableViewDelegate"
-- "UITableViewCell"
-- "CLPlacemark"
-- "NSIndexPath"
 - !private "StringLiteralType"
-- !private "UILabel"
-- "CGRect"
-- "CGFloat"
-- "UIView"
-- "UITableViewStyle"
-- "UITextField"
-- !private ">"
-- "UIViewController"
-- !private "MapVC"
 - "Int"
 - "CorrectAddressTableViewDelegate"
-- "UITableView"
+- !private ">"
+- "UITextField"
+- !private "MapVC"
 - "NSCoder"
+- "UIViewController"
 - !private "+"
-- !private "Theme"
-- "UITableViewDataSource"
-- "CorrectAddressTableView"
+- "UITableViewCell"
 - !private "BooleanLiteralType"
+- "UITableViewDelegate"
+- "UITableViewDataSource"
+- !private "UILabel"
+- "CorrectAddressTableView"
+- "UITableViewStyle"
+- "NSIndexPath"
+- "CGRect"
+- !private "Theme"
+- "UIView"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -160,58 +160,58 @@ depends-member:
 - !private ["Ps14CollectionType", "_Element"]
 - !private ["Ps14CollectionType", "count"]
 - !private ["Ps14CollectionType", "subscript"]
-- !private ["OV7Air_End5Theme6Colors", "BackgroundColor"]
-- !private ["OV7Air_End5Theme6Colors", "color"]
+- !private ["OV5Mango5Theme6Colors", "BackgroundColor"]
+- !private ["OV5Mango5Theme6Colors", "color"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
-- ["C7Air_End23CorrectAddressTableView", "CGFloat"]
-- ["C7Air_End23CorrectAddressTableView", "CGRect"]
-- ["C7Air_End23CorrectAddressTableView", "CLPlacemark"]
-- ["C7Air_End23CorrectAddressTableView", "CorrectAddressTableViewDelegate"]
-- ["C7Air_End23CorrectAddressTableView", "Int"]
-- !private ["C7Air_End23CorrectAddressTableView", "MapVC"]
-- ["C7Air_End23CorrectAddressTableView", "NSCoder"]
-- ["C7Air_End23CorrectAddressTableView", "NSIndexPath"]
-- ["C7Air_End23CorrectAddressTableView", "String"]
-- !private ["C7Air_End23CorrectAddressTableView", "Theme"]
-- ["C7Air_End23CorrectAddressTableView", "UIButton"]
-- !private ["C7Air_End23CorrectAddressTableView", "UILabel"]
-- ["C7Air_End23CorrectAddressTableView", "UITableView"]
-- ["C7Air_End23CorrectAddressTableView", "UITableViewCell"]
-- ["C7Air_End23CorrectAddressTableView", "UITableViewStyle"]
-- ["C7Air_End23CorrectAddressTableView", "UITextField"]
-- ["C7Air_End23CorrectAddressTableView", "UIView"]
-- ["C7Air_End23CorrectAddressTableView", "UIViewController"]
-- ["C7Air_End23CorrectAddressTableView", "addresses"]
-- ["C7Air_End23CorrectAddressTableView", "correctAddressTableViewDelegate"]
-- ["C7Air_End23CorrectAddressTableView", "currentTextField"]
-- ["C7Air_End23CorrectAddressTableView", "deinit"]
-- ["C7Air_End23CorrectAddressTableView", "indexPathForPreferredFocusedViewInTableView"]
-- ["C7Air_End23CorrectAddressTableView", "init"]
-- ["C7Air_End23CorrectAddressTableView", "mainViewController"]
-- ["C7Air_End23CorrectAddressTableView", "numberOfSectionsInTableView"]
-- ["C7Air_End23CorrectAddressTableView", "placemarkArray"]
-- !private ["C7Air_End23CorrectAddressTableView", "registerClass"]
-- !private ["C7Air_End23CorrectAddressTableView", "removeFromSuperview"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidEndDecelerating"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidEndDragging"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidEndScrollingAnimation"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidEndZooming"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidScroll"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidScrollToTop"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewDidZoom"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewShouldScrollToTop"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewWillBeginDecelerating"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewWillBeginDragging"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewWillBeginZooming"]
-- ["C7Air_End23CorrectAddressTableView", "scrollViewWillEndDragging"]
-- ["C7Air_End23CorrectAddressTableView", "sectionIndexTitlesForTableView"]
-- ["C7Air_End23CorrectAddressTableView", "sender"]
-- ["C7Air_End23CorrectAddressTableView", "tableView"]
-- ["C7Air_End23CorrectAddressTableView", "viewForZoomingInScrollView"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "CorrectAddressTableView"]
-- !private ["P7Air_End31CorrectAddressTableViewDelegate", "destinationTextField"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "didSetValidAddress"]
+- ["C5Mango23CorrectAddressTableView", "CGFloat"]
+- ["C5Mango23CorrectAddressTableView", "CGRect"]
+- ["C5Mango23CorrectAddressTableView", "CLPlacemark"]
+- ["C5Mango23CorrectAddressTableView", "CorrectAddressTableViewDelegate"]
+- ["C5Mango23CorrectAddressTableView", "Int"]
+- !private ["C5Mango23CorrectAddressTableView", "MapVC"]
+- ["C5Mango23CorrectAddressTableView", "NSCoder"]
+- ["C5Mango23CorrectAddressTableView", "NSIndexPath"]
+- ["C5Mango23CorrectAddressTableView", "String"]
+- !private ["C5Mango23CorrectAddressTableView", "Theme"]
+- ["C5Mango23CorrectAddressTableView", "UIButton"]
+- !private ["C5Mango23CorrectAddressTableView", "UILabel"]
+- ["C5Mango23CorrectAddressTableView", "UITableView"]
+- ["C5Mango23CorrectAddressTableView", "UITableViewCell"]
+- ["C5Mango23CorrectAddressTableView", "UITableViewStyle"]
+- ["C5Mango23CorrectAddressTableView", "UITextField"]
+- ["C5Mango23CorrectAddressTableView", "UIView"]
+- ["C5Mango23CorrectAddressTableView", "UIViewController"]
+- ["C5Mango23CorrectAddressTableView", "addresses"]
+- ["C5Mango23CorrectAddressTableView", "correctAddressTableViewDelegate"]
+- ["C5Mango23CorrectAddressTableView", "currentTextField"]
+- ["C5Mango23CorrectAddressTableView", "deinit"]
+- ["C5Mango23CorrectAddressTableView", "indexPathForPreferredFocusedViewInTableView"]
+- ["C5Mango23CorrectAddressTableView", "init"]
+- ["C5Mango23CorrectAddressTableView", "mainViewController"]
+- ["C5Mango23CorrectAddressTableView", "numberOfSectionsInTableView"]
+- ["C5Mango23CorrectAddressTableView", "placemarkArray"]
+- !private ["C5Mango23CorrectAddressTableView", "registerClass"]
+- !private ["C5Mango23CorrectAddressTableView", "removeFromSuperview"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidEndDecelerating"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidEndDragging"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidEndScrollingAnimation"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidEndZooming"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidScroll"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidScrollToTop"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewDidZoom"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewShouldScrollToTop"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewWillBeginDecelerating"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewWillBeginDragging"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewWillBeginZooming"]
+- ["C5Mango23CorrectAddressTableView", "scrollViewWillEndDragging"]
+- ["C5Mango23CorrectAddressTableView", "sectionIndexTitlesForTableView"]
+- ["C5Mango23CorrectAddressTableView", "sender"]
+- ["C5Mango23CorrectAddressTableView", "tableView"]
+- ["C5Mango23CorrectAddressTableView", "viewForZoomingInScrollView"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "CorrectAddressTableView"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "destinationTextField"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "didSetValidAddress"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
@@ -354,9 +354,9 @@ depends-member:
 - !private ["Ps9Equatable", "textLabel"]
 - ["Ps9Equatable", "viewForZoomingInScrollView"]
 - ["Ps9Equatable", ""]
-- !private ["OV7Air_End5Theme5Fonts", "BoldNavigationBarTypeFace"]
-- !private ["OV7Air_End5Theme5Fonts", "NormalTextTypeFaceLato"]
-- !private ["OV7Air_End5Theme5Fonts", "font"]
+- !private ["OV5Mango5Theme5Fonts", "BoldNavigationBarTypeFace"]
+- !private ["OV5Mango5Theme5Fonts", "NormalTextTypeFaceLato"]
+- !private ["OV5Mango5Theme5Fonts", "font"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps13GeneratorType", "Element"]
@@ -424,7 +424,7 @@ depends-member:
 - !private ["Ps11IntegerType", "Distance"]
 - !private ["Ps11IntegerType", "IntegerLiteralType"]
 - !private ["PSo17MKMapViewDelegate", "destinationTextField"]
-- !private ["C7Air_End5MapVC", "destinationTextField"]
+- !private ["C5Mango5MapVC", "destinationTextField"]
 - !private ["P10RealmSwift10MinMaxType", "Distance"]
 - !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "Distance"]
@@ -593,7 +593,9 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["Ps30RangeReplaceableCollectionType", "count"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
+- !private ["Ps16RawRepresentable", "BackgroundColor"]
 - !private ["Ps16RawRepresentable", "Center"]
+- !private ["Ps16RawRepresentable", "color"]
 - !private ["P10RealmSwift17RealmOptionalType", "Distance"]
 - !private ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
 - !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
@@ -614,8 +616,9 @@ depends-member:
 - !private ["Vs5Slice", "_Element"]
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
-- !private ["V7Air_End5Theme", "Colors"]
-- !private ["V7Air_End5Theme", "Fonts"]
+- !private ["P5Mango19TaskMapViewDelegate", "destinationTextField"]
+- !private ["V5Mango5Theme", "Colors"]
+- !private ["V5Mango5Theme", "Fonts"]
 - !private ["PSo29UIAccessibilityIdentification", "Theme"]
 - !private ["PSo29UIAccessibilityIdentification", "UILabel"]
 - !private ["PSo29UIAccessibilityIdentification", "UITableViewCell"]
@@ -1279,14 +1282,14 @@ depends-nominal:
 - !private "PSo25CLLocationManagerDelegate"
 - "Ps11CVarArgType"
 - !private "Ps14CollectionType"
-- !private "OV7Air_End5Theme6Colors"
+- !private "OV5Mango5Theme6Colors"
 - !private "Ps10Comparable"
-- "C7Air_End23CorrectAddressTableView"
-- "P7Air_End31CorrectAddressTableViewDelegate"
+- "C5Mango23CorrectAddressTableView"
+- "P5Mango31CorrectAddressTableViewDelegate"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
-- !private "OV7Air_End5Theme5Fonts"
+- !private "OV5Mango5Theme5Fonts"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
@@ -1297,7 +1300,7 @@ depends-nominal:
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - !private "PSo17MKMapViewDelegate"
-- !private "C7Air_End5MapVC"
+- !private "C5Mango5MapVC"
 - !private "P10RealmSwift10MinMaxType"
 - !private "Ps14MirrorPathType"
 - !private "Ps21MutableCollectionType"
@@ -1322,7 +1325,8 @@ depends-nominal:
 - !private "Ps16SignedNumberType"
 - !private "Vs5Slice"
 - !private "Ps10Strideable"
-- !private "V7Air_End5Theme"
+- !private "P5Mango19TaskMapViewDelegate"
+- !private "V5Mango5Theme"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"

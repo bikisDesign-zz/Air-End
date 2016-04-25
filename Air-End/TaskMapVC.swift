@@ -11,13 +11,18 @@ import MapKit
 import CoreLocation
 
 class TaskMapVC: UIViewController {
-    @IBOutlet var taskMapView: MKMapView!
+    @IBOutlet var guidanceContainer: UIView!
+    @IBOutlet var etaLabel: UILabel!
+    @IBOutlet var cancelButton: UIButton!
+    @IBOutlet var taskMapView: TaskMapView!
     @IBOutlet var overlayView: UIView!
     @IBOutlet var taskTextField: UITextField!
     @IBOutlet var nounTextField: UITextField!
     var task:Task?
     var closestTask:MKMapItem?
     let locationManager = CLLocationManager()
+    var userLocation:MKMapItem?
+    var guidanceEnabled:Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +34,41 @@ class TaskMapVC: UIViewController {
     func setUpUI(){
         let editButton = UIBarButtonItem(barButtonSystemItem: .Edit, target: self, action:#selector(editTask))
         navigationItem.rightBarButtonItem = editButton
-        hideOverlay(true, viewCollection: [overlayView, taskTextField, nounTextField])
+        cancelButton.setImage(UIImage(named: "Cancel-76"), forState: .Normal)
+        cancelButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        cancelButton.tintColor = UIColor.whiteColor()
+        guidanceContainer.backgroundColor = Theme.Colors.OrangeColor.color
+        guidanceContainer.alpha = 0.8
+        hideOverlay(true, viewCollection: [overlayView, taskTextField, nounTextField, guidanceContainer, cancelButton, etaLabel])
         taskMapView.showsUserLocation = true
         let tgr = UITapGestureRecognizer(target: self, action: #selector(endEditing))
         view.addGestureRecognizer(tgr)
+        guidanceEnabled = false
     }
     
     func endEditing(){
         view.endEditing(true)
     }
     
+    func hideGuidance(){
+        hideOverlay(!guidanceContainer.hidden, viewCollection: [guidanceContainer, cancelButton, etaLabel])
+    }
+    
+    func setUpGuidanceUI(enabled:Bool){
+            tabBarController?.tabBar.hidden = enabled
+            navigationController?.setNavigationBarHidden(enabled, animated: true)
+            guidanceEnabled = enabled
+        if enabled == true {
+            let mapSingleTGR = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
+            taskMapView.addGestureRecognizer(mapSingleTGR)
+        }
+        else {
+            guard let tgrs = taskMapView.gestureRecognizers else {return}
+            for tgr in tgrs {
+            taskMapView.removeGestureRecognizer(tgr)
+            }
+        }
+    }
     
     func searchForClosestAnnotationMatchingNoun(nounDescriptor:String) {
         if let userLocation = taskMapView.userLocation.location {
@@ -59,7 +89,6 @@ class TaskMapVC: UIViewController {
         }
     }
     
-    
     func editTask(){
         let doneButton = UIBarButtonItem(barButtonSystemItem:.Done, target: self, action: #selector(updateTask))
         navigationItem.rightBarButtonItem = doneButton
@@ -68,7 +97,6 @@ class TaskMapVC: UIViewController {
         nounTextField.text = task?.hashtag?.descriptor
         hideOverlay(false, viewCollection: [overlayView, taskTextField, nounTextField])
     }
-    
     
     func updateTask(){
         guard let newTask = taskTextField.text else {return}
@@ -92,15 +120,21 @@ class TaskMapVC: UIViewController {
     }
 }
 
-
 extension TaskMapVC: CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let taskAnnotation = convertToAnnotationFromMapItem(closestTask!)
-        setRegionForUnionOfUserLocationAndTaskAnnotation(taskAnnotation, userLocation: locations.first!, mapView: taskMapView)
+        guard let currentLocation = locations.first else {return}
+               setRegionForUnionOfUserLocationAndTaskAnnotation(taskAnnotation, userLocation: currentLocation, mapView: taskMapView)
+        CLGeocoder().reverseGeocodeLocation(locations.last!,
+                                            completionHandler: {(placemarks:[CLPlacemark]?, error:NSError?) -> Void in
+                                                if let placemarks = placemarks {
+                                                    let userPlaceMark = MKPlacemark(placemark: placemarks[0])
+                                                    self.userLocation = MKMapItem(placemark: userPlaceMark)
+                                                }
+            })
         locationManager.stopUpdatingLocation()
     }
 }
-
 
 extension TaskMapVC: MKMapViewDelegate {
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -114,11 +148,32 @@ extension TaskMapVC: MKMapViewDelegate {
             pinView?.canShowCallout = true
             pinView?.animatesDrop = true
             pinView?.pinTintColor = Theme.Colors.ButtonColor.color
+            if guidanceEnabled == false {
+            let rightButton = UIButton(type: .Custom)
+            rightButton.frame = CGRectMake(0, 0, 25, 25)
+            rightButton.setImage(UIImage(named: "Route-Small"), forState: .Normal)
+            pinView?.rightCalloutAccessoryView = rightButton
+            }
         }
         else {
             pinView?.annotation = annotation
         }
         return pinView
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        view.rightCalloutAccessoryView = nil
+        setUpGuidanceUI(true)
+        guard let source = userLocation else {return}
+        guard let destination = closestTask else {return}
+        guard let request = initializeRequest(source, destination: destination) else {return}
+        let directions = MKDirections(request: request)
+        searchForFastestRouteWithDirections(directions) { (route) in
+            guard let fastestRoute = route else {return}
+            self.plotPolylineWithRoute(fastestRoute, mapView: self.taskMapView)
+            self.hideOverlay(false, viewCollection: [self.guidanceContainer, self.cancelButton, self.etaLabel])
+            self.etaLabel.text = "\(Int(fastestRoute.expectedTravelTime / 60)) Mins"
+        }
     }
     
     func mapView(mapView: MKMapView, didAddAnnotationViews views: [MKAnnotationView]) {
@@ -128,5 +183,29 @@ extension TaskMapVC: MKMapViewDelegate {
         else {
             mapView.selectAnnotation(mapView.annotations.last!, animated: true)
         }
+    }
+    
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+        if (overlay is MKPolyline) {
+            let color = generatePolylineColor()
+            polylineRenderer.strokeColor = color
+            polylineRenderer.lineWidth = 10
+            polylineRenderer.alpha = 0.5
+        }
+        return polylineRenderer
+    }
+    
+    func generatePolylineColor () -> UIColor {
+        var color = Theme.randomColor().color
+        if color == Theme.Colors.NavigationBarFontColor.color {
+        color = generatePolylineColor()
+        }
+        return color
+    }
+    
+    @IBAction func cancelGuidance(sender: UIButton) {
+        setUpGuidanceUI(false)
+        hideGuidance()
     }
 }

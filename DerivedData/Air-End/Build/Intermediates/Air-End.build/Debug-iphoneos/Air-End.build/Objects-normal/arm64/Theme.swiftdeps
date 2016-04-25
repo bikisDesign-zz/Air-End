@@ -2,26 +2,24 @@
 provides-top-level:
 - "Theme"
 provides-nominal:
-- "V7Air_End5Theme"
-- "OV7Air_End5Theme6Colors"
-- "OV7Air_End5Theme9BoldColor"
-- "OV7Air_End5Theme5Fonts"
+- "V5Mango5Theme"
+- "OV5Mango5Theme6Colors"
+- "OV5Mango5Theme5Fonts"
 provides-member:
-- ["V7Air_End5Theme", ""]
-- ["OV7Air_End5Theme6Colors", ""]
-- ["OV7Air_End5Theme9BoldColor", ""]
-- ["OV7Air_End5Theme5Fonts", ""]
+- ["V5Mango5Theme", ""]
+- ["OV5Mango5Theme6Colors", ""]
+- ["OV5Mango5Theme5Fonts", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "arc4random_uniform"
+- "UInt32"
 - !private "~="
 - "=="
-- "UInt32"
-- !private "arc4random_uniform"
 - !private "StringLiteralType"
-- "Theme"
 - "Array"
-- "UIColor"
 - "UIFont"
+- "Theme"
+- "UIColor"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
 - !private ["P10RealmSwift11AddableType", "hashValue"]
@@ -35,21 +33,6 @@ depends-member:
 - !private ["Ps21BitwiseOperationsType", "Distance"]
 - !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Ps21BitwiseOperationsType", "hashValue"]
-- ["OV7Air_End5Theme9BoldColor", "BlueColor"]
-- ["OV7Air_End5Theme9BoldColor", "GreenColor"]
-- ["OV7Air_End5Theme9BoldColor", "OrangeColor"]
-- ["OV7Air_End5Theme9BoldColor", "PinkColor"]
-- ["OV7Air_End5Theme9BoldColor", "PurpleColor"]
-- ["OV7Air_End5Theme9BoldColor", "RawValue"]
-- ["OV7Air_End5Theme9BoldColor", "RedColor"]
-- ["OV7Air_End5Theme9BoldColor", "UIColor"]
-- ["OV7Air_End5Theme9BoldColor", "YellowColor"]
-- ["OV7Air_End5Theme9BoldColor", "allValues"]
-- ["OV7Air_End5Theme9BoldColor", "color"]
-- ["OV7Air_End5Theme9BoldColor", "deinit"]
-- ["OV7Air_End5Theme9BoldColor", "hashValue"]
-- ["OV7Air_End5Theme9BoldColor", "init"]
-- ["OV7Air_End5Theme9BoldColor", "rawValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
@@ -60,19 +43,30 @@ depends-member:
 - !private ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "whiteColor"]
 - ["Ps14CollectionType", "Element"]
-- ["OV7Air_End5Theme6Colors", "BackgroundColor"]
-- ["OV7Air_End5Theme6Colors", "ButtonColor"]
-- ["OV7Air_End5Theme6Colors", "LabelColor"]
-- ["OV7Air_End5Theme6Colors", "LightBackgroundColor"]
-- ["OV7Air_End5Theme6Colors", "LightForegroundColor"]
-- ["OV7Air_End5Theme6Colors", "NavigationBarColor"]
-- ["OV7Air_End5Theme6Colors", "NavigationBarFontColor"]
-- ["OV7Air_End5Theme6Colors", "RedBackgroundColor"]
-- ["OV7Air_End5Theme6Colors", "SegmentedControlColor"]
-- ["OV7Air_End5Theme6Colors", "UIColor"]
-- ["OV7Air_End5Theme6Colors", "color"]
-- ["OV7Air_End5Theme6Colors", "deinit"]
-- ["OV7Air_End5Theme6Colors", "hashValue"]
+- ["OV5Mango5Theme6Colors", "BackgroundColor"]
+- ["OV5Mango5Theme6Colors", "BlueColor"]
+- ["OV5Mango5Theme6Colors", "ButtonColor"]
+- ["OV5Mango5Theme6Colors", "GreenColor"]
+- ["OV5Mango5Theme6Colors", "LabelColor"]
+- ["OV5Mango5Theme6Colors", "LightBackgroundColor"]
+- ["OV5Mango5Theme6Colors", "LightForegroundColor"]
+- ["OV5Mango5Theme6Colors", "NavigationBarColor"]
+- ["OV5Mango5Theme6Colors", "NavigationBarFontColor"]
+- ["OV5Mango5Theme6Colors", "OrangeColor"]
+- ["OV5Mango5Theme6Colors", "PinkColor"]
+- ["OV5Mango5Theme6Colors", "PurpleColor"]
+- ["OV5Mango5Theme6Colors", "RawValue"]
+- ["OV5Mango5Theme6Colors", "RedBackgroundColor"]
+- ["OV5Mango5Theme6Colors", "RedColor"]
+- ["OV5Mango5Theme6Colors", "SegmentedControlColor"]
+- ["OV5Mango5Theme6Colors", "UIColor"]
+- ["OV5Mango5Theme6Colors", "YellowColor"]
+- ["OV5Mango5Theme6Colors", "allValues"]
+- ["OV5Mango5Theme6Colors", "color"]
+- ["OV5Mango5Theme6Colors", "deinit"]
+- ["OV5Mango5Theme6Colors", "hashValue"]
+- ["OV5Mango5Theme6Colors", "init"]
+- ["OV5Mango5Theme6Colors", "rawValue"]
 - !private ["Ps10Comparable", "Distance"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "hashValue"]
@@ -121,17 +115,17 @@ depends-member:
 - ["Ps9Equatable", "rawValue"]
 - !private ["Ps9Equatable", "whiteColor"]
 - ["Ps9Equatable", ""]
-- ["OV7Air_End5Theme5Fonts", "BoldItalicNavigationBarTypeFace"]
-- ["OV7Air_End5Theme5Fonts", "BoldNavigationBarTypeFace"]
-- ["OV7Air_End5Theme5Fonts", "BoldTitleTypeFace"]
-- ["OV7Air_End5Theme5Fonts", "NavigationBarTypeFace"]
-- ["OV7Air_End5Theme5Fonts", "NormalTextTypeFaceLato"]
-- ["OV7Air_End5Theme5Fonts", "NormalTextTypeFaceSimplifica"]
-- ["OV7Air_End5Theme5Fonts", "TitleTypeFace"]
-- ["OV7Air_End5Theme5Fonts", "UIFont"]
-- ["OV7Air_End5Theme5Fonts", "deinit"]
-- ["OV7Air_End5Theme5Fonts", "font"]
-- ["OV7Air_End5Theme5Fonts", "hashValue"]
+- ["OV5Mango5Theme5Fonts", "BoldItalicNavigationBarTypeFace"]
+- ["OV5Mango5Theme5Fonts", "BoldNavigationBarTypeFace"]
+- ["OV5Mango5Theme5Fonts", "BoldTitleTypeFace"]
+- ["OV5Mango5Theme5Fonts", "NavigationBarTypeFace"]
+- ["OV5Mango5Theme5Fonts", "NormalTextTypeFaceLato"]
+- ["OV5Mango5Theme5Fonts", "NormalTextTypeFaceSimplifica"]
+- ["OV5Mango5Theme5Fonts", "TitleTypeFace"]
+- ["OV5Mango5Theme5Fonts", "UIFont"]
+- ["OV5Mango5Theme5Fonts", "deinit"]
+- ["OV5Mango5Theme5Fonts", "font"]
+- ["OV5Mango5Theme5Fonts", "hashValue"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "hashValue"]
@@ -207,13 +201,22 @@ depends-member:
 - !private ["Ps21RandomAccessIndexType", "hashValue"]
 - !private ["Vs5Range", "deinit"]
 - ["Ps30RangeReplaceableCollectionType", "Element"]
+- ["Ps16RawRepresentable", "BackgroundColor"]
 - ["Ps16RawRepresentable", "BlueColor"]
+- ["Ps16RawRepresentable", "ButtonColor"]
 - ["Ps16RawRepresentable", "GreenColor"]
+- ["Ps16RawRepresentable", "LabelColor"]
+- ["Ps16RawRepresentable", "LightBackgroundColor"]
+- ["Ps16RawRepresentable", "LightForegroundColor"]
+- ["Ps16RawRepresentable", "NavigationBarColor"]
+- ["Ps16RawRepresentable", "NavigationBarFontColor"]
 - ["Ps16RawRepresentable", "OrangeColor"]
 - ["Ps16RawRepresentable", "PinkColor"]
 - ["Ps16RawRepresentable", "PurpleColor"]
 - ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "RedBackgroundColor"]
 - ["Ps16RawRepresentable", "RedColor"]
+- ["Ps16RawRepresentable", "SegmentedControlColor"]
 - !private ["Ps16RawRepresentable", "UIColor"]
 - ["Ps16RawRepresentable", "YellowColor"]
 - ["Ps16RawRepresentable", "hashValue"]
@@ -231,15 +234,14 @@ depends-member:
 - !private ["Ps10Strideable", "Distance"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "hashValue"]
-- ["V7Air_End5Theme", "BoldColor"]
-- ["V7Air_End5Theme", "Colors"]
-- ["V7Air_End5Theme", "Fonts"]
-- ["V7Air_End5Theme", "UIColor"]
-- ["V7Air_End5Theme", "UIFont"]
-- ["V7Air_End5Theme", "UInt32"]
-- !private ["V7Air_End5Theme", "arc4random_uniform"]
-- ["V7Air_End5Theme", "init"]
-- ["V7Air_End5Theme", "randomColor"]
+- ["V5Mango5Theme", "Colors"]
+- ["V5Mango5Theme", "Fonts"]
+- ["V5Mango5Theme", "UIColor"]
+- ["V5Mango5Theme", "UIFont"]
+- ["V5Mango5Theme", "UInt32"]
+- !private ["V5Mango5Theme", "arc4random_uniform"]
+- ["V5Mango5Theme", "init"]
+- ["V5Mango5Theme", "randomColor"]
 - !private ["CSo7UIColor", "init"]
 - !private ["CSo7UIColor", "whiteColor"]
 - !private ["CSo6UIFont", "init"]
@@ -286,20 +288,19 @@ depends-nominal:
 - "Ps23ArrayLiteralConvertible"
 - !private "Ps22BidirectionalIndexType"
 - !private "Ps21BitwiseOperationsType"
-- "OV7Air_End5Theme9BoldColor"
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
 - !private "V12CoreGraphics7CGFloat"
 - !private "Ps11CVarArgType"
 - "Ps14CollectionType"
-- "OV7Air_End5Theme6Colors"
+- "OV5Mango5Theme6Colors"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - !private "Sd"
 - "Ps9Equatable"
-- "OV7Air_End5Theme5Fonts"
+- "OV5Mango5Theme5Fonts"
 - !private "Ps16ForwardIndexType"
 - "Ps8Hashable"
 - "Ps9Indexable"
@@ -328,7 +329,7 @@ depends-nominal:
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
 - !private "Ps10Strideable"
-- "V7Air_End5Theme"
+- "V5Mango5Theme"
 - !private "CSo7UIColor"
 - !private "CSo6UIFont"
 - !private "Vs6UInt32"
@@ -391,4 +392,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "64ce5a8724a1b8fb6da54a550e86825d"
+interface-hash: "794a36ae3a7b4a529b33a40d7c605e47"

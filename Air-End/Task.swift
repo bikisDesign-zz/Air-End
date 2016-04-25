@@ -44,4 +44,12 @@ class Task: Object {
         let taskList = uiRealm.objects(Task).sorted("distanceFromUser", ascending: true)
         handler(tasks: taskList)
     }
+    
+    func removeTask(task: Task, withCompletionHandler handler: (tasks: Results<Task>?) ->()) {
+        try! uiRealm.write({ 
+            uiRealm.delete(task)
+            let taskList = uiRealm.objects(Task).sorted("dueDate", ascending:  true)
+            handler(tasks: taskList)
+        })
+    }
 }
