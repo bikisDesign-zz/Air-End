@@ -26,7 +26,6 @@
 		914C30D31CA8C57A002D5B9B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914C30D21CA8C57A002D5B9B /* MapVC.swift */; };
 		914E4D201CB475DA009D795E /* Glamor-BoldExtendedItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 914E4D1F1CB475DA009D795E /* Glamor-BoldExtendedItalic.otf */; };
 		915A43F21CC0440600AA6C42 /* TaskMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915A43F11CC0440600AA6C42 /* TaskMapView.swift */; };
-		915B0B6F1CCAA5AD00C4026C /* launchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915B0B6E1CCAA5AD00C4026C /* launchScreenViewController.swift */; };
 		918EF1E81CAC574700A3553E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E61CAC574700A3553E /* Realm.framework */; };
 		918EF1E91CAC574700A3553E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E61CAC574700A3553E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		918EF1EA1CAC574700A3553E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 918EF1E71CAC574700A3553E /* RealmSwift.framework */; };
@@ -86,7 +85,6 @@
 		914C30D21CA8C57A002D5B9B /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		914E4D1F1CB475DA009D795E /* Glamor-BoldExtendedItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Glamor-BoldExtendedItalic.otf"; sourceTree = "<group>"; };
 		915A43F11CC0440600AA6C42 /* TaskMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskMapView.swift; sourceTree = "<group>"; };
-		915B0B6E1CCAA5AD00C4026C /* launchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchScreenViewController.swift; sourceTree = "<group>"; };
 		918EF1E61CAC574700A3553E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../Realm.framework; sourceTree = "<group>"; };
 		918EF1E71CAC574700A3553E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		91BABBE81CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapVC-Guidance-ExtensionViewController.swift"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				918EF1E61CAC574700A3553E /* Realm.framework */,
 				9100915F1CA0690E004D6D78 /* Assets.xcassets */,
 				910091611CA0690E004D6D78 /* LaunchScreen.storyboard */,
-				915B0B6E1CCAA5AD00C4026C /* launchScreenViewController.swift */,
 				91E225351CB0864F009D7CDC /* CorrectAddressTableView.swift */,
 				915A43F11CC0440600AA6C42 /* TaskMapView.swift */,
 			);
@@ -357,7 +354,6 @@
 				911A9D311CA0A2DF0060DB04 /* ViewController-Conversions-Extension.swift in Sources */,
 				913B1E361CA08D3500F8AFF7 /* ViewController-Extension.swift in Sources */,
 				91BABBE91CBC2CD5001B275C /* MapVC-Guidance-ExtensionViewController.swift in Sources */,
-				915B0B6F1CCAA5AD00C4026C /* launchScreenViewController.swift in Sources */,
 				913B1E331CA088D300F8AFF7 /* NewTaskVC.swift in Sources */,
 				91F67AC91CB43E8100241C2F /* Theme.swift in Sources */,
 				91E225341CB05DBA009D7CDC /* MapVC-SegmentedControl-Extension.swift in Sources */,
@@ -488,7 +484,7 @@
 				);
 				INFOPLIST_FILE = "Air-End/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mp-design.Air-End";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mp-design.Mango";
 				PRODUCT_NAME = Mango;
 				PROVISIONING_PROFILE = "";
 			};
@@ -506,7 +502,7 @@
 				);
 				INFOPLIST_FILE = "Air-End/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mp-design.Air-End";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mp-design.Mango";
 				PRODUCT_NAME = Mango;
 				PROVISIONING_PROFILE = "";
 			};

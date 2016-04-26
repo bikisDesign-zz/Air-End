@@ -17,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mangoLogoTranparent-60" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-C6-KAl">
+                            <imageView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mango" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-C6-KAl">
                                 <rect key="frame" x="175" y="175" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="HJ8-hM-lFH"/>
-                                    <constraint firstAttribute="width" constant="250" id="XTI-lD-GZc"/>
+                                    <constraint firstAttribute="width" constant="250" id="VB8-Tn-aGy"/>
+                                    <constraint firstAttribute="height" constant="250" id="xrc-30-jRj"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.42352941176470588" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="vRe-C6-KAl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GVS-qc-Fne"/>
-                            <constraint firstItem="vRe-C6-KAl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cEz-Wg-kFK"/>
+                            <constraint firstItem="vRe-C6-KAl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jzi-hV-MA5"/>
+                            <constraint firstItem="vRe-C6-KAl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="s2j-Z2-Eap"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mangoLogoTranparent-60" width="60" height="60"/>
+        <image name="mango" width="1200" height="1200"/>
     </resources>
 </document>

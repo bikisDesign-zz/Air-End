@@ -33,16 +33,11 @@ extension ListVC: CLLocationManagerDelegate{
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        // check if denied or authed when in use if so prompt
         switch status {
-            //        case .Denied:
-            // prompt that we need it to funcion
-            //        case .AuthorizedWhenInUse:
-            // do stuff
-        // do stuff
+            case .Denied:
+            showAlert("Mango needs your location in order to perform its basic functions")
         default:
             break
-            //            assertionFailure("received unexpected authorization status")
         }
     }
     

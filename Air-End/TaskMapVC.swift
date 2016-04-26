@@ -39,6 +39,7 @@ class TaskMapVC: UIViewController {
         cancelButton.tintColor = UIColor.whiteColor()
         guidanceContainer.backgroundColor = Theme.Colors.OrangeColor.color
         guidanceContainer.alpha = 0.8
+        guidanceContainer.layer.cornerRadius = 10
         hideOverlay(true, viewCollection: [overlayView, taskTextField, nounTextField, guidanceContainer, cancelButton, etaLabel])
         taskMapView.showsUserLocation = true
         let tgr = UITapGestureRecognizer(target: self, action: #selector(endEditing))

@@ -69,7 +69,7 @@ struct Theme {
             switch self{
             case .TitleTypeFace: return UIFont(name: "Lato-Regular", size: 18)!
             case .BoldTitleTypeFace: return UIFont(name: "Lato-Bold", size: 17)!
-            case .NormalTextTypeFaceLato: return UIFont(name: "Lato-Thin", size: 18)!
+            case .NormalTextTypeFaceLato: return UIFont(name: "Lato-Regular", size: 12)!
             case .NavigationBarTypeFace: return UIFont(name: "Glamor-Regular", size: 16)!
             case .BoldNavigationBarTypeFace: return UIFont(name: "Glamor-Bold", size: 25)!
             case .BoldItalicNavigationBarTypeFace: return UIFont(name: "Glamor-BoldExtendedItalic", size: 25)!

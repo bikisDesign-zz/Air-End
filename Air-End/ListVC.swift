@@ -135,7 +135,9 @@ extension ListVC: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .None
         cell.backgroundColor = Theme.Colors.LabelColor.color
         cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.font = Theme.Fonts.TitleTypeFace.font
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell.detailTextLabel?.font = Theme.Fonts.TitleTypeFace.font
         cell.preservesSuperviewLayoutMargins = false
         cell.separatorInset = UIEdgeInsetsZero
         cell.layoutMargins = UIEdgeInsetsZero

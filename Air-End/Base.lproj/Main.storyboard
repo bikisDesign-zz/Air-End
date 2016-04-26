@@ -28,7 +28,7 @@
                                         </connections>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy8-Zs-FkP">
-                                        <rect key="frame" x="20" y="526" width="560" height="75"/>
+                                        <rect key="frame" x="20" y="476" width="560" height="75"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm4-U8-Snc">
                                                 <rect key="frame" x="95" y="10" width="465" height="55"/>
@@ -39,12 +39,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjQ-TF-DCu">
                                                 <rect key="frame" x="8" y="8" width="59" height="59"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="Csd-pi-1La"/>
                                                     <constraint firstAttribute="width" constant="59" id="paq-rU-ZIC"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
-                                                    <action selector="cancelGuidance:" destination="q3Y-t3-ZCG" eventType="touchUpInside" id="0ud-Ko-Lyl"/>
-                                                    <action selector="cancelGuidance:" destination="MKC-yz-ckq" eventType="touchUpInside" id="KoW-jW-H3b"/>
+                                                    <action selector="cancelGuidance:" destination="MKC-yz-ckq" eventType="touchUpInside" id="Zhz-kx-sv2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -109,7 +109,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="vjp-uk-ecK" secondAttribute="trailing" constant="25" id="2le-WT-Ebi"/>
                                     <constraint firstAttribute="bottom" secondItem="uy8-Zs-FkP" secondAttribute="bottom" constant="8" id="FRz-1T-0I6"/>
-                                    <constraint firstAttribute="bottom" secondItem="uy8-Zs-FkP" secondAttribute="bottom" constant="-50" id="GeY-P3-ehR"/>
+                                    <constraint firstAttribute="bottom" secondItem="uy8-Zs-FkP" secondAttribute="bottom" id="GeY-P3-ehR"/>
                                     <constraint firstItem="uy8-Zs-FkP" firstAttribute="leading" secondItem="hyB-d0-qTK" secondAttribute="leading" constant="20" id="MIN-26-VUC"/>
                                     <constraint firstItem="PZS-sK-BTi" firstAttribute="top" secondItem="hyB-d0-qTK" secondAttribute="top" constant="18" id="QE5-65-Ef2"/>
                                     <constraint firstAttribute="trailing" secondItem="PZS-sK-BTi" secondAttribute="trailing" constant="8" id="RDu-hq-gJ3"/>
@@ -231,7 +231,7 @@
                             <constraint firstItem="ggf-Ar-A8U" firstAttribute="centerX" secondItem="QkY-8S-09b" secondAttribute="centerX" id="xAP-oN-rEE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" image="compass-Small" selectedImage="compass-Small" id="2Nx-jR-bP7"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="compass-Small" selectedImage="compass-Small" id="epI-VU-Djd"/>
                     <connections>
                         <outlet property="activityIndicator" destination="m5s-AN-NyM" id="AGN-PV-PcF"/>
                         <outlet property="addDestinationButton" destination="mRz-BU-pHd" id="b8m-u2-sIq"/>
@@ -378,7 +378,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Sy-Th-Wxf" customClass="TaskMapView" customModule="Mango" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="537"/>
                                 <connections>
                                     <outlet property="delegate" destination="q3Y-t3-ZCG" id="Ze9-cj-jx6"/>
                                 </connections>
@@ -451,8 +451,9 @@
                             <constraint firstItem="vT8-1m-axH" firstAttribute="leading" secondItem="a5m-MW-Da3" secondAttribute="leading" id="B6O-ku-fjd"/>
                             <constraint firstAttribute="trailing" secondItem="3Sy-Th-Wxf" secondAttribute="trailing" id="CPc-X5-ZgB"/>
                             <constraint firstItem="vT8-1m-axH" firstAttribute="top" secondItem="QSg-aY-Lzc" secondAttribute="bottom" id="FuB-7Q-uUl"/>
+                            <constraint firstItem="ZmF-E9-LjQ" firstAttribute="top" secondItem="fW4-bM-4HY" secondAttribute="bottom" id="IFM-Id-9Rs"/>
                             <constraint firstItem="ZmF-E9-LjQ" firstAttribute="top" secondItem="vT8-1m-axH" secondAttribute="bottom" id="JpC-x0-wHn"/>
-                            <constraint firstItem="ZmF-E9-LjQ" firstAttribute="top" secondItem="3Sy-Th-Wxf" secondAttribute="bottom" id="Mkz-VG-Lhn"/>
+                            <constraint firstItem="ZmF-E9-LjQ" firstAttribute="top" secondItem="3Sy-Th-Wxf" secondAttribute="bottom" constant="-50" id="Mkz-VG-Lhn"/>
                             <constraint firstItem="ZmF-E9-LjQ" firstAttribute="top" secondItem="fW4-bM-4HY" secondAttribute="bottom" id="SXh-4r-zzR"/>
                             <constraint firstItem="3Sy-Th-Wxf" firstAttribute="leading" secondItem="a5m-MW-Da3" secondAttribute="leading" id="aKn-zn-2Ju"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fW4-bM-4HY" secondAttribute="trailing" id="fby-DV-KDA"/>
@@ -460,6 +461,11 @@
                             <constraint firstAttribute="trailing" secondItem="vT8-1m-axH" secondAttribute="trailing" id="pVB-lG-zEF"/>
                             <constraint firstItem="3Sy-Th-Wxf" firstAttribute="top" secondItem="QSg-aY-Lzc" secondAttribute="bottom" id="yNJ-Ib-ycz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SXh-4r-zzR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="Miv-MT-YUg" id="U7n-lf-Gtc"/>

@@ -60,11 +60,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         guidanceLabelContainer.layer.cornerRadius = 10
         guidanceLabelContainer.alpha = 0.7
         guidanceLabel.textColor = UIColor.whiteColor()
+        guidanceLabel.adjustsFontSizeToFitWidth = true
+        guidanceLabel.textAlignment = .Center
         cancelButton.setImage(UIImage(named: "Cancel-76"), forState: .Normal)
         cancelButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         cancelButton.tintColor = UIColor.whiteColor()
         guidanceContainer.backgroundColor = Theme.Colors.OrangeColor.color
         guidanceContainer.alpha = 0.8
+        guidanceContainer.layer.cornerRadius = 10
         taskMapView.showsUserLocation = true
         taskMapView.delegate = self
         hideOverlay(true, viewCollection: [enRouteView, destinationTextField, destinationTextField, guidanceButton, guidanceLabelContainer, guidanceLabel, activityIndicator, guidanceContainer, cancelButton, etaLabel])
@@ -94,12 +97,6 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         if enabled == true {
             let mapSingleTGR = UITapGestureRecognizer(target: self, action: #selector(hideGuidance))
             taskMapView.addGestureRecognizer(mapSingleTGR)
-        }
-        else {
-            guard let tgrs = taskMapView.gestureRecognizers else {return}
-            for tgr in tgrs {
-                taskMapView.removeGestureRecognizer(tgr)
-            }
         }
     }
 
@@ -292,4 +289,6 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
         self.activityIndicator.stopAnimating()
     }
+    
+    
   }

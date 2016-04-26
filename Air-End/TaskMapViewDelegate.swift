@@ -73,12 +73,10 @@ extension MapVC {
                 self.searchForFastestRouteWithDirections(directions, withCompletionHandler: { (route) in
                     guard let fastestRoute = route else {return}
                     self.plotPolylineWithRoute(fastestRoute, mapView: self.taskMapView)
-                    self.hideOverlay(false, viewCollection: [self.guidanceContainer, self.cancelButton, self.etaLabel])
                     self.finalRoutes.removeAll()
                     self.finalRoutes.append(fastestRoute)
                     self.setUpTurnByTurnUI()
-                    self.guidanceLabel.text = self.finalRoutes.first?.steps.first?.instructions
-                    self.etaLabel.text = "\(Int(fastestRoute.expectedTravelTime / 60)) Mins"
+                    self.showETALabelWithRoutes([fastestRoute])
                     self.routeIndexInstructionIndexTuple = (0,0)
                 })
             }
@@ -86,6 +84,16 @@ extension MapVC {
         else {
             AddRouteToGuidance()
         }
+    }
+    
+    func showETALabelWithRoutes(routes:[MKRoute]) {
+        self.hideOverlay(false, viewCollection: [self.guidanceContainer, self.cancelButton, self.etaLabel])
+        self.guidanceLabel.text = self.finalRoutes.first?.steps.first?.instructions
+        var eta = Double()
+        for route in routes {
+            eta += route.expectedTravelTime
+        }
+        self.etaLabel.text = "\(Int(eta / 60)) Mins"
     }
     
     

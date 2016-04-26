@@ -14,6 +14,12 @@ extension MapVC {
         guidanceButton.hidden = true
         guidanceButton.alpha = 0.0
         taskMapView.removeOverlays(taskMapView.overlays)
+        taskMapView.removeAnnotations(taskMapView.annotations)
+        setUpGuidanceUI(true)
+        userSelectingAdditionalRoutes = false
+        for taskLocation in taskLocations {
+            taskMapView.addAnnotation(convertToAnnotationFromMapItem(taskLocation))
+        }
         let filteredGuidance = guidances.filter{($0.wasSelectedForFinalRoute == true)}
         guidances = filteredGuidance
         let userGuidance = Guidance(index: guidances.count, sourceRoute:MKRoute() , destinationRoute: MKRoute(), destinationMapItem: userLocation)
@@ -71,6 +77,7 @@ extension MapVC {
             self.finalRoutes += [fastestRoute]
             self.guidanceLabel.text = self.finalRoutes.first?.steps.first?.instructions
             self.routeIndexInstructionIndexTuple = (0,0)
+            self.showETALabelWithRoutes(self.finalRoutes)
         })
     }
 
