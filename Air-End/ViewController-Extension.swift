@@ -67,6 +67,18 @@ extension UIViewController {
         }
     }
     
+    func addActivityIndicator(inout activityIndicator:UIActivityIndicatorView, vcView:UIView) {
+        let activityIndicator = UIActivityIndicatorView(frame: UIScreen.mainScreen().bounds)
+        activityIndicator.activityIndicatorViewStyle = .WhiteLarge
+        activityIndicator.backgroundColor = view.backgroundColor
+        activityIndicator.startAnimating()
+        vcView.addSubview(activityIndicator)
+    }
+    
+    func hideActivityIndicator(inout activityIndicator:UIActivityIndicatorView) {
+            activityIndicator.removeFromSuperview()
+    }
+
     //MARK: MAPVIEW Methods
     
     func initalizeRequestWithDescriptor(nounDescriptor:String, location:CLLocation?) -> MKLocalSearchRequest? {
@@ -77,6 +89,45 @@ extension UIViewController {
             return request
         }
         return nil
+    }
+    
+    func initializeRequest(source:MKMapItem, destination:MKMapItem) -> MKDirectionsRequest? {
+        let request:MKDirectionsRequest = MKDirectionsRequest()
+        request.requestsAlternateRoutes = true
+        request.transportType = .Automobile
+        request.source = source
+        request.destination = destination
+        return request
+    }
+    
+    func matchCoordinatesOfMapItemAndAnnoatation(annotation :MKAnnotation, mapItem: MKMapItem) -> Bool {
+        let annotationCoordinate = annotation.coordinate
+        let locationCoordinate = mapItem.placemark.coordinate
+        if annotationCoordinate.latitude == locationCoordinate.latitude && annotationCoordinate.longitude == locationCoordinate.longitude {
+            return true
+        }
+        return false
+    }
+    
+    func searchForMapItemsMatchingNoun(noun:String?, userLocation:MKMapItem?, withCompletionHandler handler: ((mapItems:[MKMapItem]?) -> ())) {
+        guard let descriptor = noun else {return}
+        guard let request = initalizeRequestWithDescriptor(descriptor, location: userLocation?.placemark.location) else {return}
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
+            guard let unSortedMapItems = response?.mapItems else {return}
+            handler(mapItems: unSortedMapItems)
+        })
+    }
+    
+    func searchForFastestRouteWithDirections(directions:MKDirections, withCompletionHandler handler: (route:MKRoute?) -> ()){
+        directions.calculateDirectionsWithCompletionHandler {(
+            response: MKDirectionsResponse?,
+            error: NSError?) in
+            guard let routeResponse = response?.routes else {return}
+            if let sourceToDestination:MKRoute = routeResponse.sort({$0.expectedTravelTime < $1.expectedTravelTime})[0] {
+                handler(route: sourceToDestination)
+            }
+        }
     }
     
     func setRegionForUnionOfUserLocationAndTaskAnnotation(taskAnnotation:MKAnnotation, userLocation:CLLocation, mapView:MKMapView){
@@ -116,4 +167,13 @@ extension UIViewController {
         return mapItems.sort({$0.placemark.location?.distanceFromLocation(currentLocation) < $1.placemark.location?.distanceFromLocation(currentLocation)})
     }
     
+    
+    func plotPolylineWithRoute(route: MKRoute, mapView:MKMapView) {
+        mapView.addOverlay(route.polyline)
+        let polylineBoundingRect =  MKMapRectUnion(mapView.visibleMapRect,
+                                                   route.polyline.boundingMapRect)
+        mapView.setVisibleMapRect(polylineBoundingRect,
+                                  edgePadding: UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0),
+                                  animated: false)
+    }
 }

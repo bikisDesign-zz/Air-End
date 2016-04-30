@@ -22,8 +22,9 @@ class CorrectAddressTableView: UITableView {
     
     override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
-        self.registerClass(UITableViewCell.self, forCellReuseIdentifier: "AddressCell")
-        
+        registerClass(UITableViewCell.self, forCellReuseIdentifier: "AddressCell")
+        backgroundColor = Theme.Colors.LabelColor.color
+        separatorColor = Theme.Colors.RedBackgroundColor.color
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,11 +44,11 @@ extension CorrectAddressTableView: UITableViewDelegate {
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
-        label.font = Theme.Fonts.BoldNavigationBarTypeFace.font
+        label.font = Theme.Fonts.BoldTitleTypeFace.font
+        label.adjustsFontSizeToFitWidth = true
         label.textAlignment = .Center
-        label.text = "Did you mean..."
+        label.text = "Please Select a Specific Address"
         label.backgroundColor = Theme.Colors.BackgroundColor.color
-        
         return label
     }
     
@@ -57,9 +58,6 @@ extension CorrectAddressTableView: UITableViewDelegate {
             if let mapVC = mainViewController as! MapVC? {
                 correctAddressTableViewDelegate?.didSetValidAddress(self)
                 mapVC.destinationTextField.text = currentTextField.text
-            }
-            else {
-                //is another VC
             }
             sender.selected = true
         }
@@ -80,14 +78,22 @@ extension CorrectAddressTableView: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("AddressCell") as UITableViewCell!
-        cell.textLabel?.numberOfLines = 3
-        cell.textLabel?.font = Theme.Fonts.NormalTextTypeFaceLato.font
-        
+        cell.textLabel?.numberOfLines = 5
         if addresses.count > indexPath.row {
             cell.textLabel?.text = addresses[indexPath.row]
+            cell.detailTextLabel?.text = placemarkArray[indexPath.row].name
+           
         } else {
             cell.textLabel?.text = "Nope! Lemme try that again"
         }
+        cell.detailTextLabel?.font = Theme.Fonts.TitleTypeFace.font
+        cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.font = Theme.Fonts.TitleTypeFace.font
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.backgroundColor = Theme.Colors.LabelColor.color
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
         return cell
     }
 }

@@ -2,14 +2,16 @@
 provides-top-level:
 - "Noun"
 provides-nominal:
-- "C7Air_End4Noun"
+- "C5Mango4Noun"
 provides-member:
-- ["C7Air_End4Noun", ""]
+- ["C5Mango4Noun", ""]
 provides-dynamic-lookup:
 - "descriptor"
 - "parentTask"
 depends-top-level:
 - "Task"
+- "Noun"
+- "String"
 - "Object"
 - "String"
 - "Noun"
@@ -41,12 +43,12 @@ depends-member:
 - ["PSo16NSObjectProtocol", "descriptor"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "parentTask"]
-- ["C7Air_End4Noun", "String"]
-- ["C7Air_End4Noun", "Task"]
-- ["C7Air_End4Noun", "deinit"]
-- ["C7Air_End4Noun", "descriptor"]
-- ["C7Air_End4Noun", "init"]
-- ["C7Air_End4Noun", "parentTask"]
+- ["C5Mango4Noun", "String"]
+- ["C5Mango4Noun", "Task"]
+- ["C5Mango4Noun", "deinit"]
+- ["C5Mango4Noun", "descriptor"]
+- ["C5Mango4Noun", "init"]
+- ["C5Mango4Noun", "parentTask"]
 - ["C10RealmSwift6Object", "String"]
 - ["C10RealmSwift6Object", "Task"]
 - ["C10RealmSwift6Object", "descriptor"]
@@ -67,7 +69,7 @@ depends-nominal:
 - "Ps8Hashable"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- "C7Air_End4Noun"
+- "C5Mango4Noun"
 - "C10RealmSwift6Object"
 - "CSo13RLMObjectBase"
 depends-dynamic-lookup:

@@ -1,0 +1,407 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Task"
+provides-nominal:
+- "C5Mango4Task"
+provides-member:
+- ["C5Mango4Task", ""]
+provides-dynamic-lookup:
+- "isCompleted"
+- "id"
+- "hashtag"
+- "createNewTaskWithID"
+- "primaryKey"
+- "distanceFromUser"
+- "name"
+- "dueDate"
+depends-top-level:
+- "Bool"
+- !private "StringLiteralType"
+- !private "uiRealm"
+- !private "Void"
+- !private "Array"
+- "Object"
+- "Double"
+- "Noun"
+- "Task"
+- "String"
+- "Results"
+- "BooleanLiteralType"
+- "NSDate"
+depends-member:
+- ["Ps16AbsoluteValuable", "init"]
+- ["P10RealmSwift11AddableType", "init"]
+- ["Ps9AnyObject", "Double"]
+- !private ["Ps9AnyObject", "Element"]
+- ["Ps9AnyObject", "NSDate"]
+- ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "Task"]
+- !private ["Ps9AnyObject", "add"]
+- ["Ps9AnyObject", "createNewTaskWithID"]
+- !private ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "delete"]
+- ["Ps9AnyObject", "distanceFromUser"]
+- ["Ps9AnyObject", "dueDate"]
+- ["Ps9AnyObject", "hashtag"]
+- ["Ps9AnyObject", "id"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isCompleted"]
+- ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "objects"]
+- ["Ps9AnyObject", "primaryKey"]
+- ["Ps9AnyObject", "readAllTasks"]
+- ["Ps9AnyObject", "readCloseTasks"]
+- ["Ps9AnyObject", "readTasksDueSoon"]
+- ["Ps9AnyObject", "removeTask"]
+- !private ["Ps9AnyObject", "sorted"]
+- !private ["Ps9AnyObject", "uiRealm"]
+- !private ["Ps9AnyObject", "write"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "deinit"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- ["Ps11CVarArgType", "createNewTaskWithID"]
+- ["Ps11CVarArgType", "distanceFromUser"]
+- ["Ps11CVarArgType", "dueDate"]
+- ["Ps11CVarArgType", "hashtag"]
+- ["Ps11CVarArgType", "id"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "isCompleted"]
+- ["Ps11CVarArgType", "name"]
+- ["Ps11CVarArgType", "primaryKey"]
+- ["Ps11CVarArgType", "readAllTasks"]
+- ["Ps11CVarArgType", "readCloseTasks"]
+- ["Ps11CVarArgType", "readTasksDueSoon"]
+- ["Ps11CVarArgType", "removeTask"]
+- !private ["Ps11CVarArgType", "sorted"]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps14CollectionType", "sorted"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- ["Ps28CustomDebugStringConvertible", "createNewTaskWithID"]
+- ["Ps28CustomDebugStringConvertible", "distanceFromUser"]
+- ["Ps28CustomDebugStringConvertible", "dueDate"]
+- ["Ps28CustomDebugStringConvertible", "hashtag"]
+- ["Ps28CustomDebugStringConvertible", "id"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isCompleted"]
+- ["Ps28CustomDebugStringConvertible", "name"]
+- ["Ps28CustomDebugStringConvertible", "primaryKey"]
+- ["Ps28CustomDebugStringConvertible", "readAllTasks"]
+- ["Ps28CustomDebugStringConvertible", "readCloseTasks"]
+- ["Ps28CustomDebugStringConvertible", "readTasksDueSoon"]
+- ["Ps28CustomDebugStringConvertible", "removeTask"]
+- !private ["Ps28CustomDebugStringConvertible", "sorted"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- ["Ps23CustomStringConvertible", "createNewTaskWithID"]
+- ["Ps23CustomStringConvertible", "distanceFromUser"]
+- ["Ps23CustomStringConvertible", "dueDate"]
+- ["Ps23CustomStringConvertible", "hashtag"]
+- ["Ps23CustomStringConvertible", "id"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isCompleted"]
+- ["Ps23CustomStringConvertible", "name"]
+- ["Ps23CustomStringConvertible", "primaryKey"]
+- ["Ps23CustomStringConvertible", "readAllTasks"]
+- ["Ps23CustomStringConvertible", "readCloseTasks"]
+- ["Ps23CustomStringConvertible", "readTasksDueSoon"]
+- ["Ps23CustomStringConvertible", "removeTask"]
+- !private ["Ps23CustomStringConvertible", "sorted"]
+- ["Sd", "init"]
+- !private ["Ps9Equatable", "add"]
+- ["Ps9Equatable", "createNewTaskWithID"]
+- !private ["Ps9Equatable", "delete"]
+- ["Ps9Equatable", "distanceFromUser"]
+- ["Ps9Equatable", "dueDate"]
+- ["Ps9Equatable", "hashtag"]
+- ["Ps9Equatable", "id"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isCompleted"]
+- ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "objects"]
+- ["Ps9Equatable", "primaryKey"]
+- ["Ps9Equatable", "readAllTasks"]
+- ["Ps9Equatable", "readCloseTasks"]
+- ["Ps9Equatable", "readTasksDueSoon"]
+- ["Ps9Equatable", "removeTask"]
+- !private ["Ps9Equatable", "sorted"]
+- !private ["Ps9Equatable", "write"]
+- ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps23FloatLiteralConvertible", "init"]
+- ["Ps17FloatingPointType", "init"]
+- ["Ps8Hashable", "createNewTaskWithID"]
+- ["Ps8Hashable", "distanceFromUser"]
+- ["Ps8Hashable", "dueDate"]
+- ["Ps8Hashable", "hashtag"]
+- ["Ps8Hashable", "id"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isCompleted"]
+- ["Ps8Hashable", "name"]
+- ["Ps8Hashable", "primaryKey"]
+- ["Ps8Hashable", "readAllTasks"]
+- ["Ps8Hashable", "readCloseTasks"]
+- ["Ps8Hashable", "readTasksDueSoon"]
+- ["Ps8Hashable", "removeTask"]
+- !private ["Ps8Hashable", "sorted"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps9Indexable", "sorted"]
+- ["Ps25IntegerLiteralConvertible", "init"]
+- ["P10RealmSwift10MinMaxType", "init"]
+- ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableSliceable", "Element"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "init"]
+- ["CSo6NSDate", "init"]
+- !private ["PSo17NSFastEnumeration", "sorted"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "Double"]
+- ["CSo8NSObject", "NSDate"]
+- ["CSo8NSObject", "Noun"]
+- ["CSo8NSObject", "Results"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "Task"]
+- !private ["CSo8NSObject", "Void"]
+- ["CSo8NSObject", "createNewTaskWithID"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "distanceFromUser"]
+- ["CSo8NSObject", "dueDate"]
+- ["CSo8NSObject", "hashtag"]
+- ["CSo8NSObject", "id"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isCompleted"]
+- ["CSo8NSObject", "name"]
+- ["CSo8NSObject", "primaryKey"]
+- ["CSo8NSObject", "readAllTasks"]
+- ["CSo8NSObject", "readCloseTasks"]
+- ["CSo8NSObject", "readTasksDueSoon"]
+- ["CSo8NSObject", "removeTask"]
+- !private ["CSo8NSObject", "sorted"]
+- !private ["CSo8NSObject", "uiRealm"]
+- ["PSo16NSObjectProtocol", "createNewTaskWithID"]
+- ["PSo16NSObjectProtocol", "distanceFromUser"]
+- ["PSo16NSObjectProtocol", "dueDate"]
+- ["PSo16NSObjectProtocol", "hashtag"]
+- ["PSo16NSObjectProtocol", "id"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isCompleted"]
+- ["PSo16NSObjectProtocol", "name"]
+- ["PSo16NSObjectProtocol", "primaryKey"]
+- ["PSo16NSObjectProtocol", "readAllTasks"]
+- ["PSo16NSObjectProtocol", "readCloseTasks"]
+- ["PSo16NSObjectProtocol", "readTasksDueSoon"]
+- ["PSo16NSObjectProtocol", "removeTask"]
+- !private ["PSo16NSObjectProtocol", "sorted"]
+- ["PSo14NSSecureCoding", "init"]
+- ["C10RealmSwift6Object", "Bool"]
+- ["C10RealmSwift6Object", "Double"]
+- ["C10RealmSwift6Object", "NSDate"]
+- ["C10RealmSwift6Object", "Noun"]
+- ["C10RealmSwift6Object", "Results"]
+- ["C10RealmSwift6Object", "String"]
+- ["C10RealmSwift6Object", "Task"]
+- !private ["C10RealmSwift6Object", "Void"]
+- ["C10RealmSwift6Object", "createNewTaskWithID"]
+- !private ["C10RealmSwift6Object", "deinit"]
+- ["C10RealmSwift6Object", "distanceFromUser"]
+- ["C10RealmSwift6Object", "dueDate"]
+- ["C10RealmSwift6Object", "hashtag"]
+- ["C10RealmSwift6Object", "id"]
+- ["C10RealmSwift6Object", "init"]
+- ["C10RealmSwift6Object", "isCompleted"]
+- ["C10RealmSwift6Object", "name"]
+- ["C10RealmSwift6Object", "primaryKey"]
+- ["C10RealmSwift6Object", "readAllTasks"]
+- ["C10RealmSwift6Object", "readCloseTasks"]
+- ["C10RealmSwift6Object", "readTasksDueSoon"]
+- ["C10RealmSwift6Object", "removeTask"]
+- !private ["C10RealmSwift6Object", "uiRealm"]
+- ["C10RealmSwift6Object", ""]
+- !private ["Sq", "deinit"]
+- ["Ps16OutputStreamType", "init"]
+- ["CSo13RLMObjectBase", "Bool"]
+- ["CSo13RLMObjectBase", "Double"]
+- ["CSo13RLMObjectBase", "NSDate"]
+- ["CSo13RLMObjectBase", "Noun"]
+- ["CSo13RLMObjectBase", "Results"]
+- ["CSo13RLMObjectBase", "String"]
+- ["CSo13RLMObjectBase", "Task"]
+- !private ["CSo13RLMObjectBase", "Void"]
+- ["CSo13RLMObjectBase", "createNewTaskWithID"]
+- !private ["CSo13RLMObjectBase", "deinit"]
+- ["CSo13RLMObjectBase", "distanceFromUser"]
+- ["CSo13RLMObjectBase", "dueDate"]
+- ["CSo13RLMObjectBase", "hashtag"]
+- ["CSo13RLMObjectBase", "id"]
+- ["CSo13RLMObjectBase", "init"]
+- ["CSo13RLMObjectBase", "isCompleted"]
+- ["CSo13RLMObjectBase", "name"]
+- ["CSo13RLMObjectBase", "primaryKey"]
+- ["CSo13RLMObjectBase", "readAllTasks"]
+- ["CSo13RLMObjectBase", "readCloseTasks"]
+- ["CSo13RLMObjectBase", "readTasksDueSoon"]
+- ["CSo13RLMObjectBase", "removeTask"]
+- !private ["CSo13RLMObjectBase", "uiRealm"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["C10RealmSwift5Realm", "add"]
+- !private ["C10RealmSwift5Realm", "delete"]
+- !private ["C10RealmSwift5Realm", "objects"]
+- !private ["C10RealmSwift5Realm", "write"]
+- !private ["P10RealmSwift19RealmCollectionType", "sorted"]
+- ["P10RealmSwift17RealmOptionalType", "init"]
+- !private ["C10RealmSwift7Results", "sorted"]
+- !private ["C10RealmSwift11ResultsBase", "sorted"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps12SequenceType", "sorted"]
+- ["Ps16SignedNumberType", "init"]
+- ["Ps10Streamable", "init"]
+- ["Ps10Strideable", "init"]
+- ["SS", "init"]
+- ["Ps30StringInterpolationConvertible", "init"]
+- ["Ps24StringLiteralConvertible", "init"]
+- ["C5Mango4Task", "Bool"]
+- ["C5Mango4Task", "Double"]
+- ["C5Mango4Task", "NSDate"]
+- ["C5Mango4Task", "Noun"]
+- ["C5Mango4Task", "Results"]
+- ["C5Mango4Task", "String"]
+- ["C5Mango4Task", "Task"]
+- !private ["C5Mango4Task", "Void"]
+- ["C5Mango4Task", "createNewTaskWithID"]
+- ["C5Mango4Task", "deinit"]
+- ["C5Mango4Task", "distanceFromUser"]
+- ["C5Mango4Task", "dueDate"]
+- ["C5Mango4Task", "hashtag"]
+- ["C5Mango4Task", "id"]
+- ["C5Mango4Task", "init"]
+- ["C5Mango4Task", "isCompleted"]
+- ["C5Mango4Task", "name"]
+- ["C5Mango4Task", "primaryKey"]
+- ["C5Mango4Task", "readAllTasks"]
+- ["C5Mango4Task", "readCloseTasks"]
+- ["C5Mango4Task", "readTasksDueSoon"]
+- ["C5Mango4Task", "removeTask"]
+- !private ["C5Mango4Task", "uiRealm"]
+- ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps10_ArrayType", "Element"]
+- ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps31_BuiltinFloatLiteralConvertible", "init"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- ["Ps19_CVarArgAlignedType", "init"]
+- ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps12_Reflectable", "Element"]
+- ["Ps12_Reflectable", "init"]
+depends-nominal:
+- "Ps16AbsoluteValuable"
+- "P10RealmSwift11AddableType"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Sd"
+- "Ps9Equatable"
+- "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- "Ps23FloatLiteralConvertible"
+- "Ps17FloatingPointType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- "Ps25IntegerLiteralConvertible"
+- "P10RealmSwift10MinMaxType"
+- "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo6NSDate"
+- !private "PSo17NSFastEnumeration"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "C10RealmSwift6Object"
+- !private "Sq"
+- "Ps16OutputStreamType"
+- "CSo13RLMObjectBase"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "C10RealmSwift5Realm"
+- !private "P10RealmSwift19RealmCollectionType"
+- "P10RealmSwift17RealmOptionalType"
+- !private "C10RealmSwift7Results"
+- !private "C10RealmSwift11ResultsBase"
+- !private "Ps12SequenceType"
+- "Ps16SignedNumberType"
+- "Ps10Streamable"
+- "Ps10Strideable"
+- "SS"
+- "Ps30StringInterpolationConvertible"
+- "Ps24StringLiteralConvertible"
+- "C5Mango4Task"
+- "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
+- "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- "Ps31_BuiltinFloatLiteralConvertible"
+- "Ps33_BuiltinIntegerLiteralConvertible"
+- "Ps32_BuiltinStringLiteralConvertible"
+- "Ps37_BuiltinUTF16StringLiteralConvertible"
+- "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- "Ps19_CVarArgAlignedType"
+- "Ps22_CVarArgPassedAsDouble"
+- !private "Ps24_DestructorSafeContainer"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreLocation.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreData.swiftmodule"
+interface-hash: "1ce7739f55765d136a8cd8e2be69f066"

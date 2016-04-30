@@ -1,0 +1,222 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "launchScreenViewController"
+provides-nominal:
+- "C5Mango26launchScreenViewController"
+provides-member:
+- ["C5Mango26launchScreenViewController", ""]
+provides-dynamic-lookup:
+- "setUPUI"
+- "viewDidLoad"
+depends-top-level:
+- "UIViewController"
+- "launchScreenViewController"
+- !private "Theme"
+depends-member:
+- !private ["Ps9AnyObject", "Theme"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "setUPUI"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps11CVarArgType", "Theme"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "setUPUI"]
+- !private ["Ps11CVarArgType", "view"]
+- ["Ps11CVarArgType", "viewDidLoad"]
+- ["Ps11CVarArgType", ""]
+- !private ["OV5Mango5Theme6Colors", "BackgroundColor"]
+- !private ["OV5Mango5Theme6Colors", "color"]
+- !private ["Ps28CustomDebugStringConvertible", "Theme"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "setUPUI"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "Theme"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "setUPUI"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "BackgroundColor"]
+- !private ["Ps9Equatable", "Theme"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "color"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "setUPUI"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "BackgroundColor"]
+- !private ["Ps8Hashable", "Theme"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "color"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "setUPUI"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "Theme"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "setUPUI"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "Theme"]
+- ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "setUPUI"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["CSo8NSObject", "Theme"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "setUPUI"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "Theme"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "setUPUI"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Ps16RawRepresentable", "BackgroundColor"]
+- !private ["Ps16RawRepresentable", "color"]
+- !private ["V5Mango5Theme", "Colors"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "Theme"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "setUPUI"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "Theme"]
+- ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "setUPUI"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "Theme"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "setUPUI"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo11UIResponder", "Theme"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "setUPUI"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "Theme"]
+- ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "setUPUI"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "Theme"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "setUPUI"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo16UIViewController", "Theme"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "setUPUI"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps12_Reflectable", "backgroundColor"]
+- !private ["C5Mango26launchScreenViewController", "Theme"]
+- ["C5Mango26launchScreenViewController", "deinit"]
+- ["C5Mango26launchScreenViewController", "init"]
+- ["C5Mango26launchScreenViewController", "setUPUI"]
+- !private ["C5Mango26launchScreenViewController", "view"]
+- ["C5Mango26launchScreenViewController", "viewDidLoad"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- !private "OV5Mango5Theme6Colors"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Ps16RawRepresentable"
+- !private "V5Mango5Theme"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps12_Reflectable"
+- "C5Mango26launchScreenViewController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/x86_64.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "73f25b66e64ae3b6280450e368fc1c0e"

@@ -15,58 +15,21 @@ extension MapVC {
         case 0:
             segmentAllTasks()
         case 1:
-            segmentCloseTasks()
-        case 2:
             segmentEnRoute()
         default:
             assertionFailure("received extroneous input from segemented control")
         }
     }
     
-    
     func segmentAllTasks(){
+        getLocation()
+        guidanceEnabled = true
         hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-        taskManager.readAllTasks(withCompletionHandler: { (tasks) in
-            guard let allTasks = tasks else {return}
-            self.tasks = allTasks
-            for task in self.tasks! {
-                guard let descriptor = task.hashtag?.descriptor else {return}
-                self.searchForMapItemsMatchingNoun(descriptor, withCompletionHandler: { (mapItems) -> () in
-                    if let sortedMapItems = self.sortMapItemsCloseToUserLocation(self.taskMapView.userLocation.location, mapItems: mapItems){
-                        self.closeMapItems[descriptor] = [sortedMapItems.first!]
-                        self.setMapRegionForMapItems(sortedMapItems.first, mapViewA: self.taskMapView)
-                    }
-                })
-            }
-        })
-    }
-    
-    
-    func segmentCloseTasks(){
-        hideOverlay(true, viewCollection: [enRouteView, destinationTextField])
-        //        if closeMapItems.count > 0 {
-        //                //then they are already sorted
-        //            for mapItem in closeMapItems {
-        //             // search through map items and find ones that are within a geofence
-        //             // have ui available to route all of them
-        //            }
-        //            }
     }
     
     func segmentEnRoute() {
+        guidanceEnabled = false
         hideOverlay(false, viewCollection: [enRouteView, destinationTextField])
         checkDestinationUI(false)
-    }
-    
-    
-    
-    func searchForMapItemsMatchingNoun(noun:String?, withCompletionHandler handler: ((mapItems:[MKMapItem]) -> ()?)) {
-        guard let descriptor = noun else {return}
-        guard let request = initalizeRequestWithDescriptor(descriptor, location: userLocation?.placemark.location) else {return}
-        let search = MKLocalSearch(request: request)
-        search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
-            guard let unSortedMapItems = response?.mapItems else {return print("couldn't find any mapItems matching \(noun)")}
-            handler(mapItems: unSortedMapItems)
-        })
     }
 }

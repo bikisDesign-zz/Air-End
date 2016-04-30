@@ -1,0 +1,482 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["C5Mango5MapVC", ""]
+- ["C5Mango5MapVC", "segmentedControlValueChanged"]
+- ["C5Mango5MapVC", "segmentAllTasks"]
+- ["C5Mango5MapVC", "segmentEnRoute"]
+provides-dynamic-lookup:
+- "segmentEnRoute"
+- "segmentAllTasks"
+- "segmentedControlValueChanged"
+depends-top-level:
+- !private "StringLiteralType"
+- "MapVC"
+- !private "BooleanLiteralType"
+- "UISegmentedControl"
+- !private "assertionFailure"
+- !private "~="
+- !private "Array"
+depends-member:
+- !private ["P10RealmSwift11AddableType", "Distance"]
+- !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
+- !private ["Ps9AnyObject", "assertionFailure"]
+- !private ["Ps9AnyObject", "checkDestinationUI"]
+- !private ["Ps9AnyObject", "destinationTextField"]
+- !private ["Ps9AnyObject", "enRouteView"]
+- !private ["Ps9AnyObject", "getLocation"]
+- !private ["Ps9AnyObject", "guidanceEnabled"]
+- !private ["Ps9AnyObject", "hideOverlay"]
+- ["Ps9AnyObject", "segmentAllTasks"]
+- ["Ps9AnyObject", "segmentEnRoute"]
+- !private ["Ps9AnyObject", "segmentedControl"]
+- ["Ps9AnyObject", "segmentedControlValueChanged"]
+- !private ["Ps9AnyObject", "selectedSegmentIndex"]
+- !private ["Sa", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps22BidirectionalIndexType", "Distance"]
+- !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["Ps21BitwiseOperationsType", "Distance"]
+- !private ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSo25CLLocationManagerDelegate", "assertionFailure"]
+- !private ["PSo25CLLocationManagerDelegate", "checkDestinationUI"]
+- !private ["PSo25CLLocationManagerDelegate", "destinationTextField"]
+- !private ["PSo25CLLocationManagerDelegate", "enRouteView"]
+- !private ["PSo25CLLocationManagerDelegate", "getLocation"]
+- !private ["PSo25CLLocationManagerDelegate", "guidanceEnabled"]
+- !private ["PSo25CLLocationManagerDelegate", "hideOverlay"]
+- !private ["PSo25CLLocationManagerDelegate", "segmentAllTasks"]
+- !private ["PSo25CLLocationManagerDelegate", "segmentEnRoute"]
+- !private ["PSo25CLLocationManagerDelegate", "segmentedControl"]
+- !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "IntegerLiteralType"]
+- !private ["Ps11CVarArgType", "assertionFailure"]
+- !private ["Ps11CVarArgType", "checkDestinationUI"]
+- !private ["Ps11CVarArgType", "destinationTextField"]
+- !private ["Ps11CVarArgType", "enRouteView"]
+- !private ["Ps11CVarArgType", "getLocation"]
+- !private ["Ps11CVarArgType", "guidanceEnabled"]
+- !private ["Ps11CVarArgType", "hideOverlay"]
+- ["Ps11CVarArgType", "segmentAllTasks"]
+- ["Ps11CVarArgType", "segmentEnRoute"]
+- !private ["Ps11CVarArgType", "segmentedControl"]
+- ["Ps11CVarArgType", "segmentedControlValueChanged"]
+- !private ["Ps11CVarArgType", "selectedSegmentIndex"]
+- !private ["Ps14CollectionType", "Element"]
+- !private ["Ps10Comparable", "Distance"]
+- !private ["Ps10Comparable", "IntegerLiteralType"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "assertionFailure"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "checkDestinationUI"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "destinationTextField"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "enRouteView"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "getLocation"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "guidanceEnabled"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "hideOverlay"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "segmentAllTasks"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "segmentEnRoute"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "segmentedControl"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "assertionFailure"]
+- !private ["Ps28CustomDebugStringConvertible", "checkDestinationUI"]
+- !private ["Ps28CustomDebugStringConvertible", "destinationTextField"]
+- !private ["Ps28CustomDebugStringConvertible", "enRouteView"]
+- !private ["Ps28CustomDebugStringConvertible", "getLocation"]
+- !private ["Ps28CustomDebugStringConvertible", "guidanceEnabled"]
+- !private ["Ps28CustomDebugStringConvertible", "hideOverlay"]
+- ["Ps28CustomDebugStringConvertible", "segmentAllTasks"]
+- ["Ps28CustomDebugStringConvertible", "segmentEnRoute"]
+- !private ["Ps28CustomDebugStringConvertible", "segmentedControl"]
+- ["Ps28CustomDebugStringConvertible", "segmentedControlValueChanged"]
+- !private ["Ps28CustomDebugStringConvertible", "selectedSegmentIndex"]
+- !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "assertionFailure"]
+- !private ["Ps23CustomStringConvertible", "checkDestinationUI"]
+- !private ["Ps23CustomStringConvertible", "destinationTextField"]
+- !private ["Ps23CustomStringConvertible", "enRouteView"]
+- !private ["Ps23CustomStringConvertible", "getLocation"]
+- !private ["Ps23CustomStringConvertible", "guidanceEnabled"]
+- !private ["Ps23CustomStringConvertible", "hideOverlay"]
+- ["Ps23CustomStringConvertible", "segmentAllTasks"]
+- ["Ps23CustomStringConvertible", "segmentEnRoute"]
+- !private ["Ps23CustomStringConvertible", "segmentedControl"]
+- ["Ps23CustomStringConvertible", "segmentedControlValueChanged"]
+- !private ["Ps23CustomStringConvertible", "selectedSegmentIndex"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "IntegerLiteralType"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "assertionFailure"]
+- !private ["Ps9Equatable", "checkDestinationUI"]
+- !private ["Ps9Equatable", "destinationTextField"]
+- !private ["Ps9Equatable", "enRouteView"]
+- !private ["Ps9Equatable", "getLocation"]
+- !private ["Ps9Equatable", "guidanceEnabled"]
+- !private ["Ps9Equatable", "hideOverlay"]
+- ["Ps9Equatable", "segmentAllTasks"]
+- ["Ps9Equatable", "segmentEnRoute"]
+- !private ["Ps9Equatable", "segmentedControl"]
+- ["Ps9Equatable", "segmentedControlValueChanged"]
+- !private ["Ps9Equatable", "selectedSegmentIndex"]
+- !private ["Ps16ForwardIndexType", "Distance"]
+- !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "IntegerLiteralType"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "assertionFailure"]
+- !private ["Ps8Hashable", "checkDestinationUI"]
+- !private ["Ps8Hashable", "destinationTextField"]
+- !private ["Ps8Hashable", "enRouteView"]
+- !private ["Ps8Hashable", "getLocation"]
+- !private ["Ps8Hashable", "guidanceEnabled"]
+- !private ["Ps8Hashable", "hideOverlay"]
+- ["Ps8Hashable", "segmentAllTasks"]
+- ["Ps8Hashable", "segmentEnRoute"]
+- !private ["Ps8Hashable", "segmentedControl"]
+- ["Ps8Hashable", "segmentedControlValueChanged"]
+- !private ["Ps8Hashable", "selectedSegmentIndex"]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["Ps21IntegerArithmeticType", "Distance"]
+- !private ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps25IntegerLiteralConvertible", "Distance"]
+- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps11IntegerType", "Distance"]
+- !private ["Ps11IntegerType", "IntegerLiteralType"]
+- !private ["PSo17MKMapViewDelegate", "assertionFailure"]
+- !private ["PSo17MKMapViewDelegate", "checkDestinationUI"]
+- !private ["PSo17MKMapViewDelegate", "destinationTextField"]
+- !private ["PSo17MKMapViewDelegate", "enRouteView"]
+- !private ["PSo17MKMapViewDelegate", "getLocation"]
+- !private ["PSo17MKMapViewDelegate", "guidanceEnabled"]
+- !private ["PSo17MKMapViewDelegate", "hideOverlay"]
+- !private ["PSo17MKMapViewDelegate", "segmentAllTasks"]
+- !private ["PSo17MKMapViewDelegate", "segmentEnRoute"]
+- !private ["PSo17MKMapViewDelegate", "segmentedControl"]
+- ["C5Mango5MapVC", "UISegmentedControl"]
+- !private ["C5Mango5MapVC", "assertionFailure"]
+- !private ["C5Mango5MapVC", "checkDestinationUI"]
+- !private ["C5Mango5MapVC", "destinationTextField"]
+- !private ["C5Mango5MapVC", "enRouteView"]
+- !private ["C5Mango5MapVC", "getLocation"]
+- !private ["C5Mango5MapVC", "guidanceEnabled"]
+- !private ["C5Mango5MapVC", "hideOverlay"]
+- ["C5Mango5MapVC", "segmentAllTasks"]
+- ["C5Mango5MapVC", "segmentEnRoute"]
+- !private ["C5Mango5MapVC", "segmentedControl"]
+- ["C5Mango5MapVC", "segmentedControlValueChanged"]
+- !private ["P10RealmSwift10MinMaxType", "Distance"]
+- !private ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
+- !private ["Ps14MirrorPathType", "Distance"]
+- !private ["Ps14MirrorPathType", "IntegerLiteralType"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableSliceable", "Element"]
+- !private ["PSo8NSCoding", "assertionFailure"]
+- !private ["PSo8NSCoding", "checkDestinationUI"]
+- !private ["PSo8NSCoding", "destinationTextField"]
+- !private ["PSo8NSCoding", "enRouteView"]
+- !private ["PSo8NSCoding", "getLocation"]
+- !private ["PSo8NSCoding", "guidanceEnabled"]
+- !private ["PSo8NSCoding", "hideOverlay"]
+- ["PSo8NSCoding", "segmentAllTasks"]
+- ["PSo8NSCoding", "segmentEnRoute"]
+- !private ["PSo8NSCoding", "segmentedControl"]
+- ["PSo8NSCoding", "segmentedControlValueChanged"]
+- !private ["PSo8NSCoding", "selectedSegmentIndex"]
+- !private ["PSo26NSExtensionRequestHandling", "assertionFailure"]
+- !private ["PSo26NSExtensionRequestHandling", "checkDestinationUI"]
+- !private ["PSo26NSExtensionRequestHandling", "destinationTextField"]
+- !private ["PSo26NSExtensionRequestHandling", "enRouteView"]
+- !private ["PSo26NSExtensionRequestHandling", "getLocation"]
+- !private ["PSo26NSExtensionRequestHandling", "guidanceEnabled"]
+- !private ["PSo26NSExtensionRequestHandling", "hideOverlay"]
+- ["PSo26NSExtensionRequestHandling", "segmentAllTasks"]
+- ["PSo26NSExtensionRequestHandling", "segmentEnRoute"]
+- !private ["PSo26NSExtensionRequestHandling", "segmentedControl"]
+- ["PSo26NSExtensionRequestHandling", "segmentedControlValueChanged"]
+- !private ["CSo8NSNumber", "deinit"]
+- ["CSo8NSObject", "UISegmentedControl"]
+- !private ["CSo8NSObject", "assertionFailure"]
+- !private ["CSo8NSObject", "checkDestinationUI"]
+- !private ["CSo8NSObject", "deinit"]
+- !private ["CSo8NSObject", "destinationTextField"]
+- !private ["CSo8NSObject", "enRouteView"]
+- !private ["CSo8NSObject", "getLocation"]
+- !private ["CSo8NSObject", "guidanceEnabled"]
+- !private ["CSo8NSObject", "hideOverlay"]
+- ["CSo8NSObject", "segmentAllTasks"]
+- ["CSo8NSObject", "segmentEnRoute"]
+- !private ["CSo8NSObject", "segmentedControl"]
+- ["CSo8NSObject", "segmentedControlValueChanged"]
+- !private ["CSo8NSObject", "selectedSegmentIndex"]
+- !private ["PSo16NSObjectProtocol", "assertionFailure"]
+- !private ["PSo16NSObjectProtocol", "checkDestinationUI"]
+- !private ["PSo16NSObjectProtocol", "destinationTextField"]
+- !private ["PSo16NSObjectProtocol", "enRouteView"]
+- !private ["PSo16NSObjectProtocol", "getLocation"]
+- !private ["PSo16NSObjectProtocol", "guidanceEnabled"]
+- !private ["PSo16NSObjectProtocol", "hideOverlay"]
+- ["PSo16NSObjectProtocol", "segmentAllTasks"]
+- ["PSo16NSObjectProtocol", "segmentEnRoute"]
+- !private ["PSo16NSObjectProtocol", "segmentedControl"]
+- ["PSo16NSObjectProtocol", "segmentedControlValueChanged"]
+- !private ["PSo16NSObjectProtocol", "selectedSegmentIndex"]
+- !private ["CSo7NSValue", "deinit"]
+- !private ["Ps21RandomAccessIndexType", "Distance"]
+- !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["Vs5Range", "deinit"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- !private ["P10RealmSwift17RealmOptionalType", "Distance"]
+- !private ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
+- !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
+- !private ["Ps12SequenceType", "Element"]
+- !private ["Ps17SignedIntegerType", "Distance"]
+- !private ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- !private ["Ps16SignedNumberType", "Distance"]
+- !private ["Ps16SignedNumberType", "IntegerLiteralType"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["Ps10Strideable", "Distance"]
+- !private ["Ps10Strideable", "IntegerLiteralType"]
+- !private ["PSo29UIAccessibilityIdentification", "selectedSegmentIndex"]
+- !private ["PSo12UIAppearance", "selectedSegmentIndex"]
+- !private ["PSo21UIAppearanceContainer", "assertionFailure"]
+- !private ["PSo21UIAppearanceContainer", "checkDestinationUI"]
+- !private ["PSo21UIAppearanceContainer", "destinationTextField"]
+- !private ["PSo21UIAppearanceContainer", "enRouteView"]
+- !private ["PSo21UIAppearanceContainer", "getLocation"]
+- !private ["PSo21UIAppearanceContainer", "guidanceEnabled"]
+- !private ["PSo21UIAppearanceContainer", "hideOverlay"]
+- ["PSo21UIAppearanceContainer", "segmentAllTasks"]
+- ["PSo21UIAppearanceContainer", "segmentEnRoute"]
+- !private ["PSo21UIAppearanceContainer", "segmentedControl"]
+- ["PSo21UIAppearanceContainer", "segmentedControlValueChanged"]
+- !private ["PSo21UIAppearanceContainer", "selectedSegmentIndex"]
+- !private ["PSo18UIContentContainer", "assertionFailure"]
+- !private ["PSo18UIContentContainer", "checkDestinationUI"]
+- !private ["PSo18UIContentContainer", "destinationTextField"]
+- !private ["PSo18UIContentContainer", "enRouteView"]
+- !private ["PSo18UIContentContainer", "getLocation"]
+- !private ["PSo18UIContentContainer", "guidanceEnabled"]
+- !private ["PSo18UIContentContainer", "hideOverlay"]
+- ["PSo18UIContentContainer", "segmentAllTasks"]
+- ["PSo18UIContentContainer", "segmentEnRoute"]
+- !private ["PSo18UIContentContainer", "segmentedControl"]
+- ["PSo18UIContentContainer", "segmentedControlValueChanged"]
+- !private ["CSo9UIControl", "selectedSegmentIndex"]
+- !private ["PSo17UICoordinateSpace", "selectedSegmentIndex"]
+- !private ["PSo13UIDynamicItem", "selectedSegmentIndex"]
+- !private ["PSo18UIFocusEnvironment", "assertionFailure"]
+- !private ["PSo18UIFocusEnvironment", "checkDestinationUI"]
+- !private ["PSo18UIFocusEnvironment", "destinationTextField"]
+- !private ["PSo18UIFocusEnvironment", "enRouteView"]
+- !private ["PSo18UIFocusEnvironment", "getLocation"]
+- !private ["PSo18UIFocusEnvironment", "guidanceEnabled"]
+- !private ["PSo18UIFocusEnvironment", "hideOverlay"]
+- ["PSo18UIFocusEnvironment", "segmentAllTasks"]
+- ["PSo18UIFocusEnvironment", "segmentEnRoute"]
+- !private ["PSo18UIFocusEnvironment", "segmentedControl"]
+- ["PSo18UIFocusEnvironment", "segmentedControlValueChanged"]
+- !private ["PSo18UIFocusEnvironment", "selectedSegmentIndex"]
+- ["CSo11UIResponder", "UISegmentedControl"]
+- !private ["CSo11UIResponder", "assertionFailure"]
+- !private ["CSo11UIResponder", "checkDestinationUI"]
+- !private ["CSo11UIResponder", "destinationTextField"]
+- !private ["CSo11UIResponder", "enRouteView"]
+- !private ["CSo11UIResponder", "getLocation"]
+- !private ["CSo11UIResponder", "guidanceEnabled"]
+- !private ["CSo11UIResponder", "hideOverlay"]
+- ["CSo11UIResponder", "segmentAllTasks"]
+- ["CSo11UIResponder", "segmentEnRoute"]
+- !private ["CSo11UIResponder", "segmentedControl"]
+- ["CSo11UIResponder", "segmentedControlValueChanged"]
+- !private ["CSo11UIResponder", "selectedSegmentIndex"]
+- !private ["CSo18UISegmentedControl", "selectedSegmentIndex"]
+- !private ["PSo16UIStateRestoring", "assertionFailure"]
+- !private ["PSo16UIStateRestoring", "checkDestinationUI"]
+- !private ["PSo16UIStateRestoring", "destinationTextField"]
+- !private ["PSo16UIStateRestoring", "enRouteView"]
+- !private ["PSo16UIStateRestoring", "getLocation"]
+- !private ["PSo16UIStateRestoring", "guidanceEnabled"]
+- !private ["PSo16UIStateRestoring", "hideOverlay"]
+- ["PSo16UIStateRestoring", "segmentAllTasks"]
+- ["PSo16UIStateRestoring", "segmentEnRoute"]
+- !private ["PSo16UIStateRestoring", "segmentedControl"]
+- ["PSo16UIStateRestoring", "segmentedControlValueChanged"]
+- !private ["PSo18UITraitEnvironment", "assertionFailure"]
+- !private ["PSo18UITraitEnvironment", "checkDestinationUI"]
+- !private ["PSo18UITraitEnvironment", "destinationTextField"]
+- !private ["PSo18UITraitEnvironment", "enRouteView"]
+- !private ["PSo18UITraitEnvironment", "getLocation"]
+- !private ["PSo18UITraitEnvironment", "guidanceEnabled"]
+- !private ["PSo18UITraitEnvironment", "hideOverlay"]
+- ["PSo18UITraitEnvironment", "segmentAllTasks"]
+- ["PSo18UITraitEnvironment", "segmentEnRoute"]
+- !private ["PSo18UITraitEnvironment", "segmentedControl"]
+- ["PSo18UITraitEnvironment", "segmentedControlValueChanged"]
+- !private ["PSo18UITraitEnvironment", "selectedSegmentIndex"]
+- !private ["CSo6UIView", "selectedSegmentIndex"]
+- ["CSo16UIViewController", "UISegmentedControl"]
+- !private ["CSo16UIViewController", "assertionFailure"]
+- !private ["CSo16UIViewController", "checkDestinationUI"]
+- !private ["CSo16UIViewController", "destinationTextField"]
+- !private ["CSo16UIViewController", "enRouteView"]
+- !private ["CSo16UIViewController", "getLocation"]
+- !private ["CSo16UIViewController", "guidanceEnabled"]
+- !private ["CSo16UIViewController", "hideOverlay"]
+- ["CSo16UIViewController", "segmentAllTasks"]
+- ["CSo16UIViewController", "segmentEnRoute"]
+- !private ["CSo16UIViewController", "segmentedControl"]
+- ["CSo16UIViewController", "segmentedControlValueChanged"]
+- !private ["Ps10_ArrayType", "Element"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps14_Incrementable", "Distance"]
+- !private ["Ps14_Incrementable", "IntegerLiteralType"]
+- !private ["Ps22_IntegerArithmeticType", "Distance"]
+- !private ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["Ps12_IntegerType", "Distance"]
+- !private ["Ps12_IntegerType", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps22_RandomAccessAmbiguity", "Distance"]
+- !private ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["Ps12_Reflectable", "selectedSegmentIndex"]
+- !private ["Ps18_SignedIntegerType", "Distance"]
+- !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+depends-nominal:
+- !private "P10RealmSwift11AddableType"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps22BidirectionalIndexType"
+- !private "Ps21BitwiseOperationsType"
+- !private "Sb"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "Ps11BooleanType"
+- !private "PSo25CLLocationManagerDelegate"
+- "Ps11CVarArgType"
+- !private "Ps14CollectionType"
+- !private "Ps10Comparable"
+- !private "P5Mango31CorrectAddressTableViewDelegate"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps16ForwardIndexType"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Si"
+- !private "Ps21IntegerArithmeticType"
+- !private "Ps25IntegerLiteralConvertible"
+- !private "Ps11IntegerType"
+- !private "PSo17MKMapViewDelegate"
+- "C5Mango5MapVC"
+- !private "P10RealmSwift10MinMaxType"
+- !private "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- !private "CSo8NSNumber"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo7NSValue"
+- !private "Ps21RandomAccessIndexType"
+- !private "Vs5Range"
+- !private "Ps30RangeReplaceableCollectionType"
+- !private "P10RealmSwift17RealmOptionalType"
+- !private "Ps12SequenceType"
+- !private "Ps17SignedIntegerType"
+- !private "Ps16SignedNumberType"
+- !private "Vs12StaticString"
+- !private "Ps10Strideable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- !private "CSo18UISegmentedControl"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps10_ArrayType"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps14_Incrementable"
+- !private "Ps22_IntegerArithmeticType"
+- !private "Ps12_IntegerType"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps22_RandomAccessAmbiguity"
+- !private "Ps12_Reflectable"
+- !private "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreLocation.swiftmodule"
+- "/Users/aaronb/Development/Air-End/RealmSwift.framework/Modules/RealmSwift.swiftmodule/i386.swiftmodule"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMMigration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMDefines.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreData.swiftmodule"
+interface-hash: "5e47b7a1853c156b70ca1ca81e871113"

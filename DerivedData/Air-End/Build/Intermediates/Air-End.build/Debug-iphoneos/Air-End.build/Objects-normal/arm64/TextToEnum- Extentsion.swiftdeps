@@ -1,13 +1,13 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 provides-nominal:
-- "OE7Air_EndCSo16UIViewController15SegueIdentifier"
-- "OE7Air_EndCSo11UITableView14CellIdentifier"
+- "OE5MangoCSo16UIViewController15SegueIdentifier"
+- "OE5MangoCSo11UITableView14CellIdentifier"
 provides-member:
 - ["CSo16UIViewController", ""]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", ""]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", ""]
 - ["CSo11UITableView", ""]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", ""]
+- ["OE5MangoCSo11UITableView14CellIdentifier", ""]
 - ["CSo16UIViewController", "SegueIdentifier"]
 - ["CSo16UIViewController", "performSegueWithSegueIdentifier"]
 - ["CSo16UIViewController", "shouldPerformSegueWithSegueIdentifier"]
@@ -15,14 +15,14 @@ provides-member:
 - ["CSo11UITableView", "dequeueReusableCellWithCellIdentifier"]
 provides-dynamic-lookup:
 depends-top-level:
-- "AnyObject"
-- "StringLiteralType"
-- !private "~="
-- "=="
 - "UITableView"
 - "UIViewController"
-- "String"
+- "=="
+- !private "~="
 - "UITableViewCell"
+- "String"
+- "AnyObject"
+- "StringLiteralType"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "hashValue"]
 - ["Ps9AnyObject", "dequeueReusableCellWithCellIdentifier"]
@@ -43,12 +43,12 @@ depends-member:
 - ["Ps11CVarArgType", "performSegueWithSegueIdentifier"]
 - !private ["Ps11CVarArgType", "shouldPerformSegueWithIdentifier"]
 - ["Ps11CVarArgType", "shouldPerformSegueWithSegueIdentifier"]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", "ListCell"]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", "RawValue"]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", "deinit"]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", "hashValue"]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", "init"]
-- ["OE7Air_EndCSo11UITableView14CellIdentifier", "rawValue"]
+- ["OE5MangoCSo11UITableView14CellIdentifier", "ListCell"]
+- ["OE5MangoCSo11UITableView14CellIdentifier", "RawValue"]
+- ["OE5MangoCSo11UITableView14CellIdentifier", "deinit"]
+- ["OE5MangoCSo11UITableView14CellIdentifier", "hashValue"]
+- ["OE5MangoCSo11UITableView14CellIdentifier", "init"]
+- ["OE5MangoCSo11UITableView14CellIdentifier", "rawValue"]
 - !private ["Ps10Comparable", "hashValue"]
 - ["Ps28CustomDebugStringConvertible", "dequeueReusableCellWithCellIdentifier"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCellWithIdentifier"]
@@ -129,14 +129,14 @@ depends-member:
 - ["Ps16RawRepresentable", ""]
 - !private ["P10RealmSwift17RealmOptionalType", "_getBuiltinLogicValue"]
 - !private ["P10RealmSwift17RealmOptionalType", "hashValue"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "RawValue"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueToMapTaskVC"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueToNewTaskVC"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "SegueUnwindToListVC"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "deinit"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "hashValue"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "init"]
-- ["OE7Air_EndCSo16UIViewController15SegueIdentifier", "rawValue"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "RawValue"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "SegueToMapTaskVC"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "SegueToNewTaskVC"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "SegueUnwindToListVC"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "deinit"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "hashValue"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "init"]
+- ["OE5MangoCSo16UIViewController15SegueIdentifier", "rawValue"]
 - !private ["Ps17SignedIntegerType", "hashValue"]
 - !private ["Ps16SignedNumberType", "hashValue"]
 - !private ["Ps10Strideable", "hashValue"]
@@ -221,7 +221,7 @@ depends-nominal:
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
 - "Ps11CVarArgType"
-- "OE7Air_EndCSo11UITableView14CellIdentifier"
+- "OE5MangoCSo11UITableView14CellIdentifier"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
@@ -243,7 +243,7 @@ depends-nominal:
 - !private "Vs5Range"
 - "Ps16RawRepresentable"
 - !private "P10RealmSwift17RealmOptionalType"
-- "OE7Air_EndCSo16UIViewController15SegueIdentifier"
+- "OE5MangoCSo16UIViewController15SegueIdentifier"
 - !private "Ps17SignedIntegerType"
 - !private "Ps16SignedNumberType"
 - !private "Ps10Strideable"

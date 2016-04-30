@@ -12,11 +12,12 @@ import CoreLocation
 import MapKit
 
 class ListVC: UIViewController {
+    @IBOutlet var viewContainer: UIView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
     var tasks : Results<Task>?
     let taskManager = Task()
-    var closeMapItems = [String:[MKMapItem]]()
+    var closeMapItems = [String:MKMapItem]()
     let locationManager = CLLocationManager()
     var currentLocation:CLLocation?
     var selectedTask:Task?
@@ -25,7 +26,13 @@ class ListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        getLocation()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControlValueChanged(segmentedControl)
+        tableView.allowsMultipleSelectionDuringEditing = false
     }
     
     func getLocation(){
@@ -33,23 +40,19 @@ class ListVC: UIViewController {
         determineLocationAuthorizationStatus()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        segmentDueSoon()
-    }
-    
     func setUpUI(){
         let add = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action:#selector(addItemButtonWasTapped))
         navigationItem.rightBarButtonItem = add
-        navigationItem.title = "MANGO"
-        tableView.backgroundColor = Theme.Colors.BackgroundColor.color
+        navigationItem.title = " M A N G O "
+        tableView.backgroundColor = Theme.Colors.LabelColor.color
         tableView.separatorColor = Theme.Colors.NavigationBarColor.color
-        
+        viewContainer.backgroundColor = tableView.backgroundColor
     }
     
     //MARK: - Segmented Control
     
     func segmentDueSoon(){
+        getLocation()
         taskManager.readTasksDueSoon { (tasks) -> () in
             self.tasks = tasks
             self.tableView.reloadData()
@@ -57,14 +60,10 @@ class ListVC: UIViewController {
     }
     
     func segmentCloseTasks(){
-        taskManager.readAllTasks { (tasks) -> () in
-            self.tasks = tasks
-            for task in tasks! {
-                if let descriptor = task.hashtag?.descriptor {
-                    self.findCloseLocationsMatchingNoun(descriptor)
-                }
-            }
-        }
+            taskManager.readCloseTasks(withCompletionHandler: { (closeTasks) in
+            self.tasks = closeTasks
+            self.tableView.reloadData()
+        })
     }
     
     func segmentFullList(){
@@ -75,7 +74,6 @@ class ListVC: UIViewController {
     }
     
     
-    
     @IBAction func segmentedControlValueChanged(sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -83,9 +81,6 @@ class ListVC: UIViewController {
         case 1:
             if determineLocationAuthorizationStatus() == true {
                 segmentCloseTasks()
-            }
-            else {
-                //display warning
             }
         case 2:
             segmentFullList()
@@ -114,46 +109,64 @@ class ListVC: UIViewController {
 
 extension ListVC: UITableViewDataSource, UITableViewDelegate {
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let numberOfTasks = tasks?.count else { return 0}
+        return numberOfTasks
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.ListCell)
+        var cell = tableView.dequeueReusableCellWithCellIdentifier(UITableView.CellIdentifier.ListCell)
         guard let task = tasks?[indexPath.row] else { return cell}
         if segmentedControl.selectedSegmentIndex == 1 {
             cell.textLabel?.text = task.name
-            cell.detailTextLabel?.text = findClosestLocationNameForTask(task)
+            cell.detailTextLabel?.text = closeMapItems[task.name]?.name
         }
         else {
             cell.textLabel?.text = task.name
             cell.detailTextLabel?.text = convertNSDateToString(task.dueDate)
         }
-        cell.selectionStyle = .None
-        cell.backgroundColor = Theme.Colors.LightForegroundColor.color
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell = setUpTableviewCellUI(cell)
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 65
+    func setUpTableviewCellUI(cell:UITableViewCell) -> UITableViewCell{
+        cell.selectionStyle = .None
+        cell.backgroundColor = Theme.Colors.LabelColor.color
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.font = Theme.Fonts.TitleTypeFace.font
+        cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell.detailTextLabel?.font = Theme.Fonts.TitleTypeFace.font
+        cell.preservesSuperviewLayoutMargins = false
+        cell.separatorInset = UIEdgeInsetsZero
+        cell.layoutMargins = UIEdgeInsetsZero
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let task = tasks?[indexPath.row] {
-            guard let descriptor = task.hashtag?.descriptor else {return}
-            let closestTask = closeMapItems[descriptor]?.first
-            if closestTask != nil {
-                selectedTask = task
-                selectedClosestTask = closestTask
-                performSegueWithSegueIdentifier(SegueIdentifier.SegueToMapTaskVC, sender: self)
-            }
+        guard let task = tasks?[indexPath.row] else {return}
+        if closeMapItems.count > 0 {
+        let selectedMapItem = closeMapItems[task.name]
+        selectedTask = task
+        selectedClosestTask = selectedMapItem
+        performSegueWithSegueIdentifier(SegueIdentifier.SegueToMapTaskVC, sender: self)
+        }
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            guard let task = tasks?[indexPath.row] else {return}
+            taskManager.removeTask(task, withCompletionHandler: { (tasks) in
+                self.tasks = tasks
+                self.tableView.reloadData()
+            })
         }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let numberOfTasks = tasks?.count else { return 0}
-        return numberOfTasks
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 65
     }
 }

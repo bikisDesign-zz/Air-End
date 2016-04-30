@@ -1,9 +1,9 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
 provides-nominal:
-- "C7Air_End5MapVC"
+- "C5Mango5MapVC"
 provides-member:
-- ["C7Air_End5MapVC", ""]
+- ["C5Mango5MapVC", ""]
 provides-dynamic-lookup:
 - "textFieldDidBeginEditing"
 - "textFieldDidEndEditing"
@@ -33,13 +33,13 @@ depends-member:
 - ["Ps11CVarArgType", "textFieldShouldClear"]
 - ["Ps11CVarArgType", "textFieldShouldEndEditing"]
 - ["Ps11CVarArgType", "textFieldShouldReturn"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textField"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textFieldDidBeginEditing"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textFieldDidEndEditing"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textFieldShouldBeginEditing"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textFieldShouldClear"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textFieldShouldEndEditing"]
-- ["P7Air_End31CorrectAddressTableViewDelegate", "textFieldShouldReturn"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textField"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textFieldDidBeginEditing"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textFieldDidEndEditing"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textFieldShouldBeginEditing"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textFieldShouldClear"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textFieldShouldEndEditing"]
+- ["P5Mango31CorrectAddressTableViewDelegate", "textFieldShouldReturn"]
 - ["Ps28CustomDebugStringConvertible", "textField"]
 - ["Ps28CustomDebugStringConvertible", "textFieldDidBeginEditing"]
 - ["Ps28CustomDebugStringConvertible", "textFieldDidEndEditing"]
@@ -75,15 +75,15 @@ depends-member:
 - ["PSo17MKMapViewDelegate", "textFieldShouldClear"]
 - ["PSo17MKMapViewDelegate", "textFieldShouldEndEditing"]
 - ["PSo17MKMapViewDelegate", "textFieldShouldReturn"]
-- ["C7Air_End5MapVC", "UITextField"]
-- ["C7Air_End5MapVC", "deinit"]
-- ["C7Air_End5MapVC", "textField"]
-- ["C7Air_End5MapVC", "textFieldDidBeginEditing"]
-- ["C7Air_End5MapVC", "textFieldDidEndEditing"]
-- ["C7Air_End5MapVC", "textFieldShouldBeginEditing"]
-- ["C7Air_End5MapVC", "textFieldShouldClear"]
-- ["C7Air_End5MapVC", "textFieldShouldEndEditing"]
-- ["C7Air_End5MapVC", "textFieldShouldReturn"]
+- ["C5Mango5MapVC", "UITextField"]
+- ["C5Mango5MapVC", "deinit"]
+- ["C5Mango5MapVC", "textField"]
+- ["C5Mango5MapVC", "textFieldDidBeginEditing"]
+- ["C5Mango5MapVC", "textFieldDidEndEditing"]
+- ["C5Mango5MapVC", "textFieldShouldBeginEditing"]
+- ["C5Mango5MapVC", "textFieldShouldClear"]
+- ["C5Mango5MapVC", "textFieldShouldEndEditing"]
+- ["C5Mango5MapVC", "textFieldShouldReturn"]
 - ["PSo8NSCoding", "textField"]
 - ["PSo8NSCoding", "textFieldDidBeginEditing"]
 - ["PSo8NSCoding", "textFieldDidEndEditing"]
@@ -113,6 +113,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textFieldShouldClear"]
 - ["PSo16NSObjectProtocol", "textFieldShouldEndEditing"]
 - ["PSo16NSObjectProtocol", "textFieldShouldReturn"]
+- ["P5Mango19TaskMapViewDelegate", "textField"]
+- ["P5Mango19TaskMapViewDelegate", "textFieldDidBeginEditing"]
+- ["P5Mango19TaskMapViewDelegate", "textFieldDidEndEditing"]
+- ["P5Mango19TaskMapViewDelegate", "textFieldShouldBeginEditing"]
+- ["P5Mango19TaskMapViewDelegate", "textFieldShouldClear"]
+- ["P5Mango19TaskMapViewDelegate", "textFieldShouldEndEditing"]
+- ["P5Mango19TaskMapViewDelegate", "textFieldShouldReturn"]
 - ["PSo21UIAppearanceContainer", "textField"]
 - ["PSo21UIAppearanceContainer", "textFieldDidBeginEditing"]
 - ["PSo21UIAppearanceContainer", "textFieldDidEndEditing"]
@@ -176,17 +183,18 @@ depends-nominal:
 - "Ps9AnyObject"
 - "PSo25CLLocationManagerDelegate"
 - "Ps11CVarArgType"
-- "P7Air_End31CorrectAddressTableViewDelegate"
+- "P5Mango31CorrectAddressTableViewDelegate"
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - "Ps9Equatable"
 - "Ps8Hashable"
 - "PSo17MKMapViewDelegate"
-- "C7Air_End5MapVC"
+- "C5Mango5MapVC"
 - "PSo8NSCoding"
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- "P5Mango19TaskMapViewDelegate"
 - "PSo21UIAppearanceContainer"
 - "PSo18UIContentContainer"
 - "PSo18UIFocusEnvironment"
