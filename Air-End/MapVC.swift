@@ -128,12 +128,11 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     func findClosestMapItemMatchingTask(task:Task, userLocation:CLLocation) {
-        print("finding Closest Task")
-        guard let descriptor = task.hashtag?.descriptor else {return print("this task doesn't have a descriptor")}
+        guard let descriptor = task.hashtag?.descriptor else {return}
         guard let request = initalizeRequestWithDescriptor(descriptor, location: userLocation) else {return showAlert("We couldn't locate you! Please try again.")}
         let search = MKLocalSearch(request: request)
         search.startWithCompletionHandler({ (response: MKLocalSearchResponse?, error:NSError?) -> Void in
-            guard let mapItems = response?.mapItems else { return print("couldn't find any close mapItems matching \(descriptor)")}
+            guard let mapItems = response?.mapItems else { return}
             
             let sortedCloseTasks = mapItems.sort({$0.placemark.location?.distanceFromLocation(userLocation) < $1.placemark.location?.distanceFromLocation(userLocation)})
             self.closeMapItems[task.name] = sortedCloseTasks.first!
@@ -194,8 +193,8 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     //MARK - Route Methods
     func findTasksEnrouteToDestination(){
-        guard let source = taskLocations.first else {return print("source not available")}
-        guard let destination = taskLocations.last else {return print ("destination not available")}
+        guard let source = taskLocations.first else {return}
+        guard let destination = taskLocations.last else {return}
         
         guard let sourceToDestinationRequest = initializeRequest(source, destination: destination) else {return}
         
@@ -203,14 +202,15 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
         searchForFastestRouteWithDirections(sourceToDestinationDirections) { (sourceToDestinationRoute) in
             guard let sToDRoute = sourceToDestinationRoute else {return}
-            self.routeAllCloseTasksEnRouteToDestination(source, destination: destination, sourceToDestinationRoute: sToDRoute, index: 1)
+            var index = 1
+            self.routeAllCloseTasksEnRouteToDestination(source, destination: destination, sourceToDestinationRoute: sToDRoute, index: &index)
         }
     }
     
     func routeAllCloseTasksEnRouteToDestination(source: MKMapItem,
                                                 destination:MKMapItem,
                                                 sourceToDestinationRoute:MKRoute,
-                                                var index: Int){
+                                                inout index: Int){
         
         let sourceToDestinationETA = sourceToDestinationRoute.expectedTravelTime
         guard let sourceToTaskRequest = initializeRequest(source,
@@ -243,7 +243,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                                                                 destination: destination,
                                                                 sourceToDestinationRoute:
                                                                 sourceToDestinationRoute,
-                                                                index: index)
+                                                                index: &index)
                 })
             }
             else {
@@ -252,7 +252,7 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 self.determineRemaningDestinationsWithSource(source,
                                                              destination: destination,
                                                              sourceToDestinationRoute: sourceToDestinationRoute,
-                                                             index: index)
+                                                             index: &index)
             }
         }
     }
@@ -261,12 +261,13 @@ class MapVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     func determineRemaningDestinationsWithSource(source: MKMapItem,
                                                  destination:MKMapItem,
                                                  sourceToDestinationRoute:MKRoute,
-                                                 var index: Int){
+                                                 inout index: Int){
         if index < self.taskLocations.count - 2 {
+            index += 1
             routeAllCloseTasksEnRouteToDestination(source,
                                                    destination: destination,
                                                    sourceToDestinationRoute: sourceToDestinationRoute,
-                                                   index: index + 1)
+                                                   index: &index)
         }
         else {
             let newGuidance = Guidance(index: index - 1,

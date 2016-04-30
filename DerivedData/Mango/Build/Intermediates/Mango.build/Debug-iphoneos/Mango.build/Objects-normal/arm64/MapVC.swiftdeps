@@ -6,92 +6,89 @@ provides-nominal:
 provides-member:
 - ["C5Mango5MapVC", ""]
 provides-dynamic-lookup:
-- "activityIndicator"
-- "addDestination"
-- "determineRemaningDestinationsWithSource"
-- "taskMapView"
-- "destinationMapItem"
-- "segmentedControl"
-- "guidanceContainer"
-- "locationManager"
-- "locationManager"
-- "routeCounter"
-- "guidanceButton"
-- "enRouteView"
-- "etaLabel"
-- "getLocation"
-- "viewWillAppear"
-- "routeAllCloseTasksEnRouteToDestination"
-- "guidanceLabel"
-- "enRouteOutletCollection"
-- "closeMapItems"
-- "taskLocations"
-- "finalRoutes"
-- "destinationTextField"
-- "cancelButton"
-- "findTasksEnrouteToDestination"
-- "setUpMapUI"
-- "guidances"
-- "setUpGuidanceUI"
-- "userSelectingAdditionalRoutes"
-- "guidanceLabelContainer"
 - "checkDestinationButton"
-- "userLocation"
-- "showRoute"
-- "taskManager"
+- "userSelectingAdditionalRoutes"
+- "findTasksEnrouteToDestination"
+- "destinationTextField"
+- "taskMapView"
 - "addDestinationButton"
-- "guidanceEnabled"
-- "viewDidLoad"
 - "checkDestinationUI"
-- "findClosestMapItemMatchingTask"
+- "guidances"
+- "taskLocations"
+- "segmentedControl"
+- "getLocation"
+- "guidanceLabel"
+- "etaLabel"
+- "viewDidLoad"
+- "cancelButton"
+- "taskManager"
+- "enRouteOutletCollection"
+- "guidanceButton"
+- "finalRoutes"
+- "userLocation"
+- "guidanceContainer"
+- "showRoute"
+- "addDestination"
+- "guidanceLabelContainer"
+- "closeMapItems"
+- "routeCounter"
+- "enRouteView"
 - "checkDestination"
+- "setUpGuidanceUI"
+- "destinationMapItem"
+- "viewWillAppear"
+- "setUpMapUI"
+- "guidanceEnabled"
+- "findClosestMapItemMatchingTask"
+- "locationManager"
+- "locationManager"
+- "activityIndicator"
 depends-top-level:
-- !private "UITapGestureRecognizer"
-- !private "-"
-- "CLLocationManager"
-- "String"
-- !private "+"
-- !private "MKDirections"
-- !private "NSError"
+- !private "MKLocalSearchResponse"
+- !private "uiRealm"
+- "MKRoute"
+- "Int"
+- "CLLocation"
+- "TaskMapView"
+- !private "-="
+- !private "<"
+- !private "MKLocalSearch"
+- "UIButton"
+- "Results"
+- "Task"
 - "UITextField"
+- !private "UIColor"
+- !private "CorrectAddressTableView"
+- "UIActivityIndicatorView"
+- "UIViewController"
+- "CLLocationManager"
+- !private "StringLiteralType"
+- !private "=="
+- !private "Void"
+- !private "CLGeocoder"
+- !private "UIEdgeInsets"
+- !private "+"
 - "MKMapItem"
 - "BooleanLiteralType"
-- "UIViewController"
-- "UIView"
-- !private "UIEdgeInsets"
+- "String"
+- "Guidance"
+- "Bool"
 - !private "UIImage"
+- "MKMapViewDelegate"
+- !private "NSError"
+- "MapVC"
+- !private "MKDirections"
+- !private "Array"
+- !private "UITapGestureRecognizer"
+- !private "-"
+- !private "Theme"
+- "UILabel"
+- "UIView"
 - "UISegmentedControl"
 - !private "MKPlacemark"
-- !private "-="
-- "UIButton"
 - !private "+="
-- !private "MKLocalSearchResponse"
-- "UILabel"
-- !private "print"
-- "Task"
-- "Results"
-- "TaskMapView"
-- "CLLocation"
-- "Guidance"
-- !private "CorrectAddressTableView"
-- !private "StringLiteralType"
-- !private "MKLocalSearch"
-- !private "uiRealm"
-- "CLLocationManagerDelegate"
-- !private "UIColor"
-- !private "Array"
-- !private "Void"
-- "Bool"
-- !private "CLGeocoder"
-- "MapVC"
-- !private "Theme"
-- "Int"
 - !private "CLPlacemark"
-- !private "<"
-- "UIActivityIndicatorView"
-- "MKMapViewDelegate"
-- "MKRoute"
-- !private "=="
+- "CLLocationManagerDelegate"
 depends-member:
 - ["P10RealmSwift11AddableType", "Distance"]
 - ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -121,6 +118,7 @@ depends-member:
 - ["Ps9AnyObject", "addDestination"]
 - ["Ps9AnyObject", "addDestinationButton"]
 - !private ["Ps9AnyObject", "addGestureRecognizer"]
+- !private ["Ps9AnyObject", "adjustsFontSizeToFitWidth"]
 - !private ["Ps9AnyObject", "allTextFieldsAreFilled"]
 - !private ["Ps9AnyObject", "alpha"]
 - !private ["Ps9AnyObject", "animateWithDuration"]
@@ -149,7 +147,6 @@ depends-member:
 - ["Ps9AnyObject", "finalRoutes"]
 - ["Ps9AnyObject", "findClosestMapItemMatchingTask"]
 - ["Ps9AnyObject", "findTasksEnrouteToDestination"]
-- !private ["Ps9AnyObject", "gestureRecognizers"]
 - ["Ps9AnyObject", "getLocation"]
 - ["Ps9AnyObject", "guidanceButton"]
 - ["Ps9AnyObject", "guidanceContainer"]
@@ -184,10 +181,8 @@ depends-member:
 - !private ["Ps9AnyObject", "navigationController"]
 - !private ["Ps9AnyObject", "placemark"]
 - !private ["Ps9AnyObject", "plotPolylineWithRoute"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "readAllTasks"]
 - !private ["Ps9AnyObject", "removeAnnotation"]
-- !private ["Ps9AnyObject", "removeGestureRecognizer"]
 - !private ["Ps9AnyObject", "reverseGeocodeLocation"]
 - ["Ps9AnyObject", "routeAllCloseTasksEnRouteToDestination"]
 - ["Ps9AnyObject", "routeCounter"]
@@ -219,6 +214,7 @@ depends-member:
 - ["Ps9AnyObject", "taskMapView"]
 - ["Ps9AnyObject", "tasks"]
 - !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "textAlignment"]
 - !private ["Ps9AnyObject", "textColor"]
 - !private ["Ps9AnyObject", "tintColor"]
 - !private ["Ps9AnyObject", "uiRealm"]
@@ -343,7 +339,6 @@ depends-member:
 - ["PSo25CLLocationManagerDelegate", "mapViewWillStartRenderingMap"]
 - !private ["PSo25CLLocationManagerDelegate", "navigationController"]
 - !private ["PSo25CLLocationManagerDelegate", "plotPolylineWithRoute"]
-- !private ["PSo25CLLocationManagerDelegate", "print"]
 - !private ["PSo25CLLocationManagerDelegate", "routeAllCloseTasksEnRouteToDestination"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForFastestRouteWithDirections"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForMapItemsMatchingNoun"]
@@ -393,6 +388,7 @@ depends-member:
 - ["Ps11CVarArgType", "addDestination"]
 - ["Ps11CVarArgType", "addDestinationButton"]
 - !private ["Ps11CVarArgType", "addGestureRecognizer"]
+- !private ["Ps11CVarArgType", "adjustsFontSizeToFitWidth"]
 - !private ["Ps11CVarArgType", "allTextFieldsAreFilled"]
 - !private ["Ps11CVarArgType", "alpha"]
 - !private ["Ps11CVarArgType", "animateWithDuration"]
@@ -419,7 +415,6 @@ depends-member:
 - ["Ps11CVarArgType", "finalRoutes"]
 - ["Ps11CVarArgType", "findClosestMapItemMatchingTask"]
 - ["Ps11CVarArgType", "findTasksEnrouteToDestination"]
-- !private ["Ps11CVarArgType", "gestureRecognizers"]
 - ["Ps11CVarArgType", "getLocation"]
 - ["Ps11CVarArgType", "guidanceButton"]
 - ["Ps11CVarArgType", "guidanceContainer"]
@@ -452,9 +447,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "navigationController"]
 - !private ["Ps11CVarArgType", "placemark"]
 - !private ["Ps11CVarArgType", "plotPolylineWithRoute"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "removeAnnotation"]
-- !private ["Ps11CVarArgType", "removeGestureRecognizer"]
 - !private ["Ps11CVarArgType", "reverseGeocodeLocation"]
 - ["Ps11CVarArgType", "routeAllCloseTasksEnRouteToDestination"]
 - ["Ps11CVarArgType", "routeCounter"]
@@ -486,6 +479,7 @@ depends-member:
 - ["Ps11CVarArgType", "taskMapView"]
 - ["Ps11CVarArgType", "tasks"]
 - !private ["Ps11CVarArgType", "text"]
+- !private ["Ps11CVarArgType", "textAlignment"]
 - !private ["Ps11CVarArgType", "textColor"]
 - !private ["Ps11CVarArgType", "tintColor"]
 - !private ["Ps11CVarArgType", "uiRealm"]
@@ -578,7 +572,6 @@ depends-member:
 - ["P5Mango31CorrectAddressTableViewDelegate", "mapViewWillStartRenderingMap"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "navigationController"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "plotPolylineWithRoute"]
-- !private ["P5Mango31CorrectAddressTableViewDelegate", "print"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "routeAllCloseTasksEnRouteToDestination"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "searchForFastestRouteWithDirections"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "searchForMapItemsMatchingNoun"]
@@ -629,6 +622,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "addDestination"]
 - ["Ps28CustomDebugStringConvertible", "addDestinationButton"]
 - !private ["Ps28CustomDebugStringConvertible", "addGestureRecognizer"]
+- !private ["Ps28CustomDebugStringConvertible", "adjustsFontSizeToFitWidth"]
 - !private ["Ps28CustomDebugStringConvertible", "allTextFieldsAreFilled"]
 - !private ["Ps28CustomDebugStringConvertible", "alpha"]
 - !private ["Ps28CustomDebugStringConvertible", "animateWithDuration"]
@@ -658,7 +652,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "findClosestMapItemMatchingTask"]
 - ["Ps28CustomDebugStringConvertible", "findTasksEnrouteToDestination"]
 - !private ["Ps28CustomDebugStringConvertible", "first"]
-- !private ["Ps28CustomDebugStringConvertible", "gestureRecognizers"]
 - ["Ps28CustomDebugStringConvertible", "getLocation"]
 - ["Ps28CustomDebugStringConvertible", "guidanceButton"]
 - ["Ps28CustomDebugStringConvertible", "guidanceContainer"]
@@ -693,10 +686,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "placemark"]
 - !private ["Ps28CustomDebugStringConvertible", "plotPolylineWithRoute"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAnnotation"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAtIndex"]
-- !private ["Ps28CustomDebugStringConvertible", "removeGestureRecognizer"]
 - !private ["Ps28CustomDebugStringConvertible", "reverseGeocodeLocation"]
 - ["Ps28CustomDebugStringConvertible", "routeAllCloseTasksEnRouteToDestination"]
 - ["Ps28CustomDebugStringConvertible", "routeCounter"]
@@ -730,6 +721,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "taskMapView"]
 - ["Ps28CustomDebugStringConvertible", "tasks"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "textAlignment"]
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
 - !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "uiRealm"]
@@ -774,6 +766,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "addDestination"]
 - ["Ps23CustomStringConvertible", "addDestinationButton"]
 - !private ["Ps23CustomStringConvertible", "addGestureRecognizer"]
+- !private ["Ps23CustomStringConvertible", "adjustsFontSizeToFitWidth"]
 - !private ["Ps23CustomStringConvertible", "allTextFieldsAreFilled"]
 - !private ["Ps23CustomStringConvertible", "alpha"]
 - !private ["Ps23CustomStringConvertible", "animateWithDuration"]
@@ -803,7 +796,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "findClosestMapItemMatchingTask"]
 - ["Ps23CustomStringConvertible", "findTasksEnrouteToDestination"]
 - !private ["Ps23CustomStringConvertible", "first"]
-- !private ["Ps23CustomStringConvertible", "gestureRecognizers"]
 - ["Ps23CustomStringConvertible", "getLocation"]
 - ["Ps23CustomStringConvertible", "guidanceButton"]
 - ["Ps23CustomStringConvertible", "guidanceContainer"]
@@ -838,10 +830,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - !private ["Ps23CustomStringConvertible", "placemark"]
 - !private ["Ps23CustomStringConvertible", "plotPolylineWithRoute"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "removeAnnotation"]
 - !private ["Ps23CustomStringConvertible", "removeAtIndex"]
-- !private ["Ps23CustomStringConvertible", "removeGestureRecognizer"]
 - !private ["Ps23CustomStringConvertible", "reverseGeocodeLocation"]
 - ["Ps23CustomStringConvertible", "routeAllCloseTasksEnRouteToDestination"]
 - ["Ps23CustomStringConvertible", "routeCounter"]
@@ -875,6 +865,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "taskMapView"]
 - ["Ps23CustomStringConvertible", "tasks"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "textAlignment"]
 - !private ["Ps23CustomStringConvertible", "textColor"]
 - !private ["Ps23CustomStringConvertible", "tintColor"]
 - !private ["Ps23CustomStringConvertible", "uiRealm"]
@@ -895,6 +886,7 @@ depends-member:
 - ["Ps9Equatable", "Bool"]
 - !private ["Ps9Equatable", "CLGeocoder"]
 - ["Ps9Equatable", "CLLocationManager"]
+- !private ["Ps9Equatable", "Center"]
 - !private ["Ps9Equatable", "CorrectAddressTableView"]
 - ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "Generator"]
@@ -923,6 +915,7 @@ depends-member:
 - ["Ps9Equatable", "addDestination"]
 - ["Ps9Equatable", "addDestinationButton"]
 - !private ["Ps9Equatable", "addGestureRecognizer"]
+- !private ["Ps9Equatable", "adjustsFontSizeToFitWidth"]
 - !private ["Ps9Equatable", "allTextFieldsAreFilled"]
 - !private ["Ps9Equatable", "alpha"]
 - !private ["Ps9Equatable", "animateWithDuration"]
@@ -950,7 +943,6 @@ depends-member:
 - ["Ps9Equatable", "finalRoutes"]
 - ["Ps9Equatable", "findClosestMapItemMatchingTask"]
 - ["Ps9Equatable", "findTasksEnrouteToDestination"]
-- !private ["Ps9Equatable", "gestureRecognizers"]
 - ["Ps9Equatable", "getLocation"]
 - ["Ps9Equatable", "guidanceButton"]
 - ["Ps9Equatable", "guidanceContainer"]
@@ -983,9 +975,7 @@ depends-member:
 - !private ["Ps9Equatable", "navigationController"]
 - !private ["Ps9Equatable", "placemark"]
 - !private ["Ps9Equatable", "plotPolylineWithRoute"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "removeAnnotation"]
-- !private ["Ps9Equatable", "removeGestureRecognizer"]
 - !private ["Ps9Equatable", "reverseGeocodeLocation"]
 - ["Ps9Equatable", "routeAllCloseTasksEnRouteToDestination"]
 - ["Ps9Equatable", "routeCounter"]
@@ -1017,6 +1007,7 @@ depends-member:
 - ["Ps9Equatable", "taskMapView"]
 - ["Ps9Equatable", "tasks"]
 - !private ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "textAlignment"]
 - !private ["Ps9Equatable", "textColor"]
 - !private ["Ps9Equatable", "tintColor"]
 - !private ["Ps9Equatable", "uiRealm"]
@@ -1041,6 +1032,7 @@ depends-member:
 - ["Ps8Hashable", "Bool"]
 - !private ["Ps8Hashable", "CLGeocoder"]
 - ["Ps8Hashable", "CLLocationManager"]
+- !private ["Ps8Hashable", "Center"]
 - !private ["Ps8Hashable", "CorrectAddressTableView"]
 - ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "Generator"]
@@ -1068,6 +1060,7 @@ depends-member:
 - ["Ps8Hashable", "addDestination"]
 - ["Ps8Hashable", "addDestinationButton"]
 - !private ["Ps8Hashable", "addGestureRecognizer"]
+- !private ["Ps8Hashable", "adjustsFontSizeToFitWidth"]
 - !private ["Ps8Hashable", "allTextFieldsAreFilled"]
 - !private ["Ps8Hashable", "alpha"]
 - !private ["Ps8Hashable", "animateWithDuration"]
@@ -1095,7 +1088,6 @@ depends-member:
 - ["Ps8Hashable", "finalRoutes"]
 - ["Ps8Hashable", "findClosestMapItemMatchingTask"]
 - ["Ps8Hashable", "findTasksEnrouteToDestination"]
-- !private ["Ps8Hashable", "gestureRecognizers"]
 - ["Ps8Hashable", "getLocation"]
 - ["Ps8Hashable", "guidanceButton"]
 - ["Ps8Hashable", "guidanceContainer"]
@@ -1128,9 +1120,7 @@ depends-member:
 - !private ["Ps8Hashable", "navigationController"]
 - !private ["Ps8Hashable", "placemark"]
 - !private ["Ps8Hashable", "plotPolylineWithRoute"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "removeAnnotation"]
-- !private ["Ps8Hashable", "removeGestureRecognizer"]
 - !private ["Ps8Hashable", "reverseGeocodeLocation"]
 - ["Ps8Hashable", "routeAllCloseTasksEnRouteToDestination"]
 - ["Ps8Hashable", "routeCounter"]
@@ -1162,6 +1152,7 @@ depends-member:
 - ["Ps8Hashable", "taskMapView"]
 - ["Ps8Hashable", "tasks"]
 - !private ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "textAlignment"]
 - !private ["Ps8Hashable", "textColor"]
 - !private ["Ps8Hashable", "tintColor"]
 - !private ["Ps8Hashable", "uiRealm"]
@@ -1214,9 +1205,7 @@ depends-member:
 - !private ["CSo9MKMapView", "addGestureRecognizer"]
 - !private ["CSo9MKMapView", "annotations"]
 - !private ["CSo9MKMapView", "delegate"]
-- !private ["CSo9MKMapView", "gestureRecognizers"]
 - !private ["CSo9MKMapView", "removeAnnotation"]
-- !private ["CSo9MKMapView", "removeGestureRecognizer"]
 - !private ["CSo9MKMapView", "showsUserLocation"]
 - ["PSo17MKMapViewDelegate", "Bool"]
 - !private ["PSo17MKMapViewDelegate", "CLGeocoder"]
@@ -1274,7 +1263,6 @@ depends-member:
 - ["PSo17MKMapViewDelegate", "mapViewWillStartRenderingMap"]
 - !private ["PSo17MKMapViewDelegate", "navigationController"]
 - !private ["PSo17MKMapViewDelegate", "plotPolylineWithRoute"]
-- !private ["PSo17MKMapViewDelegate", "print"]
 - !private ["PSo17MKMapViewDelegate", "routeAllCloseTasksEnRouteToDestination"]
 - !private ["PSo17MKMapViewDelegate", "searchForFastestRouteWithDirections"]
 - !private ["PSo17MKMapViewDelegate", "searchForMapItemsMatchingNoun"]
@@ -1376,7 +1364,6 @@ depends-member:
 - ["C5Mango5MapVC", "mapViewWillStartRenderingMap"]
 - !private ["C5Mango5MapVC", "navigationController"]
 - !private ["C5Mango5MapVC", "plotPolylineWithRoute"]
-- !private ["C5Mango5MapVC", "print"]
 - ["C5Mango5MapVC", "routeAllCloseTasksEnRouteToDestination"]
 - ["C5Mango5MapVC", "routeCounter"]
 - ["C5Mango5MapVC", "routeIndexInstructionIndexTuple"]
@@ -1475,6 +1462,7 @@ depends-member:
 - ["PSo8NSCoding", "addDestination"]
 - ["PSo8NSCoding", "addDestinationButton"]
 - !private ["PSo8NSCoding", "addGestureRecognizer"]
+- !private ["PSo8NSCoding", "adjustsFontSizeToFitWidth"]
 - !private ["PSo8NSCoding", "allTextFieldsAreFilled"]
 - !private ["PSo8NSCoding", "alpha"]
 - !private ["PSo8NSCoding", "animateWithDuration"]
@@ -1500,7 +1488,6 @@ depends-member:
 - ["PSo8NSCoding", "finalRoutes"]
 - ["PSo8NSCoding", "findClosestMapItemMatchingTask"]
 - ["PSo8NSCoding", "findTasksEnrouteToDestination"]
-- !private ["PSo8NSCoding", "gestureRecognizers"]
 - ["PSo8NSCoding", "getLocation"]
 - ["PSo8NSCoding", "guidanceButton"]
 - ["PSo8NSCoding", "guidanceContainer"]
@@ -1531,9 +1518,7 @@ depends-member:
 - ["PSo8NSCoding", "mapViewWillStartRenderingMap"]
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "plotPolylineWithRoute"]
-- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "removeAnnotation"]
-- !private ["PSo8NSCoding", "removeGestureRecognizer"]
 - ["PSo8NSCoding", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo8NSCoding", "routeCounter"]
 - ["PSo8NSCoding", "routeIndexInstructionIndexTuple"]
@@ -1560,6 +1545,7 @@ depends-member:
 - ["PSo8NSCoding", "taskMapView"]
 - ["PSo8NSCoding", "tasks"]
 - !private ["PSo8NSCoding", "text"]
+- !private ["PSo8NSCoding", "textAlignment"]
 - !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo8NSCoding", "uiRealm"]
@@ -1638,7 +1624,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "mapViewWillStartRenderingMap"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "plotPolylineWithRoute"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo26NSExtensionRequestHandling", "routeCounter"]
 - ["PSo26NSExtensionRequestHandling", "routeIndexInstructionIndexTuple"]
@@ -1705,6 +1690,7 @@ depends-member:
 - ["CSo8NSObject", "addDestination"]
 - ["CSo8NSObject", "addDestinationButton"]
 - !private ["CSo8NSObject", "addGestureRecognizer"]
+- !private ["CSo8NSObject", "adjustsFontSizeToFitWidth"]
 - !private ["CSo8NSObject", "allTextFieldsAreFilled"]
 - !private ["CSo8NSObject", "alpha"]
 - !private ["CSo8NSObject", "animateWithDuration"]
@@ -1733,7 +1719,6 @@ depends-member:
 - ["CSo8NSObject", "finalRoutes"]
 - ["CSo8NSObject", "findClosestMapItemMatchingTask"]
 - ["CSo8NSObject", "findTasksEnrouteToDestination"]
-- !private ["CSo8NSObject", "gestureRecognizers"]
 - ["CSo8NSObject", "getLocation"]
 - ["CSo8NSObject", "guidanceButton"]
 - ["CSo8NSObject", "guidanceContainer"]
@@ -1768,10 +1753,8 @@ depends-member:
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "placemark"]
 - !private ["CSo8NSObject", "plotPolylineWithRoute"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "readAllTasks"]
 - !private ["CSo8NSObject", "removeAnnotation"]
-- !private ["CSo8NSObject", "removeGestureRecognizer"]
 - !private ["CSo8NSObject", "reverseGeocodeLocation"]
 - ["CSo8NSObject", "routeAllCloseTasksEnRouteToDestination"]
 - ["CSo8NSObject", "routeCounter"]
@@ -1803,6 +1786,7 @@ depends-member:
 - ["CSo8NSObject", "taskMapView"]
 - ["CSo8NSObject", "tasks"]
 - !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "textAlignment"]
 - !private ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "tintColor"]
 - !private ["CSo8NSObject", "uiRealm"]
@@ -1838,6 +1822,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "addDestination"]
 - ["PSo16NSObjectProtocol", "addDestinationButton"]
 - !private ["PSo16NSObjectProtocol", "addGestureRecognizer"]
+- !private ["PSo16NSObjectProtocol", "adjustsFontSizeToFitWidth"]
 - !private ["PSo16NSObjectProtocol", "allTextFieldsAreFilled"]
 - !private ["PSo16NSObjectProtocol", "alpha"]
 - !private ["PSo16NSObjectProtocol", "animateWithDuration"]
@@ -1864,7 +1849,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "finalRoutes"]
 - ["PSo16NSObjectProtocol", "findClosestMapItemMatchingTask"]
 - ["PSo16NSObjectProtocol", "findTasksEnrouteToDestination"]
-- !private ["PSo16NSObjectProtocol", "gestureRecognizers"]
 - ["PSo16NSObjectProtocol", "getLocation"]
 - ["PSo16NSObjectProtocol", "guidanceButton"]
 - ["PSo16NSObjectProtocol", "guidanceContainer"]
@@ -1897,9 +1881,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "placemark"]
 - !private ["PSo16NSObjectProtocol", "plotPolylineWithRoute"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "removeAnnotation"]
-- !private ["PSo16NSObjectProtocol", "removeGestureRecognizer"]
 - !private ["PSo16NSObjectProtocol", "reverseGeocodeLocation"]
 - ["PSo16NSObjectProtocol", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo16NSObjectProtocol", "routeCounter"]
@@ -1931,6 +1913,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "taskMapView"]
 - ["PSo16NSObjectProtocol", "tasks"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "textAlignment"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "tintColor"]
 - !private ["PSo16NSObjectProtocol", "uiRealm"]
@@ -1946,8 +1929,8 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "location"]
 - !private ["PSo14NSSecureCoding", "whiteColor"]
-- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
+- !private ["OSC15NSTextAlignment", "Center"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - !private ["C5Mango4Noun", "descriptor"]
 - !private ["C10RealmSwift6Object", "descriptor"]
@@ -1985,6 +1968,7 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "sort"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "BackgroundColor"]
+- !private ["Ps16RawRepresentable", "Center"]
 - !private ["Ps16RawRepresentable", "LabelColor"]
 - !private ["Ps16RawRepresentable", "Normal"]
 - !private ["Ps16RawRepresentable", "OrangeColor"]
@@ -2036,13 +2020,12 @@ depends-member:
 - !private ["C5Mango11TaskMapView", "addGestureRecognizer"]
 - !private ["C5Mango11TaskMapView", "annotations"]
 - !private ["C5Mango11TaskMapView", "delegate"]
-- !private ["C5Mango11TaskMapView", "gestureRecognizers"]
 - !private ["C5Mango11TaskMapView", "removeAnnotation"]
-- !private ["C5Mango11TaskMapView", "removeGestureRecognizer"]
 - !private ["C5Mango11TaskMapView", "showsUserLocation"]
 - !private ["V5Mango5Theme", "Colors"]
 - !private ["PSo29UIAccessibilityIdentification", "addAnnotation"]
 - !private ["PSo29UIAccessibilityIdentification", "addGestureRecognizer"]
+- !private ["PSo29UIAccessibilityIdentification", "adjustsFontSizeToFitWidth"]
 - !private ["PSo29UIAccessibilityIdentification", "alpha"]
 - !private ["PSo29UIAccessibilityIdentification", "animateWithDuration"]
 - !private ["PSo29UIAccessibilityIdentification", "annotations"]
@@ -2050,25 +2033,25 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "correctAddressTableViewDelegate"]
 - !private ["PSo29UIAccessibilityIdentification", "delegate"]
 - !private ["PSo29UIAccessibilityIdentification", "endEditing"]
-- !private ["PSo29UIAccessibilityIdentification", "gestureRecognizers"]
 - !private ["PSo29UIAccessibilityIdentification", "hidden"]
 - !private ["PSo29UIAccessibilityIdentification", "imageEdgeInsets"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "layer"]
 - !private ["PSo29UIAccessibilityIdentification", "removeAnnotation"]
-- !private ["PSo29UIAccessibilityIdentification", "removeGestureRecognizer"]
 - !private ["PSo29UIAccessibilityIdentification", "selectedSegmentIndex"]
 - !private ["PSo29UIAccessibilityIdentification", "setImage"]
 - !private ["PSo29UIAccessibilityIdentification", "showsUserLocation"]
 - !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
 - !private ["PSo29UIAccessibilityIdentification", "stopAnimating"]
 - !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo29UIAccessibilityIdentification", "textAlignment"]
 - !private ["PSo29UIAccessibilityIdentification", "textColor"]
 - !private ["PSo29UIAccessibilityIdentification", "tintColor"]
 - !private ["CSo23UIActivityIndicatorView", "startAnimating"]
 - !private ["CSo23UIActivityIndicatorView", "stopAnimating"]
 - !private ["PSo12UIAppearance", "addAnnotation"]
 - !private ["PSo12UIAppearance", "addGestureRecognizer"]
+- !private ["PSo12UIAppearance", "adjustsFontSizeToFitWidth"]
 - !private ["PSo12UIAppearance", "alpha"]
 - !private ["PSo12UIAppearance", "animateWithDuration"]
 - !private ["PSo12UIAppearance", "annotations"]
@@ -2076,19 +2059,18 @@ depends-member:
 - !private ["PSo12UIAppearance", "correctAddressTableViewDelegate"]
 - !private ["PSo12UIAppearance", "delegate"]
 - !private ["PSo12UIAppearance", "endEditing"]
-- !private ["PSo12UIAppearance", "gestureRecognizers"]
 - !private ["PSo12UIAppearance", "hidden"]
 - !private ["PSo12UIAppearance", "imageEdgeInsets"]
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "layer"]
 - !private ["PSo12UIAppearance", "removeAnnotation"]
-- !private ["PSo12UIAppearance", "removeGestureRecognizer"]
 - !private ["PSo12UIAppearance", "selectedSegmentIndex"]
 - !private ["PSo12UIAppearance", "setImage"]
 - !private ["PSo12UIAppearance", "showsUserLocation"]
 - !private ["PSo12UIAppearance", "startAnimating"]
 - !private ["PSo12UIAppearance", "stopAnimating"]
 - !private ["PSo12UIAppearance", "text"]
+- !private ["PSo12UIAppearance", "textAlignment"]
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo12UIAppearance", "tintColor"]
 - ["PSo21UIAppearanceContainer", "Bool"]
@@ -2115,6 +2097,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "addDestination"]
 - ["PSo21UIAppearanceContainer", "addDestinationButton"]
 - !private ["PSo21UIAppearanceContainer", "addGestureRecognizer"]
+- !private ["PSo21UIAppearanceContainer", "adjustsFontSizeToFitWidth"]
 - !private ["PSo21UIAppearanceContainer", "allTextFieldsAreFilled"]
 - !private ["PSo21UIAppearanceContainer", "alpha"]
 - !private ["PSo21UIAppearanceContainer", "animateWithDuration"]
@@ -2138,7 +2121,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "finalRoutes"]
 - ["PSo21UIAppearanceContainer", "findClosestMapItemMatchingTask"]
 - ["PSo21UIAppearanceContainer", "findTasksEnrouteToDestination"]
-- !private ["PSo21UIAppearanceContainer", "gestureRecognizers"]
 - ["PSo21UIAppearanceContainer", "getLocation"]
 - ["PSo21UIAppearanceContainer", "guidanceButton"]
 - ["PSo21UIAppearanceContainer", "guidanceContainer"]
@@ -2168,9 +2150,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "mapViewWillStartRenderingMap"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "plotPolylineWithRoute"]
-- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "removeAnnotation"]
-- !private ["PSo21UIAppearanceContainer", "removeGestureRecognizer"]
 - ["PSo21UIAppearanceContainer", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo21UIAppearanceContainer", "routeCounter"]
 - ["PSo21UIAppearanceContainer", "routeIndexInstructionIndexTuple"]
@@ -2197,6 +2177,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "taskMapView"]
 - ["PSo21UIAppearanceContainer", "tasks"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo21UIAppearanceContainer", "textAlignment"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "uiRealm"]
@@ -2276,7 +2257,6 @@ depends-member:
 - ["PSo18UIContentContainer", "mapViewWillStartRenderingMap"]
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "plotPolylineWithRoute"]
-- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo18UIContentContainer", "routeCounter"]
 - ["PSo18UIContentContainer", "routeIndexInstructionIndexTuple"]
@@ -2315,6 +2295,7 @@ depends-member:
 - !private ["VSC14UIControlState", "Normal"]
 - !private ["PSo17UICoordinateSpace", "addAnnotation"]
 - !private ["PSo17UICoordinateSpace", "addGestureRecognizer"]
+- !private ["PSo17UICoordinateSpace", "adjustsFontSizeToFitWidth"]
 - !private ["PSo17UICoordinateSpace", "alpha"]
 - !private ["PSo17UICoordinateSpace", "animateWithDuration"]
 - !private ["PSo17UICoordinateSpace", "annotations"]
@@ -2322,23 +2303,23 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "correctAddressTableViewDelegate"]
 - !private ["PSo17UICoordinateSpace", "delegate"]
 - !private ["PSo17UICoordinateSpace", "endEditing"]
-- !private ["PSo17UICoordinateSpace", "gestureRecognizers"]
 - !private ["PSo17UICoordinateSpace", "hidden"]
 - !private ["PSo17UICoordinateSpace", "imageEdgeInsets"]
 - !private ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo17UICoordinateSpace", "layer"]
 - !private ["PSo17UICoordinateSpace", "removeAnnotation"]
-- !private ["PSo17UICoordinateSpace", "removeGestureRecognizer"]
 - !private ["PSo17UICoordinateSpace", "selectedSegmentIndex"]
 - !private ["PSo17UICoordinateSpace", "setImage"]
 - !private ["PSo17UICoordinateSpace", "showsUserLocation"]
 - !private ["PSo17UICoordinateSpace", "startAnimating"]
 - !private ["PSo17UICoordinateSpace", "stopAnimating"]
 - !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo17UICoordinateSpace", "textAlignment"]
 - !private ["PSo17UICoordinateSpace", "textColor"]
 - !private ["PSo17UICoordinateSpace", "tintColor"]
 - !private ["PSo13UIDynamicItem", "addAnnotation"]
 - !private ["PSo13UIDynamicItem", "addGestureRecognizer"]
+- !private ["PSo13UIDynamicItem", "adjustsFontSizeToFitWidth"]
 - !private ["PSo13UIDynamicItem", "alpha"]
 - !private ["PSo13UIDynamicItem", "animateWithDuration"]
 - !private ["PSo13UIDynamicItem", "annotations"]
@@ -2346,19 +2327,18 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "correctAddressTableViewDelegate"]
 - !private ["PSo13UIDynamicItem", "delegate"]
 - !private ["PSo13UIDynamicItem", "endEditing"]
-- !private ["PSo13UIDynamicItem", "gestureRecognizers"]
 - !private ["PSo13UIDynamicItem", "hidden"]
 - !private ["PSo13UIDynamicItem", "imageEdgeInsets"]
 - !private ["PSo13UIDynamicItem", "init"]
 - !private ["PSo13UIDynamicItem", "layer"]
 - !private ["PSo13UIDynamicItem", "removeAnnotation"]
-- !private ["PSo13UIDynamicItem", "removeGestureRecognizer"]
 - !private ["PSo13UIDynamicItem", "selectedSegmentIndex"]
 - !private ["PSo13UIDynamicItem", "setImage"]
 - !private ["PSo13UIDynamicItem", "showsUserLocation"]
 - !private ["PSo13UIDynamicItem", "startAnimating"]
 - !private ["PSo13UIDynamicItem", "stopAnimating"]
 - !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo13UIDynamicItem", "textAlignment"]
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo13UIDynamicItem", "tintColor"]
 - !private ["VSC12UIEdgeInsets", "init"]
@@ -2386,6 +2366,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "addDestination"]
 - ["PSo18UIFocusEnvironment", "addDestinationButton"]
 - !private ["PSo18UIFocusEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UIFocusEnvironment", "adjustsFontSizeToFitWidth"]
 - !private ["PSo18UIFocusEnvironment", "allTextFieldsAreFilled"]
 - !private ["PSo18UIFocusEnvironment", "alpha"]
 - !private ["PSo18UIFocusEnvironment", "animateWithDuration"]
@@ -2409,7 +2390,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "finalRoutes"]
 - ["PSo18UIFocusEnvironment", "findClosestMapItemMatchingTask"]
 - ["PSo18UIFocusEnvironment", "findTasksEnrouteToDestination"]
-- !private ["PSo18UIFocusEnvironment", "gestureRecognizers"]
 - ["PSo18UIFocusEnvironment", "getLocation"]
 - ["PSo18UIFocusEnvironment", "guidanceButton"]
 - ["PSo18UIFocusEnvironment", "guidanceContainer"]
@@ -2439,9 +2419,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "mapViewWillStartRenderingMap"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "plotPolylineWithRoute"]
-- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "removeAnnotation"]
-- !private ["PSo18UIFocusEnvironment", "removeGestureRecognizer"]
 - ["PSo18UIFocusEnvironment", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo18UIFocusEnvironment", "routeCounter"]
 - ["PSo18UIFocusEnvironment", "routeIndexInstructionIndexTuple"]
@@ -2468,6 +2446,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "taskMapView"]
 - ["PSo18UIFocusEnvironment", "tasks"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo18UIFocusEnvironment", "textAlignment"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "tintColor"]
 - !private ["PSo18UIFocusEnvironment", "uiRealm"]
@@ -2481,6 +2460,8 @@ depends-member:
 - !private ["CSo7UIImage", "init"]
 - !private ["PSo10UIKeyInput", "backgroundColor"]
 - !private ["PSo10UIKeyInput", "text"]
+- !private ["CSo7UILabel", "adjustsFontSizeToFitWidth"]
+- !private ["CSo7UILabel", "textAlignment"]
 - !private ["CSo7UILabel", "textColor"]
 - !private ["CSo22UINavigationController", "setNavigationBarHidden"]
 - ["CSo11UIResponder", "Bool"]
@@ -2519,6 +2500,7 @@ depends-member:
 - ["CSo11UIResponder", "addDestination"]
 - ["CSo11UIResponder", "addDestinationButton"]
 - !private ["CSo11UIResponder", "addGestureRecognizer"]
+- !private ["CSo11UIResponder", "adjustsFontSizeToFitWidth"]
 - !private ["CSo11UIResponder", "allTextFieldsAreFilled"]
 - !private ["CSo11UIResponder", "alpha"]
 - !private ["CSo11UIResponder", "animateWithDuration"]
@@ -2542,7 +2524,6 @@ depends-member:
 - ["CSo11UIResponder", "finalRoutes"]
 - ["CSo11UIResponder", "findClosestMapItemMatchingTask"]
 - ["CSo11UIResponder", "findTasksEnrouteToDestination"]
-- !private ["CSo11UIResponder", "gestureRecognizers"]
 - ["CSo11UIResponder", "getLocation"]
 - ["CSo11UIResponder", "guidanceButton"]
 - ["CSo11UIResponder", "guidanceContainer"]
@@ -2572,9 +2553,7 @@ depends-member:
 - ["CSo11UIResponder", "mapViewWillStartRenderingMap"]
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "plotPolylineWithRoute"]
-- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "removeAnnotation"]
-- !private ["CSo11UIResponder", "removeGestureRecognizer"]
 - ["CSo11UIResponder", "routeAllCloseTasksEnRouteToDestination"]
 - ["CSo11UIResponder", "routeCounter"]
 - ["CSo11UIResponder", "routeIndexInstructionIndexTuple"]
@@ -2601,6 +2580,7 @@ depends-member:
 - ["CSo11UIResponder", "taskMapView"]
 - ["CSo11UIResponder", "tasks"]
 - !private ["CSo11UIResponder", "text"]
+- !private ["CSo11UIResponder", "textAlignment"]
 - !private ["CSo11UIResponder", "textColor"]
 - !private ["CSo11UIResponder", "tintColor"]
 - !private ["CSo11UIResponder", "uiRealm"]
@@ -2679,7 +2659,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "mapViewWillStartRenderingMap"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "plotPolylineWithRoute"]
-- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo16UIStateRestoring", "routeCounter"]
 - ["PSo16UIStateRestoring", "routeIndexInstructionIndexTuple"]
@@ -2747,6 +2726,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "addDestination"]
 - ["PSo18UITraitEnvironment", "addDestinationButton"]
 - !private ["PSo18UITraitEnvironment", "addGestureRecognizer"]
+- !private ["PSo18UITraitEnvironment", "adjustsFontSizeToFitWidth"]
 - !private ["PSo18UITraitEnvironment", "allTextFieldsAreFilled"]
 - !private ["PSo18UITraitEnvironment", "alpha"]
 - !private ["PSo18UITraitEnvironment", "animateWithDuration"]
@@ -2770,7 +2750,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "finalRoutes"]
 - ["PSo18UITraitEnvironment", "findClosestMapItemMatchingTask"]
 - ["PSo18UITraitEnvironment", "findTasksEnrouteToDestination"]
-- !private ["PSo18UITraitEnvironment", "gestureRecognizers"]
 - ["PSo18UITraitEnvironment", "getLocation"]
 - ["PSo18UITraitEnvironment", "guidanceButton"]
 - ["PSo18UITraitEnvironment", "guidanceContainer"]
@@ -2800,9 +2779,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "mapViewWillStartRenderingMap"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "plotPolylineWithRoute"]
-- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "removeAnnotation"]
-- !private ["PSo18UITraitEnvironment", "removeGestureRecognizer"]
 - ["PSo18UITraitEnvironment", "routeAllCloseTasksEnRouteToDestination"]
 - ["PSo18UITraitEnvironment", "routeCounter"]
 - ["PSo18UITraitEnvironment", "routeIndexInstructionIndexTuple"]
@@ -2829,6 +2806,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "taskMapView"]
 - ["PSo18UITraitEnvironment", "tasks"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- !private ["PSo18UITraitEnvironment", "textAlignment"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
 - !private ["PSo18UITraitEnvironment", "tintColor"]
 - !private ["PSo18UITraitEnvironment", "uiRealm"]
@@ -2840,6 +2818,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "addAnnotation"]
 - !private ["CSo6UIView", "addGestureRecognizer"]
+- !private ["CSo6UIView", "adjustsFontSizeToFitWidth"]
 - !private ["CSo6UIView", "alpha"]
 - !private ["CSo6UIView", "animateWithDuration"]
 - !private ["CSo6UIView", "annotations"]
@@ -2847,19 +2826,18 @@ depends-member:
 - !private ["CSo6UIView", "correctAddressTableViewDelegate"]
 - !private ["CSo6UIView", "delegate"]
 - !private ["CSo6UIView", "endEditing"]
-- !private ["CSo6UIView", "gestureRecognizers"]
 - !private ["CSo6UIView", "hidden"]
 - !private ["CSo6UIView", "imageEdgeInsets"]
 - !private ["CSo6UIView", "init"]
 - !private ["CSo6UIView", "layer"]
 - !private ["CSo6UIView", "removeAnnotation"]
-- !private ["CSo6UIView", "removeGestureRecognizer"]
 - !private ["CSo6UIView", "selectedSegmentIndex"]
 - !private ["CSo6UIView", "setImage"]
 - !private ["CSo6UIView", "showsUserLocation"]
 - !private ["CSo6UIView", "startAnimating"]
 - !private ["CSo6UIView", "stopAnimating"]
 - !private ["CSo6UIView", "text"]
+- !private ["CSo6UIView", "textAlignment"]
 - !private ["CSo6UIView", "textColor"]
 - !private ["CSo6UIView", "tintColor"]
 - ["CSo16UIViewController", "Bool"]
@@ -2938,7 +2916,6 @@ depends-member:
 - ["CSo16UIViewController", "mapViewWillStartRenderingMap"]
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "plotPolylineWithRoute"]
-- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "routeAllCloseTasksEnRouteToDestination"]
 - ["CSo16UIViewController", "routeCounter"]
 - ["CSo16UIViewController", "routeIndexInstructionIndexTuple"]
@@ -3051,6 +3028,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "addAnnotation"]
 - !private ["Ps12_Reflectable", "addGestureRecognizer"]
+- !private ["Ps12_Reflectable", "adjustsFontSizeToFitWidth"]
 - !private ["Ps12_Reflectable", "alpha"]
 - !private ["Ps12_Reflectable", "animateWithDuration"]
 - !private ["Ps12_Reflectable", "annotations"]
@@ -3061,7 +3039,6 @@ depends-member:
 - !private ["Ps12_Reflectable", "delegate"]
 - !private ["Ps12_Reflectable", "endEditing"]
 - !private ["Ps12_Reflectable", "first"]
-- !private ["Ps12_Reflectable", "gestureRecognizers"]
 - !private ["Ps12_Reflectable", "hidden"]
 - !private ["Ps12_Reflectable", "imageEdgeInsets"]
 - ["Ps12_Reflectable", "init"]
@@ -3070,7 +3047,6 @@ depends-member:
 - !private ["Ps12_Reflectable", "layer"]
 - !private ["Ps12_Reflectable", "removeAnnotation"]
 - !private ["Ps12_Reflectable", "removeAtIndex"]
-- !private ["Ps12_Reflectable", "removeGestureRecognizer"]
 - !private ["Ps12_Reflectable", "selectedSegmentIndex"]
 - !private ["Ps12_Reflectable", "setImage"]
 - !private ["Ps12_Reflectable", "showsUserLocation"]
@@ -3079,6 +3055,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "stopAnimating"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps12_Reflectable", "text"]
+- !private ["Ps12_Reflectable", "textAlignment"]
 - !private ["Ps12_Reflectable", "textColor"]
 - !private ["Ps12_Reflectable", "tintColor"]
 - ["Ps18_SignedIntegerType", "Distance"]
@@ -3155,6 +3132,7 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
+- !private "OSC15NSTextAlignment"
 - "Ps21NilLiteralConvertible"
 - !private "C5Mango4Noun"
 - "C10RealmSwift6Object"
@@ -3288,4 +3266,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "db247c8d8cb93bb0dddcf7246177ce47"
+interface-hash: "e238a8eb07c2371c7857a19015ec98b7"

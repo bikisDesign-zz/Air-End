@@ -6,84 +6,83 @@ provides-nominal:
 provides-member:
 - ["C5Mango9TaskMapVC", ""]
 provides-dynamic-lookup:
+- "overlayView"
 - "taskTextField"
+- "viewDidLoad"
+- "closestTask"
+- "etaLabel"
+- "taskMapView"
 - "generatePolylineColor"
-- "userLocation"
-- "searchForClosestAnnotationMatchingNoun"
 - "locationManager"
 - "locationManager"
 - "task"
+- "cancelButton"
 - "setUpGuidanceUI"
+- "endEditing"
 - "setUpUI"
 - "updateTask"
-- "overlayView"
-- "viewDidLoad"
-- "cancelButton"
-- "nounTextField"
-- "hideGuidance"
-- "etaLabel"
-- "closestTask"
-- "taskMapView"
-- "endEditing"
 - "guidanceContainer"
-- "mapView"
-- "mapView"
-- "mapView"
-- "mapView"
+- "nounTextField"
 - "editTask"
 - "cancelGuidance"
+- "searchForClosestAnnotationMatchingNoun"
+- "userLocation"
+- "hideGuidance"
+- "mapView"
+- "mapView"
+- "mapView"
+- "mapView"
 depends-top-level:
-- !private "/"
-- "UIView"
-- "CLLocation"
-- "UIControl"
-- !private "Array"
-- "MKOverlay"
-- !private "Int"
-- "Bool"
-- !private "=="
-- !private "Theme"
-- !private "MKDirections"
-- "TaskMapVC"
-- !private "!="
-- !private "MKPlacemark"
-- "UILabel"
-- "String"
-- !private "NSError"
-- !private "CLPlacemark"
-- !private "CLGeocoder"
-- !private "MKLocalSearchResponse"
-- "TaskMapView"
-- "Task"
-- "MKOverlayRenderer"
-- !private "UIBarButtonItem"
-- "MKMapItem"
-- "MKAnnotation"
-- !private "BooleanLiteralType"
-- "MKAnnotationView"
-- !private "MKLocalSearch"
-- !private "MKUserLocation"
-- "CLLocationManager"
-- !private "!"
-- !private "CGRectMake"
-- !private "StringLiteralType"
-- !private "&&"
-- !private "UIEdgeInsets"
-- "UIColor"
-- !private "uiRealm"
-- "UITextField"
-- !private "MKPolylineRenderer"
-- "UIViewController"
-- "MKMapViewDelegate"
-- !private "Void"
-- !private "UIImage"
-- !private "MKPolyline"
-- "UIButton"
-- "MKMapView"
 - "CLLocationManagerDelegate"
+- !private "CLGeocoder"
+- "UILabel"
+- "MKOverlay"
+- "String"
+- !private "!"
+- "UIView"
+- !private "UIBarButtonItem"
+- !private "UIImage"
+- "MKMapItem"
+- !private "CLPlacemark"
+- !private "=="
+- "MKOverlayRenderer"
+- !private "MKDirections"
+- "CLLocationManager"
+- "Task"
+- "TaskMapVC"
+- !private "MKLocalSearchResponse"
+- "MKAnnotation"
+- !private "MKPlacemark"
+- "UIColor"
+- "Bool"
+- !private "&&"
+- "UIButton"
+- !private "!="
+- !private "MKPolylineRenderer"
+- "TaskMapView"
+- "MKMapViewDelegate"
 - !private "UITapGestureRecognizer"
+- "MKAnnotationView"
+- !private "/"
+- !private "BooleanLiteralType"
+- "UITextField"
+- !private "CGRectMake"
 - !private "MKPinAnnotationView"
-- !private "print"
+- !private "MKPolyline"
+- "UIViewController"
+- !private "Int"
+- !private "uiRealm"
+- !private "Array"
+- !private "Theme"
+- !private "UIEdgeInsets"
+- "MKMapView"
+- "UIControl"
+- "CLLocation"
+- !private "MKUserLocation"
+- !private "NSError"
+- !private "StringLiteralType"
+- !private "MKLocalSearch"
+- !private "Void"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -116,6 +115,7 @@ depends-member:
 - ["Ps9AnyObject", "cancelGuidance"]
 - ["Ps9AnyObject", "closestTask"]
 - !private ["Ps9AnyObject", "convertToAnnotationFromMapItem"]
+- !private ["Ps9AnyObject", "cornerRadius"]
 - !private ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableAnnotationViewWithIdentifier"]
 - !private ["Ps9AnyObject", "descriptor"]
@@ -136,6 +136,7 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "initalizeRequestWithDescriptor"]
 - !private ["Ps9AnyObject", "initializeRequest"]
+- !private ["Ps9AnyObject", "layer"]
 - !private ["Ps9AnyObject", "lineWidth"]
 - !private ["Ps9AnyObject", "location"]
 - ["Ps9AnyObject", "locationManager"]
@@ -158,7 +159,6 @@ depends-member:
 - ["Ps9AnyObject", "overlayView"]
 - !private ["Ps9AnyObject", "pinTintColor"]
 - !private ["Ps9AnyObject", "plotPolylineWithRoute"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "removeAnnotations"]
 - !private ["Ps9AnyObject", "removeGestureRecognizer"]
 - !private ["Ps9AnyObject", "reverseGeocodeLocation"]
@@ -223,6 +223,8 @@ depends-member:
 - !private ["Sb", "deinit"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["CSo7CALayer", "cornerRadius"]
+- !private ["PSo13CAMediaTiming", "cornerRadius"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["CSo10CLGeocoder", "init"]
 - !private ["CSo10CLGeocoder", "reverseGeocodeLocation"]
@@ -277,7 +279,6 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "nounTextField"]
 - !private ["PSo25CLLocationManagerDelegate", "overlayView"]
 - !private ["PSo25CLLocationManagerDelegate", "plotPolylineWithRoute"]
-- !private ["PSo25CLLocationManagerDelegate", "print"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForClosestAnnotationMatchingNoun"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForFastestRouteWithDirections"]
 - !private ["PSo25CLLocationManagerDelegate", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
@@ -324,6 +325,7 @@ depends-member:
 - ["Ps11CVarArgType", "cancelGuidance"]
 - ["Ps11CVarArgType", "closestTask"]
 - !private ["Ps11CVarArgType", "convertToAnnotationFromMapItem"]
+- !private ["Ps11CVarArgType", "cornerRadius"]
 - !private ["Ps11CVarArgType", "delegate"]
 - !private ["Ps11CVarArgType", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["Ps11CVarArgType", "editTask"]
@@ -342,6 +344,7 @@ depends-member:
 - ["Ps11CVarArgType", "init"]
 - !private ["Ps11CVarArgType", "initalizeRequestWithDescriptor"]
 - !private ["Ps11CVarArgType", "initializeRequest"]
+- !private ["Ps11CVarArgType", "layer"]
 - !private ["Ps11CVarArgType", "lineWidth"]
 - !private ["Ps11CVarArgType", "location"]
 - ["Ps11CVarArgType", "locationManager"]
@@ -363,7 +366,6 @@ depends-member:
 - ["Ps11CVarArgType", "overlayView"]
 - !private ["Ps11CVarArgType", "pinTintColor"]
 - !private ["Ps11CVarArgType", "plotPolylineWithRoute"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "removeAnnotations"]
 - !private ["Ps11CVarArgType", "removeGestureRecognizer"]
 - !private ["Ps11CVarArgType", "reverseGeocodeLocation"]
@@ -448,6 +450,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "cancelGuidance"]
 - ["Ps28CustomDebugStringConvertible", "closestTask"]
 - !private ["Ps28CustomDebugStringConvertible", "convertToAnnotationFromMapItem"]
+- !private ["Ps28CustomDebugStringConvertible", "cornerRadius"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["Ps28CustomDebugStringConvertible", "editTask"]
@@ -468,6 +471,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "initalizeRequestWithDescriptor"]
 - !private ["Ps28CustomDebugStringConvertible", "initializeRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "last"]
+- !private ["Ps28CustomDebugStringConvertible", "layer"]
 - !private ["Ps28CustomDebugStringConvertible", "lineWidth"]
 - !private ["Ps28CustomDebugStringConvertible", "location"]
 - ["Ps28CustomDebugStringConvertible", "locationManager"]
@@ -489,7 +493,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "overlayView"]
 - !private ["Ps28CustomDebugStringConvertible", "pinTintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "plotPolylineWithRoute"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAnnotations"]
 - !private ["Ps28CustomDebugStringConvertible", "removeGestureRecognizer"]
 - !private ["Ps28CustomDebugStringConvertible", "reverseGeocodeLocation"]
@@ -560,6 +563,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "cancelGuidance"]
 - ["Ps23CustomStringConvertible", "closestTask"]
 - !private ["Ps23CustomStringConvertible", "convertToAnnotationFromMapItem"]
+- !private ["Ps23CustomStringConvertible", "cornerRadius"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["Ps23CustomStringConvertible", "editTask"]
@@ -580,6 +584,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "initalizeRequestWithDescriptor"]
 - !private ["Ps23CustomStringConvertible", "initializeRequest"]
 - !private ["Ps23CustomStringConvertible", "last"]
+- !private ["Ps23CustomStringConvertible", "layer"]
 - !private ["Ps23CustomStringConvertible", "lineWidth"]
 - !private ["Ps23CustomStringConvertible", "location"]
 - ["Ps23CustomStringConvertible", "locationManager"]
@@ -601,7 +606,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "overlayView"]
 - !private ["Ps23CustomStringConvertible", "pinTintColor"]
 - !private ["Ps23CustomStringConvertible", "plotPolylineWithRoute"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "removeAnnotations"]
 - !private ["Ps23CustomStringConvertible", "removeGestureRecognizer"]
 - !private ["Ps23CustomStringConvertible", "reverseGeocodeLocation"]
@@ -677,6 +681,7 @@ depends-member:
 - ["Ps9Equatable", "closestTask"]
 - !private ["Ps9Equatable", "color"]
 - !private ["Ps9Equatable", "convertToAnnotationFromMapItem"]
+- !private ["Ps9Equatable", "cornerRadius"]
 - !private ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["Ps9Equatable", "editTask"]
@@ -695,6 +700,7 @@ depends-member:
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "initalizeRequestWithDescriptor"]
 - !private ["Ps9Equatable", "initializeRequest"]
+- !private ["Ps9Equatable", "layer"]
 - !private ["Ps9Equatable", "lineWidth"]
 - !private ["Ps9Equatable", "location"]
 - ["Ps9Equatable", "locationManager"]
@@ -716,7 +722,6 @@ depends-member:
 - ["Ps9Equatable", "overlayView"]
 - !private ["Ps9Equatable", "pinTintColor"]
 - !private ["Ps9Equatable", "plotPolylineWithRoute"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "removeAnnotations"]
 - !private ["Ps9Equatable", "removeGestureRecognizer"]
 - !private ["Ps9Equatable", "reverseGeocodeLocation"]
@@ -796,6 +801,7 @@ depends-member:
 - ["Ps8Hashable", "closestTask"]
 - !private ["Ps8Hashable", "color"]
 - !private ["Ps8Hashable", "convertToAnnotationFromMapItem"]
+- !private ["Ps8Hashable", "cornerRadius"]
 - !private ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["Ps8Hashable", "editTask"]
@@ -814,6 +820,7 @@ depends-member:
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "initalizeRequestWithDescriptor"]
 - !private ["Ps8Hashable", "initializeRequest"]
+- !private ["Ps8Hashable", "layer"]
 - !private ["Ps8Hashable", "lineWidth"]
 - !private ["Ps8Hashable", "location"]
 - ["Ps8Hashable", "locationManager"]
@@ -835,7 +842,6 @@ depends-member:
 - ["Ps8Hashable", "overlayView"]
 - !private ["Ps8Hashable", "pinTintColor"]
 - !private ["Ps8Hashable", "plotPolylineWithRoute"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "removeAnnotations"]
 - !private ["Ps8Hashable", "removeGestureRecognizer"]
 - !private ["Ps8Hashable", "reverseGeocodeLocation"]
@@ -964,7 +970,6 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "nounTextField"]
 - !private ["PSo17MKMapViewDelegate", "overlayView"]
 - !private ["PSo17MKMapViewDelegate", "plotPolylineWithRoute"]
-- !private ["PSo17MKMapViewDelegate", "print"]
 - !private ["PSo17MKMapViewDelegate", "searchForClosestAnnotationMatchingNoun"]
 - !private ["PSo17MKMapViewDelegate", "searchForFastestRouteWithDirections"]
 - !private ["PSo17MKMapViewDelegate", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
@@ -1059,6 +1064,7 @@ depends-member:
 - ["PSo8NSCoding", "cancelGuidance"]
 - ["PSo8NSCoding", "closestTask"]
 - !private ["PSo8NSCoding", "convertToAnnotationFromMapItem"]
+- !private ["PSo8NSCoding", "cornerRadius"]
 - !private ["PSo8NSCoding", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["PSo8NSCoding", "editTask"]
 - ["PSo8NSCoding", "endEditing"]
@@ -1075,6 +1081,7 @@ depends-member:
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "initalizeRequestWithDescriptor"]
 - !private ["PSo8NSCoding", "initializeRequest"]
+- !private ["PSo8NSCoding", "layer"]
 - ["PSo8NSCoding", "locationManager"]
 - ["PSo8NSCoding", "locationManagerDidPauseLocationUpdates"]
 - ["PSo8NSCoding", "locationManagerDidResumeLocationUpdates"]
@@ -1093,7 +1100,6 @@ depends-member:
 - ["PSo8NSCoding", "overlayView"]
 - !private ["PSo8NSCoding", "pinTintColor"]
 - !private ["PSo8NSCoding", "plotPolylineWithRoute"]
-- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "removeAnnotations"]
 - !private ["PSo8NSCoding", "removeGestureRecognizer"]
 - !private ["PSo8NSCoding", "rightBarButtonItem"]
@@ -1173,7 +1179,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "nounTextField"]
 - ["PSo26NSExtensionRequestHandling", "overlayView"]
 - !private ["PSo26NSExtensionRequestHandling", "plotPolylineWithRoute"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "searchForClosestAnnotationMatchingNoun"]
 - !private ["PSo26NSExtensionRequestHandling", "searchForFastestRouteWithDirections"]
 - !private ["PSo26NSExtensionRequestHandling", "setNavigationBarHidden"]
@@ -1241,6 +1246,7 @@ depends-member:
 - ["CSo8NSObject", "cancelGuidance"]
 - ["CSo8NSObject", "closestTask"]
 - !private ["CSo8NSObject", "convertToAnnotationFromMapItem"]
+- !private ["CSo8NSObject", "cornerRadius"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableAnnotationViewWithIdentifier"]
 - !private ["CSo8NSObject", "descriptor"]
@@ -1261,6 +1267,7 @@ depends-member:
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "initalizeRequestWithDescriptor"]
 - !private ["CSo8NSObject", "initializeRequest"]
+- !private ["CSo8NSObject", "layer"]
 - !private ["CSo8NSObject", "lineWidth"]
 - !private ["CSo8NSObject", "location"]
 - ["CSo8NSObject", "locationManager"]
@@ -1283,7 +1290,6 @@ depends-member:
 - ["CSo8NSObject", "overlayView"]
 - !private ["CSo8NSObject", "pinTintColor"]
 - !private ["CSo8NSObject", "plotPolylineWithRoute"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "removeAnnotations"]
 - !private ["CSo8NSObject", "removeGestureRecognizer"]
 - !private ["CSo8NSObject", "reverseGeocodeLocation"]
@@ -1344,6 +1350,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "cancelGuidance"]
 - ["PSo16NSObjectProtocol", "closestTask"]
 - !private ["PSo16NSObjectProtocol", "convertToAnnotationFromMapItem"]
+- !private ["PSo16NSObjectProtocol", "cornerRadius"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableAnnotationViewWithIdentifier"]
 - ["PSo16NSObjectProtocol", "editTask"]
@@ -1362,6 +1369,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "initalizeRequestWithDescriptor"]
 - !private ["PSo16NSObjectProtocol", "initializeRequest"]
+- !private ["PSo16NSObjectProtocol", "layer"]
 - !private ["PSo16NSObjectProtocol", "lineWidth"]
 - !private ["PSo16NSObjectProtocol", "location"]
 - ["PSo16NSObjectProtocol", "locationManager"]
@@ -1383,7 +1391,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "overlayView"]
 - !private ["PSo16NSObjectProtocol", "pinTintColor"]
 - !private ["PSo16NSObjectProtocol", "plotPolylineWithRoute"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "removeAnnotations"]
 - !private ["PSo16NSObjectProtocol", "removeGestureRecognizer"]
 - !private ["PSo16NSObjectProtocol", "reverseGeocodeLocation"]
@@ -1556,7 +1563,6 @@ depends-member:
 - ["C5Mango9TaskMapVC", "nounTextField"]
 - ["C5Mango9TaskMapVC", "overlayView"]
 - !private ["C5Mango9TaskMapVC", "plotPolylineWithRoute"]
-- !private ["C5Mango9TaskMapVC", "print"]
 - ["C5Mango9TaskMapVC", "searchForClosestAnnotationMatchingNoun"]
 - !private ["C5Mango9TaskMapVC", "searchForFastestRouteWithDirections"]
 - !private ["C5Mango9TaskMapVC", "setRegionForUnionOfUserLocationAndTaskAnnotation"]
@@ -1595,6 +1601,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "hidden"]
 - !private ["PSo29UIAccessibilityIdentification", "imageEdgeInsets"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "layer"]
 - !private ["PSo29UIAccessibilityIdentification", "pinTintColor"]
 - !private ["PSo29UIAccessibilityIdentification", "removeAnnotations"]
 - !private ["PSo29UIAccessibilityIdentification", "removeGestureRecognizer"]
@@ -1619,6 +1626,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "hidden"]
 - !private ["PSo12UIAppearance", "imageEdgeInsets"]
 - !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "layer"]
 - !private ["PSo12UIAppearance", "pinTintColor"]
 - !private ["PSo12UIAppearance", "removeAnnotations"]
 - !private ["PSo12UIAppearance", "removeGestureRecognizer"]
@@ -1673,6 +1681,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "initalizeRequestWithDescriptor"]
 - !private ["PSo21UIAppearanceContainer", "initializeRequest"]
+- !private ["PSo21UIAppearanceContainer", "layer"]
 - ["PSo21UIAppearanceContainer", "locationManager"]
 - ["PSo21UIAppearanceContainer", "locationManagerDidPauseLocationUpdates"]
 - ["PSo21UIAppearanceContainer", "locationManagerDidResumeLocationUpdates"]
@@ -1691,7 +1700,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "overlayView"]
 - !private ["PSo21UIAppearanceContainer", "pinTintColor"]
 - !private ["PSo21UIAppearanceContainer", "plotPolylineWithRoute"]
-- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "removeAnnotations"]
 - !private ["PSo21UIAppearanceContainer", "removeGestureRecognizer"]
 - !private ["PSo21UIAppearanceContainer", "rightCalloutAccessoryView"]
@@ -1778,7 +1786,6 @@ depends-member:
 - ["PSo18UIContentContainer", "nounTextField"]
 - ["PSo18UIContentContainer", "overlayView"]
 - !private ["PSo18UIContentContainer", "plotPolylineWithRoute"]
-- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "searchForClosestAnnotationMatchingNoun"]
 - !private ["PSo18UIContentContainer", "searchForFastestRouteWithDirections"]
 - !private ["PSo18UIContentContainer", "setNavigationBarHidden"]
@@ -1818,6 +1825,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "hidden"]
 - !private ["PSo17UICoordinateSpace", "imageEdgeInsets"]
 - !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "layer"]
 - !private ["PSo17UICoordinateSpace", "pinTintColor"]
 - !private ["PSo17UICoordinateSpace", "removeAnnotations"]
 - !private ["PSo17UICoordinateSpace", "removeGestureRecognizer"]
@@ -1842,6 +1850,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "hidden"]
 - !private ["PSo13UIDynamicItem", "imageEdgeInsets"]
 - !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "layer"]
 - !private ["PSo13UIDynamicItem", "pinTintColor"]
 - !private ["PSo13UIDynamicItem", "removeAnnotations"]
 - !private ["PSo13UIDynamicItem", "removeGestureRecognizer"]
@@ -1897,6 +1906,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "initalizeRequestWithDescriptor"]
 - !private ["PSo18UIFocusEnvironment", "initializeRequest"]
+- !private ["PSo18UIFocusEnvironment", "layer"]
 - ["PSo18UIFocusEnvironment", "locationManager"]
 - ["PSo18UIFocusEnvironment", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UIFocusEnvironment", "locationManagerDidResumeLocationUpdates"]
@@ -1915,7 +1925,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "overlayView"]
 - !private ["PSo18UIFocusEnvironment", "pinTintColor"]
 - !private ["PSo18UIFocusEnvironment", "plotPolylineWithRoute"]
-- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "removeAnnotations"]
 - !private ["PSo18UIFocusEnvironment", "removeGestureRecognizer"]
 - !private ["PSo18UIFocusEnvironment", "rightCalloutAccessoryView"]
@@ -2012,6 +2021,7 @@ depends-member:
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "initalizeRequestWithDescriptor"]
 - !private ["CSo11UIResponder", "initializeRequest"]
+- !private ["CSo11UIResponder", "layer"]
 - ["CSo11UIResponder", "locationManager"]
 - ["CSo11UIResponder", "locationManagerDidPauseLocationUpdates"]
 - ["CSo11UIResponder", "locationManagerDidResumeLocationUpdates"]
@@ -2030,7 +2040,6 @@ depends-member:
 - ["CSo11UIResponder", "overlayView"]
 - !private ["CSo11UIResponder", "pinTintColor"]
 - !private ["CSo11UIResponder", "plotPolylineWithRoute"]
-- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "removeAnnotations"]
 - !private ["CSo11UIResponder", "removeGestureRecognizer"]
 - !private ["CSo11UIResponder", "rightCalloutAccessoryView"]
@@ -2105,7 +2114,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "nounTextField"]
 - ["PSo16UIStateRestoring", "overlayView"]
 - !private ["PSo16UIStateRestoring", "plotPolylineWithRoute"]
-- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "searchForClosestAnnotationMatchingNoun"]
 - !private ["PSo16UIStateRestoring", "searchForFastestRouteWithDirections"]
 - !private ["PSo16UIStateRestoring", "setNavigationBarHidden"]
@@ -2175,6 +2183,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "initalizeRequestWithDescriptor"]
 - !private ["PSo18UITraitEnvironment", "initializeRequest"]
+- !private ["PSo18UITraitEnvironment", "layer"]
 - ["PSo18UITraitEnvironment", "locationManager"]
 - ["PSo18UITraitEnvironment", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UITraitEnvironment", "locationManagerDidResumeLocationUpdates"]
@@ -2193,7 +2202,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "overlayView"]
 - !private ["PSo18UITraitEnvironment", "pinTintColor"]
 - !private ["PSo18UITraitEnvironment", "plotPolylineWithRoute"]
-- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "removeAnnotations"]
 - !private ["PSo18UITraitEnvironment", "removeGestureRecognizer"]
 - !private ["PSo18UITraitEnvironment", "rightCalloutAccessoryView"]
@@ -2234,6 +2242,7 @@ depends-member:
 - !private ["CSo6UIView", "hidden"]
 - !private ["CSo6UIView", "imageEdgeInsets"]
 - !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "layer"]
 - !private ["CSo6UIView", "pinTintColor"]
 - !private ["CSo6UIView", "removeAnnotations"]
 - !private ["CSo6UIView", "removeGestureRecognizer"]
@@ -2313,7 +2322,6 @@ depends-member:
 - ["CSo16UIViewController", "nounTextField"]
 - ["CSo16UIViewController", "overlayView"]
 - !private ["CSo16UIViewController", "plotPolylineWithRoute"]
-- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "searchForClosestAnnotationMatchingNoun"]
 - !private ["CSo16UIViewController", "searchForFastestRouteWithDirections"]
 - !private ["CSo16UIViewController", "setNavigationBarHidden"]
@@ -2415,6 +2423,7 @@ depends-member:
 - !private ["Ps12_Reflectable", "imageEdgeInsets"]
 - !private ["Ps12_Reflectable", "init"]
 - !private ["Ps12_Reflectable", "last"]
+- !private ["Ps12_Reflectable", "layer"]
 - !private ["Ps12_Reflectable", "pinTintColor"]
 - !private ["Ps12_Reflectable", "removeAnnotations"]
 - !private ["Ps12_Reflectable", "removeGestureRecognizer"]
@@ -2440,6 +2449,8 @@ depends-nominal:
 - !private "Sb"
 - !private "Ps25BooleanLiteralConvertible"
 - !private "Ps11BooleanType"
+- !private "CSo7CALayer"
+- !private "PSo13CAMediaTiming"
 - !private "V12CoreGraphics7CGFloat"
 - !private "CSo10CLGeocoder"
 - "CSo17CLLocationManager"

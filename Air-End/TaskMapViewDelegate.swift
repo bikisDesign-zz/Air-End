@@ -122,7 +122,6 @@ extension MapVC {
         guard let finalDestinationRoute = guidances.last?.sourceRoute else {return}
         if i + 1 != guidances.count {
             if guidances[i].wasSelectedForFinalRoute == false {
-                print("tapped\(i)")
                 routeCounter += [i]
                 let differenceToDestination = (sourceRoute.expectedTravelTime + destinationRoute.expectedTravelTime) - (finalDestinationRoute.expectedTravelTime)
                 hideOverlay(false, viewCollection: [guidanceLabel, guidanceLabelContainer])

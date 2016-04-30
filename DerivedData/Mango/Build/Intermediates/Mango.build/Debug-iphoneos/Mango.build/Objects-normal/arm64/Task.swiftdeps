@@ -6,28 +6,28 @@ provides-nominal:
 provides-member:
 - ["C5Mango4Task", ""]
 provides-dynamic-lookup:
-- "primaryKey"
-- "id"
 - "name"
+- "primaryKey"
 - "dueDate"
-- "isCompleted"
-- "createNewTaskWithID"
 - "hashtag"
+- "id"
+- "createNewTaskWithID"
+- "isCompleted"
 - "distanceFromUser"
 depends-top-level:
-- "BooleanLiteralType"
-- "Bool"
-- !private "Void"
 - "String"
+- "Object"
 - !private "Array"
+- "Task"
+- "Results"
+- "BooleanLiteralType"
 - !private "uiRealm"
 - "NSDate"
-- "Task"
-- "Noun"
+- "Bool"
 - !private "StringLiteralType"
-- "Results"
 - "Double"
-- "Object"
+- !private "Void"
+- "Noun"
 depends-member:
 - ["Ps16AbsoluteValuable", "init"]
 - ["P10RealmSwift11AddableType", "init"]

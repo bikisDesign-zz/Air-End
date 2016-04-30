@@ -6,18 +6,18 @@ provides-nominal:
 provides-member:
 - ["C5Mango8Guidance", ""]
 provides-dynamic-lookup:
-- "destinationMapItem"
-- "destinationRoute"
 - "sourceRoute"
+- "destinationRoute"
+- "destinationMapItem"
 depends-top-level:
-- "NSObject"
-- "Bool"
-- !private "BooleanLiteralType"
-- "MKRoute"
 - "Int"
+- "Bool"
+- "MKRoute"
 - !private "StringLiteralType"
-- "MKMapItem"
+- "NSObject"
 - "Guidance"
+- "MKMapItem"
+- !private "BooleanLiteralType"
 depends-member:
 - ["Ps9AnyObject", "destinationMapItem"]
 - ["Ps9AnyObject", "destinationRoute"]

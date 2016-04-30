@@ -60,9 +60,7 @@ class ListVC: UIViewController {
     }
     
     func segmentCloseTasks(){
-        print(closeMapItems.count)
-        print(tasks?.count)
-        taskManager.readCloseTasks(withCompletionHandler: { (closeTasks) in
+            taskManager.readCloseTasks(withCompletionHandler: { (closeTasks) in
             self.tasks = closeTasks
             self.tableView.reloadData()
         })

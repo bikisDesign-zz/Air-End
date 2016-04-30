@@ -10,22 +10,22 @@ provides-dynamic-lookup:
 - "locationManager"
 - "locationManager"
 depends-top-level:
-- !private "uiRealm"
+- !private "NSError"
+- !private "StringLiteralType"
 - "Task"
 - "CLLocation"
-- !private "assertionFailure"
-- "CLLocationManager"
-- !private "StringLiteralType"
-- !private "MKLocalSearch"
-- !private "<"
-- !private "NSError"
-- !private "Void"
-- "Bool"
 - !private "MKLocalSearchResponse"
-- "ListVC"
+- "CLLocationManager"
 - "CLAuthorizationStatus"
+- !private "uiRealm"
 - "CLLocationManagerDelegate"
 - !private "BooleanLiteralType"
+- !private "assertionFailure"
+- "Bool"
+- !private "MKLocalSearch"
+- !private "<"
+- "ListVC"
+- !private "Void"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
@@ -55,6 +55,7 @@ depends-member:
 - !private ["Ps9AnyObject", "placemark"]
 - !private ["Ps9AnyObject", "readAllTasks"]
 - !private ["Ps9AnyObject", "requestWhenInUseAuthorization"]
+- !private ["Ps9AnyObject", "showAlert"]
 - !private ["Ps9AnyObject", "startUpdatingLocation"]
 - !private ["Ps9AnyObject", "startWithCompletionHandler"]
 - !private ["Ps9AnyObject", "stopUpdatingLocation"]
@@ -100,6 +101,7 @@ depends-member:
 - ["PSo25CLLocationManagerDelegate", "locationManagerDidPauseLocationUpdates"]
 - ["PSo25CLLocationManagerDelegate", "locationManagerDidResumeLocationUpdates"]
 - ["PSo25CLLocationManagerDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo25CLLocationManagerDelegate", "showAlert"]
 - !private ["PSo25CLLocationManagerDelegate", "taskManager"]
 - !private ["PSo25CLLocationManagerDelegate", "uiRealm"]
 - ["PSo25CLLocationManagerDelegate", ""]
@@ -126,6 +128,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "mapItems"]
 - !private ["Ps11CVarArgType", "placemark"]
 - !private ["Ps11CVarArgType", "requestWhenInUseAuthorization"]
+- !private ["Ps11CVarArgType", "showAlert"]
 - !private ["Ps11CVarArgType", "startUpdatingLocation"]
 - !private ["Ps11CVarArgType", "startWithCompletionHandler"]
 - !private ["Ps11CVarArgType", "stopUpdatingLocation"]
@@ -165,6 +168,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "mapItems"]
 - !private ["Ps28CustomDebugStringConvertible", "placemark"]
 - !private ["Ps28CustomDebugStringConvertible", "requestWhenInUseAuthorization"]
+- !private ["Ps28CustomDebugStringConvertible", "showAlert"]
 - !private ["Ps28CustomDebugStringConvertible", "sort"]
 - !private ["Ps28CustomDebugStringConvertible", "startUpdatingLocation"]
 - !private ["Ps28CustomDebugStringConvertible", "startWithCompletionHandler"]
@@ -198,6 +202,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "mapItems"]
 - !private ["Ps23CustomStringConvertible", "placemark"]
 - !private ["Ps23CustomStringConvertible", "requestWhenInUseAuthorization"]
+- !private ["Ps23CustomStringConvertible", "showAlert"]
 - !private ["Ps23CustomStringConvertible", "sort"]
 - !private ["Ps23CustomStringConvertible", "startUpdatingLocation"]
 - !private ["Ps23CustomStringConvertible", "startWithCompletionHandler"]
@@ -233,6 +238,7 @@ depends-member:
 - !private ["Ps9Equatable", "mapItems"]
 - !private ["Ps9Equatable", "placemark"]
 - !private ["Ps9Equatable", "requestWhenInUseAuthorization"]
+- !private ["Ps9Equatable", "showAlert"]
 - !private ["Ps9Equatable", "startUpdatingLocation"]
 - !private ["Ps9Equatable", "startWithCompletionHandler"]
 - !private ["Ps9Equatable", "stopUpdatingLocation"]
@@ -268,6 +274,7 @@ depends-member:
 - !private ["Ps8Hashable", "mapItems"]
 - !private ["Ps8Hashable", "placemark"]
 - !private ["Ps8Hashable", "requestWhenInUseAuthorization"]
+- !private ["Ps8Hashable", "showAlert"]
 - !private ["Ps8Hashable", "startUpdatingLocation"]
 - !private ["Ps8Hashable", "startWithCompletionHandler"]
 - !private ["Ps8Hashable", "stopUpdatingLocation"]
@@ -308,6 +315,7 @@ depends-member:
 - ["C5Mango6ListVC", "locationManagerDidPauseLocationUpdates"]
 - ["C5Mango6ListVC", "locationManagerDidResumeLocationUpdates"]
 - ["C5Mango6ListVC", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["C5Mango6ListVC", "showAlert"]
 - !private ["C5Mango6ListVC", "taskManager"]
 - !private ["C5Mango6ListVC", "uiRealm"]
 - !private ["PSo12MKAnnotation", "location"]
@@ -351,6 +359,7 @@ depends-member:
 - ["PSo8NSCoding", "locationManagerDidPauseLocationUpdates"]
 - ["PSo8NSCoding", "locationManagerDidResumeLocationUpdates"]
 - ["PSo8NSCoding", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo8NSCoding", "showAlert"]
 - !private ["PSo8NSCoding", "taskManager"]
 - !private ["PSo8NSCoding", "uiRealm"]
 - !private ["PSo9NSCopying", "distanceFromLocation"]
@@ -366,6 +375,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "locationManagerDidPauseLocationUpdates"]
 - ["PSo26NSExtensionRequestHandling", "locationManagerDidResumeLocationUpdates"]
 - ["PSo26NSExtensionRequestHandling", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo26NSExtensionRequestHandling", "showAlert"]
 - !private ["PSo26NSExtensionRequestHandling", "taskManager"]
 - !private ["PSo26NSExtensionRequestHandling", "uiRealm"]
 - !private ["PSo17NSFastEnumeration", "Generator"]
@@ -401,6 +411,7 @@ depends-member:
 - !private ["CSo8NSObject", "placemark"]
 - !private ["CSo8NSObject", "readAllTasks"]
 - !private ["CSo8NSObject", "requestWhenInUseAuthorization"]
+- !private ["CSo8NSObject", "showAlert"]
 - !private ["CSo8NSObject", "startUpdatingLocation"]
 - !private ["CSo8NSObject", "startWithCompletionHandler"]
 - !private ["CSo8NSObject", "stopUpdatingLocation"]
@@ -426,6 +437,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "mapItems"]
 - !private ["PSo16NSObjectProtocol", "placemark"]
 - !private ["PSo16NSObjectProtocol", "requestWhenInUseAuthorization"]
+- !private ["PSo16NSObjectProtocol", "showAlert"]
 - !private ["PSo16NSObjectProtocol", "startUpdatingLocation"]
 - !private ["PSo16NSObjectProtocol", "startWithCompletionHandler"]
 - !private ["PSo16NSObjectProtocol", "stopUpdatingLocation"]
@@ -500,6 +512,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "locationManagerDidPauseLocationUpdates"]
 - ["PSo21UIAppearanceContainer", "locationManagerDidResumeLocationUpdates"]
 - ["PSo21UIAppearanceContainer", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo21UIAppearanceContainer", "showAlert"]
 - !private ["PSo21UIAppearanceContainer", "taskManager"]
 - !private ["PSo21UIAppearanceContainer", "uiRealm"]
 - !private ["PSo18UIContentContainer", "CLLocationManager"]
@@ -513,6 +526,7 @@ depends-member:
 - ["PSo18UIContentContainer", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UIContentContainer", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UIContentContainer", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo18UIContentContainer", "showAlert"]
 - !private ["PSo18UIContentContainer", "taskManager"]
 - !private ["PSo18UIContentContainer", "uiRealm"]
 - !private ["PSo18UIFocusEnvironment", "CLLocationManager"]
@@ -526,6 +540,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UIFocusEnvironment", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UIFocusEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo18UIFocusEnvironment", "showAlert"]
 - !private ["PSo18UIFocusEnvironment", "taskManager"]
 - !private ["PSo18UIFocusEnvironment", "uiRealm"]
 - ["CSo11UIResponder", "Bool"]
@@ -546,6 +561,7 @@ depends-member:
 - ["CSo11UIResponder", "locationManagerDidPauseLocationUpdates"]
 - ["CSo11UIResponder", "locationManagerDidResumeLocationUpdates"]
 - ["CSo11UIResponder", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["CSo11UIResponder", "showAlert"]
 - !private ["CSo11UIResponder", "taskManager"]
 - !private ["CSo11UIResponder", "uiRealm"]
 - !private ["PSo20UIScrollViewDelegate", "CLLocationManager"]
@@ -558,6 +574,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "locationManagerDidPauseLocationUpdates"]
 - ["PSo20UIScrollViewDelegate", "locationManagerDidResumeLocationUpdates"]
 - ["PSo20UIScrollViewDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo20UIScrollViewDelegate", "showAlert"]
 - !private ["PSo20UIScrollViewDelegate", "taskManager"]
 - !private ["PSo20UIScrollViewDelegate", "uiRealm"]
 - !private ["PSo16UIStateRestoring", "CLLocationManager"]
@@ -571,6 +588,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "locationManagerDidPauseLocationUpdates"]
 - ["PSo16UIStateRestoring", "locationManagerDidResumeLocationUpdates"]
 - ["PSo16UIStateRestoring", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo16UIStateRestoring", "showAlert"]
 - !private ["PSo16UIStateRestoring", "taskManager"]
 - !private ["PSo16UIStateRestoring", "uiRealm"]
 - !private ["PSo21UITableViewDataSource", "CLLocationManager"]
@@ -583,6 +601,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "locationManagerDidPauseLocationUpdates"]
 - ["PSo21UITableViewDataSource", "locationManagerDidResumeLocationUpdates"]
 - ["PSo21UITableViewDataSource", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo21UITableViewDataSource", "showAlert"]
 - !private ["PSo21UITableViewDataSource", "taskManager"]
 - !private ["PSo21UITableViewDataSource", "uiRealm"]
 - !private ["PSo19UITableViewDelegate", "CLLocationManager"]
@@ -595,6 +614,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "locationManagerDidPauseLocationUpdates"]
 - ["PSo19UITableViewDelegate", "locationManagerDidResumeLocationUpdates"]
 - ["PSo19UITableViewDelegate", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo19UITableViewDelegate", "showAlert"]
 - !private ["PSo19UITableViewDelegate", "taskManager"]
 - !private ["PSo19UITableViewDelegate", "uiRealm"]
 - !private ["PSo18UITraitEnvironment", "CLLocationManager"]
@@ -608,6 +628,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UITraitEnvironment", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UITraitEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["PSo18UITraitEnvironment", "showAlert"]
 - !private ["PSo18UITraitEnvironment", "taskManager"]
 - !private ["PSo18UITraitEnvironment", "uiRealm"]
 - ["CSo16UIViewController", "Bool"]
@@ -628,6 +649,7 @@ depends-member:
 - ["CSo16UIViewController", "locationManagerDidPauseLocationUpdates"]
 - ["CSo16UIViewController", "locationManagerDidResumeLocationUpdates"]
 - ["CSo16UIViewController", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["CSo16UIViewController", "showAlert"]
 - !private ["CSo16UIViewController", "taskManager"]
 - !private ["CSo16UIViewController", "uiRealm"]
 - !private ["Ps10_ArrayType", "Generator"]

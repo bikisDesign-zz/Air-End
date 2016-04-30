@@ -9,9 +9,9 @@ provides-dynamic-lookup:
 - "descriptor"
 - "parentTask"
 depends-top-level:
-- "Task"
-- "Object"
 - "Noun"
+- "Object"
+- "Task"
 - "String"
 depends-member:
 - ["Ps9AnyObject", "descriptor"]

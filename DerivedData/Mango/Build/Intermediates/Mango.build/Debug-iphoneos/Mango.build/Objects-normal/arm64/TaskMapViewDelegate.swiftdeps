@@ -6,56 +6,61 @@ provides-member:
 - ["C5Mango5MapVC", "mapView"]
 - ["C5Mango5MapVC", "mapView"]
 - ["C5Mango5MapVC", "mapView"]
+- ["C5Mango5MapVC", "showETALabelWithRoutes"]
 - ["C5Mango5MapVC", "mapView"]
 - ["C5Mango5MapVC", "generatePolylineColor"]
 - ["C5Mango5MapVC", "displaySelectedGuidanceRoute"]
 - ["C5Mango5MapVC", "AddRouteToGuidance"]
 provides-dynamic-lookup:
-- "generatePolylineColor"
 - "mapView"
 - "mapView"
 - "mapView"
 - "mapView"
-- "displaySelectedGuidanceRoute"
+- "showETALabelWithRoutes"
 - "AddRouteToGuidance"
+- "generatePolylineColor"
+- "displaySelectedGuidanceRoute"
 depends-top-level:
-- "Int"
-- "UIControl"
-- "MKOverlayRenderer"
-- !private "!="
+- !private "UIImage"
 - "MKAnnotation"
-- !private "Theme"
-- "MKMapView"
-- !private "=="
-- !private "MKDirections"
-- "Array"
 - "MapVC"
-- !private "StringLiteralType"
-- "UIColor"
+- !private "MKPolylineRenderer"
 - !private "MKUserLocation"
-- !private "/"
-- !private "CGRectMake"
-- !private "print"
-- !private "-"
-- !private "..<"
+- !private "+"
+- "Int"
 - !private "!=="
-- "MKOverlay"
+- "MKRoute"
+- !private "=="
+- "MKMapView"
+- !private "MKPolyline"
+- "Array"
+- !private "+="
+- !private "/"
+- "MKOverlayRenderer"
+- !private "Theme"
+- !private "!="
+- !private "StringLiteralType"
+- !private "-"
+- !private "UIButton"
 - !private "MKPinAnnotationView"
 - "MKAnnotationView"
-- !private "MKPolylineRenderer"
-- !private "+"
-- !private "+="
-- !private "UIButton"
+- "MKOverlay"
+- "UIColor"
+- !private "CGRectMake"
+- !private "..<"
+- !private "Double"
 - !private "BooleanLiteralType"
-- !private "MKPolyline"
-- !private "UIImage"
+- !private "MKDirections"
+- "UIControl"
 depends-member:
+- !private ["Ps16AbsoluteValuable", "init"]
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
 - !private ["P10RealmSwift11AddableType", "_DisabledRangeIndex"]
 - !private ["P10RealmSwift11AddableType", "init"]
 - ["Ps9AnyObject", "AddRouteToGuidance"]
 - !private ["Ps9AnyObject", "CGRectMake"]
+- !private ["Ps9AnyObject", "Double"]
 - !private ["Ps9AnyObject", "Int"]
 - !private ["Ps9AnyObject", "MKDirections"]
 - !private ["Ps9AnyObject", "MKPinAnnotationView"]
@@ -92,7 +97,6 @@ depends-member:
 - !private ["Ps9AnyObject", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["Ps9AnyObject", "pinTintColor"]
 - !private ["Ps9AnyObject", "plotPolylineWithRoute"]
-- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "removeAnnotation"]
 - !private ["Ps9AnyObject", "rightCalloutAccessoryView"]
 - !private ["Ps9AnyObject", "routeCounter"]
@@ -102,6 +106,7 @@ depends-member:
 - !private ["Ps9AnyObject", "setImage"]
 - !private ["Ps9AnyObject", "setUpGuidanceUI"]
 - !private ["Ps9AnyObject", "setUpTurnByTurnUI"]
+- ["Ps9AnyObject", "showETALabelWithRoutes"]
 - !private ["Ps9AnyObject", "sourceRoute"]
 - !private ["Ps9AnyObject", "steps"]
 - !private ["Ps9AnyObject", "strokeColor"]
@@ -153,6 +158,7 @@ depends-member:
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["PSo25CLLocationManagerDelegate", "AddRouteToGuidance"]
 - !private ["PSo25CLLocationManagerDelegate", "CGRectMake"]
+- !private ["PSo25CLLocationManagerDelegate", "Double"]
 - !private ["PSo25CLLocationManagerDelegate", "Int"]
 - !private ["PSo25CLLocationManagerDelegate", "MKDirections"]
 - !private ["PSo25CLLocationManagerDelegate", "MKPinAnnotationView"]
@@ -175,19 +181,20 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "initializeRequest"]
 - !private ["PSo25CLLocationManagerDelegate", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo25CLLocationManagerDelegate", "plotPolylineWithRoute"]
-- !private ["PSo25CLLocationManagerDelegate", "print"]
 - !private ["PSo25CLLocationManagerDelegate", "routeCounter"]
 - !private ["PSo25CLLocationManagerDelegate", "routeIndexInstructionIndexTuple"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForFastestRouteWithDirections"]
 - !private ["PSo25CLLocationManagerDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["PSo25CLLocationManagerDelegate", "setUpGuidanceUI"]
 - !private ["PSo25CLLocationManagerDelegate", "setUpTurnByTurnUI"]
+- !private ["PSo25CLLocationManagerDelegate", "showETALabelWithRoutes"]
 - !private ["PSo25CLLocationManagerDelegate", "taskMapView"]
 - !private ["PSo25CLLocationManagerDelegate", "userLocation"]
 - !private ["PSo25CLLocationManagerDelegate", "userSelectingAdditionalRoutes"]
 - ["Ps11CVarArgType", "AddRouteToGuidance"]
 - !private ["Ps11CVarArgType", "CGRectMake"]
 - !private ["Ps11CVarArgType", "Distance"]
+- !private ["Ps11CVarArgType", "Double"]
 - !private ["Ps11CVarArgType", "Int"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "MKDirections"]
@@ -226,7 +233,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["Ps11CVarArgType", "pinTintColor"]
 - !private ["Ps11CVarArgType", "plotPolylineWithRoute"]
-- !private ["Ps11CVarArgType", "print"]
 - !private ["Ps11CVarArgType", "removeAnnotation"]
 - !private ["Ps11CVarArgType", "rightCalloutAccessoryView"]
 - !private ["Ps11CVarArgType", "routeCounter"]
@@ -236,6 +242,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "setImage"]
 - !private ["Ps11CVarArgType", "setUpGuidanceUI"]
 - !private ["Ps11CVarArgType", "setUpTurnByTurnUI"]
+- ["Ps11CVarArgType", "showETALabelWithRoutes"]
 - !private ["Ps11CVarArgType", "sourceRoute"]
 - !private ["Ps11CVarArgType", "steps"]
 - !private ["Ps11CVarArgType", "strokeColor"]
@@ -267,6 +274,7 @@ depends-member:
 - !private ["Ps10Comparable", "init"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "AddRouteToGuidance"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "CGRectMake"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "Double"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "Int"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "MKDirections"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "MKPinAnnotationView"]
@@ -289,18 +297,19 @@ depends-member:
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "initializeRequest"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "plotPolylineWithRoute"]
-- !private ["P5Mango31CorrectAddressTableViewDelegate", "print"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "routeCounter"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "routeIndexInstructionIndexTuple"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "searchForFastestRouteWithDirections"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "setUpGuidanceUI"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "setUpTurnByTurnUI"]
+- !private ["P5Mango31CorrectAddressTableViewDelegate", "showETALabelWithRoutes"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "taskMapView"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "userLocation"]
 - !private ["P5Mango31CorrectAddressTableViewDelegate", "userSelectingAdditionalRoutes"]
 - ["Ps28CustomDebugStringConvertible", "AddRouteToGuidance"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectMake"]
+- !private ["Ps28CustomDebugStringConvertible", "Double"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
@@ -348,7 +357,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["Ps28CustomDebugStringConvertible", "pinTintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "plotPolylineWithRoute"]
-- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAll"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAnnotation"]
 - !private ["Ps28CustomDebugStringConvertible", "rightCalloutAccessoryView"]
@@ -359,6 +367,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "setImage"]
 - !private ["Ps28CustomDebugStringConvertible", "setUpGuidanceUI"]
 - !private ["Ps28CustomDebugStringConvertible", "setUpTurnByTurnUI"]
+- ["Ps28CustomDebugStringConvertible", "showETALabelWithRoutes"]
 - !private ["Ps28CustomDebugStringConvertible", "sourceRoute"]
 - !private ["Ps28CustomDebugStringConvertible", "steps"]
 - !private ["Ps28CustomDebugStringConvertible", "strokeColor"]
@@ -371,6 +380,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "AddRouteToGuidance"]
 - !private ["Ps23CustomStringConvertible", "CGRectMake"]
 - !private ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Double"]
 - !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
@@ -420,7 +430,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["Ps23CustomStringConvertible", "pinTintColor"]
 - !private ["Ps23CustomStringConvertible", "plotPolylineWithRoute"]
-- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "removeAll"]
 - !private ["Ps23CustomStringConvertible", "removeAnnotation"]
 - !private ["Ps23CustomStringConvertible", "rightCalloutAccessoryView"]
@@ -431,6 +440,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "setImage"]
 - !private ["Ps23CustomStringConvertible", "setUpGuidanceUI"]
 - !private ["Ps23CustomStringConvertible", "setUpTurnByTurnUI"]
+- ["Ps23CustomStringConvertible", "showETALabelWithRoutes"]
 - !private ["Ps23CustomStringConvertible", "sourceRoute"]
 - !private ["Ps23CustomStringConvertible", "steps"]
 - !private ["Ps23CustomStringConvertible", "strokeColor"]
@@ -441,11 +451,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "userSelectingAdditionalRoutes"]
 - !private ["Ps23CustomStringConvertible", "wasSelectedForFinalRoute"]
 - !private ["Sd", "deinit"]
+- !private ["Sd", "init"]
 - ["Ps9Equatable", "AddRouteToGuidance"]
 - !private ["Ps9Equatable", "CGRectMake"]
 - !private ["Ps9Equatable", "ContactAdd"]
 - !private ["Ps9Equatable", "Custom"]
 - !private ["Ps9Equatable", "Distance"]
+- !private ["Ps9Equatable", "Double"]
 - !private ["Ps9Equatable", "Generator"]
 - !private ["Ps9Equatable", "Int"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
@@ -491,7 +503,6 @@ depends-member:
 - !private ["Ps9Equatable", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["Ps9Equatable", "pinTintColor"]
 - !private ["Ps9Equatable", "plotPolylineWithRoute"]
-- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "removeAnnotation"]
 - !private ["Ps9Equatable", "rightCalloutAccessoryView"]
 - !private ["Ps9Equatable", "routeCounter"]
@@ -501,6 +512,7 @@ depends-member:
 - !private ["Ps9Equatable", "setImage"]
 - !private ["Ps9Equatable", "setUpGuidanceUI"]
 - !private ["Ps9Equatable", "setUpTurnByTurnUI"]
+- ["Ps9Equatable", "showETALabelWithRoutes"]
 - !private ["Ps9Equatable", "sourceRoute"]
 - !private ["Ps9Equatable", "steps"]
 - !private ["Ps9Equatable", "strokeColor"]
@@ -511,6 +523,8 @@ depends-member:
 - !private ["Ps9Equatable", "wasSelectedForFinalRoute"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
+- !private ["Ps23FloatLiteralConvertible", "init"]
+- !private ["Ps17FloatingPointType", "init"]
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
@@ -527,6 +541,7 @@ depends-member:
 - !private ["Ps8Hashable", "ContactAdd"]
 - !private ["Ps8Hashable", "Custom"]
 - !private ["Ps8Hashable", "Distance"]
+- !private ["Ps8Hashable", "Double"]
 - !private ["Ps8Hashable", "Int"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "MKDirections"]
@@ -570,7 +585,6 @@ depends-member:
 - !private ["Ps8Hashable", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["Ps8Hashable", "pinTintColor"]
 - !private ["Ps8Hashable", "plotPolylineWithRoute"]
-- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "removeAnnotation"]
 - !private ["Ps8Hashable", "rightCalloutAccessoryView"]
 - !private ["Ps8Hashable", "routeCounter"]
@@ -580,6 +594,7 @@ depends-member:
 - !private ["Ps8Hashable", "setImage"]
 - !private ["Ps8Hashable", "setUpGuidanceUI"]
 - !private ["Ps8Hashable", "setUpTurnByTurnUI"]
+- ["Ps8Hashable", "showETALabelWithRoutes"]
 - !private ["Ps8Hashable", "sourceRoute"]
 - !private ["Ps8Hashable", "steps"]
 - !private ["Ps8Hashable", "strokeColor"]
@@ -636,6 +651,7 @@ depends-member:
 - !private ["CSo9MKMapView", "removeAnnotation"]
 - !private ["PSo17MKMapViewDelegate", "AddRouteToGuidance"]
 - !private ["PSo17MKMapViewDelegate", "CGRectMake"]
+- !private ["PSo17MKMapViewDelegate", "Double"]
 - !private ["PSo17MKMapViewDelegate", "Int"]
 - !private ["PSo17MKMapViewDelegate", "MKDirections"]
 - !private ["PSo17MKMapViewDelegate", "MKPinAnnotationView"]
@@ -658,13 +674,13 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "initializeRequest"]
 - !private ["PSo17MKMapViewDelegate", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo17MKMapViewDelegate", "plotPolylineWithRoute"]
-- !private ["PSo17MKMapViewDelegate", "print"]
 - !private ["PSo17MKMapViewDelegate", "routeCounter"]
 - !private ["PSo17MKMapViewDelegate", "routeIndexInstructionIndexTuple"]
 - !private ["PSo17MKMapViewDelegate", "searchForFastestRouteWithDirections"]
 - !private ["PSo17MKMapViewDelegate", "searchForMapItemsMatchingNoun"]
 - !private ["PSo17MKMapViewDelegate", "setUpGuidanceUI"]
 - !private ["PSo17MKMapViewDelegate", "setUpTurnByTurnUI"]
+- !private ["PSo17MKMapViewDelegate", "showETALabelWithRoutes"]
 - !private ["PSo17MKMapViewDelegate", "taskMapView"]
 - !private ["PSo17MKMapViewDelegate", "userLocation"]
 - !private ["PSo17MKMapViewDelegate", "userSelectingAdditionalRoutes"]
@@ -690,6 +706,7 @@ depends-member:
 - !private ["CSo11MKRouteStep", "instructions"]
 - ["C5Mango5MapVC", "AddRouteToGuidance"]
 - !private ["C5Mango5MapVC", "CGRectMake"]
+- !private ["C5Mango5MapVC", "Double"]
 - ["C5Mango5MapVC", "Int"]
 - ["C5Mango5MapVC", "MKAnnotation"]
 - ["C5Mango5MapVC", "MKAnnotationView"]
@@ -700,6 +717,7 @@ depends-member:
 - !private ["C5Mango5MapVC", "MKPinAnnotationView"]
 - !private ["C5Mango5MapVC", "MKPolyline"]
 - !private ["C5Mango5MapVC", "MKPolylineRenderer"]
+- ["C5Mango5MapVC", "MKRoute"]
 - !private ["C5Mango5MapVC", "MKUserLocation"]
 - !private ["C5Mango5MapVC", "Theme"]
 - !private ["C5Mango5MapVC", "UIButton"]
@@ -722,13 +740,13 @@ depends-member:
 - ["C5Mango5MapVC", "mapView"]
 - !private ["C5Mango5MapVC", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["C5Mango5MapVC", "plotPolylineWithRoute"]
-- !private ["C5Mango5MapVC", "print"]
 - !private ["C5Mango5MapVC", "routeCounter"]
 - !private ["C5Mango5MapVC", "routeIndexInstructionIndexTuple"]
 - !private ["C5Mango5MapVC", "searchForFastestRouteWithDirections"]
 - !private ["C5Mango5MapVC", "searchForMapItemsMatchingNoun"]
 - !private ["C5Mango5MapVC", "setUpGuidanceUI"]
 - !private ["C5Mango5MapVC", "setUpTurnByTurnUI"]
+- ["C5Mango5MapVC", "showETALabelWithRoutes"]
 - !private ["C5Mango5MapVC", "taskMapView"]
 - !private ["C5Mango5MapVC", "userLocation"]
 - !private ["C5Mango5MapVC", "userSelectingAdditionalRoutes"]
@@ -778,6 +796,7 @@ depends-member:
 - !private ["Ps16MutableSliceable", "subscript"]
 - ["PSo8NSCoding", "AddRouteToGuidance"]
 - !private ["PSo8NSCoding", "CGRectMake"]
+- !private ["PSo8NSCoding", "Double"]
 - !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "MKDirections"]
 - !private ["PSo8NSCoding", "MKPinAnnotationView"]
@@ -809,7 +828,6 @@ depends-member:
 - !private ["PSo8NSCoding", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo8NSCoding", "pinTintColor"]
 - !private ["PSo8NSCoding", "plotPolylineWithRoute"]
-- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "removeAnnotation"]
 - !private ["PSo8NSCoding", "rightCalloutAccessoryView"]
 - !private ["PSo8NSCoding", "routeCounter"]
@@ -819,6 +837,7 @@ depends-member:
 - !private ["PSo8NSCoding", "setImage"]
 - !private ["PSo8NSCoding", "setUpGuidanceUI"]
 - !private ["PSo8NSCoding", "setUpTurnByTurnUI"]
+- ["PSo8NSCoding", "showETALabelWithRoutes"]
 - !private ["PSo8NSCoding", "taskMapView"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "userLocation"]
@@ -826,6 +845,7 @@ depends-member:
 - !private ["PSo9NSCopying", "init"]
 - ["PSo26NSExtensionRequestHandling", "AddRouteToGuidance"]
 - !private ["PSo26NSExtensionRequestHandling", "CGRectMake"]
+- !private ["PSo26NSExtensionRequestHandling", "Double"]
 - !private ["PSo26NSExtensionRequestHandling", "Int"]
 - !private ["PSo26NSExtensionRequestHandling", "MKDirections"]
 - !private ["PSo26NSExtensionRequestHandling", "MKPinAnnotationView"]
@@ -849,19 +869,20 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "mapView"]
 - !private ["PSo26NSExtensionRequestHandling", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo26NSExtensionRequestHandling", "plotPolylineWithRoute"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "routeCounter"]
 - !private ["PSo26NSExtensionRequestHandling", "routeIndexInstructionIndexTuple"]
 - !private ["PSo26NSExtensionRequestHandling", "searchForFastestRouteWithDirections"]
 - !private ["PSo26NSExtensionRequestHandling", "searchForMapItemsMatchingNoun"]
 - !private ["PSo26NSExtensionRequestHandling", "setUpGuidanceUI"]
 - !private ["PSo26NSExtensionRequestHandling", "setUpTurnByTurnUI"]
+- ["PSo26NSExtensionRequestHandling", "showETALabelWithRoutes"]
 - !private ["PSo26NSExtensionRequestHandling", "taskMapView"]
 - !private ["PSo26NSExtensionRequestHandling", "userLocation"]
 - !private ["PSo26NSExtensionRequestHandling", "userSelectingAdditionalRoutes"]
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AddRouteToGuidance"]
 - !private ["CSo8NSObject", "CGRectMake"]
+- !private ["CSo8NSObject", "Double"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "MKAnnotation"]
 - ["CSo8NSObject", "MKAnnotationView"]
@@ -872,6 +893,7 @@ depends-member:
 - !private ["CSo8NSObject", "MKPinAnnotationView"]
 - !private ["CSo8NSObject", "MKPolyline"]
 - !private ["CSo8NSObject", "MKPolylineRenderer"]
+- ["CSo8NSObject", "MKRoute"]
 - !private ["CSo8NSObject", "MKUserLocation"]
 - !private ["CSo8NSObject", "Theme"]
 - !private ["CSo8NSObject", "UIButton"]
@@ -907,7 +929,6 @@ depends-member:
 - !private ["CSo8NSObject", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["CSo8NSObject", "pinTintColor"]
 - !private ["CSo8NSObject", "plotPolylineWithRoute"]
-- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "removeAnnotation"]
 - !private ["CSo8NSObject", "rightCalloutAccessoryView"]
 - !private ["CSo8NSObject", "routeCounter"]
@@ -917,6 +938,7 @@ depends-member:
 - !private ["CSo8NSObject", "setImage"]
 - !private ["CSo8NSObject", "setUpGuidanceUI"]
 - !private ["CSo8NSObject", "setUpTurnByTurnUI"]
+- ["CSo8NSObject", "showETALabelWithRoutes"]
 - !private ["CSo8NSObject", "sourceRoute"]
 - !private ["CSo8NSObject", "steps"]
 - !private ["CSo8NSObject", "strokeColor"]
@@ -927,6 +949,7 @@ depends-member:
 - !private ["CSo8NSObject", "wasSelectedForFinalRoute"]
 - ["PSo16NSObjectProtocol", "AddRouteToGuidance"]
 - !private ["PSo16NSObjectProtocol", "CGRectMake"]
+- !private ["PSo16NSObjectProtocol", "Double"]
 - !private ["PSo16NSObjectProtocol", "Int"]
 - !private ["PSo16NSObjectProtocol", "MKDirections"]
 - !private ["PSo16NSObjectProtocol", "MKPinAnnotationView"]
@@ -963,7 +986,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo16NSObjectProtocol", "pinTintColor"]
 - !private ["PSo16NSObjectProtocol", "plotPolylineWithRoute"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "removeAnnotation"]
 - !private ["PSo16NSObjectProtocol", "rightCalloutAccessoryView"]
 - !private ["PSo16NSObjectProtocol", "routeCounter"]
@@ -973,6 +995,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "setImage"]
 - !private ["PSo16NSObjectProtocol", "setUpGuidanceUI"]
 - !private ["PSo16NSObjectProtocol", "setUpTurnByTurnUI"]
+- ["PSo16NSObjectProtocol", "showETALabelWithRoutes"]
 - !private ["PSo16NSObjectProtocol", "sourceRoute"]
 - !private ["PSo16NSObjectProtocol", "steps"]
 - !private ["PSo16NSObjectProtocol", "strokeColor"]
@@ -983,7 +1006,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "userSelectingAdditionalRoutes"]
 - !private ["PSo16NSObjectProtocol", "wasSelectedForFinalRoute"]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - !private ["Ps13OptionSetType", "Normal"]
@@ -1081,6 +1103,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "text"]
 - ["PSo21UIAppearanceContainer", "AddRouteToGuidance"]
 - !private ["PSo21UIAppearanceContainer", "CGRectMake"]
+- !private ["PSo21UIAppearanceContainer", "Double"]
 - !private ["PSo21UIAppearanceContainer", "Int"]
 - !private ["PSo21UIAppearanceContainer", "MKDirections"]
 - !private ["PSo21UIAppearanceContainer", "MKPinAnnotationView"]
@@ -1112,7 +1135,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo21UIAppearanceContainer", "pinTintColor"]
 - !private ["PSo21UIAppearanceContainer", "plotPolylineWithRoute"]
-- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "removeAnnotation"]
 - !private ["PSo21UIAppearanceContainer", "rightCalloutAccessoryView"]
 - !private ["PSo21UIAppearanceContainer", "routeCounter"]
@@ -1122,6 +1144,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "setImage"]
 - !private ["PSo21UIAppearanceContainer", "setUpGuidanceUI"]
 - !private ["PSo21UIAppearanceContainer", "setUpTurnByTurnUI"]
+- ["PSo21UIAppearanceContainer", "showETALabelWithRoutes"]
 - !private ["PSo21UIAppearanceContainer", "taskMapView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "userLocation"]
@@ -1133,6 +1156,7 @@ depends-member:
 - !private ["OSC12UIButtonType", "Custom"]
 - ["PSo18UIContentContainer", "AddRouteToGuidance"]
 - !private ["PSo18UIContentContainer", "CGRectMake"]
+- !private ["PSo18UIContentContainer", "Double"]
 - !private ["PSo18UIContentContainer", "Int"]
 - !private ["PSo18UIContentContainer", "MKDirections"]
 - !private ["PSo18UIContentContainer", "MKPinAnnotationView"]
@@ -1156,13 +1180,13 @@ depends-member:
 - ["PSo18UIContentContainer", "mapView"]
 - !private ["PSo18UIContentContainer", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo18UIContentContainer", "plotPolylineWithRoute"]
-- !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "routeCounter"]
 - !private ["PSo18UIContentContainer", "routeIndexInstructionIndexTuple"]
 - !private ["PSo18UIContentContainer", "searchForFastestRouteWithDirections"]
 - !private ["PSo18UIContentContainer", "searchForMapItemsMatchingNoun"]
 - !private ["PSo18UIContentContainer", "setUpGuidanceUI"]
 - !private ["PSo18UIContentContainer", "setUpTurnByTurnUI"]
+- ["PSo18UIContentContainer", "showETALabelWithRoutes"]
 - !private ["PSo18UIContentContainer", "taskMapView"]
 - !private ["PSo18UIContentContainer", "userLocation"]
 - !private ["PSo18UIContentContainer", "userSelectingAdditionalRoutes"]
@@ -1196,6 +1220,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - ["PSo18UIFocusEnvironment", "AddRouteToGuidance"]
 - !private ["PSo18UIFocusEnvironment", "CGRectMake"]
+- !private ["PSo18UIFocusEnvironment", "Double"]
 - !private ["PSo18UIFocusEnvironment", "Int"]
 - !private ["PSo18UIFocusEnvironment", "MKDirections"]
 - !private ["PSo18UIFocusEnvironment", "MKPinAnnotationView"]
@@ -1227,7 +1252,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo18UIFocusEnvironment", "pinTintColor"]
 - !private ["PSo18UIFocusEnvironment", "plotPolylineWithRoute"]
-- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "removeAnnotation"]
 - !private ["PSo18UIFocusEnvironment", "rightCalloutAccessoryView"]
 - !private ["PSo18UIFocusEnvironment", "routeCounter"]
@@ -1237,6 +1261,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "setImage"]
 - !private ["PSo18UIFocusEnvironment", "setUpGuidanceUI"]
 - !private ["PSo18UIFocusEnvironment", "setUpTurnByTurnUI"]
+- ["PSo18UIFocusEnvironment", "showETALabelWithRoutes"]
 - !private ["PSo18UIFocusEnvironment", "taskMapView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "userLocation"]
@@ -1245,6 +1270,7 @@ depends-member:
 - !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "AddRouteToGuidance"]
 - !private ["CSo11UIResponder", "CGRectMake"]
+- !private ["CSo11UIResponder", "Double"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "MKAnnotation"]
 - ["CSo11UIResponder", "MKAnnotationView"]
@@ -1255,6 +1281,7 @@ depends-member:
 - !private ["CSo11UIResponder", "MKPinAnnotationView"]
 - !private ["CSo11UIResponder", "MKPolyline"]
 - !private ["CSo11UIResponder", "MKPolylineRenderer"]
+- ["CSo11UIResponder", "MKRoute"]
 - !private ["CSo11UIResponder", "MKUserLocation"]
 - !private ["CSo11UIResponder", "Theme"]
 - !private ["CSo11UIResponder", "UIButton"]
@@ -1285,7 +1312,6 @@ depends-member:
 - !private ["CSo11UIResponder", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["CSo11UIResponder", "pinTintColor"]
 - !private ["CSo11UIResponder", "plotPolylineWithRoute"]
-- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "removeAnnotation"]
 - !private ["CSo11UIResponder", "rightCalloutAccessoryView"]
 - !private ["CSo11UIResponder", "routeCounter"]
@@ -1295,12 +1321,14 @@ depends-member:
 - !private ["CSo11UIResponder", "setImage"]
 - !private ["CSo11UIResponder", "setUpGuidanceUI"]
 - !private ["CSo11UIResponder", "setUpTurnByTurnUI"]
+- ["CSo11UIResponder", "showETALabelWithRoutes"]
 - !private ["CSo11UIResponder", "taskMapView"]
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "userLocation"]
 - !private ["CSo11UIResponder", "userSelectingAdditionalRoutes"]
 - ["PSo16UIStateRestoring", "AddRouteToGuidance"]
 - !private ["PSo16UIStateRestoring", "CGRectMake"]
+- !private ["PSo16UIStateRestoring", "Double"]
 - !private ["PSo16UIStateRestoring", "Int"]
 - !private ["PSo16UIStateRestoring", "MKDirections"]
 - !private ["PSo16UIStateRestoring", "MKPinAnnotationView"]
@@ -1324,18 +1352,19 @@ depends-member:
 - ["PSo16UIStateRestoring", "mapView"]
 - !private ["PSo16UIStateRestoring", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo16UIStateRestoring", "plotPolylineWithRoute"]
-- !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "routeCounter"]
 - !private ["PSo16UIStateRestoring", "routeIndexInstructionIndexTuple"]
 - !private ["PSo16UIStateRestoring", "searchForFastestRouteWithDirections"]
 - !private ["PSo16UIStateRestoring", "searchForMapItemsMatchingNoun"]
 - !private ["PSo16UIStateRestoring", "setUpGuidanceUI"]
 - !private ["PSo16UIStateRestoring", "setUpTurnByTurnUI"]
+- ["PSo16UIStateRestoring", "showETALabelWithRoutes"]
 - !private ["PSo16UIStateRestoring", "taskMapView"]
 - !private ["PSo16UIStateRestoring", "userLocation"]
 - !private ["PSo16UIStateRestoring", "userSelectingAdditionalRoutes"]
 - ["PSo18UITraitEnvironment", "AddRouteToGuidance"]
 - !private ["PSo18UITraitEnvironment", "CGRectMake"]
+- !private ["PSo18UITraitEnvironment", "Double"]
 - !private ["PSo18UITraitEnvironment", "Int"]
 - !private ["PSo18UITraitEnvironment", "MKDirections"]
 - !private ["PSo18UITraitEnvironment", "MKPinAnnotationView"]
@@ -1367,7 +1396,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["PSo18UITraitEnvironment", "pinTintColor"]
 - !private ["PSo18UITraitEnvironment", "plotPolylineWithRoute"]
-- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "removeAnnotation"]
 - !private ["PSo18UITraitEnvironment", "rightCalloutAccessoryView"]
 - !private ["PSo18UITraitEnvironment", "routeCounter"]
@@ -1377,6 +1405,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "setImage"]
 - !private ["PSo18UITraitEnvironment", "setUpGuidanceUI"]
 - !private ["PSo18UITraitEnvironment", "setUpTurnByTurnUI"]
+- ["PSo18UITraitEnvironment", "showETALabelWithRoutes"]
 - !private ["PSo18UITraitEnvironment", "taskMapView"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "userLocation"]
@@ -1395,6 +1424,7 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "AddRouteToGuidance"]
 - !private ["CSo16UIViewController", "CGRectMake"]
+- !private ["CSo16UIViewController", "Double"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "MKAnnotation"]
 - ["CSo16UIViewController", "MKAnnotationView"]
@@ -1405,6 +1435,7 @@ depends-member:
 - !private ["CSo16UIViewController", "MKPinAnnotationView"]
 - !private ["CSo16UIViewController", "MKPolyline"]
 - !private ["CSo16UIViewController", "MKPolylineRenderer"]
+- ["CSo16UIViewController", "MKRoute"]
 - !private ["CSo16UIViewController", "MKUserLocation"]
 - !private ["CSo16UIViewController", "Theme"]
 - !private ["CSo16UIViewController", "UIButton"]
@@ -1427,13 +1458,13 @@ depends-member:
 - ["CSo16UIViewController", "mapView"]
 - !private ["CSo16UIViewController", "matchCoordinatesOfMapItemAndAnnoatation"]
 - !private ["CSo16UIViewController", "plotPolylineWithRoute"]
-- !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "routeCounter"]
 - !private ["CSo16UIViewController", "routeIndexInstructionIndexTuple"]
 - !private ["CSo16UIViewController", "searchForFastestRouteWithDirections"]
 - !private ["CSo16UIViewController", "searchForMapItemsMatchingNoun"]
 - !private ["CSo16UIViewController", "setUpGuidanceUI"]
 - !private ["CSo16UIViewController", "setUpTurnByTurnUI"]
+- ["CSo16UIViewController", "showETALabelWithRoutes"]
 - !private ["CSo16UIViewController", "taskMapView"]
 - !private ["CSo16UIViewController", "userLocation"]
 - !private ["CSo16UIViewController", "userSelectingAdditionalRoutes"]
@@ -1458,6 +1489,7 @@ depends-member:
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps31_BuiltinFloatLiteralConvertible", "init"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
@@ -1465,6 +1497,8 @@ depends-member:
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps19_CVarArgAlignedType", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
@@ -1546,6 +1580,7 @@ depends-member:
 - !private ["Ps18_SignedIntegerType", "_DisabledRangeIndex"]
 - !private ["Ps18_SignedIntegerType", "init"]
 depends-nominal:
+- !private "Ps16AbsoluteValuable"
 - !private "P10RealmSwift11AddableType"
 - "Ps9AnyObject"
 - !private "Sa"
@@ -1570,6 +1605,8 @@ depends-nominal:
 - "Ps9Equatable"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
+- !private "Ps23FloatLiteralConvertible"
+- !private "Ps17FloatingPointType"
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - !private "C5Mango8Guidance"
@@ -1660,10 +1697,13 @@ depends-nominal:
 - !private "Ps10_ArrayType"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps31_BuiltinFloatLiteralConvertible"
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps32_BuiltinStringLiteralConvertible"
 - !private "Ps37_BuiltinUTF16StringLiteralConvertible"
 - !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps19_CVarArgAlignedType"
+- !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps24_ImageLiteralConvertible"
 - !private "Ps14_Incrementable"
@@ -1718,4 +1758,4 @@ depends-external:
 - "./Realm.framework/Headers/Realm.h"
 - "./Realm.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "3c1dc90de92cf6c825d7ff398bd075ca"
+interface-hash: "6897f4b370400afca218d89aa7ae2fb9"

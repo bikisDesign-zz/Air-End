@@ -5,21 +5,21 @@ provides-nominal:
 provides-member:
 - ["C5Mango5MapVC", ""]
 provides-dynamic-lookup:
+- "didSetValidAddress"
 - "searchForValidAddress"
 - "showCorrectAddressTableView"
-- "didSetValidAddress"
 depends-top-level:
-- "MapVC"
 - "CorrectAddressTableViewDelegate"
-- "String"
-- !private "BooleanLiteralType"
+- "MapVC"
 - !private "UIScreen"
-- "CorrectAddressTableView"
-- "UIViewController"
 - "CLPlacemark"
-- "UITextField"
-- "UIButton"
 - "StringLiteralType"
+- "CorrectAddressTableView"
+- "UIButton"
+- "String"
+- "UITextField"
+- "UIViewController"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]

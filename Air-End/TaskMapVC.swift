@@ -82,11 +82,7 @@ class TaskMapVC: UIViewController {
                             self.setRegionForUnionOfUserLocationAndTaskAnnotation(taskAnnotation, userLocation: userLocation,mapView:self.taskMapView)
                         }
                     }
-                    else {
-                        print("didn't find any close tasks")
-                    }})}
-            else{
-                print("request returned nil")}
+                   })}
         }
     }
     

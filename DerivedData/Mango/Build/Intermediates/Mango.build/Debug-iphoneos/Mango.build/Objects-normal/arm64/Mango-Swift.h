@@ -275,8 +275,6 @@ SWIFT_CLASS("_TtC5Mango5MapVC")
 - (IBAction)addDestination:(UIButton * _Nonnull)sender;
 - (IBAction)checkDestination:(UIButton * _Nonnull)sender;
 - (void)findTasksEnrouteToDestination;
-- (void)routeAllCloseTasksEnRouteToDestination:(MKMapItem * _Nonnull)source destination:(MKMapItem * _Nonnull)destination sourceToDestinationRoute:(MKRoute * _Nonnull)sourceToDestinationRoute index:(NSInteger)index;
-- (void)determineRemaningDestinationsWithSource:(MKMapItem * _Nonnull)source destination:(MKMapItem * _Nonnull)destination sourceToDestinationRoute:(MKRoute * _Nonnull)sourceToDestinationRoute index:(NSInteger)index;
 - (void)showRoute;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -296,6 +294,18 @@ SWIFT_CLASS("_TtC5Mango5MapVC")
 - (void)didSetValidAddress:(CorrectAddressTableView * _Nonnull)sender;
 @end
 
+
+@interface MapVC (SWIFT_EXTENSION(Mango))
+- (IBAction)beginGuidance:(UIButton * _Nonnull)sender;
+- (void)setUpTurnByTurnUI;
+- (void)handlerSwipeRightGesture;
+- (void)handlerSwipeLeftGesture;
+- (void)queNextStepInstructionWithPositiveIncrement:(BOOL)positiveIncrement;
+- (void)searchForFinalRouteBetween:(MKMapItem * _Nonnull)source destination:(MKMapItem * _Nonnull)destination;
+- (IBAction)cancelGuidance:(UIButton * _Nonnull)sender;
+- (void)hideGuidance;
+@end
+
 @class MKMapView;
 @class MKAnnotationView;
 @protocol MKAnnotation;
@@ -308,22 +318,11 @@ SWIFT_CLASS("_TtC5Mango5MapVC")
 - (void)mapView:(MKMapView * _Nonnull)mapView didSelectAnnotationView:(MKAnnotationView * _Nonnull)view;
 - (MKAnnotationView * _Nullable)mapView:(MKMapView * _Nonnull)mapView viewForAnnotation:(id <MKAnnotation> _Nonnull)annotation;
 - (void)mapView:(MKMapView * _Nonnull)mapView annotationView:(MKAnnotationView * _Nonnull)view calloutAccessoryControlTapped:(UIControl * _Nonnull)control;
+- (void)showETALabelWithRoutes:(NSArray<MKRoute *> * _Nonnull)routes;
 - (MKOverlayRenderer * _Nonnull)mapView:(MKMapView * _Nonnull)mapView rendererForOverlay:(id <MKOverlay> _Nonnull)overlay;
 - (UIColor * _Nonnull)generatePolylineColor;
 - (void)displaySelectedGuidanceRoute:(NSInteger)i;
 - (void)AddRouteToGuidance;
-@end
-
-
-@interface MapVC (SWIFT_EXTENSION(Mango))
-- (IBAction)beginGuidance:(UIButton * _Nonnull)sender;
-- (void)setUpTurnByTurnUI;
-- (void)handlerSwipeRightGesture;
-- (void)handlerSwipeLeftGesture;
-- (void)queNextStepInstructionWithPositiveIncrement:(BOOL)positiveIncrement;
-- (void)searchForFinalRouteBetween:(MKMapItem * _Nonnull)source destination:(MKMapItem * _Nonnull)destination;
-- (IBAction)cancelGuidance:(UIButton * _Nonnull)sender;
-- (void)hideGuidance;
 @end
 
 @class NSDate;
@@ -477,15 +476,6 @@ SWIFT_CLASS("_TtC5Mango11TaskMapView")
 - (void)setMapRegionForMapItems:(MKMapItem * _Nullable)mapItemA mapViewA:(MKMapView * _Nullable)mapViewA;
 - (NSArray<MKMapItem *> * _Nullable)sortMapItemsCloseToUserLocation:(CLLocation * _Nullable)userLocation mapItems:(NSArray<MKMapItem *> * _Nonnull)mapItems;
 - (void)plotPolylineWithRoute:(MKRoute * _Nonnull)route mapView:(MKMapView * _Nonnull)mapView;
-@end
-
-
-SWIFT_CLASS("_TtC5Mango26launchScreenViewController")
-@interface launchScreenViewController : UIViewController
-- (void)viewDidLoad;
-- (void)setUPUI;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #pragma clang diagnostic pop

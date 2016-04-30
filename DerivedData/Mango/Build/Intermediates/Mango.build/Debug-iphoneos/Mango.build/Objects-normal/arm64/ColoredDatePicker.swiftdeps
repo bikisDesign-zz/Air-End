@@ -9,13 +9,13 @@ provides-dynamic-lookup:
 - "changed"
 - "addSubview"
 depends-top-level:
-- "UIDatePicker"
 - !private "StringLiteralType"
 - "UIView"
-- "BooleanLiteralType"
 - !private "!"
-- !private "UIColor"
+- "UIDatePicker"
+- "BooleanLiteralType"
 - "ColoredDatePicker"
+- !private "UIColor"
 depends-member:
 - !private ["Ps9AnyObject", "UIColor"]
 - ["Ps9AnyObject", "addSubview"]

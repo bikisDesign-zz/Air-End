@@ -7,17 +7,17 @@ provides-member:
 - ["C5Mango5MapVC", "segmentAllTasks"]
 - ["C5Mango5MapVC", "segmentEnRoute"]
 provides-dynamic-lookup:
+- "segmentEnRoute"
 - "segmentedControlValueChanged"
 - "segmentAllTasks"
-- "segmentEnRoute"
 depends-top-level:
-- !private "StringLiteralType"
-- !private "Array"
 - "MapVC"
-- !private "~="
-- "UISegmentedControl"
-- !private "assertionFailure"
 - !private "BooleanLiteralType"
+- "UISegmentedControl"
+- !private "~="
+- !private "Array"
+- !private "assertionFailure"
+- !private "StringLiteralType"
 depends-member:
 - !private ["P10RealmSwift11AddableType", "Distance"]
 - !private ["P10RealmSwift11AddableType", "IntegerLiteralType"]
